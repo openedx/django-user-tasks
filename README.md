@@ -1,1 +1,0 @@
-# django-user-tasks

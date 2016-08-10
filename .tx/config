@@ -1,0 +1,14 @@
+[main]
+host = https://www.transifex.com
+
+[edx-platform.django-user-tasks]
+file_filter = user_tasks/conf/locale/<lang>/LC_MESSAGES/django.po
+source_file = user_tasks/conf/locale/en/LC_MESSAGES/django.po
+source_lang = en
+type = PO
+
+[edx-platform.django-user-tasks-js]
+file_filter = user_tasks/conf/locale/<lang>/LC_MESSAGES/djangojs.po
+source_file = user_tasks/conf/locale/en/LC_MESSAGES/djangojs.po
+source_lang = en
+type = PO
