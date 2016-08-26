@@ -1,0 +1,6 @@
+# Requirements for code quality checks
+
+caniusepython3            # Additional Python 3 compatibility pylint checks
+edx-lint                  # edX pylint rules and plugins
+pycodestyle               # PEP 8 compliance validation
+pydocstyle                # PEP 257 compliance validation
