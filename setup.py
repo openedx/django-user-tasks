@@ -45,7 +45,7 @@ setup(
         'user_tasks',
     ],
     include_package_data=True,
-    install_requires=["django-model-utils>=2.0"],
+    install_requires=['django-model-utils>=2.0', 'djangorestframework>=3.0.4'],
     license="Apache Software License 2.0",
     zip_safe=False,
     keywords='Django edx',

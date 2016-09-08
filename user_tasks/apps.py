@@ -14,6 +14,7 @@ class UserTasksConfig(AppConfig):
     """
 
     name = 'user_tasks'
+    verbose_name = 'User Tasks'
 
     def ready(self):
         """

@@ -9,11 +9,11 @@ from __future__ import absolute_import, unicode_literals
 import logging
 from uuid import uuid4
 
+import pytest
+
 from django.contrib.auth.models import User
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.test import TestCase
-
-import pytest
 
 from user_tasks.exceptions import TaskCanceledException
 from user_tasks.models import UserTaskArtifact, UserTaskStatus

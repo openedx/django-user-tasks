@@ -1,6 +1,8 @@
 # Additional requirements for test runs.
 
+mock                      # For setup of testing corner cases
 packaging                 # For version number parsing and comparisons
 pytest-catchlog           # Show log output for test failures
 pytest-cov                # pytest extension for code coverage statistics
 pytest-django             # pytest extension for better Django support
+rules                     # Authorization rules for test cases

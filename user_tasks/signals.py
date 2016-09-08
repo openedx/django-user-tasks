@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Celery signal handlers.
+Celery signal handlers and custom Django signal.
 """
 
 from __future__ import absolute_import, unicode_literals
@@ -8,12 +8,13 @@ from __future__ import absolute_import, unicode_literals
 import logging
 from uuid import uuid4
 
+from celery.signals import before_task_publish, task_failure, task_prerun, task_retry, task_success
+
 from django.contrib.auth import get_user_model
 from django.db import transaction
 from django.utils.module_loading import import_string
 
-from celery.signals import before_task_publish, task_failure, task_prerun, task_retry, task_success
-
+from user_tasks import user_task_stopped
 from .exceptions import TaskCanceledException
 from .models import UserTaskStatus
 from .tasks import UserTaskMixin
@@ -196,6 +197,7 @@ def task_failed(sender=None, **kwargs):
         if not isinstance(exception, TaskCanceledException):
             # Don't include traceback, since this is intended for end users
             sender.status.fail(str(exception))
+        user_task_stopped.send_robust(sender=UserTaskStatus, status=sender.status)
 
 
 @task_retry.connect
@@ -214,3 +216,4 @@ def task_succeeded(sender=None, **kwargs):  # pylint: disable=unused-argument
     """
     if isinstance(sender, UserTaskMixin):
         sender.status.succeed()
+        user_task_stopped.send_robust(sender=UserTaskStatus, status=sender.status)

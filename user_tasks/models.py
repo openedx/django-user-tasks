@@ -6,17 +6,22 @@ Database models for user_tasks.
 from __future__ import absolute_import, unicode_literals
 
 import logging
+from uuid import uuid4
 
-from django.conf import settings
+from celery import current_app
+
+from django.conf import settings as django_settings
 from django.db import models, transaction
 from django.db.models import Q
 from django.db.models.expressions import F
 from django.utils.encoding import python_2_unicode_compatible
 from django.utils.timezone import now
+from django.utils.translation import ugettext_lazy as _
 
-from celery import current_app
 from model_utils.models import TimeStampedModel
 
+from user_tasks import user_task_stopped
+from .conf import settings
 from .exceptions import TaskCanceledException
 
 LOGGER = logging.getLogger(__name__)
@@ -42,7 +47,17 @@ class UserTaskStatus(TimeStampedModel):
     CANCELED = 'Canceled'
     RETRYING = 'Retrying'
 
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, help_text='The user who triggered the task')
+    STATE_TRANSLATIONS = {
+        PENDING: _('Pending'),
+        IN_PROGRESS: _('In Progress'),
+        SUCCEEDED: _('Succeeded'),
+        FAILED: _('Failed'),
+        CANCELED: _('Canceled'),
+        RETRYING: _('Retrying'),
+    }
+
+    uuid = models.UUIDField(default=uuid4, unique=True, editable=False, help_text='Unique ID for use in APIs')
+    user = models.ForeignKey(django_settings.AUTH_USER_MODEL, help_text='The user who triggered the task')
     # Auto-generated Celery task IDs will always be 36 characters, but longer custom ones can be specified
     task_id = models.CharField(max_length=128, unique=True, db_index=True,
                                help_text='UUID of the associated Celery task')
@@ -56,6 +71,13 @@ class UserTaskStatus(TimeStampedModel):
     completed_steps = models.PositiveSmallIntegerField(default=0)
     total_steps = models.PositiveSmallIntegerField()
     attempts = models.PositiveSmallIntegerField(default=1, help_text='How many times has execution been attempted?')
+
+    class Meta:
+        """
+        Additional configuration for the UserTaskStatus model.
+        """
+
+        verbose_name_plural = 'user task statuses'
 
     def start(self):
         """
@@ -110,6 +132,7 @@ class UserTaskStatus(TimeStampedModel):
                 child.cancel()
         elif self.state in (UserTaskStatus.PENDING, UserTaskStatus.RETRYING):
             current_app.control.revoke(self.task_id)
+            user_task_stopped.send_robust(UserTaskStatus, status=self)
         with transaction.atomic():
             status = UserTaskStatus.objects.select_for_update().get(pk=self.id)
             if status.state in (UserTaskStatus.CANCELED, UserTaskStatus.FAILED, UserTaskStatus.SUCCEEDED):
@@ -172,6 +195,13 @@ class UserTaskStatus(TimeStampedModel):
         if self.parent and self.parent.task_class != 'celery.group':  # pylint: disable=no-member
             self.parent.set_state(custom_state)  # pylint: disable=no-member
 
+    @property
+    def state_text(self):
+        """
+        Get the translation into the current language of the current state of this status instance.
+        """
+        return self.STATE_TRANSLATIONS.get(self.state, self.state)
+
     def succeed(self):
         """
         Mark the task as having finished successfully and save it.
@@ -200,10 +230,12 @@ class UserTaskArtifact(TimeStampedModel):
     May be a file, a URL, or text stored directly in the database table.
     """
 
-    status = models.ForeignKey(UserTaskStatus)
+    uuid = models.UUIDField(default=uuid4, unique=True, editable=False, help_text='Unique ID for use in APIs')
+    status = models.ForeignKey(UserTaskStatus, related_name='artifacts')
     name = models.CharField(max_length=255, default='Output',
                             help_text='Distinguishes between multiple artifact types for the same task')
-    file = models.FileField(null=True, blank=True)
+    file = models.FileField(null=True, blank=True, storage=settings.USER_TASKS_ARTIFACT_STORAGE,
+                            upload_to='user_tasks/%Y/%m/%d/')
     url = models.URLField(blank=True)
     text = models.TextField(blank=True)
 

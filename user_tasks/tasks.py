@@ -8,8 +8,12 @@ from __future__ import absolute_import, unicode_literals
 import inspect
 import logging
 
+from celery import shared_task
 from celery.task import Task
 
+from django.utils.timezone import now
+
+from .conf import settings
 from .models import UserTaskStatus
 
 LOGGER = logging.getLogger(__name__)
@@ -95,3 +99,15 @@ class UserTask(Task, UserTaskMixin):  # pylint: disable=abstract-method
     """
 
     abstract = True
+
+
+@shared_task
+def purge_old_user_tasks():
+    """
+    Delete any UserTaskStatus and UserTaskArtifact records older than ``settings.USER_TASKS_MAX_AGE``.
+
+    Intended to be run as a scheduled task.
+    """
+    limit = now() - settings.USER_TASKS_MAX_AGE
+    # UserTaskArtifacts will also be removed via deletion cascading
+    UserTaskStatus.objects.filter(created__lt=limit).delete()

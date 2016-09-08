@@ -7,14 +7,17 @@ Tests for the user_tasks subclasses of celery.Task.
 from __future__ import absolute_import, print_function, unicode_literals
 
 import logging
+from datetime import timedelta
+from uuid import uuid4
+
+from celery import Task, shared_task
 
 from django.contrib.auth.models import User
-from django.test import TestCase
+from django.test import TestCase, override_settings
+from django.utils.timezone import now
 
-from celery import shared_task, Task
-
-from user_tasks.models import UserTaskStatus
-from user_tasks.tasks import UserTask, UserTaskMixin
+from user_tasks.models import UserTaskArtifact, UserTaskStatus
+from user_tasks.tasks import UserTask, UserTaskMixin, purge_old_user_tasks
 
 LOGGER = logging.getLogger(__name__)
 
@@ -60,7 +63,7 @@ def sample_task(self, user_id, arg1, arg2, **kwargs):  # pylint: disable=unused-
     return arg1, arg2
 
 
-class TestTasks(TestCase):
+class TestUserTasks(TestCase):
     """
     Tests of UserTaskMixin and UserTask.
     """
@@ -103,3 +106,52 @@ class TestTasks(TestCase):
         result = sample_task.delay(arg2=6, arg1=5, user_id=self.user.id)
         status = UserTaskStatus.objects.get(task_id=result.id)
         assert status.total_steps == 30
+
+
+@override_settings(CELERY_ALWAYS_EAGER=True)
+class TestPurgeOldUserTasks(TestCase):
+    """
+    Tests of the Celery cleanup task for old user task database records.
+    """
+
+    @classmethod
+    def setUpTestData(cls):
+        cls.user = User.objects.create_user('test_user', 'test@example.com', 'password')
+
+    def test_old_data(self):
+        """The cleanup task should purge old database records."""
+        self._create_records(now() - timedelta(days=31))
+        purge_old_user_tasks.delay()
+        assert UserTaskStatus.objects.count() == 0
+        assert UserTaskArtifact.objects.count() == 0
+
+    def test_recent_data(self):
+        """The cleanup task should leave recent database records intact."""
+        self._create_records(now() - timedelta(days=29))
+        purge_old_user_tasks.delay()
+        assert UserTaskStatus.objects.count() == 1
+        assert UserTaskArtifact.objects.count() == 1
+
+    def test_mixed_data(self):
+        """The cleanup task should purge only old database records."""
+        self._create_records(now() - timedelta(days=29))
+        status = UserTaskStatus.objects.all()[0]
+        self._create_records(now() - timedelta(days=31))
+        purge_old_user_tasks.delay()
+        assert UserTaskStatus.objects.count() == 1
+        assert UserTaskArtifact.objects.count() == 1
+        assert UserTaskStatus.objects.filter(pk=status.id).exists()
+
+    def _create_records(self, created):
+        """
+        Create a UserTaskStatus and UserTaskArtifact with the specified creation date.
+        """
+        data = {
+            'name': 'SampleTask', 'state': UserTaskStatus.SUCCEEDED, 'task_class': 'test_tasks.sample_task',
+            'task_id': str(uuid4()), 'total_steps': 5, 'user': self.user
+        }
+        status = UserTaskStatus.objects.create(**data)
+        completed = created + timedelta(hours=1)
+        UserTaskStatus.objects.filter(pk=status.id).update(created=created, modified=completed)
+        artifact = UserTaskArtifact.objects.create(status=status, text='Lorem ipsum')
+        UserTaskArtifact.objects.filter(pk=artifact.id).update(created=completed, modified=completed)

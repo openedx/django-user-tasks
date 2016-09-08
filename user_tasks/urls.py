@@ -4,9 +4,12 @@ URLs for user_tasks.
 """
 from __future__ import absolute_import, unicode_literals
 
-from django.conf.urls import url
-from django.views.generic import TemplateView
+from rest_framework.routers import SimpleRouter
 
-urlpatterns = [
-    url(r'', TemplateView.as_view(template_name="user_tasks/base.html")),
-]
+from user_tasks.views import ArtifactViewSet, StatusViewSet
+
+ROUTER = SimpleRouter()
+ROUTER.register(r'artifacts', ArtifactViewSet, base_name='usertaskartifact')
+ROUTER.register(r'tasks', StatusViewSet, base_name='usertaskstatus')
+
+urlpatterns = ROUTER.urls

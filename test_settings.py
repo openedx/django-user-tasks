@@ -7,7 +7,8 @@ Django applications, so these settings will not be used.
 
 from __future__ import absolute_import, unicode_literals
 
-from os.path import join, abspath, dirname
+import tempfile
+from os.path import abspath, dirname, join
 
 from celery import Celery
 
@@ -20,6 +21,11 @@ def root(*args):
     Get the absolute path of the given path relative to the project root.
     """
     return join(abspath(dirname(__file__)), *args)
+
+AUTHENTICATION_BACKENDS = (
+    'rules.permissions.ObjectPermissionBackend',
+    'django.contrib.auth.backends.ModelBackend',
+)
 
 BROKER_URL = 'memory://localhost/'
 CELERY_IGNORE_RESULT = True
@@ -38,6 +44,8 @@ DATABASES = {
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'rest_framework',
     'user_tasks.apps.UserTasksConfig',
 )
 
@@ -45,6 +53,10 @@ LOCALE_PATHS = [
     root('user_tasks', 'conf', 'locale'),
 ]
 
+MEDIA_ROOT = tempfile.mkdtemp()
+
 ROOT_URLCONF = 'user_tasks.urls'
 
 SECRET_KEY = 'insecure-secret-key'
+
+USE_TZ = True

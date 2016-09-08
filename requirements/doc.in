@@ -1,5 +1,8 @@
-# Requirements for documentation validation
+# Requirements for documentation generation
 
+django-rest-swagger       # Generates a Swagger/Open API schema for the REST API
 readme_renderer           # Validates README.rst for usage on PyPI
+rules                     # Needed to import user_tasks/rules.py for autodoc
 Sphinx                    # Documentation builder
 sphinx_rtd_theme          # ReadTheDocs theme for Sphinx output
+swagger2rst               # Generates REST API documentation for Sphinx from a Swagger/Open API schema JSON file

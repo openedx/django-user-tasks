@@ -1,16 +1,25 @@
 .PHONY: clean compile_translations coverage docs dummy_translations extract_translations \
-	fake_translations help pull_translations push_translations quality requirements test test-all validate
+	fake_translations help pull_translations push_translations quality \
+	requirements swagger-ui test test-all upgrade validate
 
 .DEFAULT_GOAL := help
 
 define BROWSER_PYSCRIPT
 import os, webbrowser, sys
+from time import sleep
 try:
 	from urllib import pathname2url
 except:
 	from urllib.request import pathname2url
 
-webbrowser.open("file://" + pathname2url(os.path.abspath(sys.argv[1])))
+path_or_url = sys.argv[1]
+delay = int(sys.argv[2]) if len(sys.argv) > 2 else 0
+if delay > 0:
+    sleep(delay)
+if '://' in path_or_url:
+    webbrowser.open(path_or_url)
+else:
+    webbrowser.open("file://" + pathname2url(os.path.abspath(path_or_url)))
 endef
 export BROWSER_PYSCRIPT
 BROWSER := python -c "$$BROWSER_PYSCRIPT"
@@ -32,7 +41,7 @@ compile_translations: ## compile translation files, outputting .po files for eac
 	./manage.py compilemessages
 
 coverage: clean ## generate and view HTML coverage report
-	py.test --cov-report html
+	pytest --cov-report html
 	$(BROWSER) htmlcov/index.html
 
 docs: ## generate Sphinx HTML documentation, including API docs
@@ -48,11 +57,11 @@ extract_translations: ## extract strings to be translated, outputting .mo files
 
 fake_translations: extract_translations dummy_translations compile_translations ## generate and compile dummy translation files
 
-pip-compile: ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
+upgrade: ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
 	pip install -q pip-tools
 	pip-compile --upgrade -o requirements/base.txt requirements/base.in
-	pip-compile --upgrade -o requirements/dev.txt requirements/dev.in
-	pip-compile --upgrade -o requirements/doc.txt requirements/doc.in
+	pip-compile --upgrade -o requirements/dev.txt requirements/dev.in requirements/quality.in
+	pip-compile --upgrade -o requirements/doc.txt requirements/base.in requirements/doc.in
 	pip-compile --upgrade -o requirements/quality.txt requirements/quality.in
 	pip-compile --upgrade -o requirements/test.txt requirements/base.in requirements/test.in
 	pip-compile --upgrade -o requirements/travis.txt requirements/travis.in
@@ -73,8 +82,14 @@ requirements: ## install development environment requirements
 	pip install -qr requirements/dev.txt --exists-action w
 	pip-sync requirements/base.txt requirements/dev.txt requirements/private.* requirements/test.txt
 
+swagger-ui: ## view Swagger UI for the REST API documentation
+	tox -e docs
+	$(BROWSER) http://localhost:8000 5 &
+	echo "The REST API documentation should open in your browser within a few seconds"
+	. .tox/docs/bin/activate; ./manage.py migrate --settings=schema.settings; SWAGGER_JSON_PATH=docs/swagger.json ./manage.py runserver --settings=schema.settings
+
 test: clean ## run tests in the current virtualenv
-	py.test
+	pytest
 
 test-all: ## run tests on every supported Python/Django combination
 	tox -e quality
