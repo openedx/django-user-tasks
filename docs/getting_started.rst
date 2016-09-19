@@ -7,7 +7,7 @@ for a single type of task:
 1. Install ``django-user-tasks`` (typically via
    ``pip install django-user-tasks``, but use whatever mechanism you've chosen
    for dependency management).
-2. Add ``django-user-tasks`` to the ``INSTALLED_APPS`` Django setting.
+2. Add ``django-user-tasks`` and ``rest_framework`` to the ``INSTALLED_APPS`` Django setting.
 3. Run migrations to create the required database tables.
 4. Create a subclass of :py:class:`user_tasks.tasks.UserTask` and override one or
    two of its methods.
@@ -75,3 +75,29 @@ Now the name of the task includes the name of the course being exported,
 there's an indication of how far along execution of the task has progressed,
 and while in progress the status reflects the name of the section currently
 being exported.
+
+URL Configuration
+-----------------
+
+Out of the box, ``django-user-tasks`` provides a ``urls`` module containing a URLconf which places the REST API
+endpoints under ``tasks/`` and ``artifacts/``.  You can include ``user_tasks.urls.urlpatterns`` in your
+service's overall URL configuration, or create a custom configuration which uses paths of your choice.  For example:
+
+.. code-block:: python
+
+    from rest_framework.routers import SimpleRouter
+    from user_tasks.views import ArtifactViewSet, StatusViewSet
+
+    ROUTER = SimpleRouter()
+    ROUTER.register(r'user_task_artifacts', ArtifactViewSet, base_name='usertaskartifact')
+    ROUTER.register(r'user_tasks/', StatusViewSet, base_name='usertaskstatus')
+
+    urlpatterns = ROUTER.urls
+
+Task Status Signal
+------------------
+
+When a subclass of :py:class:`user_tasks.tasks.UserTaskMixin` reaches any end state (``Canceled``, ``Failed``, or
+``Succeeded``), a ``user_tasks.user_task_stopped`` signal is sent.  Listeners can use this signal to notify users of
+the status change, log relevant statistics, etc.  The signal's ``sender`` is the :py:class:`UserTaskStatus` class,
+and its ``status`` argument is the instance of that class for which the signal was sent.

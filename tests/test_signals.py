@@ -1,25 +1,26 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-Tests for the ``django-user-tasks`` Celery signal handlers.
+Tests for the ``django-user-tasks`` Celery signal handlers and Django signal.
 """
 
 from __future__ import absolute_import, print_function, unicode_literals
 
 import logging
 
-from django.contrib.auth.models import User
-from django.test import override_settings, TestCase
-
-import celery
+import pytest
+from celery import __version__ as celery_version
 from celery import chain, chord, group, shared_task
 from packaging import version
-import pytest
 
+from django.contrib.auth.models import User
+from django.test import TestCase, override_settings
+
+from user_tasks import user_task_stopped
 from user_tasks.models import UserTaskStatus
 from user_tasks.tasks import UserTask
 
-CELERY_VERSION = version.parse(celery.__version__)
+CELERY_VERSION = version.parse(celery_version)
 LOGGER = logging.getLogger(__name__)
 USER_ID = 1
 
@@ -76,10 +77,29 @@ def verify_state(status, eager):
         assert status.state == UserTaskStatus.PENDING
 
 
+SIGNAL_DATA = {}
+
+
+def receiver(sender, **kwargs):  # pylint: disable=unused-argument
+    """
+    Signal handler for testing the user_task_stopped signal.
+    """
+    if 'received_status' in SIGNAL_DATA:
+        # Flag duplicate signals
+        SIGNAL_DATA['received_status'].state += ' again'
+    SIGNAL_DATA['received_status'] = kwargs.get('status')
+
+user_task_stopped.connect(receiver)
+
+
 class TestCreateUserTask(TestCase):
     """
     Tests of UserTaskStatus creation for new UserTasks.
     """
+
+    def tearDown(self):
+        super(TestCreateUserTask, self).tearDown()
+        SIGNAL_DATA.clear()
 
     @classmethod
     def setUpTestData(cls):
@@ -93,6 +113,7 @@ class TestCreateUserTask(TestCase):
     def test_create_user_task_eager(self):
         """Eager tasks should still have UserTaskStatus records created on execution."""
         self._create_user_task(eager=True)
+        assert SIGNAL_DATA['received_status'].state == UserTaskStatus.SUCCEEDED
 
     def test_create_group(self):
         """The create_user_task signal handler should correctly handle celery groups"""
@@ -348,6 +369,10 @@ class TestStatusChanges(TestCase):
     Tests of signals indicating changes in the task's status.
     """
 
+    def tearDown(self):
+        super(TestStatusChanges, self).tearDown()
+        SIGNAL_DATA.clear()
+
     @classmethod
     def setUpTestData(cls):
         cls.user = User.objects.create_user('test_user', 'test@example.com', 'password')
@@ -369,6 +394,7 @@ class TestStatusChanges(TestCase):
         assert status.completed_steps == 0
         assert status.state == UserTaskStatus.CANCELED
         assert status.attempts == 1
+        assert SIGNAL_DATA['received_status'].state == UserTaskStatus.CANCELED
 
     @override_settings(CELERY_ALWAYS_EAGER=True)
     def test_canceled_during_execution(self):
@@ -387,6 +413,7 @@ class TestStatusChanges(TestCase):
         assert status.completed_steps == 1
         assert status.state == UserTaskStatus.CANCELED
         assert status.attempts == 1
+        assert SIGNAL_DATA['received_status'].state == UserTaskStatus.CANCELED
 
     @override_settings(CELERY_ALWAYS_EAGER=True)
     def test_failed(self):
@@ -405,6 +432,7 @@ class TestStatusChanges(TestCase):
         assert status.completed_steps == 0
         assert status.state == UserTaskStatus.FAILED
         assert status.attempts == 1
+        assert SIGNAL_DATA['received_status'].state == UserTaskStatus.FAILED
 
     @override_settings(CELERY_ALWAYS_EAGER=True)
     def test_retried(self):
@@ -431,6 +459,7 @@ class TestStatusChanges(TestCase):
         normal_failing_task.delay('Argument')
         statuses = UserTaskStatus.objects.all()
         assert len(statuses) == 0
+        assert 'received_status' not in SIGNAL_DATA
 
     @override_settings(CELERY_ALWAYS_EAGER=True)
     def test_non_user_task_retry(self):
@@ -438,3 +467,13 @@ class TestStatusChanges(TestCase):
         normal_retried_task.delay('Argument')
         statuses = UserTaskStatus.objects.all()
         assert len(statuses) == 0
+        assert 'received_status' not in SIGNAL_DATA
+
+    def test_duplicate_stopped_signal(self):
+        """The test signal receiver should be able to detect and flag duplicate signals"""
+        sample_task.delay(self.user.id, 'Argument')
+        status = UserTaskStatus.objects.all()[0]
+        user_task_stopped.send_robust(sender=UserTaskStatus, status=status)
+        status.cancel()
+        user_task_stopped.send_robust(sender=UserTaskStatus, status=status)
+        assert SIGNAL_DATA['received_status'].state == UserTaskStatus.CANCELED + ' again'

@@ -14,7 +14,11 @@ Contents:
 
    readme
    getting_started
+   authorization
+   rest_api
+   data_cleanup
    linked_tasks
+   settings
    modules
    testing
    internationalization

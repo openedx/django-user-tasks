@@ -16,6 +16,8 @@ serve to show the default.
 from __future__ import absolute_import, unicode_literals
 
 import os
+import sys
+from subprocess import check_call
 
 # Configure Django for autodoc usage
 import django
@@ -459,6 +461,32 @@ intersphinx_mapping = {
 }
 
 
+def on_init(app):  # pylint: disable=unused-argument
+    """
+    Run sphinx-apidoc and swg2rst after Sphinx initialization.
+
+    Read the Docs won't run tox or custom shell commands, so we need this to
+    avoid checking in the generated reStructuredText files.
+    """
+    docs_path = os.path.abspath(os.path.dirname(__file__))
+    root_path = os.path.abspath(os.path.join(docs_path, '..'))
+    apidoc_path = 'sphinx-apidoc'
+    swg2rst_path = 'swg2rst'
+    if hasattr(sys, 'real_prefix'):  # Check to see if we are in a virtualenv
+        # If we are, assemble the path manually
+        bin_path = os.path.abspath(os.path.join(sys.prefix, 'bin'))
+        apidoc_path = os.path.join(bin_path, apidoc_path)
+        swg2rst_path = os.path.join(bin_path, swg2rst_path)
+    check_call([apidoc_path, '-o', docs_path, os.path.join(root_path, 'user_tasks'),
+                os.path.join(root_path, 'user_tasks/migrations')])
+    json_path = os.path.join(docs_path, 'swagger.json')
+    rst_path = os.path.join(docs_path, 'rest_api.rst')
+    check_call([swg2rst_path, json_path, '-f', 'rst', '-o', rst_path])
+
+
 def setup(app):
-    """Sphinx extension for applying some CSS overrides to the output theme."""
+    """
+    Sphinx extension: run sphinx-apidoc and apply some CSS overrides to the output theme.
+    """
+    app.connect('builder-inited', on_init)
     app.add_stylesheet('theme_overrides.css')
