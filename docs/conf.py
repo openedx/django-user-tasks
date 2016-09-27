@@ -78,8 +78,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'django-user-tasks'
-copyright = '2016, edX Doc Team'  # pylint: disable=redefined-builtin
-author = 'edX Doc Team'
+copyright = '2016, edX Inc.'  # pylint: disable=redefined-builtin
+author = 'edX Inc.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -289,7 +289,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'django-user-tasks.tex', 'django-user-tasks Documentation',
-     'edX Doc Team', 'manual'),
+     'edX Inc.', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
