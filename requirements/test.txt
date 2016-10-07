@@ -10,7 +10,7 @@ billiard==3.3.0.23        # via celery
 celery==3.1.23
 coverage==4.2             # via pytest-cov
 django-model-utils==2.6
-djangorestframework==3.4.6
+djangorestframework==3.4.7
 kombu==3.0.35             # via celery
 mock==2.0.0
 packaging==16.7
