@@ -1,14 +1,29 @@
-Part of `edX code`__.
+django-user-tasks
+=================
 
-__ http://code.edx.org/
+.. image:: https://img.shields.io/pypi/v/django-user-tasks.svg
+    :target: https://pypi.python.org/pypi/django-user-tasks/
+    :alt: PyPI
 
-django-user-tasks  |Travis|_ |Codecov|_
-=======================================
-.. |Travis| image:: https://travis-ci.org/edx/django-user-tasks.svg?branch=master
-.. _Travis: https://travis-ci.org/edx/django-user-tasks
+.. image:: https://travis-ci.org/edx/django-user-tasks.svg?branch=master
+    :target: https://travis-ci.org/edx/django-user-tasks
+    :alt: Travis
 
-.. |Codecov| image:: http://codecov.io/github/edx/django-user-tasks/coverage.svg?branch=master
-.. _Codecov: http://codecov.io/github/edx/django-user-tasks?branch=master
+.. image:: http://codecov.io/github/edx/django-user-tasks/coverage.svg?branch=master
+    :target: http://codecov.io/github/edx/django-user-tasks?branch=master
+    :alt: Codecov
+
+.. image:: http://django-user-tasks.readthedocs.io/en/latest/?badge=latest
+    :target: http://django-user-tasks.readthedocs.io/en/latest/
+    :alt: Documentation
+
+.. image:: https://img.shields.io/pypi/pyversions/django-user-tasks.svg
+    :target: https://pypi.python.org/pypi/django-user-tasks/
+    :alt: Supported Python versions
+
+.. image:: https://img.shields.io/github/license/edx/django-user-tasks.svg
+    :target: https://github.com/edx/django-user-tasks/blob/master/LICENSE.txt
+    :alt: License
 
 django-user-tasks is a reusable Django application for managing user-triggered
 asynchronous tasks.  It provides a status page for each such task, which
@@ -85,9 +100,10 @@ Reporting Security Issues
 
 Please do not report security issues in public. Please email security@edx.org.
 
-Mailing List and IRC Channel
-----------------------------
+Getting Help
+------------
 
-You can discuss this code in the `edx-code Google Group`__ or in the ``#edx-code`` IRC channel on Freenode.
+Have a question about this repository, or about Open edX in general?  Please
+refer to this `list of resources`_ if you need any assistance.
 
-__ https://groups.google.com/forum/#!forum/edx-code
+.. _list of resources: https://open.edx.org/getting-help

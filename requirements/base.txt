@@ -7,9 +7,9 @@
 amqp==1.4.9               # via kombu
 anyjson==0.3.3            # via kombu
 billiard==3.3.0.23        # via celery
-celery==3.1.23
+celery==3.1.24
 django-model-utils==2.6
-Django==1.10.1            # via django-model-utils
+Django==1.10.2            # via django-model-utils
 djangorestframework==3.4.7
-kombu==3.0.35             # via celery
-pytz==2016.6.1            # via celery
+kombu==3.0.37             # via celery
+pytz==2016.7              # via celery
