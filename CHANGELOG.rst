@@ -14,7 +14,20 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+[0.1.1] - 2016-10-11
+~~~~~~~~~~~~~~~~~~~~
+
+Changed
+_______
+
+* Fix Travis configuration for PyPI deployments.
+* Switch from the Read the Docs Sphinx theme to the Open edX one for documentation.
+
+
+[0.1.0] - 2016-10-07
+~~~~~~~~~~~~~~~~~~~~
+
 Added
 _____
 
-* First release on PyPI.
+* First attempt to release on PyPI.

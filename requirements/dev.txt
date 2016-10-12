@@ -11,9 +11,9 @@ caniusepython3==4.0.0
 click==6.6                # via pip-tools
 clint==0.5.1              # via twine
 colorama==0.3.7           # via pylint
-distlib==0.2.3            # via caniusepython3
-django==1.10.1            # via edx-i18n-tools
-edx-i18n-tools==0.3.3
+distlib==0.2.4            # via caniusepython3
+django==1.10.2            # via edx-i18n-tools
+edx-i18n-tools==0.3.4
 edx-lint==0.5.1
 first==2.0.1              # via pip-tools
 futures==3.0.5            # via caniusepython3
@@ -27,12 +27,12 @@ pluggy==0.3.1             # via tox
 polib==1.0.7              # via edx-i18n-tools
 py==1.4.31                # via tox
 pycodestyle==2.0.0
-pydocstyle==1.0.0
+pydocstyle==1.1.1
 pylint-celery==0.3        # via edx-lint
 pylint-django==0.7.2      # via edx-lint
 pylint-plugin-utils==0.2.4  # via pylint-celery, pylint-django
 pylint==1.5.4             # via edx-lint, pylint-celery, pylint-django, pylint-plugin-utils
-pyparsing==2.1.9          # via packaging
+pyparsing==2.1.10         # via packaging
 pyYaml==3.12              # via edx-i18n-tools
 requests-toolbelt==0.7.0  # via twine
 requests==2.11.1          # via caniusepython3, requests-toolbelt, twine
