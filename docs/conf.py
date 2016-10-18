@@ -24,6 +24,9 @@ import edx_theme
 import django
 from django.utils import six
 
+sys.path.insert(0, os.path.join(os.path.abspath(os.path.dirname(__file__)), '..'))
+os.environ['DJANGO_SETTINGS_MODULE'] = 'schema.settings'
+
 # Configure Django for autodoc usage
 django.setup()
 
