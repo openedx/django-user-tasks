@@ -14,6 +14,17 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+[0.1.2] - 2016-12-05
+~~~~~~~~~~~~~~~~~~~~
+
+Changed
+-------
+
+* Add a migration to explicitly reference the setting for artifact file storage.
+  This setting is likely to vary between installations, but doesn't affect the
+  generated database schema.  This change should prevent ``makemigrations``
+  from creating a new migration whenever the setting value changes.
+
 [0.1.1] - 2016-10-11
 ~~~~~~~~~~~~~~~~~~~~
 

@@ -13,7 +13,7 @@ django-user-tasks
     :target: http://codecov.io/github/edx/django-user-tasks?branch=master
     :alt: Codecov
 
-.. image:: http://django-user-tasks.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/django-user-tasks/badge/?version=latest
     :target: http://django-user-tasks.readthedocs.io/en/latest/
     :alt: Documentation
 
