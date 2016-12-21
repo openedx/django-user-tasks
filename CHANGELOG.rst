@@ -14,6 +14,18 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+[0.1.3] - 2017-01-03
+~~~~~~~~~~~~~~~~~~~~
+
+Changed
+-------
+
+* Tasks which were explicitly canceled, failed, or retried no longer have
+  their status changed to ``Succeeded`` just because the task exited cleanly.
+* Celery tasks which fail to import cleanly by name (because they use a custom
+  name which isn't actually the fully qualified task name) are now just ignored
+  in the ``before_task_publish`` signal handler.
+
 [0.1.2] - 2016-12-05
 ~~~~~~~~~~~~~~~~~~~~
 

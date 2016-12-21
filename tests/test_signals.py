@@ -319,6 +319,14 @@ def failing_task(self, user_id, argument, **kwargs):  # pylint: disable=unused-a
     raise Exception('Boom!')
 
 
+@shared_task(base=SampleTask, bind=True)
+def manually_failed_task(self, user_id, argument, **kwargs):  # pylint: disable=unused-argument
+    """
+    A task using the UserTask framework which fails without throwing an exception.
+    """
+    self.status.fail("Something went wrong")
+
+
 @shared_task(bind=True)
 def normal_failing_task(self, *args, **kwargs):  # pylint: disable=unused-argument
     """
@@ -424,6 +432,25 @@ class TestStatusChanges(TestCase):
         status = statuses[0]
         assert status.task_id == result.id
         assert status.task_class == 'test_signals.failing_task'
+        assert status.user_id == self.user.id
+        assert status.parent is None
+        assert not status.is_container
+        assert status.name == 'SampleTask: Argument'
+        assert status.total_steps == 1
+        assert status.completed_steps == 0
+        assert status.state == UserTaskStatus.FAILED
+        assert status.attempts == 1
+        assert SIGNAL_DATA['received_status'].state == UserTaskStatus.FAILED
+
+    @override_settings(CELERY_ALWAYS_EAGER=True)
+    def test_manually_failed(self):
+        """A UserTask that failed cleanly (no exception) should have its status updated accordingly."""
+        result = manually_failed_task.delay(self.user.id, 'Argument')
+        statuses = UserTaskStatus.objects.all()
+        assert len(statuses) == 1
+        status = statuses[0]
+        assert status.task_id == result.id
+        assert status.task_class == 'test_signals.manually_failed_task'
         assert status.user_id == self.user.id
         assert status.parent is None
         assert not status.is_container
