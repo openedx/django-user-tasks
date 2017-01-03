@@ -30,11 +30,10 @@ def create_user_task(sender=None, body=None, **kwargs):  # pylint: disable=unuse
     Also creates a :py:class:`UserTaskStatus` for each chain, chord, or group containing
     the new :py:class:`UserTaskMixin`.
     """
-    if sender == 'celery.chord_unlock':
-        # Celery uses this pseudo-task in the implementation of chords
-        # It can't be imported and we don't need to do anything for it anyway
+    try:
+        task_class = import_string(sender)
+    except ImportError:
         return
-    task_class = import_string(sender)
     if issubclass(task_class.__class__, UserTaskMixin):
         arguments_dict = task_class.arguments_as_dict(*body['args'], **body['kwargs'])
         user_id = _get_user_id(arguments_dict)
@@ -215,5 +214,8 @@ def task_succeeded(sender=None, **kwargs):  # pylint: disable=unused-argument
     Update the status record accordingly when a :py:class:`UserTaskMixin` finishes successfully.
     """
     if isinstance(sender, UserTaskMixin):
-        sender.status.succeed()
+        status = sender.status
+        # Failed tasks with good exception handling did not succeed just because they ended cleanly
+        if status.state not in (UserTaskStatus.CANCELED, UserTaskStatus.FAILED, UserTaskStatus.RETRYING):
+            status.succeed()
         user_task_stopped.send_robust(sender=UserTaskStatus, status=sender.status)
