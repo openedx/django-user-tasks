@@ -4,7 +4,7 @@ language: python
 
 python:
   - 2.7
-  - 3.5
+  - 3.6
 
 env:
   - TOXENV=django18
@@ -13,9 +13,9 @@ env:
 
 matrix:
   include:
-    - python: 3.5
+    - python: 3.6
       env: TOXENV=quality
-    - python: 3.5
+    - python: 3.6
       env: TOXENV=docs
 
 cache:

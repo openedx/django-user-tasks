@@ -77,17 +77,22 @@ class UserTaskMixin(object):
         """
         task_id = self.request.id
         try:
+            # Most calls are for existing objects, don't waste time
+            # preparing creation arguments unless necessary
             return UserTaskStatus.objects.get(task_id=task_id)
         except UserTaskStatus.DoesNotExist:
             # Probably an eager task that skipped the before_task_publish
-            # signal.  Create a record for it.
+            # signal (or an atomic view where the new record hasn't been
+            # committed yet).  Create a record for it.
             arguments_dict = self.arguments_as_dict(*self.request.args, **self.request.kwargs)
             name = self.generate_name(arguments_dict)
             task_class = '.'.join([self.__class__.__module__, self.__class__.__name__])
             total_steps = self.calculate_total_steps(arguments_dict)
             user_id = arguments_dict['user_id']
-            return UserTaskStatus.objects.create(
-                name=name, task_id=task_id, task_class=task_class, total_steps=total_steps, user_id=user_id)
+            # Use get_or_create() again just in case another process created it in the meantime
+            return UserTaskStatus.objects.get_or_create(
+                task_id=task_id, defaults={'user_id': user_id, 'name': name, 'task_class': task_class,
+                                           'total_steps': total_steps})[0]
 
 
 class UserTask(Task, UserTaskMixin):  # pylint: disable=abstract-method

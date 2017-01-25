@@ -89,6 +89,7 @@ def receiver(sender, **kwargs):  # pylint: disable=unused-argument
         SIGNAL_DATA['received_status'].state += ' again'
     SIGNAL_DATA['received_status'] = kwargs.get('status')
 
+
 user_task_stopped.connect(receiver)
 
 

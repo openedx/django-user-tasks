@@ -52,6 +52,7 @@ def is_artifact_creator(user, artifact=None):
         return True
     return is_status_creator(user, artifact.status)
 
+
 STATUS_PERMISSION = is_status_creator | rules.predicates.is_superuser
 ARTIFACT_PERMISSION = is_artifact_creator | rules.predicates.is_superuser
 

@@ -101,3 +101,25 @@ When a subclass of :py:class:`user_tasks.tasks.UserTaskMixin` reaches any end st
 ``Succeeded``), a ``user_tasks.user_task_stopped`` signal is sent.  Listeners can use this signal to notify users of
 the status change, log relevant statistics, etc.  The signal's ``sender`` is the :py:class:`UserTaskStatus` class,
 and its ``status`` argument is the instance of that class for which the signal was sent.
+
+Note on Database Transactions
+-----------------------------
+
+If the code that triggers a :py:class:`user_tasks.tasks.UserTaskMixin` is
+contained in a database transaction, note that the Celery task may start
+before the new UserTaskStatus record has been committed to the database.
+``django-user-tasks`` tries to compensate for this, but it can still lead to
+errors in some pathological timing scenarios, so try to avoid creating such
+tasks during long transactions.  On Django 1.10 and later,
+`transaction.on_commit`_ can make this easier.
+
+Furthermore, Django used to default to
+`wrapping each request in a database transaction`_.  While this is no longer
+the default behavior, many older applications (or newer ones with specialized
+needs) are still using this atomic requests feature.  You should generally
+either use `transaction.on_commit`_ or the `transaction.non_atomic_requests`_
+decorator for views creating user tasks in applications with this setting enabled.
+
+.. _transaction.on_commit: https://docs.djangoproject.com/en/1.10/topics/db/transactions/#django.db.transaction.on_commit
+.. _wrapping each request in a database transaction: https://docs.djangoproject.com/en/1.11/topics/db/transactions/#tying-transactions-to-http-requests
+.. _transaction.non_atomic_requests: https://docs.djangoproject.com/en/1.11/topics/db/transactions/#django.db.transaction.non_atomic_requests
