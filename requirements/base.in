@@ -1,6 +1,6 @@
 # Core requirements for using this application
 
-celery                    # Asynchronous task execution library
+celery<4.0                # Asynchronous task execution library
 Django                    # Web application framework
 django-model-utils        # Provides TimeStampedModel abstract base class
 djangorestframework       # REST API framework

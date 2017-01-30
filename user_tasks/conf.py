@@ -67,4 +67,5 @@ class LazySettings(object):
         """
         return getattr(django_settings, 'USER_TASKS_STATUS_FILTERS', (filters.StatusFilterBackend,))
 
+
 settings = LazySettings()  # pylint: disable=invalid-name

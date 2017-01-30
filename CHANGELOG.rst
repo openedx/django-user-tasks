@@ -14,11 +14,23 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+*
+
+[0.1.4] - 2017-01-30
+~~~~~~~~~~~~~~~~~~~~
+
+Changed
++++++++
+
+* Slightly improved handling of tasks which start before their status records
+  are committed (due to database transactions).  Also documented how to avoid
+  this problem in the first place.
+
 [0.1.3] - 2017-01-03
 ~~~~~~~~~~~~~~~~~~~~
 
 Changed
--------
++++++++
 
 * Tasks which were explicitly canceled, failed, or retried no longer have
   their status changed to ``Succeeded`` just because the task exited cleanly.
@@ -30,7 +42,7 @@ Changed
 ~~~~~~~~~~~~~~~~~~~~
 
 Changed
--------
++++++++
 
 * Add a migration to explicitly reference the setting for artifact file storage.
   This setting is likely to vary between installations, but doesn't affect the
@@ -41,7 +53,7 @@ Changed
 ~~~~~~~~~~~~~~~~~~~~
 
 Changed
-_______
++++++++
 
 * Fix Travis configuration for PyPI deployments.
 * Switch from the Read the Docs Sphinx theme to the Open edX one for documentation.
@@ -51,6 +63,6 @@ _______
 ~~~~~~~~~~~~~~~~~~~~
 
 Added
-_____
++++++
 
 * First attempt to release on PyPI.
