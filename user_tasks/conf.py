@@ -24,7 +24,7 @@ class LazySettings(object):
         A tuple containing zero or more filters for UserTaskArtifact listing REST API calls.
 
         Each entry should be a Django REST Framework filter backend class
-        object, such as ``rest_framework.filters.DjangoFilterBackend``.
+        object, such as ``django_filters.rest_framework.DjangoFilterBackend``.
         The default value contains only ``user_tasks.filters.ArtifactFilterBackend``,
         which allows superusers to see all artifacts but other users to see only
         those for artifacts they triggered themselves.
@@ -60,7 +60,7 @@ class LazySettings(object):
         A tuple containing zero or more filters for UserTaskStatus listing REST API calls.
 
         Each entry should be a Django REST Framework filter backend class
-        object, such as ``rest_framework.filters.DjangoFilterBackend``.
+        object, such as ``django_filters.rest_framework.DjangoFilterBackend``.
         The default value contains only ``user_tasks.filters.StatusFilterBackend``,
         which allows superusers to see all task statuses but other users to see only
         those for tasks they triggered themselves.
