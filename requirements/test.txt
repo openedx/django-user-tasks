@@ -6,23 +6,23 @@
 #
 amqp==1.4.9               # via kombu
 anyjson==0.3.3            # via kombu
-appdirs==1.4.0            # via setuptools
+appdirs==1.4.3            # via setuptools
 billiard==3.3.0.23        # via celery
 celery==3.1.25
 coverage==4.3.4           # via pytest-cov
 django-model-utils==2.6.1
-djangorestframework==3.5.3
+djangorestframework==3.6.2
 kombu==3.0.37             # via celery
 mock==2.0.0
 packaging==16.8
-pbr==1.10.0               # via mock
-py==1.4.32                # via pytest, pytest-catchlog
-pyparsing==2.1.10         # via packaging
+pbr==2.1.0                # via mock
+py==1.4.33                # via pytest, pytest-catchlog
+pyparsing==2.2.0          # via packaging
 pytest-catchlog==1.2.2
 pytest-cov==2.4.0
 pytest-django==3.1.2
-pytest==3.0.6             # via pytest-catchlog, pytest-cov, pytest-django
-pytz==2016.10             # via celery
+pytest==3.0.7             # via pytest-catchlog, pytest-cov, pytest-django
+pytz==2017.2              # via celery, django
 rules==1.2
 six==1.10.0               # via mock, packaging, setuptools
 
