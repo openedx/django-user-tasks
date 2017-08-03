@@ -28,8 +28,10 @@ def is_status_creator(user, status=None):
         user (User): The user for whom a permission check is being made.
         status (UserTaskStatus): The status record to check ownership for.
 
-    Returns:
+    Returns
+    -------
         bool: True if no status is provided or the user owns the given status.
+
     """
     if not status:
         return True
@@ -45,8 +47,10 @@ def is_artifact_creator(user, artifact=None):
         user (User): The user for whom a permission check is being made.
         artifact (UserTaskArtifact): The artifact to check ownership for.
 
-    Returns:
+    Returns
+    -------
         bool: True if no artifact is provided or the user owns the given artifact.
+
     """
     if not artifact:
         return True

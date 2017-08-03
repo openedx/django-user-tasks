@@ -201,7 +201,7 @@ class TestCreateUserTask(TestCase):
         """Non-UserTask tasks should still pass through the before_task_publish handler cleanly."""
         normal_task.delay('Argument')
         statuses = UserTaskStatus.objects.all()
-        assert len(statuses) == 0
+        assert not statuses
 
     @override_settings(CELERY_ALWAYS_EAGER=True, CELERY_IGNORE_RESULT=False)
     def test_non_user_task_success(self):
@@ -209,7 +209,7 @@ class TestCreateUserTask(TestCase):
         result = normal_task.delay('Argument')
         assert result.get() == 'placeholder'
         statuses = UserTaskStatus.objects.all()
-        assert len(statuses) == 0
+        assert not statuses
 
     def _create_user_task(self, eager):
         """Create a task based on UserTaskMixin and verify some assertions about its corresponding status."""
@@ -486,7 +486,7 @@ class TestStatusChanges(TestCase):
         """Non-UserTask tasks should still pass through the failure handler cleanly."""
         normal_failing_task.delay('Argument')
         statuses = UserTaskStatus.objects.all()
-        assert len(statuses) == 0
+        assert not statuses
         assert 'received_status' not in SIGNAL_DATA
 
     @override_settings(CELERY_ALWAYS_EAGER=True)
@@ -494,7 +494,7 @@ class TestStatusChanges(TestCase):
         """Non-UserTask tasks should still pass through the retry handler cleanly."""
         normal_retried_task.delay('Argument')
         statuses = UserTaskStatus.objects.all()
-        assert len(statuses) == 0
+        assert not statuses
         assert 'received_status' not in SIGNAL_DATA
 
     def test_duplicate_stopped_signal(self):

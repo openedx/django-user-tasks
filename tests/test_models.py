@@ -212,8 +212,8 @@ class TestUserTaskArtifact(TestCase):
     def test_file_string(self):
         """File-based UserTaskArtifacts should have a reasonable string representation"""
         status = self._status()
-        file = SimpleUploadedFile('file.txt', b'File content')
-        artifact = UserTaskArtifact(status=status, file=file)
+        uploaded_file = SimpleUploadedFile('file.txt', b'File content')
+        artifact = UserTaskArtifact(status=status, file=uploaded_file)
         assert str(artifact) == '<UserTaskArtifact: (Output) file.txt>'
 
     def test_text_string(self):

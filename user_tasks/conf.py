@@ -21,7 +21,7 @@ class LazySettings(object):
     @property
     def USER_TASKS_ARTIFACT_FILTERS(self):  # pylint: disable=invalid-name
         """
-        A tuple containing zero or more filters for UserTaskArtifact listing REST API calls.
+        Tuple containing zero or more filters for UserTaskArtifact listing REST API calls.
 
         Each entry should be a Django REST Framework filter backend class
         object, such as ``django_filters.rest_framework.DjangoFilterBackend``.
@@ -34,7 +34,7 @@ class LazySettings(object):
     @property
     def USER_TASKS_ARTIFACT_STORAGE(self):  # pylint: disable=invalid-name
         """
-        The file storage backend to use for :py:attr:`user_tasks.models.UserTaskStatus.file`.
+        File storage backend to use for :py:attr:`user_tasks.models.UserTaskStatus.file`.
 
         If explicitly set, the setting should be the import path of a storage
         backend class.
@@ -45,7 +45,7 @@ class LazySettings(object):
     @property
     def USER_TASKS_MAX_AGE(self):  # pylint: disable=invalid-name
         """
-        A ``timedelta`` reflecting the age after which UserTaskStatus records should be deleted.
+        ``timedelta`` reflecting the age after which UserTaskStatus records should be deleted.
 
         For this setting to be useful, ``user_tasks.tasks.purge_old_user_tasks``
         should be configured to run on an appropriate schedule.  Note that the
@@ -57,7 +57,7 @@ class LazySettings(object):
     @property
     def USER_TASKS_STATUS_FILTERS(self):  # pylint: disable=invalid-name
         """
-        A tuple containing zero or more filters for UserTaskStatus listing REST API calls.
+        Tuple containing zero or more filters for UserTaskStatus listing REST API calls.
 
         Each entry should be a Django REST Framework filter backend class
         object, such as ``django_filters.rest_framework.DjangoFilterBackend``.
