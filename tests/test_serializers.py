@@ -92,8 +92,8 @@ class TestArtifactSerializer(TestCase):
 
     def test_file(self):
         """The serializer should handle file artifacts correctly."""
-        file = SimpleUploadedFile('filename.txt', b'Content of the file')
-        artifact = UserTaskArtifact.objects.create(status=self.status, file=file)
+        uploaded_file = SimpleUploadedFile('filename.txt', b'Content of the file')
+        artifact = UserTaskArtifact.objects.create(status=self.status, file=uploaded_file)
         expected = {
             'status': 'http://testserver/tasks/{}/'.format(self.status.uuid),
             'name': 'Output',

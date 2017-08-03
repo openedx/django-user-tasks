@@ -21,6 +21,7 @@ from django.utils.translation import ugettext_lazy as _
 from model_utils.models import TimeStampedModel
 
 from user_tasks import user_task_stopped
+
 from .conf import settings
 from .exceptions import TaskCanceledException
 

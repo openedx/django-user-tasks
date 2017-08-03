@@ -15,6 +15,7 @@ from django.db import transaction
 from django.utils.module_loading import import_string
 
 from user_tasks import user_task_stopped
+
 from .exceptions import TaskCanceledException
 from .models import UserTaskStatus
 from .tasks import UserTaskMixin
@@ -139,8 +140,10 @@ def _get_or_create_group_parent(message_body, user_id):
         user_id (int): The primary key of the user model record for the user who triggered the task.
                        (If using a custom user model, this may not be an integer.)
 
-    Returns:
+    Returns
+    -------
         UserTaskStatus: The status record for the containing group, or `None` if there isn't one
+
     """
     parent_id = message_body.get('taskset', None)
     if not parent_id:
@@ -164,8 +167,10 @@ def _get_user_id(arguments_dict):
     Arguments:
         arguments_dict (dict): The parsed positional and keyword arguments to the task
 
-    Returns:
+    Returns
+    -------
         int: The primary key of a user record (may not be an int if using a custom user model)
+
     """
     if 'user_id' not in arguments_dict:
         raise TypeError('Each invocation of a UserTaskMixin subclass must include the user_id')
