@@ -20,7 +20,7 @@ distlib==0.2.5            # via caniusepython3
 django-model-utils==3.0.0
 django==1.11.4            # via django-model-utils, edx-i18n-tools
 djangorestframework==3.6.3
-edx-i18n-tools==0.3.9
+edx-i18n-tools==0.4.2
 edx-lint==0.5.4
 first==2.0.1              # via pip-tools
 futures==3.1.1            # via caniusepython3
