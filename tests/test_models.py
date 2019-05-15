@@ -28,6 +28,7 @@ class TestUserTaskStatus(TestCase):
 
     @classmethod
     def setUpTestData(cls):
+        super(TestUserTaskStatus, cls).setUpTestData()
         cls.user = User.objects.create_user('test_user', 'test@example.com', 'password')
 
     def test_cancel_parent(self):
@@ -207,6 +208,7 @@ class TestUserTaskArtifact(TestCase):
 
     @classmethod
     def setUpTestData(cls):
+        super(TestUserTaskArtifact, cls).setUpTestData()
         cls.user = User.objects.create_user('test_user', 'test@example.com', 'password')
 
     def test_file_string(self):

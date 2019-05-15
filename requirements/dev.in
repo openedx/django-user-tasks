@@ -1,9 +1,10 @@
 # Additional requirements for development of this application
+-c constraints.txt
+
+-r quality.txt            # Dependencies for quality check utilities
+-r test.txt               # Dependencies for running unit tests
+-r travis.txt             # Dependencies for running tox
 
 edx-lint                  # For updating pylintrc
 edx-i18n-tools            # For i18n_tool dummy
 pip-tools                 # Requirements file management
-tox                       # virtualenv management for tests
-tox-battery==0.2          # Makes tox aware of requirements file changes (pinned due to https://github.com/signalpillar/tox-battery/issues/6)
-twine                     # Utility for PyPI package uploads
-wheel                     # For generation of wheels for PyPI

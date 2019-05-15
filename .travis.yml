@@ -7,13 +7,11 @@ python:
   - 3.6
 
 env:
-  - TOXENV=django18
-  - TOXENV=django19
-  - TOXENV=django110
+  - TOXENV=django111
 
 matrix:
   include:
-    - python: 3.5
+    - python: 3.6
       env: TOXENV=quality
     - python: 3.6
       env: TOXENV=docs

@@ -1,4 +1,7 @@
 # Requirements for documentation generation
+-c constraints.txt
+
+-r base.in                # Core package dependencies
 
 django-rest-swagger       # Generates a Swagger/Open API schema for the REST API
 doc8                      # reStructuredText style checker

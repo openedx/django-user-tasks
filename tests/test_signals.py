@@ -104,6 +104,7 @@ class TestCreateUserTask(TestCase):
 
     @classmethod
     def setUpTestData(cls):
+        super(TestCreateUserTask, cls).setUpTestData()
         cls.user = User.objects.create_user('test_user', 'test@example.com', 'password')
 
     def test_create_user_task(self):
@@ -384,6 +385,7 @@ class TestStatusChanges(TestCase):
 
     @classmethod
     def setUpTestData(cls):
+        super(TestStatusChanges, cls).setUpTestData()
         cls.user = User.objects.create_user('test_user', 'test@example.com', 'password')
 
     def test_canceled_before_execution(self):

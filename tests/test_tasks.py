@@ -70,6 +70,7 @@ class TestUserTasks(TestCase):
 
     @classmethod
     def setUpTestData(cls):
+        super(TestUserTasks, cls).setUpTestData()
         cls.user = User.objects.create_user('test_user', 'test@example.com', 'password')
 
     def test_generate_name_omitted(self):
@@ -116,6 +117,7 @@ class TestPurgeOldUserTasks(TestCase):
 
     @classmethod
     def setUpTestData(cls):
+        super(TestPurgeOldUserTasks, cls).setUpTestData()
         cls.user = User.objects.create_user('test_user', 'test@example.com', 'password')
 
     def test_old_data(self):

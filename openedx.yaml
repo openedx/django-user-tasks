@@ -1,7 +1,9 @@
 # openedx.yaml
 
 ---
-owner: edx/platform-team
+owner: jmbowman
+supporting-teams:
+    - platform-core
 nick: django-user-tasks
 tags:
     - tools
@@ -11,3 +13,4 @@ oeps:
     oep-5:
         state: False
         reason: Not a standalone service
+    oep-7: True

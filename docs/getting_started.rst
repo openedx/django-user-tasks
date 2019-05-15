@@ -7,7 +7,7 @@ for a single type of task:
 1. Install ``django-user-tasks`` (typically via
    ``pip install django-user-tasks``, but use whatever mechanism you've chosen
    for dependency management).
-2. Add ``django-user-tasks`` and ``rest_framework`` to the ``INSTALLED_APPS`` Django setting.
+2. Add ``user_tasks`` and ``rest_framework`` to the ``INSTALLED_APPS`` Django setting.
 3. Run migrations to create the required database tables.
 4. Create a subclass of :py:class:`user_tasks.tasks.UserTask` and override one or
    two of its methods.

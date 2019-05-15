@@ -59,6 +59,7 @@ class TestRestApi(APITestCase):
 
     @classmethod
     def setUpTestData(cls):
+        super(TestRestApi, cls).setUpTestData()
         cls.user = User.objects.create_user('test_user', 'test@example.com', 'password')
         cls.superuser = User.objects.create_superuser('admin', 'admin@example.com', 'password')
         cls.other_user = User.objects.create_user('other_user', 'other@example.com', 'password')

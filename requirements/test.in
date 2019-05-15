@@ -1,4 +1,7 @@
 # Additional requirements for test runs.
+-c constraints.txt
+
+-r base.in                # Core package dependencies
 
 mock                      # For setup of testing corner cases
 packaging                 # For version number parsing and comparisons
