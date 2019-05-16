@@ -14,6 +14,7 @@ from django.contrib.auth.models import User
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.core.urlresolvers import reverse
 from django.test import TestCase
+from django.utils.timezone import localtime
 
 from rest_framework.test import APIRequestFactory
 
@@ -25,7 +26,7 @@ def _format(datetime):
     """
     Generate the same text representation of the given datetime that DRF would.
     """
-    return datetime.isoformat().replace('+00:00', 'Z')
+    return localtime(datetime).isoformat()
 
 
 class TestStatusSerializer(TestCase):
@@ -35,6 +36,7 @@ class TestStatusSerializer(TestCase):
 
     @classmethod
     def setUpTestData(cls):
+        super(TestStatusSerializer, cls).setUpTestData()
         cls.user = User.objects.create_user('test_user', 'test@example.com', 'password')
 
     def test_output(self):
@@ -81,6 +83,7 @@ class TestArtifactSerializer(TestCase):
 
     @classmethod
     def setUpTestData(cls):
+        super(TestArtifactSerializer, cls).setUpTestData()
         user = User.objects.create_user('test_user', 'test@example.com', 'password')
         cls.status = UserTaskStatus.objects.create(user=user, task_id=str(uuid4()), name='SampleTask', total_steps=4)
 
