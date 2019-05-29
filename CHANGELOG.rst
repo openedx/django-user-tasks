@@ -16,6 +16,16 @@ Unreleased
 
 *
 
+[0.1.7] - 2019-05-29
+~~~~~~~~~~~~~~~~~~~~
+
+Changed
++++++++
+
+* Make ``UserTaskArtifact.url`` a ``TextField`` with a ``URLValidator``
+  instead of a ``URLField``.
+
+
 [0.1.6] - 2019-05-29
 ~~~~~~~~~~~~~~~~~~~~
 
