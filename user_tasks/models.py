@@ -11,6 +11,7 @@ from uuid import uuid4
 from celery import current_app
 
 from django.conf import settings as django_settings
+from django.core.validators import URLValidator
 from django.db import models, transaction
 from django.db.models import Q
 from django.db.models.expressions import F
@@ -237,7 +238,7 @@ class UserTaskArtifact(TimeStampedModel):
                             help_text='Distinguishes between multiple artifact types for the same task')
     file = models.FileField(null=True, blank=True, storage=settings.USER_TASKS_ARTIFACT_STORAGE,
                             upload_to='user_tasks/%Y/%m/%d/')
-    url = models.URLField(blank=True, max_length=512)
+    url = models.TextField(blank=True, validators=[URLValidator()])
     text = models.TextField(blank=True)
 
     def __str__(self):
