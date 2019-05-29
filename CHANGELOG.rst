@@ -16,6 +16,16 @@ Unreleased
 
 *
 
+[0.1.6] - 2019-05-29
+~~~~~~~~~~~~~~~~~~~~
+
+Changed
++++++++
+
+* Upgrade requirements.
+* Change ``max_length`` of ``UserTaskArtifact.url`` from 200 to 512.
+
+
 [0.1.5] - 2017-08-03
 ~~~~~~~~~~~~~~~~~~~~
 
