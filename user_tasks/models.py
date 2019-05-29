@@ -237,7 +237,7 @@ class UserTaskArtifact(TimeStampedModel):
                             help_text='Distinguishes between multiple artifact types for the same task')
     file = models.FileField(null=True, blank=True, storage=settings.USER_TASKS_ARTIFACT_STORAGE,
                             upload_to='user_tasks/%Y/%m/%d/')
-    url = models.URLField(blank=True)
+    url = models.URLField(blank=True, max_length=512)
     text = models.TextField(blank=True)
 
     def __str__(self):
