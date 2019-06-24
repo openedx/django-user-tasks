@@ -57,14 +57,17 @@ extract_translations: ## extract strings to be translated, outputting .mo files
 
 fake_translations: extract_translations dummy_translations compile_translations ## generate and compile dummy translation files
 
+# Define PIP_COMPILE_OPTS=-v to get more information during make upgrade.
+PIP_COMPILE = pip-compile --rebuild --upgrade $(PIP_COMPILE_OPTS)
+
 upgrade: export CUSTOM_COMPILE_COMMAND=make upgrade
 upgrade: ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
 	pip install -q pip-tools
-	pip-compile --rebuild --upgrade -o requirements/test.txt requirements/test.in
-	pip-compile --rebuild --upgrade -o requirements/doc.txt requirements/doc.in
-	pip-compile --rebuild --upgrade -o requirements/quality.txt requirements/quality.in
-	pip-compile --rebuild --upgrade -o requirements/dev.txt requirements/dev.in
-	pip-compile --rebuild --upgrade -o requirements/travis.txt requirements/travis.in
+	$(PIP_COMPILE) -o requirements/test.txt requirements/test.in
+	$(PIP_COMPILE) -o requirements/doc.txt requirements/doc.in
+	$(PIP_COMPILE) -o requirements/quality.txt requirements/quality.in
+	$(PIP_COMPILE) -o requirements/travis.txt requirements/travis.in
+	$(PIP_COMPILE) -o requirements/dev.txt requirements/dev.in
 	# Let tox control the Django version for tests
 	sed '/^django==/d' requirements/test.txt > requirements/test.tmp
 	mv requirements/test.tmp requirements/test.txt

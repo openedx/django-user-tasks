@@ -19,6 +19,11 @@ matrix:
 cache:
   - pip
 
+branches:
+  only:
+    - master
+    - /v?^\d+\.\d+(\.\d+)?(-\S*)?$/
+
 install:
   - pip install -r requirements/travis.txt
 
