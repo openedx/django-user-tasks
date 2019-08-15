@@ -20,7 +20,7 @@ chardet==3.0.4
 click-log==0.3.2
 click==7.0
 codecov==2.0.15
-configparser==3.7.4
+configparser==3.8.1
 contextlib2==0.5.5
 coverage==4.5.4
 distlib==0.2.9.post0
@@ -63,7 +63,7 @@ pytest==4.6.5
 pytz==2019.2
 pyyaml==5.1.2             # via edx-i18n-tools
 requests==2.22.0
-rules==2.0.1
+rules==2.1
 scandir==1.10.0
 singledispatch==3.4.0.3
 six==1.12.0
@@ -78,4 +78,4 @@ wrapt==1.11.2
 zipp==0.5.2
 
 # The following packages are considered to be unsafe in a requirements file:
-# setuptools==41.0.1        # via caniusepython3
+# setuptools==41.1.0        # via caniusepython3
