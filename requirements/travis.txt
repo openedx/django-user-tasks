@@ -8,7 +8,7 @@ attrs==19.1.0             # via packaging
 certifi==2019.6.16        # via requests
 chardet==3.0.4            # via requests
 codecov==2.0.15
-configparser==3.7.4       # via importlib-metadata
+configparser==3.8.1       # via importlib-metadata
 contextlib2==0.5.5        # via importlib-metadata
 coverage==4.5.4           # via codecov
 filelock==3.0.12          # via tox
