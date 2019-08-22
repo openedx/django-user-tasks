@@ -38,7 +38,7 @@ idna==2.8
 importlib-metadata==0.19
 isort==4.3.21
 kombu==3.0.37
-lazy-object-proxy==1.4.1
+lazy-object-proxy==1.4.2
 mccabe==0.6.1
 mock==3.0.5
 more-itertools==5.0.0
@@ -72,10 +72,10 @@ toml==0.10.0
 tox-battery==0.5.1
 tox==3.13.2
 urllib3==1.25.3
-virtualenv==16.7.2
+virtualenv==16.7.3
 wcwidth==0.1.7
 wrapt==1.11.2
 zipp==0.5.2
 
 # The following packages are considered to be unsafe in a requirements file:
-# setuptools==41.1.0        # via caniusepython3
+# setuptools==41.2.0        # via caniusepython3
