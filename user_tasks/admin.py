@@ -11,14 +11,18 @@ from .models import UserTaskArtifact, UserTaskStatus
 
 
 class UserTaskArtifactAdmin(admin.ModelAdmin):
-    """ Configuration for UserTaskArtifact admin panel. """
+    """
+    Configuration for UserTaskArtifact admin panel.
+    """
     list_display = ('created', 'uuid', 'status', 'name', 'text')
     ordering = ('created')
     search_fields = ('uuid', 'name', 'text')
 
 
 class UserTaskStatusAdmin(admin.ModelAdmin):
-    """ Configuration for UserTaskStatus admin panel. """
+    """
+    Configuration for UserTaskStatus admin panel.
+    """
     list_display = ('created', 'uuid', 'state', 'user', 'name')
     ordering = ('created')
     search_fields = ('uuid', 'task_id', 'task_class', 'user', 'name')
