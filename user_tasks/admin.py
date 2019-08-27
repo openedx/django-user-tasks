@@ -16,7 +16,7 @@ class UserTaskArtifactAdmin(admin.ModelAdmin):
     """
 
     list_display = ('created', 'uuid', 'status', 'name', 'text')
-    ordering = ('created')
+    ordering = ('created',)
     search_fields = ('uuid', 'name', 'text')
 
 
@@ -26,7 +26,7 @@ class UserTaskStatusAdmin(admin.ModelAdmin):
     """
 
     list_display = ('created', 'uuid', 'state', 'user', 'name')
-    ordering = ('created')
+    ordering = ('created',)
     search_fields = ('uuid', 'task_id', 'task_class', 'user', 'name')
 
 
