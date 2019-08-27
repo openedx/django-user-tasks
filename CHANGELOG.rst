@@ -16,6 +16,24 @@ Unreleased
 
 *
 
+[0.1.9] - 2019-08-27
+~~~~~~~~~~~~~~~~~~~~
+
+Changed
++++++++
+
+* Fix issue with `UserTaskArtifactAdmin` and `UserTaskStatusAdmin` where `ordering` attribute must be a tuple or list.
+
+
+[0.1.8] - 2019-08-22
+~~~~~~~~~~~~~~~~~~~~
+
+Changed
++++++++
+
+* Improve list display for `ModelAdmin`.
+
+
 [0.1.7] - 2019-05-29
 ~~~~~~~~~~~~~~~~~~~~
 
