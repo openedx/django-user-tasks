@@ -52,7 +52,7 @@ sphinxcontrib-websupport==1.1.2  # via sphinx
 stevedore==1.30.1         # via doc8
 strict-rfc3339==0.7       # via swagger2rst
 swagger2rst==0.0.4
-typing==3.7.4             # via sphinx
+typing==3.7.4.1           # via sphinx
 uritemplate==3.0.0        # via coreapi
 urllib3==1.25.3           # via requests
 webencodings==0.5.1       # via bleach
