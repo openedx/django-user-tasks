@@ -45,7 +45,7 @@ more-itertools==5.0.0
 packaging==19.1
 path.py==11.5.2           # via edx-i18n-tools
 pathlib2==2.3.4
-pip-tools==4.0.0
+pip-tools==4.1.0
 pluggy==0.12.0
 polib==1.1.0              # via edx-i18n-tools
 py==1.8.0
@@ -72,10 +72,10 @@ toml==0.10.0
 tox-battery==0.5.1
 tox==3.13.2
 urllib3==1.25.3
-virtualenv==16.7.3
+virtualenv==16.7.4
 wcwidth==0.1.7
 wrapt==1.11.2
-zipp==0.5.2
+zipp==0.6.0
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools==41.2.0        # via caniusepython3
