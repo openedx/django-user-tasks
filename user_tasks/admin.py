@@ -27,7 +27,9 @@ class UserTaskStatusAdmin(admin.ModelAdmin):
 
     list_display = ('created', 'uuid', 'state', 'user', 'name')
     ordering = ('-created',)
-    search_fields = ('uuid', 'task_id', 'task_class', 'user', 'name')
+    search_fields = (
+        'uuid', 'task_id', 'task_class', 'name', 'user__username', 'user__email'
+    )
 
 
 admin.site.register(UserTaskArtifact, UserTaskArtifactAdmin)
