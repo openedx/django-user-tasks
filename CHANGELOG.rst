@@ -16,6 +16,15 @@ Unreleased
 
 *
 
+[0.2.0] - 2019-08-30
+~~~~~~~~~~~~~~~~~~~~
+
+Changed
++++++++
+
+* Have the `start_user_task` receiver close obsolete connections before starting the task.
+
+
 [0.1.9] - 2019-08-27
 ~~~~~~~~~~~~~~~~~~~~
 
