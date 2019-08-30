@@ -11,7 +11,7 @@ from uuid import uuid4
 from celery.signals import before_task_publish, task_failure, task_prerun, task_retry, task_success
 
 from django.contrib.auth import get_user_model
-from django.db import transaction
+from django.db import close_old_connections, transaction
 from django.utils.module_loading import import_string
 
 from user_tasks import user_task_stopped
@@ -187,6 +187,11 @@ def start_user_task(sender=None, **kwargs):  # pylint: disable=unused-argument
     """
     Update the status record when execution of a :py:class:`UserTaskMixin` begins.
     """
+    # This should close any obsolete connections,
+    # forcing Django to grab a new connection the next time it makes a query.
+    # See: https://github.com/django/django/blob/master/django/db/__init__.py#L55
+    close_old_connections()
+
     if isinstance(sender, UserTaskMixin):
         sender.status.start()
 
