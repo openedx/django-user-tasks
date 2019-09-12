@@ -15,12 +15,12 @@ backports.os==0.1.1       # via path.py
 billiard==3.3.0.23
 caniusepython3==7.1.0
 celery==3.1.26.post2
-certifi==2019.6.16
+certifi==2019.9.11
 chardet==3.0.4
 click-log==0.3.2
 click==7.0
 codecov==2.0.15
-configparser==3.8.1
+configparser==4.0.2
 contextlib2==0.5.5
 coverage==4.5.4
 distlib==0.2.9.post0
@@ -35,7 +35,7 @@ funcsigs==1.0.2
 future==0.17.1            # via backports.os
 futures==3.3.0 ; python_version == "2.7"
 idna==2.8
-importlib-metadata==0.20
+importlib-metadata==0.22
 isort==4.3.21
 kombu==3.0.37
 lazy-object-proxy==1.4.2
@@ -46,7 +46,7 @@ packaging==19.1
 path.py==11.5.2           # via edx-i18n-tools
 pathlib2==2.3.4
 pip-tools==4.1.0
-pluggy==0.12.0
+pluggy==0.13.0
 polib==1.1.0              # via edx-i18n-tools
 py==1.8.0
 pycodestyle==2.5.0
@@ -67,7 +67,7 @@ rules==2.1
 scandir==1.10.0
 singledispatch==3.4.0.3
 six==1.12.0
-snowballstemmer==1.9.0
+snowballstemmer==1.9.1
 toml==0.10.0
 tox-battery==0.5.1
 tox==3.14.0
