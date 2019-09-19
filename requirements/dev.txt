@@ -35,14 +35,14 @@ funcsigs==1.0.2
 future==0.17.1            # via backports.os
 futures==3.3.0 ; python_version == "2.7"
 idna==2.8
-importlib-metadata==0.22
+importlib-metadata==0.23
 isort==4.3.21
 kombu==3.0.37
 lazy-object-proxy==1.4.2
 mccabe==0.6.1
 mock==3.0.5
 more-itertools==5.0.0
-packaging==19.1
+packaging==19.2
 path.py==11.5.2           # via edx-i18n-tools
 pathlib2==2.3.4
 pip-tools==4.1.0
