@@ -187,10 +187,22 @@ def start_user_task(sender=None, **kwargs):  # pylint: disable=unused-argument
     """
     Update the status record when execution of a :py:class:`UserTaskMixin` begins.
     """
-    # This should close any obsolete connections,
-    # forcing Django to grab a new connection the next time it makes a query.
-    # See: https://github.com/django/django/blob/master/django/db/__init__.py#L55
-    close_old_connections()
+    try:
+        current_connection = transaction.get_connection()
+    except Exception:  # pylint: disable=broad-except
+        current_connection = None
+
+    # We may be running this task in the context of an atomic transaction.
+    # If so, it's possible that the current transaction could be forced closed
+    # due to this block of code, where the `AUTOCOMMIT` defined in settings
+    # does not match the autocommit state of the current transaction:
+    # https://github.com/django/django/blob/1.11.24/django/db/backends/base/base.py#L510-L512
+    # Thus, we should only try to close old connections if we're not currently in an atomic block.
+    if current_connection and (not current_connection.in_atomic_block):
+        # This should close any obsolete connections,
+        # forcing Django to grab a new connection the next time it makes a query.
+        # See: https://github.com/django/django/blob/master/django/db/__init__.py#L55
+        close_old_connections()
 
     if isinstance(sender, UserTaskMixin):
         sender.status.start()

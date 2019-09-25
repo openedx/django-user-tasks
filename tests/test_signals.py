@@ -8,16 +8,19 @@ from __future__ import absolute_import, print_function, unicode_literals
 
 import logging
 
+import mock
 import pytest
 from celery import __version__ as celery_version
 from celery import chain, chord, group, shared_task
 from packaging import version
 
 from django.contrib.auth.models import User
-from django.test import TestCase, override_settings
+from django.db import transaction
+from django.test import TestCase, TransactionTestCase, override_settings
 
 from user_tasks import user_task_stopped
 from user_tasks.models import UserTaskStatus
+from user_tasks.signals import start_user_task
 from user_tasks.tasks import UserTask
 
 CELERY_VERSION = version.parse(celery_version)
@@ -507,3 +510,25 @@ class TestStatusChanges(TestCase):
         status.cancel()
         user_task_stopped.send_robust(sender=UserTaskStatus, status=status)
         assert SIGNAL_DATA['received_status'].state == UserTaskStatus.CANCELED + ' again'
+
+
+class TestConnectionClosing(TransactionTestCase):
+    """
+    Tests the logic around closing obsolete connections during task start.
+    """
+    @mock.patch('user_tasks.signals.close_old_connections', autospec=True)
+    def test_connections_closed_outside_atomic_block(self, mock_close_old_connections):
+        start_user_task(sender=SampleTask)
+        mock_close_old_connections.assert_called_once_with()
+
+    @mock.patch('user_tasks.signals.close_old_connections', autospec=True)
+    def test_connections_not_closed_inside_atomic_block(self, mock_close_old_connections):
+        with transaction.atomic():
+            start_user_task(sender=SampleTask)
+            assert mock_close_old_connections.called is False
+
+    @mock.patch('user_tasks.signals.close_old_connections', autospec=True)
+    def test_connections_not_closed_when_we_cant_get_a_connection(self, mock_close_old_connections):
+        with mock.patch('user_tasks.signals.transaction.get_connection', side_effect=Exception):
+            start_user_task(sender=SampleTask)
+            assert mock_close_old_connections.called is False

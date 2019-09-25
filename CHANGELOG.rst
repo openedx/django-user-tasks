@@ -16,6 +16,15 @@ Unreleased
 
 *
 
+[0.2.1] - 2019-09-25
+~~~~~~~~~~~~~~~~~~~~
+
+Changed
++++++++
+
+* `start_user_task` should only close obsolete connections if the current connection is NOT in an atomic block
+  (which fixes errors on devstack studio/course-publishing).
+
 [0.2.0] - 2019-08-30
 ~~~~~~~~~~~~~~~~~~~~
 
