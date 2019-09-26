@@ -54,7 +54,7 @@ strict-rfc3339==0.7       # via swagger2rst
 swagger2rst==0.0.4
 typing==3.7.4.1           # via sphinx
 uritemplate==3.0.0        # via coreapi
-urllib3==1.25.3           # via requests
+urllib3==1.25.6           # via requests
 webencodings==0.5.1       # via bleach
 
 # The following packages are considered to be unsafe in a requirements file:

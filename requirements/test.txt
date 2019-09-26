@@ -11,7 +11,7 @@ attrs==19.1.0             # via pytest
 billiard==3.3.0.23        # via celery
 celery==3.1.26.post2
 configparser==4.0.2       # via importlib-metadata
-contextlib2==0.5.5        # via importlib-metadata
+contextlib2==0.6.0        # via importlib-metadata
 coverage==4.5.4           # via pytest-cov
 django-model-utils==3.2.0
 djangorestframework==3.9.4
