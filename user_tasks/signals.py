@@ -40,9 +40,11 @@ def create_user_task(sender=None, body=None, **kwargs):  # pylint: disable=unuse
         user_id = _get_user_id(arguments_dict)
         task_id = body['id']
         if body.get('callbacks', []):
-            return _create_chain_entry(user_id, task_id, task_class, body['args'], body['kwargs'], body['callbacks'])
+            _create_chain_entry(user_id, task_id, task_class, body['args'], body['kwargs'], body['callbacks'])
+            return
         if body.get('chord', None):
-            return _create_chord_entry(task_id, task_class, body, user_id)
+            _create_chord_entry(task_id, task_class, body, user_id)
+            return
         parent = _get_or_create_group_parent(body, user_id)
         name = task_class.generate_name(arguments_dict)
         total_steps = task_class.calculate_total_steps(arguments_dict)

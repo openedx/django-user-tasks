@@ -28,7 +28,7 @@ functools32==3.2.3.post2 ; python_version == "2.7"  # via jsonschema
 idna==2.8                 # via requests
 imagesize==1.1.0          # via sphinx
 itypes==1.1.0             # via coreapi
-jinja2==2.10.1            # via coreschema, sphinx, swagger2rst
+jinja2==2.10.3            # via coreschema, sphinx, swagger2rst
 jsonschema==3.0.2         # via swagger2rst
 kombu==3.0.37             # via celery
 markupsafe==1.1.1         # via jinja2
@@ -38,7 +38,7 @@ pbr==5.4.3                # via stevedore
 pygments==2.4.2           # via readme-renderer, sphinx
 pyparsing==2.4.2          # via packaging
 pyrsistent==0.15.4        # via jsonschema
-pytz==2019.2              # via babel, celery, django
+pytz==2019.3              # via babel, celery, django
 pyyaml==5.1.2             # via swagger2rst
 readme-renderer==24.0
 requests==2.22.0          # via coreapi, sphinx
@@ -58,4 +58,4 @@ urllib3==1.25.6           # via requests
 webencodings==0.5.1       # via bleach
 
 # The following packages are considered to be unsafe in a requirements file:
-# setuptools==41.2.0        # via jsonschema, sphinx
+# setuptools==41.4.0        # via jsonschema, sphinx
