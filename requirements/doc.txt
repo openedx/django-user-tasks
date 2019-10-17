@@ -7,7 +7,7 @@
 alabaster==0.7.12         # via sphinx
 amqp==1.4.9               # via kombu
 anyjson==0.3.3            # via kombu
-attrs==19.2.0             # via jsonschema
+attrs==19.3.0             # via jsonschema
 babel==2.7.0              # via sphinx
 billiard==3.3.0.23        # via celery
 bleach==3.1.0             # via readme-renderer
@@ -16,7 +16,7 @@ celery==3.1.26.post2
 certifi==2019.9.11        # via requests
 chardet==3.0.4            # via doc8, requests
 configparser==4.0.2       # via importlib-metadata
-contextlib2==0.6.0        # via importlib-metadata
+contextlib2==0.6.0.post1  # via importlib-metadata
 coreapi==2.3.3            # via django-rest-swagger, openapi-codec
 coreschema==0.0.4         # via coreapi
 django-model-utils==3.2.0
