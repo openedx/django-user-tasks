@@ -55,9 +55,9 @@ pylint-celery==0.3
 pylint-django==0.11.1
 pylint-plugin-utils==0.6
 pylint==1.9.5
-pyparsing==2.4.4
+pyparsing==2.4.5
 pytest-cov==2.8.1
-pytest-django==3.6.0
+pytest-django==3.7.0
 pytest==4.6.6
 pytz==2019.3
 pyyaml==5.1.2             # via edx-i18n-tools
@@ -69,8 +69,8 @@ six==1.13.0
 snowballstemmer==2.0.0
 toml==0.10.0
 tox-battery==0.5.1
-tox==3.14.0
-urllib3==1.25.6
+tox==3.14.1
+urllib3==1.25.7
 virtualenv==16.7.7
 wcwidth==0.1.7
 wrapt==1.11.2
