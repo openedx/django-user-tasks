@@ -55,8 +55,7 @@ class ArtifactSerializer(serializers.HyperlinkedModelSerializer):
         Arguments:
             obj (UserTaskArtifact): The artifact being serialized
 
-        Returns
-        -------
+        Returns:
             six.text_type: The URL of the artifact's file field (empty if there isn't one)
 
         """

@@ -22,6 +22,7 @@ def root(*args):
     """
     return join(abspath(dirname(__file__)), *args)
 
+
 AUTHENTICATION_BACKENDS = (
     'rules.permissions.ObjectPermissionBackend',
     'django.contrib.auth.backends.ModelBackend',
@@ -44,7 +45,9 @@ DATABASES = {
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django.contrib.messages',
     'django.contrib.sessions',
+    'django.contrib.admin',
     'rest_framework',
     'user_tasks.apps.UserTasksConfig',
 )
@@ -55,8 +58,21 @@ LOCALE_PATHS = [
 
 MEDIA_ROOT = tempfile.mkdtemp()
 
-ROOT_URLCONF = 'user_tasks.urls'
+MIDDLEWARE = (
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+)
+
+ROOT_URLCONF = 'test_urls'
 
 SECRET_KEY = 'insecure-secret-key'
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'APP_DIRS': True,
+    }
+]
 
 USE_TZ = True

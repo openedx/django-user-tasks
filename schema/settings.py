@@ -11,13 +11,11 @@ from test_settings import *  # pylint: disable=wildcard-import
 DEBUG = True
 
 INSTALLED_APPS += (
-    'django.contrib.messages',
-    'django.contrib.admin',
     'django.contrib.staticfiles',
     'rest_framework_swagger',
 )
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE = (
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
