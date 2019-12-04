@@ -6,7 +6,7 @@ from __future__ import absolute_import, unicode_literals
 
 from django.dispatch import Signal
 
-__version__ = '0.2.1'
+__version__ = '0.3.0'
 
 default_app_config = 'user_tasks.apps.UserTasksConfig'  # pylint: disable=invalid-name
 
