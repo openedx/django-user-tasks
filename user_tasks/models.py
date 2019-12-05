@@ -59,7 +59,11 @@ class UserTaskStatus(TimeStampedModel):
     }
 
     uuid = models.UUIDField(default=uuid4, unique=True, editable=False, help_text='Unique ID for use in APIs')
-    user = models.ForeignKey(django_settings.AUTH_USER_MODEL, help_text='The user who triggered the task')
+    user = models.ForeignKey(
+        django_settings.AUTH_USER_MODEL,
+        help_text='The user who triggered the task',
+        on_delete=models.CASCADE,
+    )
     # Auto-generated Celery task IDs will always be 36 characters, but longer custom ones can be specified
     task_id = models.CharField(max_length=128, unique=True, db_index=True,
                                help_text='UUID of the associated Celery task')
@@ -233,7 +237,7 @@ class UserTaskArtifact(TimeStampedModel):
     """
 
     uuid = models.UUIDField(default=uuid4, unique=True, editable=False, help_text='Unique ID for use in APIs')
-    status = models.ForeignKey(UserTaskStatus, related_name='artifacts')
+    status = models.ForeignKey(UserTaskStatus, on_delete=models.CASCADE, related_name='artifacts')
     name = models.CharField(max_length=255, default='Output',
                             help_text='Distinguishes between multiple artifact types for the same task')
     file = models.FileField(null=True, blank=True, storage=settings.USER_TASKS_ARTIFACT_STORAGE,

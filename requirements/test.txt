@@ -16,7 +16,7 @@ coverage==4.5.4           # via pytest-cov
 django-model-utils==3.2.0
 djangorestframework==3.9.4
 funcsigs==1.0.2           # via mock, pytest
-importlib-metadata==0.23  # via pluggy, pytest
+importlib-metadata==1.1.0  # via pluggy, pytest
 kombu==3.0.37             # via celery
 mock==3.0.5
 more-itertools==5.0.0     # via pytest, zipp

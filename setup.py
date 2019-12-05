@@ -22,6 +22,7 @@ def get_version(*file_paths):
         return version_match.group(1)
     raise RuntimeError('Unable to find version string.')
 
+
 VERSION = get_version('user_tasks', '__init__.py')
 
 if sys.argv[-1] == 'tag':
@@ -38,6 +39,7 @@ setup(
     version=VERSION,
     description="""Management of user-triggered asynchronous tasks in Django projects""",
     long_description=README + '\n\n' + CHANGELOG,
+    long_description_content_type='text/x-rst',
     author='edX',
     author_email='oscm@edx.org',
     url='https://github.com/edx/django-user-tasks',
@@ -53,12 +55,15 @@ setup(
         'Development Status :: 4 - Beta',
         'Framework :: Django',
         'Framework :: Django :: 1.11',
+        'Framework :: Django :: 2.0',
+        'Framework :: Django :: 2.1',
+        'Framework :: Django :: 2.2',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
         'Natural Language :: English',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.5',
     ],
 )

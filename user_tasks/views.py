@@ -65,8 +65,7 @@ class StatusViewSet(
         Arguments:
             request (Request): A POST including a task status record ID
 
-        Returns
-        -------
+        Returns:
             Response: A JSON response indicating whether the cancellation succeeded or not
 
         """
