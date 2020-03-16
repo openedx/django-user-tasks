@@ -11,3 +11,6 @@
 # These packages are backports which can only be installed on Python 2.7
 functools32 ; python_version == "2.7"
 futures ; python_version == "2.7"
+
+# 4.0.0 drops support for Django 1.11
+django-model-utils<4.0.0
