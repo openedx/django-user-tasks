@@ -4,29 +4,28 @@
 #
 #    make upgrade
 #
-amqp==1.4.9               # via kombu
-anyjson==0.3.3            # via kombu
+amqp==1.4.9               # via -r requirements/base.txt, kombu
+anyjson==0.3.3            # via -r requirements/base.txt, kombu
 attrs==19.3.0             # via pytest
-billiard==3.3.0.23        # via celery
-celery==3.1.26.post2
+billiard==3.3.0.23        # via -r requirements/base.txt, celery
+celery==3.1.26.post2      # via -r requirements/base.txt
 coverage==5.0.3           # via pytest-cov
-django-model-utils==3.2.0
-djangorestframework==3.11.0
+django-model-utils==3.2.0  # via -c requirements/constraints.txt, -r requirements/base.txt
 importlib-metadata==1.5.0  # via pluggy, pytest
-kombu==3.0.37             # via celery
-mock==3.0.5
+kombu==3.0.37             # via -r requirements/base.txt, celery
+mock==3.0.5               # via -r requirements/test.in
 more-itertools==8.2.0     # via pytest
-packaging==20.3
+packaging==20.3           # via -r requirements/test.in, pytest
 pathlib2==2.3.5           # via pytest
 pluggy==0.13.1            # via pytest
 py==1.8.1                 # via pytest
 pyparsing==2.4.6          # via packaging
-pytest-cov==2.8.1
-pytest-django==3.8.0
+pytest-cov==2.8.1         # via -r requirements/test.in
+pytest-django==3.8.0      # via -r requirements/test.in
 pytest==5.4.1             # via pytest-cov, pytest-django
-pytz==2019.3              # via celery, django
-rules==2.2
+pytz==2019.3              # via -r requirements/base.txt, celery, django
+rules==2.2                # via -r requirements/test.in
 six==1.14.0               # via mock, packaging, pathlib2
-sqlparse==0.3.1           # via django
+sqlparse==0.3.1           # via -r requirements/base.txt, django
 wcwidth==0.1.8            # via pytest
 zipp==1.2.0               # via importlib-metadata
