@@ -20,4 +20,4 @@ class UserTasksConfig(AppConfig):
         """
         Register Celery signal handlers.
         """
-        import user_tasks.signals  # pylint: disable=unused-variable
+        import user_tasks.signals  # pylint: disable=unused-variable, import-outside-toplevel, unused-import

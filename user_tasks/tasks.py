@@ -19,7 +19,7 @@ from .models import UserTaskStatus
 LOGGER = logging.getLogger(__name__)
 
 
-class UserTaskMixin(object):
+class UserTaskMixin():
     """
     Mixin class for user-triggered Celery tasks.
 
