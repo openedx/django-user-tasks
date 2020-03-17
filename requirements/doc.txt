@@ -10,9 +10,9 @@ anyjson==0.3.3            # via -r requirements/base.txt, kombu
 attrs==19.3.0             # via jsonschema
 babel==2.8.0              # via sphinx
 billiard==3.3.0.23        # via -r requirements/base.txt, celery
-bleach==3.1.1             # via readme-renderer
+bleach==3.1.3             # via readme-renderer
 cached-property==1.5.1    # via swagger2rst
-celery==3.1.26.post2      # via -r requirements/base.txt
+celery==3.1.26.post2      # via -c requirements/constraints.txt, -r requirements/base.txt
 certifi==2019.11.28       # via requests
 chardet==3.0.4            # via doc8, requests
 coreapi==2.3.3            # via django-rest-swagger, openapi-codec

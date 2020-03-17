@@ -13,13 +13,13 @@ attrs==19.3.0             # via -r requirements/test.txt, pytest
 backports.functools-lru-cache==1.6.1  # via -r requirements/quality.txt, caniusepython3
 billiard==3.3.0.23        # via -r requirements/test.txt, celery
 caniusepython3==7.2.0     # via -r requirements/quality.txt
-celery==3.1.26.post2      # via -r requirements/test.txt
+celery==3.1.26.post2      # via -c requirements/constraints.txt, -r requirements/test.txt
 certifi==2019.11.28       # via -r requirements/quality.txt, -r requirements/travis.txt, requests
 chardet==3.0.4            # via -r requirements/quality.txt, -r requirements/travis.txt, requests
 click-log==0.3.2          # via -r requirements/quality.txt, edx-lint
 click==7.1.1              # via -r requirements/pip-tools.txt, -r requirements/quality.txt, click-log, edx-lint, pip-tools
-codecov==2.0.16           # via -r requirements/travis.txt
-coverage==5.0.3           # via -r requirements/test.txt, -r requirements/travis.txt, codecov, pytest-cov
+codecov==2.0.17           # via -r requirements/travis.txt
+coverage==5.0.4           # via -r requirements/test.txt, -r requirements/travis.txt, codecov, pytest-cov
 distlib==0.3.0            # via -r requirements/quality.txt, -r requirements/travis.txt, caniusepython3, virtualenv
 django-model-utils==3.2.0  # via -c requirements/constraints.txt, -r requirements/test.txt
 django==2.2.11            # via -r requirements/test.txt, django-model-utils, djangorestframework, edx-i18n-tools
@@ -35,7 +35,7 @@ kombu==3.0.37             # via -r requirements/test.txt, celery
 lazy-object-proxy==1.4.3  # via -r requirements/quality.txt, astroid
 mccabe==0.6.1             # via -r requirements/quality.txt, pylint
 mock==3.0.5               # via -r requirements/test.txt
-more-itertools==5.0.0     # via -c requirements/constraints.txt, -r requirements/test.txt, pytest
+more-itertools==8.2.0     # via -r requirements/test.txt, pytest
 packaging==20.3           # via -r requirements/quality.txt, -r requirements/test.txt, -r requirements/travis.txt, caniusepython3, pytest, tox
 path.py==12.4.0           # via edx-i18n-tools
 path==13.1.0              # via path.py
@@ -58,7 +58,7 @@ pytz==2019.3              # via -r requirements/test.txt, celery, django
 pyyaml==5.3               # via edx-i18n-tools
 requests==2.23.0          # via -r requirements/quality.txt, -r requirements/travis.txt, caniusepython3, codecov
 rules==2.2                # via -r requirements/test.txt
-six==1.14.0               # via -r requirements/pip-tools.txt, -r requirements/quality.txt, -r requirements/test.txt, -r requirements/travis.txt, astroid, edx-i18n-tools, edx-lint, mock, more-itertools, packaging, pathlib2, pip-tools, tox, virtualenv
+six==1.14.0               # via -r requirements/pip-tools.txt, -r requirements/quality.txt, -r requirements/test.txt, -r requirements/travis.txt, astroid, edx-i18n-tools, edx-lint, mock, packaging, pathlib2, pip-tools, tox, virtualenv
 snowballstemmer==2.0.0    # via -r requirements/quality.txt, pydocstyle
 sqlparse==0.3.1           # via -r requirements/test.txt, django
 toml==0.10.0              # via -r requirements/travis.txt, tox

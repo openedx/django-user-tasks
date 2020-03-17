@@ -71,12 +71,9 @@ upgrade: ## update the requirements/*.txt files with the latest packages satisfy
 	$(PIP_COMPILE) -o requirements/quality.txt requirements/quality.in
 	$(PIP_COMPILE) -o requirements/travis.txt requirements/travis.in
 	$(PIP_COMPILE) -o requirements/dev.txt requirements/dev.in
-
-	# Delete django, drf pins from test.txt so that tox can control
-	# Django version.
-	sed -i.tmp '/^[dD]jango==/d' requirements/test.txt
-	sed -i.tmp '/^djangorestframework==/d' requirements/test.txt
-	rm requirements/test.txt.tmp
+	# Let tox control the Django version for tests
+	sed '/^[dD]jango==/d' requirements/test.txt > requirements/test.tmp
+	mv requirements/test.tmp requirements/test.txt
 
 pull_translations: ## pull translations from Transifex
 	tx pull -a

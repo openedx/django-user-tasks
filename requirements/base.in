@@ -1,7 +1,7 @@
 # Core requirements for using this application
 -c constraints.txt
 
-celery<4.0                # Asynchronous task execution library
-Django                    # Web application framework
-django-model-utils        # Provides TimeStampedModel abstract base class
-djangorestframework       # REST API framework
+celery                      # Asynchronous task execution library
+Django                      # Web application framework
+django-model-utils>=2.0     # Provides TimeStampedModel abstract base class
+djangorestframework>=3.0.4  # REST API framework
