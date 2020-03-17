@@ -18,12 +18,12 @@ certifi==2019.11.28       # via -r requirements/quality.txt, -r requirements/tra
 chardet==3.0.4            # via -r requirements/quality.txt, -r requirements/travis.txt, requests
 click-log==0.3.2          # via -r requirements/quality.txt, edx-lint
 click==7.1.1              # via -r requirements/pip-tools.txt, -r requirements/quality.txt, click-log, edx-lint, pip-tools
-codecov==2.0.17           # via -r requirements/travis.txt
+codecov==2.0.18           # via -r requirements/travis.txt
 coverage==5.0.4           # via -r requirements/test.txt, -r requirements/travis.txt, codecov, pytest-cov
 distlib==0.3.0            # via -r requirements/quality.txt, -r requirements/travis.txt, caniusepython3, virtualenv
 django-model-utils==3.2.0  # via -c requirements/constraints.txt, -r requirements/test.txt
-django==2.2.11            # via -r requirements/test.txt, django-model-utils, djangorestframework, edx-i18n-tools
-djangorestframework==3.11.0  # via -r requirements/test.txt
+django==2.2.11            # via -r requirements/test.txt, django-model-utils, edx-i18n-tools
+djangorestframework==3.9.4  # via -c requirements/constraints.txt, -r requirements/test.txt
 edx-i18n-tools==0.5.0     # via -r requirements/dev.in
 edx-lint==1.4.1           # via -r requirements/dev.in, -r requirements/quality.txt
 filelock==3.0.12          # via -r requirements/travis.txt, tox, virtualenv
