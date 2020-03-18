@@ -56,7 +56,6 @@ def missing_user_id(self, *args, **kwargs):  # pylint: disable=unused-argument
     """
     Example of a UserTask subclass which doesn't specifically require the mandatory user_id argument.
     """
-    pass
 
 
 @shared_task(bind=True)

@@ -26,7 +26,6 @@ class MinimalTask(Task, UserTaskMixin):  # pylint: disable=abstract-method
     """
     A minimal UserTaskMixin subclass which uses the default name and total_steps generation.
     """
-    pass
 
 
 @shared_task(base=MinimalTask, bind=True)

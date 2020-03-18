@@ -13,7 +13,7 @@ from django.core.files.storage import get_storage_class
 from user_tasks import filters
 
 
-class LazySettings(object):
+class LazySettings():
     """
     The behavior of ``django-user-tasks`` can be customized via the following Django settings.
     """

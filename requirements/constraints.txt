@@ -8,6 +8,12 @@
 # pin when possible.  Writing an issue against the offending project and
 # linking to it here is good.
 
-# These packages are backports which can only be installed on Python 2.7
-functools32 ; python_version == "2.7"
-futures ; python_version == "2.7"
+# significant updates required to support celery 4.0.0
+celery<4.0.0
+
+# 4.0.0 drops support for Django 1.11
+django-model-utils<4.0.0
+
+# Requires work, including removal of detail_route. See:
+# https://www.django-rest-framework.org/community/3.8-announcement/#action-decorator-replaces-list_route-and-detail_route
+djangorestframework<3.10.0
