@@ -14,7 +14,7 @@ backports.functools-lru-cache==1.6.1  # via -r requirements/quality.txt, caniuse
 billiard==3.3.0.23        # via -r requirements/test.txt, celery
 caniusepython3==7.2.0     # via -r requirements/quality.txt
 celery==3.1.26.post2      # via -c requirements/constraints.txt, -r requirements/test.txt
-certifi==2019.11.28       # via -r requirements/quality.txt, -r requirements/travis.txt, requests
+certifi==2020.4.5.1       # via -r requirements/quality.txt, -r requirements/travis.txt, requests
 chardet==3.0.4            # via -r requirements/quality.txt, -r requirements/travis.txt, requests
 click-log==0.3.2          # via -r requirements/quality.txt, edx-lint
 click==7.1.1              # via -r requirements/pip-tools.txt, -r requirements/quality.txt, click-log, edx-lint, pip-tools
@@ -50,7 +50,7 @@ pylint-celery==0.3        # via -r requirements/quality.txt, edx-lint
 pylint-django==2.0.11     # via -r requirements/quality.txt, edx-lint
 pylint-plugin-utils==0.6  # via -r requirements/quality.txt, pylint-celery, pylint-django
 pylint==2.4.2             # via -r requirements/quality.txt, edx-lint, pylint-celery, pylint-django, pylint-plugin-utils
-pyparsing==2.4.6          # via -r requirements/quality.txt, -r requirements/test.txt, -r requirements/travis.txt, packaging
+pyparsing==2.4.7          # via -r requirements/quality.txt, -r requirements/test.txt, -r requirements/travis.txt, packaging
 pytest-cov==2.8.1         # via -r requirements/test.txt
 pytest-django==3.9.0      # via -r requirements/test.txt
 pytest==5.4.1             # via -r requirements/test.txt, pytest-cov, pytest-django
@@ -66,7 +66,7 @@ tox-battery==0.5.2        # via -r requirements/travis.txt
 tox==3.14.6               # via -r requirements/travis.txt, tox-battery
 typed-ast==1.4.1          # via -r requirements/quality.txt, astroid
 urllib3==1.25.8           # via -r requirements/quality.txt, -r requirements/travis.txt, requests
-virtualenv==20.0.15       # via -r requirements/travis.txt, tox
+virtualenv==20.0.17       # via -r requirements/travis.txt, tox
 wcwidth==0.1.9            # via -r requirements/test.txt, pytest
 wrapt==1.11.2             # via -r requirements/quality.txt, astroid
 zipp==1.2.0               # via -r requirements/test.txt, -r requirements/travis.txt, importlib-metadata, importlib-resources
