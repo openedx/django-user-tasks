@@ -30,7 +30,7 @@ requests==2.23.0          # via caniusepython3
 six==1.14.0               # via astroid, edx-lint, packaging
 snowballstemmer==2.0.0    # via pydocstyle
 typed-ast==1.4.1          # via astroid
-urllib3==1.25.8           # via requests
+urllib3==1.25.9           # via requests
 wrapt==1.11.2             # via astroid
 
 # The following packages are considered to be unsafe in a requirements file:

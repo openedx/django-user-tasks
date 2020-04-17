@@ -28,7 +28,7 @@ idna==2.9                 # via requests
 imagesize==1.2.0          # via sphinx
 importlib-metadata==1.6.0  # via jsonschema
 itypes==1.1.0             # via coreapi
-jinja2==2.11.1            # via coreschema, sphinx, swagger2rst
+jinja2==2.11.2            # via coreschema, sphinx, swagger2rst
 jsonschema==3.2.0         # via swagger2rst
 kombu==3.0.37             # via -r requirements/base.txt, celery
 markupsafe==1.1.1         # via jinja2
@@ -49,7 +49,7 @@ rules==2.2                # via -r requirements/doc.in
 simplejson==3.17.0        # via django-rest-swagger
 six==1.14.0               # via bleach, doc8, edx-sphinx-theme, jsonschema, packaging, pyrsistent, readme-renderer, stevedore
 snowballstemmer==2.0.0    # via sphinx
-sphinx==3.0.0             # via -r requirements/doc.in, edx-sphinx-theme
+sphinx==3.0.1             # via -r requirements/doc.in, edx-sphinx-theme
 sphinxcontrib-applehelp==1.0.2  # via sphinx
 sphinxcontrib-devhelp==1.0.2  # via sphinx
 sphinxcontrib-htmlhelp==1.0.3  # via sphinx
@@ -63,7 +63,7 @@ swagger2rst==0.0.4        # via -r requirements/doc.in
 tqdm==4.45.0              # via twine
 twine==1.15.0             # via -r requirements/doc.in
 uritemplate==3.0.1        # via coreapi
-urllib3==1.25.8           # via requests
+urllib3==1.25.9           # via requests
 webencodings==0.5.1       # via bleach
 zipp==1.2.0               # via importlib-metadata
 
