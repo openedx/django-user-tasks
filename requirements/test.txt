@@ -24,7 +24,7 @@ pyparsing==2.4.7          # via packaging
 pytest-cov==2.8.1         # via -r requirements/test.in
 pytest-django==3.9.0      # via -r requirements/test.in
 pytest==5.4.1             # via pytest-cov, pytest-django
-pytz==2019.3              # via -r requirements/base.txt, celery, django
+pytz==2020.1              # via -r requirements/base.txt, celery, django
 rules==2.2                # via -r requirements/test.in
 six==1.14.0               # via mock, packaging, pathlib2
 sqlparse==0.3.1           # via -r requirements/base.txt, django
