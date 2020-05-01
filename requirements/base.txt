@@ -12,5 +12,5 @@ django-model-utils==3.2.0  # via -c requirements/constraints.txt, -r requirement
 django==2.2.12            # via -r requirements/base.in, django-model-utils
 djangorestframework==3.9.4  # via -c requirements/constraints.txt, -r requirements/base.in
 kombu==3.0.37             # via celery
-pytz==2019.3              # via celery, django
+pytz==2020.1              # via celery, django
 sqlparse==0.3.1           # via django
