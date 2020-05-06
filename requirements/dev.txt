@@ -21,8 +21,8 @@ click==7.1.2              # via -r requirements/pip-tools.txt, -r requirements/q
 codecov==2.0.22           # via -r requirements/travis.txt
 coverage==5.1             # via -r requirements/test.txt, -r requirements/travis.txt, codecov, pytest-cov
 distlib==0.3.0            # via -r requirements/quality.txt, -r requirements/travis.txt, caniusepython3, virtualenv
-django-model-utils==3.2.0  # via -c requirements/constraints.txt, -r requirements/test.txt
-django==2.2.12            # via -r requirements/test.txt, django-model-utils, edx-i18n-tools
+django-model-utils==4.0.0  # via -r requirements/test.txt
+django==2.2.12            # via -c requirements/constraints.txt, -r requirements/test.txt, django-model-utils, edx-i18n-tools
 djangorestframework==3.9.4  # via -c requirements/constraints.txt, -r requirements/test.txt
 edx-i18n-tools==0.5.0     # via -r requirements/dev.in
 edx-lint==1.4.1           # via -r requirements/dev.in, -r requirements/quality.txt

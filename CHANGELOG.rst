@@ -19,6 +19,19 @@ Unreleased
 [1.0.0] - 2020-03-18
 ~~~~~~~~~~~~~~~~~~~~
 
+Added
++++++++
+
+* Added support for python 3.8
+
+Removed
++++++++
+
+* Dropped support for Django < 2.2
+
+[1.0.0] - 2020-03-18
+~~~~~~~~~~~~~~~~~~~~
+
 Removed
 +++++++
 
