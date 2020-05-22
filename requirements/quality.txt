@@ -18,7 +18,7 @@ idna==2.9                 # via requests
 isort==4.3.21             # via -r requirements/quality.in, pylint
 lazy-object-proxy==1.4.3  # via astroid
 mccabe==0.6.1             # via pylint
-packaging==20.3           # via caniusepython3
+packaging==20.4           # via caniusepython3
 pycodestyle==2.6.0        # via -r requirements/quality.in
 pydocstyle==5.0.2         # via -r requirements/quality.in
 pylint-celery==0.3        # via edx-lint
@@ -27,7 +27,7 @@ pylint-plugin-utils==0.6  # via pylint-celery, pylint-django
 pylint==2.4.2             # via edx-lint, pylint-celery, pylint-django, pylint-plugin-utils
 pyparsing==2.4.7          # via packaging
 requests==2.23.0          # via caniusepython3
-six==1.14.0               # via astroid, edx-lint, packaging
+six==1.15.0               # via astroid, edx-lint, packaging
 snowballstemmer==2.0.0    # via pydocstyle
 typed-ast==1.4.1          # via astroid
 urllib3==1.25.9           # via requests
