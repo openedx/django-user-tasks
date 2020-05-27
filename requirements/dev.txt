@@ -51,7 +51,7 @@ pylint-django==2.0.11     # via -r requirements/quality.txt, edx-lint
 pylint-plugin-utils==0.6  # via -r requirements/quality.txt, pylint-celery, pylint-django
 pylint==2.4.2             # via -r requirements/quality.txt, edx-lint, pylint-celery, pylint-django, pylint-plugin-utils
 pyparsing==2.4.7          # via -r requirements/quality.txt, -r requirements/test.txt, -r requirements/travis.txt, packaging
-pytest-cov==2.8.1         # via -r requirements/test.txt
+pytest-cov==2.9.0         # via -r requirements/test.txt
 pytest-django==3.9.0      # via -r requirements/test.txt
 pytest==5.4.2             # via -r requirements/test.txt, pytest-cov, pytest-django
 pytz==2020.1              # via -r requirements/test.txt, celery, django
@@ -62,7 +62,7 @@ six==1.15.0               # via -r requirements/pip-tools.txt, -r requirements/q
 snowballstemmer==2.0.0    # via -r requirements/quality.txt, pydocstyle
 sqlparse==0.3.1           # via -r requirements/test.txt, django
 toml==0.10.1              # via -r requirements/travis.txt, tox
-tox-battery==0.6.0        # via -r requirements/travis.txt
+tox-battery==0.5.2        # via -c requirements/constraints.txt, -r requirements/travis.txt
 tox==3.15.1               # via -r requirements/travis.txt, tox-battery
 typed-ast==1.4.1          # via -r requirements/quality.txt, astroid
 urllib3==1.25.9           # via -r requirements/quality.txt, -r requirements/travis.txt, requests
