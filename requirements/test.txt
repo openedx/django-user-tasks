@@ -15,18 +15,18 @@ djangorestframework==3.9.4  # via -c requirements/constraints.txt, -r requiremen
 importlib-metadata==1.6.0  # via pluggy, pytest
 kombu==3.0.37             # via -r requirements/base.txt, celery
 mock==3.0.5               # via -r requirements/test.in
-more-itertools==8.2.0     # via pytest
-packaging==20.3           # via -r requirements/test.in, pytest
+more-itertools==8.3.0     # via pytest
+packaging==20.4           # via -r requirements/test.in, pytest
 pathlib2==2.3.5           # via pytest
 pluggy==0.13.1            # via pytest
 py==1.8.1                 # via pytest
 pyparsing==2.4.7          # via packaging
-pytest-cov==2.8.1         # via -r requirements/test.in
+pytest-cov==2.9.0         # via -r requirements/test.in
 pytest-django==3.9.0      # via -r requirements/test.in
 pytest==5.4.2             # via pytest-cov, pytest-django
 pytz==2020.1              # via -r requirements/base.txt, celery, django
 rules==2.2                # via -r requirements/test.in
-six==1.14.0               # via mock, packaging, pathlib2
+six==1.15.0               # via mock, packaging, pathlib2
 sqlparse==0.3.1           # via -r requirements/base.txt, django
 wcwidth==0.1.9            # via pytest
 zipp==1.2.0               # via importlib-metadata
