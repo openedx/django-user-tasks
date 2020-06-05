@@ -23,10 +23,10 @@ py==1.8.1                 # via pytest
 pyparsing==2.4.7          # via packaging
 pytest-cov==2.9.0         # via -r requirements/test.in
 pytest-django==3.9.0      # via -r requirements/test.in
-pytest==5.4.2             # via pytest-cov, pytest-django
+pytest==5.4.3             # via pytest-cov, pytest-django
 pytz==2020.1              # via -r requirements/base.txt, celery, django
 rules==2.2                # via -r requirements/test.in
 six==1.15.0               # via mock, packaging, pathlib2
 sqlparse==0.3.1           # via -r requirements/base.txt, django
-wcwidth==0.1.9            # via pytest
+wcwidth==0.2.3            # via pytest
 zipp==1.2.0               # via importlib-metadata

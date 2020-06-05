@@ -9,7 +9,7 @@ anyjson==0.3.3            # via kombu
 billiard==3.3.0.23        # via celery
 celery==3.1.26.post2      # via -c requirements/constraints.txt, -r requirements/base.in
 django-model-utils==4.0.0  # via -r requirements/base.in
-django==2.2.12            # via -c requirements/constraints.txt, -r requirements/base.in, django-model-utils
+django==2.2.13            # via -c requirements/constraints.txt, -r requirements/base.in, django-model-utils
 djangorestframework==3.9.4  # via -c requirements/constraints.txt, -r requirements/base.in
 kombu==3.0.37             # via celery
 pytz==2020.1              # via celery, django
