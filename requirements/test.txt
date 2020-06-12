@@ -12,7 +12,7 @@ celery==3.1.26.post2      # via -c requirements/constraints.txt, -r requirements
 coverage==5.1             # via pytest-cov
 django-model-utils==4.0.0  # via -r requirements/base.txt
 djangorestframework==3.9.4  # via -c requirements/constraints.txt, -r requirements/base.txt
-importlib-metadata==1.6.0  # via pluggy, pytest
+importlib-metadata==1.6.1  # via pluggy, pytest
 kombu==3.0.37             # via -r requirements/base.txt, celery
 mock==3.0.5               # via -r requirements/test.in
 more-itertools==8.3.0     # via pytest
@@ -28,5 +28,5 @@ pytz==2020.1              # via -r requirements/base.txt, celery, django
 rules==2.2                # via -r requirements/test.in
 six==1.15.0               # via mock, packaging, pathlib2
 sqlparse==0.3.1           # via -r requirements/base.txt, django
-wcwidth==0.2.3            # via pytest
+wcwidth==0.2.4            # via pytest
 zipp==1.2.0               # via importlib-metadata
