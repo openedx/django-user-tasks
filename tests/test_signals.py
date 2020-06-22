@@ -4,8 +4,6 @@
 Tests for the ``django-user-tasks`` Celery signal handlers and Django signal.
 """
 
-from __future__ import absolute_import, print_function, unicode_literals
-
 import logging
 
 import mock

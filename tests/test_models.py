@@ -4,8 +4,6 @@
 Tests for the `django-user-tasks` models module.
 """
 
-from __future__ import absolute_import, unicode_literals
-
 import logging
 from uuid import uuid4
 

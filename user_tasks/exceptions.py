@@ -3,8 +3,6 @@
 Custom exception classes.
 """
 
-from __future__ import absolute_import, unicode_literals
-
 
 class TaskCanceledException(RuntimeError):
     """

@@ -2,8 +2,6 @@
 Management of user-triggered asynchronous tasks in Django projects.
 """
 
-from __future__ import absolute_import, unicode_literals
-
 from django.dispatch import Signal
 
 __version__ = '1.1.0'

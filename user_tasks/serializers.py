@@ -3,8 +3,6 @@
 REST API serialization classes.
 """
 
-from __future__ import absolute_import, unicode_literals
-
 from rest_framework import serializers
 
 from .models import UserTaskArtifact, UserTaskStatus

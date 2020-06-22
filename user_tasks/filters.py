@@ -4,8 +4,6 @@
 Optional Django REST Framework filter backends for the ``django-user-tasks`` REST API.
 """
 
-from __future__ import absolute_import, unicode_literals
-
 from rest_framework.filters import BaseFilterBackend
 
 
