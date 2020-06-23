@@ -22,7 +22,6 @@ from subprocess import check_call
 import edx_theme
 
 import django
-from django.utils import six
 
 sys.path.insert(0, os.path.join(os.path.abspath(os.path.dirname(__file__)), '..'))
 os.environ['DJANGO_SETTINGS_MODULE'] = 'schema.settings'
@@ -488,5 +487,5 @@ def setup(app):
     """
     Sphinx extension: run sphinx-apidoc and swg2rst.
     """
-    event = 'builder-inited' if six.PY3 else b'builder-inited'
+    event = 'builder-inited'
     app.connect(event, on_init)
