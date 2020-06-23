@@ -3,8 +3,6 @@
 Custom Django settings for django-user-tasks.
 """
 
-from __future__ import absolute_import, unicode_literals
-
 from datetime import timedelta
 
 from django.conf import settings as django_settings

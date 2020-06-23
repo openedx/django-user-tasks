@@ -4,8 +4,6 @@
 Tests for the REST API model serializers.
 """
 
-from __future__ import absolute_import, unicode_literals
-
 import shutil
 from uuid import uuid4
 

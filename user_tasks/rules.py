@@ -14,8 +14,6 @@ custom rules.)  You can register them in another application's ``rules.py``:
     user_tasks.rules.add_rules()
 """
 
-from __future__ import absolute_import, unicode_literals
-
 import rules
 
 

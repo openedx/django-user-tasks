@@ -4,8 +4,6 @@ Django settings used when generating the REST API schema documentation for djang
 Django admin is also enabled (for convenience of verifying changes to ``user_tasks/admin.py``.
 """
 
-from __future__ import absolute_import, unicode_literals
-
 from test_settings import *  # pylint: disable=wildcard-import
 
 DEBUG = True

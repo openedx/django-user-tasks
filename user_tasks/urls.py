@@ -2,7 +2,6 @@
 """
 URLs for user_tasks.
 """
-from __future__ import absolute_import, unicode_literals
 
 from rest_framework.routers import SimpleRouter
 
