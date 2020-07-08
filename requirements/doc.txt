@@ -13,7 +13,7 @@ billiard==3.3.0.23        # via -r requirements/base.txt, celery
 bleach==3.1.5             # via readme-renderer
 cached-property==1.5.1    # via swagger2rst
 celery==3.1.26.post2      # via -c requirements/constraints.txt, -r requirements/base.txt
-certifi==2020.4.5.2       # via requests
+certifi==2020.6.20        # via requests
 chardet==3.0.4            # via doc8, requests
 coreapi==2.3.3            # via django-rest-swagger, openapi-codec
 coreschema==0.0.4         # via coreapi
