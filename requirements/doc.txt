@@ -19,14 +19,14 @@ coreapi==2.3.3            # via django-rest-swagger, openapi-codec
 coreschema==0.0.4         # via coreapi
 django-model-utils==4.0.0  # via -r requirements/base.txt
 django-rest-swagger==2.2.0  # via -r requirements/doc.in
-django==2.2.13            # via -c requirements/constraints.txt, -r requirements/base.txt, django-model-utils
+django==2.2.14            # via -c requirements/constraints.txt, -r requirements/base.txt, django-model-utils
 djangorestframework==3.9.4  # via -c requirements/constraints.txt, -r requirements/base.txt, django-rest-swagger
 doc8==0.8.1               # via -r requirements/doc.in
 docutils==0.16            # via doc8, readme-renderer, restructuredtext-lint, sphinx
 edx-sphinx-theme==1.5.0   # via -r requirements/doc.in
-idna==2.9                 # via requests
+idna==2.10                # via requests
 imagesize==1.2.0          # via sphinx
-importlib-metadata==1.6.1  # via jsonschema
+importlib-metadata==1.7.0  # via jsonschema
 itypes==1.2.0             # via coreapi
 jinja2==2.11.2            # via coreschema, sphinx, swagger2rst
 jsonschema==3.2.0         # via swagger2rst
@@ -49,7 +49,7 @@ rules==2.2                # via -r requirements/doc.in
 simplejson==3.17.0        # via django-rest-swagger
 six==1.15.0               # via bleach, doc8, edx-sphinx-theme, jsonschema, packaging, pyrsistent, readme-renderer, stevedore
 snowballstemmer==2.0.0    # via sphinx
-sphinx==3.1.1             # via -r requirements/doc.in, edx-sphinx-theme
+sphinx==3.1.2             # via -r requirements/doc.in, edx-sphinx-theme
 sphinxcontrib-applehelp==1.0.2  # via sphinx
 sphinxcontrib-devhelp==1.0.2  # via sphinx
 sphinxcontrib-htmlhelp==1.0.3  # via sphinx
@@ -60,7 +60,7 @@ sqlparse==0.3.1           # via -r requirements/base.txt, django
 stevedore==1.32.0         # via doc8
 strict-rfc3339==0.7       # via swagger2rst
 swagger2rst==0.0.4        # via -r requirements/doc.in
-tqdm==4.46.1              # via twine
+tqdm==4.47.0              # via twine
 twine==1.15.0             # via -r requirements/doc.in
 uritemplate==3.0.1        # via coreapi
 urllib3==1.25.9           # via requests
