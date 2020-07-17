@@ -15,7 +15,7 @@ certifi==2020.6.20        # via -r requirements/travis.txt, requests
 chardet==3.0.4            # via -r requirements/travis.txt, requests
 click-log==0.3.2          # via -r requirements/quality.txt, edx-lint
 click==7.1.2              # via -r requirements/pip-tools.txt, -r requirements/quality.txt, click-log, edx-lint, pip-tools
-codecov==2.1.7            # via -r requirements/travis.txt
+codecov==2.1.8            # via -r requirements/travis.txt
 coverage==5.2             # via -r requirements/test.txt, -r requirements/travis.txt, codecov, pytest-cov
 distlib==0.3.1            # via -r requirements/travis.txt, virtualenv
 django-model-utils==4.0.0  # via -r requirements/test.txt
@@ -60,10 +60,10 @@ snowballstemmer==2.0.0    # via -r requirements/quality.txt, pydocstyle
 sqlparse==0.3.1           # via -r requirements/test.txt, django
 toml==0.10.1              # via -r requirements/travis.txt, tox
 tox-battery==0.6.1        # via -r requirements/travis.txt
-tox==3.16.1               # via -r requirements/travis.txt, tox-battery
+tox==3.17.1               # via -r requirements/travis.txt, tox-battery
 typed-ast==1.4.1          # via -r requirements/quality.txt, astroid
 urllib3==1.25.9           # via -r requirements/travis.txt, requests
-virtualenv==20.0.26       # via -r requirements/travis.txt, tox
+virtualenv==20.0.27       # via -r requirements/travis.txt, tox
 wcwidth==0.2.5            # via -r requirements/test.txt, pytest
 wrapt==1.11.2             # via -r requirements/quality.txt, astroid
 zipp==1.2.0               # via -r requirements/test.txt, -r requirements/travis.txt, importlib-metadata, importlib-resources
