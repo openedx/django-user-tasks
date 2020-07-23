@@ -17,9 +17,9 @@ import os
 import sys
 from subprocess import check_call
 
-import edx_theme
-
 import django
+
+import edx_theme
 
 sys.path.insert(0, os.path.join(os.path.abspath(os.path.dirname(__file__)), '..'))
 os.environ['DJANGO_SETTINGS_MODULE'] = 'schema.settings'
