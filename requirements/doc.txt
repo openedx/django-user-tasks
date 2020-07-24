@@ -63,7 +63,7 @@ swagger2rst==0.0.4        # via -r requirements/doc.in
 tqdm==4.48.0              # via twine
 twine==1.15.0             # via -r requirements/doc.in
 uritemplate==3.0.1        # via coreapi
-urllib3==1.25.9           # via requests
+urllib3==1.25.10          # via requests
 webencodings==0.5.1       # via bleach
 zipp==1.2.0               # via importlib-metadata
 
