@@ -9,10 +9,11 @@ anyjson==0.3.3            # via -r requirements/base.txt, kombu
 attrs==19.3.0             # via pytest
 billiard==3.3.0.23        # via -r requirements/base.txt, celery
 celery==3.1.26.post2      # via -c requirements/constraints.txt, -r requirements/base.txt
-coverage==5.2             # via pytest-cov
+coverage==5.2.1           # via pytest-cov
 django-model-utils==4.0.0  # via -r requirements/base.txt
 djangorestframework==3.9.4  # via -c requirements/constraints.txt, -r requirements/base.txt
 importlib-metadata==1.7.0  # via pluggy, pytest
+iniconfig==1.0.0          # via pytest
 kombu==3.0.37             # via -r requirements/base.txt, celery
 mock==3.0.5               # via -r requirements/test.in
 more-itertools==8.4.0     # via pytest
@@ -23,10 +24,10 @@ py==1.9.0                 # via pytest
 pyparsing==2.4.7          # via packaging
 pytest-cov==2.10.0        # via -r requirements/test.in
 pytest-django==3.9.0      # via -r requirements/test.in
-pytest==5.4.3             # via pytest-cov, pytest-django
+pytest==6.0.1             # via pytest-cov, pytest-django
 pytz==2020.1              # via -r requirements/base.txt, celery, django
 rules==2.2                # via -r requirements/test.in
 six==1.15.0               # via mock, packaging, pathlib2
 sqlparse==0.3.1           # via -r requirements/base.txt, django
-wcwidth==0.2.5            # via pytest
+toml==0.10.1              # via pytest
 zipp==1.2.0               # via importlib-metadata
