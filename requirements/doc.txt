@@ -19,7 +19,7 @@ coreapi==2.3.3            # via django-rest-swagger, openapi-codec
 coreschema==0.0.4         # via coreapi
 django-model-utils==4.0.0  # via -r requirements/base.txt
 django-rest-swagger==2.2.0  # via -r requirements/doc.in
-django==2.2.14            # via -c requirements/constraints.txt, -r requirements/base.txt, django-model-utils
+django==2.2.15            # via -c requirements/constraints.txt, -r requirements/base.txt, django-model-utils
 djangorestframework==3.9.4  # via -c requirements/constraints.txt, -r requirements/base.txt, django-rest-swagger
 doc8==0.8.1               # via -r requirements/doc.in
 docutils==0.16            # via doc8, readme-renderer, restructuredtext-lint, sphinx
@@ -60,7 +60,7 @@ sqlparse==0.3.1           # via -r requirements/base.txt, django
 stevedore==1.32.0         # via doc8
 strict-rfc3339==0.7       # via swagger2rst
 swagger2rst==0.0.4        # via -r requirements/doc.in
-tqdm==4.48.0              # via twine
+tqdm==4.48.2              # via twine
 twine==1.15.0             # via -r requirements/doc.in
 uritemplate==3.0.1        # via coreapi
 urllib3==1.25.10          # via requests
