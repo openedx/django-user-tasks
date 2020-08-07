@@ -19,7 +19,7 @@ codecov==2.1.8            # via -r requirements/travis.txt
 coverage==5.2.1           # via -r requirements/test.txt, -r requirements/travis.txt, codecov, pytest-cov
 distlib==0.3.1            # via -r requirements/travis.txt, virtualenv
 django-model-utils==4.0.0  # via -r requirements/test.txt
-django==2.2.14            # via -c requirements/constraints.txt, -r requirements/test.txt, django-model-utils, edx-i18n-tools
+django==2.2.15            # via -c requirements/constraints.txt, -r requirements/test.txt, django-model-utils, edx-i18n-tools
 djangorestframework==3.9.4  # via -c requirements/constraints.txt, -r requirements/test.txt
 edx-i18n-tools==0.5.3     # via -r requirements/dev.in
 edx-lint==1.5.0           # via -r requirements/dev.in, -r requirements/quality.txt
@@ -27,7 +27,7 @@ filelock==3.0.12          # via -r requirements/travis.txt, tox, virtualenv
 idna==2.10                # via -r requirements/travis.txt, requests
 importlib-metadata==1.7.0  # via -r requirements/test.txt, -r requirements/travis.txt, path, pluggy, pytest, tox, virtualenv
 importlib-resources==3.0.0  # via -r requirements/travis.txt, virtualenv
-iniconfig==1.0.0          # via -r requirements/test.txt, pytest
+iniconfig==1.0.1          # via -r requirements/test.txt, pytest
 isort==4.3.21             # via -r requirements/quality.txt, pylint
 kombu==3.0.37             # via -r requirements/test.txt, celery
 lazy-object-proxy==1.4.3  # via -r requirements/quality.txt, astroid
@@ -38,7 +38,7 @@ packaging==20.4           # via -r requirements/test.txt, -r requirements/travis
 path.py==12.5.0           # via edx-i18n-tools
 path==13.1.0              # via path.py
 pathlib2==2.3.5           # via -r requirements/test.txt, pytest
-pip-tools==5.3.0          # via -r requirements/pip-tools.txt
+pip-tools==5.3.1          # via -r requirements/pip-tools.txt
 pluggy==0.13.1            # via -r requirements/test.txt, -r requirements/travis.txt, pytest, tox
 polib==1.1.0              # via edx-i18n-tools
 py==1.9.0                 # via -r requirements/test.txt, -r requirements/travis.txt, pytest, tox
@@ -61,10 +61,10 @@ snowballstemmer==2.0.0    # via -r requirements/quality.txt, pydocstyle
 sqlparse==0.3.1           # via -r requirements/test.txt, django
 toml==0.10.1              # via -r requirements/test.txt, -r requirements/travis.txt, pytest, tox
 tox-battery==0.6.1        # via -r requirements/travis.txt
-tox==3.18.1               # via -r requirements/travis.txt, tox-battery
+tox==3.19.0               # via -r requirements/travis.txt, tox-battery
 typed-ast==1.4.1          # via -r requirements/quality.txt, astroid
 urllib3==1.25.10          # via -r requirements/travis.txt, requests
-virtualenv==20.0.28       # via -r requirements/travis.txt, tox
+virtualenv==20.0.30       # via -r requirements/travis.txt, tox
 wrapt==1.11.2             # via -r requirements/quality.txt, astroid
 zipp==1.2.0               # via -r requirements/test.txt, -r requirements/travis.txt, importlib-metadata, importlib-resources
 
