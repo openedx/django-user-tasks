@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # pylint: disable=invalid-name
 """
 django-user-tasks documentation build configuration file.

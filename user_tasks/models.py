@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Database models for user_tasks.
 """
@@ -13,7 +12,6 @@ from django.core.validators import URLValidator
 from django.db import models, transaction
 from django.db.models import Q
 from django.db.models.expressions import F
-from django.utils.encoding import python_2_unicode_compatible
 from django.utils.timezone import now
 from django.utils.translation import ugettext_lazy as _
 
@@ -30,7 +28,6 @@ LOGGER = logging.getLogger(__name__)
 # See https://github.com/landscapeio/pylint-django/issues/35 for more details
 
 
-@python_2_unicode_compatible
 class UserTaskStatus(TimeStampedModel):
     """
     The current status of an asynchronous task running on behalf of a particular user.
@@ -226,7 +223,6 @@ class UserTaskStatus(TimeStampedModel):
         return '<UserTaskStatus: {}>'.format(self.name)
 
 
-@python_2_unicode_compatible
 class UserTaskArtifact(TimeStampedModel):
     """
     An artifact (or error message) generated for a user by an asynchronous task.

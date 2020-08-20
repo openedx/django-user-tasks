@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """
 Tests for the ``django-user-tasks`` REST API.
 """
@@ -47,17 +46,17 @@ class TestRestApi(APITestCase):
 
     @classmethod
     def setUpClass(cls):
-        super(TestRestApi, cls).setUpClass()
+        super().setUpClass()
         add_rules()
 
     @classmethod
     def tearDownClass(cls):
-        super(TestRestApi, cls).tearDownClass()
+        super().tearDownClass()
         rules.rulesets.default_rules.clear()
 
     @classmethod
     def setUpTestData(cls):
-        super(TestRestApi, cls).setUpTestData()
+        super().setUpTestData()
         cls.user = User.objects.create_user('test_user', 'test@example.com', 'password')
         cls.superuser = User.objects.create_superuser('admin', 'admin@example.com', 'password')
         cls.other_user = User.objects.create_user('other_user', 'other@example.com', 'password')
@@ -72,7 +71,7 @@ class TestRestApi(APITestCase):
         UserTaskStatus.objects.filter(pk=cls.older_status.id).update(created=yesterday, modified=yesterday)
 
     def setUp(self):
-        super(TestRestApi, self).setUp()
+        super().setUp()
         self.status.refresh_from_db()
         self.older_status.refresh_from_db()
 

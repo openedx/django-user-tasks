@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 URLs for user_tasks test suite.
 """

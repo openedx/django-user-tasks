@@ -1,8 +1,6 @@
 """
 Views for rendering REST API schema documents.
 """
-
-import io
 import logging
 import os
 
@@ -26,10 +24,10 @@ class ConditionalOpenAPIRenderer(OpenAPIRenderer):
         Render the appropriate Open API JSON file.
         """
         if 'SWAGGER_JSON_PATH' in os.environ:
-            with io.open(os.environ['SWAGGER_JSON_PATH'], 'rb') as f:
+            with open(os.environ['SWAGGER_JSON_PATH'], 'rb') as f:
                 return f.read()
         else:
-            return super(ConditionalOpenAPIRenderer, self).render(data, accepted_media_type, renderer_context)
+            return super().render(data, accepted_media_type, renderer_context)
 
 
 @api_view()

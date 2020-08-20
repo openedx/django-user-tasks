@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Celery signal handlers and custom Django signal.
 """
