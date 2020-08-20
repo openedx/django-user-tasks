@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """
 Tests for the ``django-user-tasks`` admin module.
 """
@@ -14,7 +13,7 @@ class AdminTestCase(TestCase):
     Tests for the ``user_tasks`` application's Django admin pages.
     """
     def setUp(self):
-        super(AdminTestCase, self).setUp()
+        super().setUp()
         self.user = User.objects.create_user(
             username='tester',
             email='tester@example.com',

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Celery task abstract base classes.
 """

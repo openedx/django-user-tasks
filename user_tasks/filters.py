@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """
 Optional Django REST Framework filter backends for the ``django-user-tasks`` REST API.
 """

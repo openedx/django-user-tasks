@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """
 Tests for the REST API model serializers.
 """
@@ -34,7 +33,7 @@ class TestStatusSerializer(TestCase):
 
     @classmethod
     def setUpTestData(cls):
-        super(TestStatusSerializer, cls).setUpTestData()
+        super().setUpTestData()
         cls.user = User.objects.create_user('test_user', 'test@example.com', 'password')
 
     def test_output(self):
@@ -81,13 +80,13 @@ class TestArtifactSerializer(TestCase):
 
     @classmethod
     def setUpTestData(cls):
-        super(TestArtifactSerializer, cls).setUpTestData()
+        super().setUpTestData()
         user = User.objects.create_user('test_user', 'test@example.com', 'password')
         cls.status = UserTaskStatus.objects.create(user=user, task_id=str(uuid4()), name='SampleTask', total_steps=4)
 
     @classmethod
     def tearDownClass(cls):
-        super(TestArtifactSerializer, cls).tearDownClass()
+        super().tearDownClass()
         # Clean up temp files
         shutil.rmtree(settings.MEDIA_ROOT)
 

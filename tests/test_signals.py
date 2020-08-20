@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """
 Tests for the ``django-user-tasks`` Celery signal handlers and Django signal.
 """
@@ -99,12 +98,12 @@ class TestCreateUserTask(TestCase):
     """
 
     def tearDown(self):
-        super(TestCreateUserTask, self).tearDown()
+        super().tearDown()
         SIGNAL_DATA.clear()
 
     @classmethod
     def setUpTestData(cls):
-        super(TestCreateUserTask, cls).setUpTestData()
+        super().setUpTestData()
         cls.user = User.objects.create_user('test_user', 'test@example.com', 'password')
 
     def test_create_user_task(self):
@@ -380,12 +379,12 @@ class TestStatusChanges(TestCase):
     """
 
     def tearDown(self):
-        super(TestStatusChanges, self).tearDown()
+        super().tearDown()
         SIGNAL_DATA.clear()
 
     @classmethod
     def setUpTestData(cls):
-        super(TestStatusChanges, cls).setUpTestData()
+        super().setUpTestData()
         cls.user = User.objects.create_user('test_user', 'test@example.com', 'password')
 
     def test_canceled_before_execution(self):

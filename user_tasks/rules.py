@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """
 Sample implementation of authorization rules for the ``django-user-tasks`` permissions.
 

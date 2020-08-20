@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 user_tasks Django application initialization.
 """
