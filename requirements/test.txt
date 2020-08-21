@@ -6,7 +6,7 @@
 #
 amqp==1.4.9               # via -r requirements/base.txt, kombu
 anyjson==0.3.3            # via -r requirements/base.txt, kombu
-attrs==19.3.0             # via pytest
+attrs==20.1.0             # via pytest
 billiard==3.3.0.23        # via -r requirements/base.txt, celery
 celery==3.1.26.post2      # via -c requirements/constraints.txt, -r requirements/base.txt
 coverage==5.2.1           # via pytest-cov
@@ -22,7 +22,7 @@ pathlib2==2.3.5           # via pytest
 pluggy==0.13.1            # via pytest
 py==1.9.0                 # via pytest
 pyparsing==2.4.7          # via packaging
-pytest-cov==2.10.0        # via -r requirements/test.in
+pytest-cov==2.10.1        # via -r requirements/test.in
 pytest-django==3.9.0      # via -r requirements/test.in
 pytest==6.0.1             # via pytest-cov, pytest-django
 pytz==2020.1              # via -r requirements/base.txt, celery, django
