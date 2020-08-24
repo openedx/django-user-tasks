@@ -14,6 +14,7 @@ from packaging import version
 from django.contrib.auth.models import User
 from django.db import transaction
 from django.test import TestCase, TransactionTestCase, override_settings
+from testfixtures import LogCapture
 
 from user_tasks import user_task_stopped
 from user_tasks.models import UserTaskStatus
@@ -22,6 +23,7 @@ from user_tasks.tasks import UserTask
 
 CELERY_VERSION = version.parse(celery_version)
 LOGGER = logging.getLogger(__name__)
+SIGNAL_LOGGER = 'celery.utils.dispatch.signal'
 USER_ID = 1
 
 
@@ -120,37 +122,13 @@ class TestCreateUserTask(TestCase):
         """The create_user_task signal handler should correctly handle celery groups"""
         self._create_group(eager=False)
 
-    @pytest.mark.skipif(
-        CELERY_VERSION < version.parse('4.0'),
-        reason="celery 3.1 doesn't provide accurate group metadata to eager tasks")
-    @override_settings(CELERY_ALWAYS_EAGER=True)
-    def test_create_group_eager(self):
-        """Eager groups should still have UserTaskStatus records created on execution."""
-        self._create_group(eager=True)
-
     def test_create_chain(self):
         """The create_user_task signal handler should correctly handle celery chains."""
         self._create_chain(eager=False)
 
-    @pytest.mark.skipif(
-        CELERY_VERSION < version.parse('4.0'),
-        reason="celery 3.1 doesn't provide accurate chain metadata to eager tasks")
-    @override_settings(CELERY_ALWAYS_EAGER=True)
-    def test_create_chain_eager(self):
-        """Eager chains should still have UserTaskStatus records created on execution."""
-        self._create_chain(eager=True)
-
     def test_create_chord(self):
         """The create_user_task signal handler should correctly handle celery chords"""
         self._create_chord(eager=False)
-
-    @pytest.mark.skipif(
-        CELERY_VERSION < version.parse('4.0'),
-        reason="celery 3.1 doesn't provide accurate chord metadata to eager tasks")
-    @override_settings(CELERY_ALWAYS_EAGER=True)
-    def test_create_chord_eager(self):
-        """Eager chords should still have UserTaskStatus records created on execution."""
-        self._create_chord(eager=True)
 
     def test_create_chord_exclude_body(self):
         """If the body task of a chord is not a UserTask, it should be cleanly omitted from the status."""
@@ -187,15 +165,12 @@ class TestCreateUserTask(TestCase):
 
     def test_missing_user_id(self):
         """Queueing of the task should fail if the user ID is not provided."""
-        with pytest.raises(TypeError) as exc_info:
-            missing_user_id.delay()
-        assert str(exc_info.value) == 'Each invocation of a UserTaskMixin subclass must include the user_id'
+        self._verify_type_error(missing_user_id.delay,
+                                'Each invocation of a UserTaskMixin subclass must include the user_id')
 
     def test_invalid_user_id(self):
         """Queueing of the task should fail if an invalid user ID is given."""
-        with pytest.raises(TypeError) as exc_info:
-            sample_task.delay('arg1', 'arg2')
-        assert str(exc_info.value) == 'Invalid user_id: arg1'
+        self._verify_type_error(sample_task.delay, 'Invalid user_id: arg1', ('arg1', 'arg2'))
 
     def test_non_user_task_publish(self):
         """Non-UserTask tasks should still pass through the before_task_publish handler cleanly."""
@@ -310,6 +285,21 @@ class TestCreateUserTask(TestCase):
             assert status.name in ['SampleTask: 1', 'SampleTask: 2']
             assert status.total_steps == 1
             verify_state(status, eager)
+
+    @staticmethod
+    def _verify_type_error(func, message, args=()):
+        """
+        Verify that executing the given function either raises (celery < 4)
+        or logs (celery >= 4) a TypeError with the given message.
+        """
+        if CELERY_VERSION < version.parse('4.0'):
+            with pytest.raises(TypeError) as exc_info:
+                func(*args)
+            assert str(exc_info.value) == message
+        else:
+            with LogCapture() as capture:
+                func(*args)
+                assert message in str(capture)
 
 
 @shared_task(base=SampleTask, bind=True)
@@ -466,7 +456,13 @@ class TestStatusChanges(TestCase):
     @override_settings(CELERY_ALWAYS_EAGER=True)
     def test_retried(self):
         """A UserTask that is to be retried should have its status updated accordingly."""
-        result = retried_task.delay(self.user.id, 'Argument')
+        if version.parse('4.2') <= CELERY_VERSION < version.parse('4.4.3'):
+            # See https://github.com/celery/celery/issues/4661 for details
+            # Should only affect tests, not production (we don't use eager mode in production)
+            with mock.patch("celery.app.task.denied_join_result"):
+                result = retried_task.delay(self.user.id, 'Argument')
+        else:
+            result = retried_task.delay(self.user.id, 'Argument')
         statuses = UserTaskStatus.objects.all()
         assert len(statuses) == 1
         status = statuses[0]
@@ -476,8 +472,11 @@ class TestStatusChanges(TestCase):
         assert status.parent is None
         assert not status.is_container
         assert status.name == 'SampleTask: Argument'
-        # Eager task execution sends the retry signal last; odd, but makes testing easier
-        assert status.state == UserTaskStatus.RETRYING
+        if CELERY_VERSION < version.parse('4.4.3'):
+            # Until the fix in 4.4.3, eager task execution sent the retry signal last
+            assert status.state == UserTaskStatus.RETRYING
+        else:
+            assert status.state == UserTaskStatus.SUCCEEDED
         assert status.total_steps == 1
         assert status.completed_steps == 1
         assert status.attempts == 2

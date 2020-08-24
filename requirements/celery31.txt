@@ -1,0 +1,5 @@
+amqp==1.4.9               # via kombu
+anyjson==0.3.3            # via kombu
+billiard==3.3.0.23        # via celery
+celery==3.1.26.post2      # via -c requirements/constraints.txt, -r requirements/base.in
+kombu==3.0.37             # via celery
