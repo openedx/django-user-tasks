@@ -1,16 +1,12 @@
-# openedx.yaml
-
----
-owner: jmbowman
 supporting-teams:
     - platform-core
 nick: django-user-tasks
 tags:
     - tools
 oeps:
-    oep-2: True
-    oep-3: True
+    oep-2: true
+    oep-3: true
     oep-5:
-        state: False
+        state: false
         reason: Not a standalone service
-    oep-7: True
+    oep-7: true
