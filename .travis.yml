@@ -1,7 +1,4 @@
-# Config file for automatic testing at travis-ci.org
-
 language: python
-
 matrix:
   include:
   - python: 3.5
@@ -24,30 +21,24 @@ matrix:
     env: TOX_ENV=quality
   - python: 3.5
     env: TOX_ENV=docs
-
 cache:
-  - pip
-
+- pip
 branches:
   only:
-    - master
-    - /v?^\d+\.\d+(\.\d+)?(-\S*)?$/
-
+  - master
+  - "/v?^\\d+\\.\\d+(\\.\\d+)?(-\\S*)?$/"
 install:
-  - pip install -r requirements/travis.txt
-
+- pip install -r requirements/travis.txt
 script:
-  - tox -e $TOX_ENV
-
+- tox -e $TOX_ENV
 after_success:
-  - codecov
-
+- codecov
 deploy:
   provider: pypi
   user: edx
   password:
-    secure: xTsxnYnbjFurXNfULwxj3KgMPeDKxDxxW+gcq492h4mUpQChgM2/P/hxyLpRTY1amz8YYE7nr/ZMpQXC24b7LVly2lap5I9COcv9EP8SY7rvy4nmQjDRbQfibU8lvcLXkYiuB6B58iC+EzdA0VGR495hy+OJ3pJNyhstLjmhJEHmcFUIgZMipS3K0XjpWKI78xnOQ8yZXHu7S1PoNCYpQn5FuGTHcembHzDYtYSpeDIj2pyoATzL+X1Uy19Yjluf8XR4juCWAMlZqpGMC4+kNEncm2sTdBrdS2zY8P+ge3pMdLeAOifaQDHdAOiRE0f/MScTVCWv0D2H9ytJcAymuNRP0U1+luo8GZVh0eqY1aLX+O1iZOXO6GpNY1dWxbT94O7Ajxob5/b+1buTOgaD6m8dtwDCdzGicSZkdQvxEtoU/Eav8efGp/HTR+lp+U0jx6fpBnfSYfgCsEozjivfx1ETIHG9sQsraxFeIxyk1mF4nPwdyX90/h2ysdhojz2/5V1L75RnczUuGQXeT0H+o+9pubqOqLi0LC3ffx54fgBAIzzCRGkBB+XcKqMkmBgIJcE5/BQ9CkupAniZA8ulPvFs0FVj93bWMyY9o9ctvBlK1KuDw11sgkfp/niVbSCowN+wT9Jw1oGnFYD+BMXjt31V7DMySPQlowgF+/JXKec=
+    secure: aNtU8hLgEXPSre5UWviuliSmCAGH7I9Q+mcXGYc0UcuStntpJDsC28Bwh72VfRiONJhwDTQNPZCkd8GL71nk/bGxFk1OwVXzTG3KZMNx4rB/ASs8QRvsdGQFZ/aOISlPEbhyEWBh2kQqVboINpLLbklQNjPsok/EzPo0tpSpvDiX/suYAE+byOXE0mdFwDaXENDTizieol4jYnL6KnprVKo9MpLQeqnTyHODSM/FugOTmqx7CPssx8+Yz/ky8ZSnX256cmKcpsDEM/7t7sHqIEOvY7DeOBy1PiRNk+Qo2di2XNVVFtYT1/bE9thRpuzNpadxPWTZQD8/pu7joECg6FnC/X88NRsOctx4woMbqkD7i6qKQnYczOhhTUr6ZoLXCiP876cedsycoYEfh4zTnRvCDtSRsnCHVm6TtV6PrMSrRj/wxbFxuBBDWNwKTj+zbkQC71rg6BFuqu0VftQhJjA2HQOVTL1we4ySwOKxpdlDVd81UM3C6sMmJx+Wv+MeTbNXTkbj/Ra7NolN7+CkMaKeUMDvM3aAxsSvq7pBdbgiEJ1reptSzQfdEhXV8rwwWzkmIzqjoXThO9Guod1XDeGb9OR/9RLZLvRuF75IrUyBl6VYVJVkn48DZHDPX9y8qtxGPek3OnJkM+G8lLaHbpiQyi7JRPMD9bNpimJlhQ4=
   distributions: sdist bdist_wheel
   on:
     tags: true
-    condition: '$TOXENV = quality'
+    condition: "$TOXENV = quality"
