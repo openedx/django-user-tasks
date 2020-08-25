@@ -37,7 +37,7 @@ install:
   - pip install -r requirements/travis.txt
 
 script:
-  - tox
+  - tox -e $TOX_ENV
 
 after_success:
   - codecov
