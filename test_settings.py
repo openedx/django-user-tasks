@@ -8,10 +8,11 @@ Django applications, so these settings will not be used.
 import tempfile
 from os.path import abspath, dirname, join
 
-from celery import Celery
+from celery import __version__ as celery_version
+from packaging import version
 
-app = Celery('user_tasks')
-app.config_from_object('django.conf:settings')
+CELERY_VERSION = version.parse(celery_version)
+results_dir = tempfile.TemporaryDirectory()
 
 
 def root(*args):
@@ -28,6 +29,9 @@ AUTHENTICATION_BACKENDS = (
 
 BROKER_URL = 'memory://localhost/'
 CELERY_IGNORE_RESULT = True
+
+if CELERY_VERSION >= version.parse('4.0'):
+    CELERY_RESULT_BACKEND = 'file://{}'.format(results_dir.name)
 
 DATABASES = {
     'default': {
