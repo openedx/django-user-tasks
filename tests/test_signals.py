@@ -10,11 +10,11 @@ import pytest
 from celery import __version__ as celery_version
 from celery import chain, chord, group, shared_task
 from packaging import version
+from testfixtures import LogCapture
 
 from django.contrib.auth.models import User
 from django.db import transaction
 from django.test import TestCase, TransactionTestCase, override_settings
-from testfixtures import LogCapture
 
 from user_tasks import user_task_stopped
 from user_tasks.models import UserTaskStatus

@@ -9,7 +9,6 @@ import tempfile
 from os.path import abspath, dirname, join
 
 from celery import __version__ as celery_version
-from celery import Celery
 from packaging import version
 
 CELERY_VERSION = version.parse(celery_version)
@@ -79,7 +78,3 @@ TEMPLATES = [
 ]
 
 USE_TZ = True
-
-app = Celery('user_tasks')
-app.conf.task_protocol = 1
-app.config_from_object('django.conf:settings')
