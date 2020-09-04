@@ -11,7 +11,7 @@ djangorestframework==3.9.4  # via -c requirements/constraints.txt, -r requiremen
 importlib-metadata==1.7.0  # via pluggy, pytest
 iniconfig==1.0.1          # via pytest
 mock==3.0.5               # via -r requirements/test.in
-more-itertools==8.4.0     # via pytest
+more-itertools==8.5.0     # via pytest
 packaging==20.4           # via -r requirements/test.in, pytest
 pathlib2==2.3.5           # via pytest
 pluggy==0.13.1            # via pytest
