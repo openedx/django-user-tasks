@@ -12,7 +12,7 @@ isort==4.3.21             # via -r requirements/quality.in, pylint
 lazy-object-proxy==1.4.3  # via astroid
 mccabe==0.6.1             # via pylint
 pycodestyle==2.6.0        # via -r requirements/quality.in
-pydocstyle==5.1.0         # via -r requirements/quality.in
+pydocstyle==5.1.1         # via -r requirements/quality.in
 pylint-celery==0.3        # via edx-lint
 pylint-django==2.0.11     # via edx-lint
 pylint-plugin-utils==0.6  # via pylint-celery, pylint-django
