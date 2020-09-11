@@ -7,7 +7,7 @@
 alabaster==0.7.12         # via sphinx
 amqp==1.4.9               # via -r requirements/base.txt, kombu
 anyjson==0.3.3            # via -r requirements/base.txt, kombu
-attrs==20.1.0             # via jsonschema
+attrs==20.2.0             # via jsonschema
 babel==2.8.0              # via sphinx
 billiard==3.3.0.23        # via -r requirements/base.txt, celery
 bleach==3.1.5             # via readme-renderer

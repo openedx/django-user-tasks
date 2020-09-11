@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-attrs==20.1.0             # via pytest
+attrs==20.2.0             # via pytest
 coverage==5.2.1           # via pytest-cov
 django-model-utils==4.0.0  # via -r requirements/base.txt
 djangorestframework==3.9.4  # via -c requirements/constraints.txt, -r requirements/base.txt
@@ -24,6 +24,6 @@ pytz==2020.1              # via -r requirements/base.txt, celery, django
 rules==2.2                # via -r requirements/test.in
 six==1.15.0               # via mock, packaging, pathlib2
 sqlparse==0.3.1           # via -r requirements/base.txt, django
-testfixtures==6.14.1      # via -r requirements/test.in
+testfixtures==6.14.2      # via -r requirements/test.in
 toml==0.10.1              # via pytest
 zipp==1.2.0               # via importlib-metadata
