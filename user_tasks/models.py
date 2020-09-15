@@ -3,6 +3,7 @@ Database models for user_tasks.
 """
 
 import logging
+import warnings
 from uuid import uuid4
 
 from celery import current_app
@@ -131,7 +132,7 @@ class UserTaskStatus(TimeStampedModel):
             children = UserTaskStatus.objects.filter(parent=self)
             for child in children:
                 child.cancel()
-            LOGGER.warning("Ran cancel for %s children" % len(children))
+            warnings.warn("Ran cancel for %s children" % len(children))
         elif self.state in (UserTaskStatus.PENDING, UserTaskStatus.RETRYING):
             current_app.control.revoke(self.task_id)
             user_task_stopped.send_robust(UserTaskStatus, status=self)
@@ -143,9 +144,9 @@ class UserTaskStatus(TimeStampedModel):
             status.save(update_fields={'state', 'modified'})
             self.state = status.state
             self.modified = status.modified
-            LOGGER.iwarningnfo("Canceled task %s" % status.task_id)
+            warnings.warn("Canceled task %s" % status.task_id)
         except Exception as exc:
-            LOGGER.warning("Cancellation of task %s is failed with following exception: %s" % (status.task_id, exc))
+            warnings.warn("Cancellation of task %s is failed with following exception: %s" % (status.task_id, exc))
 
     def fail(self, message):
         """

@@ -3,6 +3,8 @@ REST API endpoints.
 """
 
 import logging
+import warnings
+
 from rest_framework import mixins, permissions, viewsets
 from rest_framework.decorators import detail_route
 from rest_framework.response import Response
@@ -70,10 +72,10 @@ class StatusViewSet(
 
         """
         status = self.get_object()
-        LOGGER.warning("Cancelling task %s" % status.task_id)
+        warnings.warn("Cancelling task %s" % status.task_id)
         status.cancel()
         serializer = StatusSerializer(status, context={'request': request})
-        LOGGER.warning("Canceled task %s. Now returning" % status.task_id)
+        warnings.warn("Canceled task %s. Now returning" % status.task_id)
         return Response(serializer.data)
 
 
