@@ -136,15 +136,14 @@ class UserTaskStatus(TimeStampedModel):
             current_app.control.revoke(self.task_id)
             user_task_stopped.send_robust(UserTaskStatus, status=self)
         try:
-            with transaction.atomic():
-                status = UserTaskStatus.objects.select_for_update().get(pk=self.id)
-                if status.state in (UserTaskStatus.CANCELED, UserTaskStatus.FAILED, UserTaskStatus.SUCCEEDED):
-                    return
-                status.state = UserTaskStatus.CANCELED
-                status.save(update_fields={'state', 'modified'})
-                self.state = status.state
-                self.modified = status.modified
-                LOGGER.info("Canceled task %s" % status.task_id)
+            status = UserTaskStatus.objects.select_for_update().get(pk=self.id)
+            if status.state in (UserTaskStatus.CANCELED, UserTaskStatus.FAILED, UserTaskStatus.SUCCEEDED):
+                return
+            status.state = UserTaskStatus.CANCELED
+            status.save(update_fields={'state', 'modified'})
+            self.state = status.state
+            self.modified = status.modified
+            LOGGER.info("Canceled task %s" % status.task_id)
         except Exception as exc:
             LOGGER.info("Cancellation of task %s is failed with following exception: %s" % (status.task_id, exc))
 
