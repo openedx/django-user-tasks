@@ -2,6 +2,7 @@
 REST API endpoints.
 """
 
+import logging
 from rest_framework import mixins, permissions, viewsets
 from rest_framework.decorators import detail_route
 from rest_framework.response import Response
@@ -9,6 +10,8 @@ from rest_framework.response import Response
 from .conf import settings
 from .models import UserTaskArtifact, UserTaskStatus
 from .serializers import ArtifactSerializer, StatusSerializer
+
+LOGGER = logging.getLogger(__name__)
 
 
 class DjangoObjectPermissionsIncludingView(permissions.DjangoObjectPermissions):
@@ -67,8 +70,10 @@ class StatusViewSet(
 
         """
         status = self.get_object()
+        LOGGER.warning("Cancelling task %s" % status.task_id)
         status.cancel()
         serializer = StatusSerializer(status, context={'request': request})
+        LOGGER.warning("Canceled task %s. Now returning" % status.task_id)
         return Response(serializer.data)
 
 

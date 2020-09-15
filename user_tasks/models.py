@@ -131,7 +131,7 @@ class UserTaskStatus(TimeStampedModel):
             children = UserTaskStatus.objects.filter(parent=self)
             for child in children:
                 child.cancel()
-            LOGGER.info("Ran cancel for %s children" % len(children))
+            LOGGER.warning("Ran cancel for %s children" % len(children))
         elif self.state in (UserTaskStatus.PENDING, UserTaskStatus.RETRYING):
             current_app.control.revoke(self.task_id)
             user_task_stopped.send_robust(UserTaskStatus, status=self)
@@ -143,9 +143,9 @@ class UserTaskStatus(TimeStampedModel):
             status.save(update_fields={'state', 'modified'})
             self.state = status.state
             self.modified = status.modified
-            LOGGER.info("Canceled task %s" % status.task_id)
+            LOGGER.iwarningnfo("Canceled task %s" % status.task_id)
         except Exception as exc:
-            LOGGER.info("Cancellation of task %s is failed with following exception: %s" % (status.task_id, exc))
+            LOGGER.warning("Cancellation of task %s is failed with following exception: %s" % (status.task_id, exc))
 
     def fail(self, message):
         """
