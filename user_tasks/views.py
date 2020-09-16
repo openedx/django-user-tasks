@@ -67,6 +67,7 @@ class StatusViewSet(
 
         """
         status = self.get_object()
+        status.cancel()
         serializer = StatusSerializer(status, context={'request': request})
         return Response(serializer.data)
 
