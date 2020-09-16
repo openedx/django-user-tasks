@@ -132,16 +132,16 @@ class UserTaskStatus(TimeStampedModel):
             for child in children:
                 child.cancel()
         elif self.state in (UserTaskStatus.PENDING, UserTaskStatus.RETRYING):
-            current_app.control.revoke(self.task_id)
+            current_app.control.revoke(self.task_id, terminate=True)
             user_task_stopped.send_robust(UserTaskStatus, status=self)
-        # with transaction.atomic():
-        #     status = UserTaskStatus.objects.select_for_update().get(pk=self.id)
-        #     if status.state in (UserTaskStatus.CANCELED, UserTaskStatus.FAILED, UserTaskStatus.SUCCEEDED):
-        #         return
-        #     status.state = UserTaskStatus.CANCELED
-        #     status.save(update_fields={'state', 'modified'})
-        #     self.state = status.state
-        #     self.modified = status.modified
+        with transaction.atomic():
+            status = UserTaskStatus.objects.select_for_update().get(pk=self.id)
+            if status.state in (UserTaskStatus.CANCELED, UserTaskStatus.FAILED, UserTaskStatus.SUCCEEDED):
+                return
+            status.state = UserTaskStatus.CANCELED
+            status.save(update_fields={'state', 'modified'})
+            self.state = status.state
+            self.modified = status.modified
 
     def fail(self, message):
         """
