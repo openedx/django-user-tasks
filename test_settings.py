@@ -30,11 +30,10 @@ AUTHENTICATION_BACKENDS = (
 BROKER_URL = 'memory://localhost/'
 CELERY_IGNORE_RESULT = True
 
-if CELERY_VERSION >= version.parse('4.0'):
-    CELERY_RESULT_BACKEND = 'file://{}'.format(results_dir.name)
-
 if CELERY_VERSION >= version.parse('4.4'):
     CELERY_RESULT_BACKEND = 'django-cache'
+elif CELERY_VERSION >= version.parse('4.0'):
+    CELERY_RESULT_BACKEND = 'file://{}'.format(results_dir.name)
 
 DATABASES = {
     'default': {
