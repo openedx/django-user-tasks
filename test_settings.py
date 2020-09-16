@@ -33,6 +33,9 @@ CELERY_IGNORE_RESULT = True
 if CELERY_VERSION >= version.parse('4.0'):
     CELERY_RESULT_BACKEND = 'file://{}'.format(results_dir.name)
 
+if CELERY_VERSION >= version.parse('4.4'):
+    CELERY_RESULT_BACKEND = 'django-cache'
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -44,7 +47,7 @@ DATABASES = {
     }
 }
 
-INSTALLED_APPS = (
+INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.messages',
@@ -52,7 +55,10 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'rest_framework',
     'user_tasks.apps.UserTasksConfig',
-)
+]
+
+if CELERY_VERSION >= version.parse('4.4'):
+    INSTALLED_APPS.append('django-celery-results')
 
 LOCALE_PATHS = [
     root('user_tasks', 'conf', 'locale'),

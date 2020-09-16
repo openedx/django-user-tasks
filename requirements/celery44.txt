@@ -3,5 +3,6 @@ billiard==3.6.3.0         # via celery
 celery==4.4.7             # via -c requirements/constraints.txt, -r requirements/base.in
 importlib-metadata==1.7.0  # via kombu
 kombu==4.6.11             # via celery
+django-celery-results==1.2.1
 vine==1.3.0               # via amqp
 zipp==1.2.0               # via -c requirements/constraints.txt, importlib-metadata
