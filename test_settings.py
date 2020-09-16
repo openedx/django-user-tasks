@@ -57,7 +57,7 @@ INSTALLED_APPS = [
 ]
 
 if CELERY_VERSION >= version.parse('4.4'):
-    INSTALLED_APPS.append('django-celery-results')
+    INSTALLED_APPS.append('django_celery_results')
 
 LOCALE_PATHS = [
     root('user_tasks', 'conf', 'locale'),
