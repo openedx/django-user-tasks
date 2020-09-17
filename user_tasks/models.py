@@ -132,7 +132,7 @@ class UserTaskStatus(TimeStampedModel):
             for child in children:
                 child.cancel()
         elif self.state in (UserTaskStatus.PENDING, UserTaskStatus.RETRYING):
-            current_app.control.terminate(self.task_id,)
+            pass
         with transaction.atomic():
             status = UserTaskStatus.objects.select_for_update().get(pk=self.id)
             if status.state in (UserTaskStatus.CANCELED, UserTaskStatus.FAILED, UserTaskStatus.SUCCEEDED):
