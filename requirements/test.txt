@@ -5,7 +5,7 @@
 #    make upgrade
 #
 attrs==20.2.0             # via pytest
-coverage==5.2.1           # via pytest-cov
+coverage==5.3             # via pytest-cov
 django-model-utils==4.0.0  # via -r requirements/base.txt
 djangorestframework==3.9.4  # via -c requirements/constraints.txt, -r requirements/base.txt
 importlib-metadata==1.7.0  # via pluggy, pytest
@@ -18,8 +18,8 @@ pluggy==0.13.1            # via pytest
 py==1.9.0                 # via pytest
 pyparsing==2.4.7          # via packaging
 pytest-cov==2.10.1        # via -r requirements/test.in
-pytest-django==3.9.0      # via -r requirements/test.in
-pytest==6.0.1             # via pytest-cov, pytest-django
+pytest-django==3.10.0     # via -r requirements/test.in
+pytest==6.0.2             # via pytest-cov, pytest-django
 pytz==2020.1              # via -r requirements/base.txt, celery, django
 rules==2.2                # via -r requirements/test.in
 six==1.15.0               # via mock, packaging, pathlib2
