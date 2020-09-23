@@ -72,7 +72,7 @@ upgrade: ## update the requirements/*.txt files with the latest packages satisfy
 	$(PIP_COMPILE) -o requirements/travis.txt requirements/travis.in
 	$(PIP_COMPILE) -o requirements/dev.txt requirements/dev.in
 	# Let tox control the Django and celery versions for tests
-	grep -e "^amqp==\|^anyjson==\|^billiard==\|^celery==\|^kombu==" requirements/base.txt > requirements/celery31.txt
+	grep -e "^amqp==\|^anyjson==\|^billiard==\|^celery==\|^kombu==" requirements/base.txt > requirements/celery44.txt
 	sed -i.tmp '/^[dD]jango==/d' requirements/test.txt
 	sed -i.tmp '/^amqp==/d' requirements/test.txt
 	sed -i.tmp '/^anyjson==/d' requirements/test.txt
