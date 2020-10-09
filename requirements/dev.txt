@@ -49,14 +49,14 @@ pylint==2.4.4             # via -r requirements/quality.txt, edx-lint, pylint-ce
 pyparsing==2.4.7          # via -r requirements/test.txt, -r requirements/travis.txt, packaging
 pytest-cov==2.10.1        # via -r requirements/test.txt
 pytest-django==3.10.0     # via -r requirements/test.txt
-pytest==6.1.0             # via -r requirements/test.txt, pytest-cov, pytest-django
+pytest==6.1.1             # via -r requirements/test.txt, pytest-cov, pytest-django
 pytz==2020.1              # via -r requirements/test.txt, celery, django
 pyyaml==5.3.1             # via edx-i18n-tools
 requests==2.24.0          # via -r requirements/travis.txt, codecov
 rules==2.2                # via -r requirements/test.txt
 six==1.15.0               # via -r requirements/pip-tools.txt, -r requirements/quality.txt, -r requirements/test.txt, -r requirements/travis.txt, astroid, edx-i18n-tools, edx-lint, mock, packaging, pathlib2, pip-tools, tox, virtualenv
 snowballstemmer==2.0.0    # via -r requirements/quality.txt, pydocstyle
-sqlparse==0.3.1           # via -r requirements/test.txt, django
+sqlparse==0.4.1           # via -r requirements/test.txt, django
 testfixtures==6.14.2      # via -r requirements/test.txt
 toml==0.10.1              # via -r requirements/test.txt, -r requirements/travis.txt, pytest, tox
 tox-battery==0.6.1        # via -r requirements/travis.txt
@@ -64,7 +64,7 @@ tox==3.20.0               # via -r requirements/travis.txt, tox-battery
 typed-ast==1.4.1          # via -r requirements/quality.txt, astroid
 urllib3==1.25.10          # via -r requirements/travis.txt, requests
 vine==1.3.0               # via -r requirements/test.txt, amqp, celery
-virtualenv==20.0.32       # via -r requirements/travis.txt, tox
+virtualenv==20.0.33       # via -r requirements/travis.txt, tox
 wrapt==1.11.2             # via -r requirements/quality.txt, astroid
 zipp==1.2.0               # via -r requirements/test.txt, -r requirements/travis.txt, importlib-metadata, importlib-resources
 
