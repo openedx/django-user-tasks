@@ -9,7 +9,7 @@ coverage==5.3             # via pytest-cov
 django-model-utils==4.0.0  # via -r requirements/base.txt
 djangorestframework==3.9.4  # via -c requirements/constraints.txt, -r requirements/base.txt
 importlib-metadata==2.0.0  # via -r requirements/base.txt, kombu, pytest
-iniconfig==1.0.1          # via pytest
+iniconfig==1.1.1          # via pytest
 mock==3.0.5               # via -r requirements/test.in
 packaging==20.4           # via -r requirements/test.in, pytest
 pathlib2==2.3.5           # via pytest
