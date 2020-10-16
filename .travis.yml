@@ -5,24 +5,12 @@ language: python
 matrix:
   include:
   - python: 3.5
-    env: TOX_ENV=py35-django22-celery31
-  - python: 3.5
-    env: TOX_ENV=py35-django22-celery40
-  - python: 3.5
-    env: TOX_ENV=py35-django22-celery42
-  - python: 3.5
-    env: TOX_ENV=py35-django22-celery43
-  - python: 3.5
     env: TOX_ENV=py35-django22-celery44
   - python: 3.8
-    env: TOX_ENV=py38-django22-celery42
-  - python: 3.8
-    env: TOX_ENV=py38-django22-celery43
-  - python: 3.8
     env: TOX_ENV=py38-django22-celery44
-  - python: 3.5
+  - python: 3.8
     env: TOX_ENV=quality
-  - python: 3.5
+  - python: 3.8
     env: TOX_ENV=docs
 
 cache:
