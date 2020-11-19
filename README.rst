@@ -5,8 +5,8 @@ django-user-tasks
     :target: https://pypi.python.org/pypi/django-user-tasks/
     :alt: PyPI
 
-.. image:: https://travis-ci.org/edx/django-user-tasks.svg?branch=master
-    :target: https://travis-ci.org/edx/django-user-tasks
+.. image:: https://travis-ci.com/edx/django-user-tasks.svg?branch=master
+    :target: https://travis-ci.com/edx/django-user-tasks
     :alt: Travis
 
 .. image:: http://codecov.io/github/edx/django-user-tasks/coverage.svg?branch=master

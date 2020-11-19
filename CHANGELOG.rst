@@ -16,6 +16,10 @@ Unreleased
 
 *
 
+[1.3.1] - 2020-11-19
+~~~~~~~~~~~~~~~~~~~~
+* Updated the build status badge in README.rst to point to travis-ci.com instead of travis-ci.org
+
 [1.3.0] - 2020-08-25
 ~~~~~~~~~~~~~~~~~~~~
 
