@@ -59,7 +59,7 @@ sqlparse==0.4.1           # via -r requirements/base.txt, django
 stevedore==1.32.0         # via doc8
 strict-rfc3339==0.7       # via swagger2rst
 swagger2rst==0.0.4        # via -r requirements/doc.in
-tqdm==4.51.0              # via twine
+tqdm==4.52.0              # via twine
 twine==1.15.0             # via -r requirements/doc.in
 uritemplate==3.0.1        # via coreapi
 urllib3==1.26.2           # via requests
