@@ -16,6 +16,14 @@ Unreleased
 
 *
 
+[1.3.1] - 2020-11-23
+~~~~~~~~~~~~~~~~~~~~
+
+Added
++++++
+
+* Added support for Django REST Framework 3.10.x through 3.12.x
+
 [1.3.0] - 2020-08-25
 ~~~~~~~~~~~~~~~~~~~~
 
