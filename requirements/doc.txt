@@ -18,8 +18,8 @@ coreapi==2.3.3            # via django-rest-swagger, openapi-codec
 coreschema==0.0.4         # via coreapi
 django-model-utils==4.0.0  # via -r requirements/base.txt
 django-rest-swagger==2.2.0  # via -r requirements/doc.in
-django==2.2.17            # via -c requirements/constraints.txt, -r requirements/base.txt, django-model-utils
-djangorestframework==3.9.4  # via -c requirements/constraints.txt, -r requirements/base.txt, django-rest-swagger
+django==2.2.17            # via -c requirements/constraints.txt, -r requirements/base.txt, django-model-utils, djangorestframework
+djangorestframework==3.12.2  # via -r requirements/base.txt, django-rest-swagger
 doc8==0.8.1               # via -r requirements/doc.in
 docutils==0.16            # via doc8, readme-renderer, restructuredtext-lint, sphinx
 edx-sphinx-theme==1.5.0   # via -r requirements/doc.in

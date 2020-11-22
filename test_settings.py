@@ -12,7 +12,8 @@ from celery import __version__ as celery_version
 from packaging import version
 
 CELERY_VERSION = version.parse(celery_version)
-results_dir = tempfile.TemporaryDirectory()
+MEDIA_DIR = tempfile.TemporaryDirectory()
+RESULTS_DIR = tempfile.TemporaryDirectory()
 
 
 def root(*args):
@@ -31,7 +32,7 @@ BROKER_URL = 'memory://localhost/'
 CELERY_IGNORE_RESULT = True
 
 if CELERY_VERSION >= version.parse('4.0'):
-    CELERY_RESULT_BACKEND = 'file://{}'.format(results_dir.name)
+    CELERY_RESULT_BACKEND = 'file://{}'.format(RESULTS_DIR.name)
 
 DATABASES = {
     'default': {
@@ -58,7 +59,7 @@ LOCALE_PATHS = [
     root('user_tasks', 'conf', 'locale'),
 ]
 
-MEDIA_ROOT = tempfile.mkdtemp()
+MEDIA_ROOT = MEDIA_DIR.name
 
 MIDDLEWARE = (
     'django.contrib.sessions.middleware.SessionMiddleware',

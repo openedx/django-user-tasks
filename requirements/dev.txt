@@ -18,8 +18,8 @@ codecov==2.1.10           # via -r requirements/travis.txt
 coverage==5.3             # via -r requirements/test.txt, -r requirements/travis.txt, codecov, pytest-cov
 distlib==0.3.1            # via -r requirements/travis.txt, virtualenv
 django-model-utils==4.0.0  # via -r requirements/test.txt
-django==2.2.17            # via -c requirements/constraints.txt, -r requirements/test.txt, django-model-utils, edx-i18n-tools
-djangorestframework==3.9.4  # via -c requirements/constraints.txt, -r requirements/test.txt
+django==2.2.17            # via -c requirements/constraints.txt, -r requirements/test.txt, django-model-utils, djangorestframework, edx-i18n-tools
+djangorestframework==3.12.2  # via -r requirements/test.txt
 edx-i18n-tools==0.5.3     # via -r requirements/dev.in
 edx-lint==1.5.2           # via -r requirements/dev.in, -r requirements/quality.txt
 filelock==3.0.12          # via -r requirements/travis.txt, tox, virtualenv

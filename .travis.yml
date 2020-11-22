@@ -5,9 +5,15 @@ language: python
 matrix:
   include:
   - python: 3.5
-    env: TOX_ENV=py35-django22-celery44
+    env: TOX_ENV=py35-django22-celery44-drf39
   - python: 3.8
-    env: TOX_ENV=py38-django22-celery44
+    env: TOX_ENV=py38-django22-celery44-drf39
+  - python: 3.8
+    env: TOX_ENV=py38-django22-celery44-drf310
+  - python: 3.8
+    env: TOX_ENV=py38-django22-celery44-drf311
+  - python: 3.8
+    env: TOX_ENV=py38-django22-celery44-drf312
   - python: 3.8
     env: TOX_ENV=quality
   - python: 3.8
