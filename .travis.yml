@@ -4,8 +4,6 @@ language: python
 
 matrix:
   include:
-  - python: 3.5
-    env: TOX_ENV=py35-django22-celery44-drf39
   - python: 3.8
     env: TOX_ENV=py38-django22-celery44-drf39
   - python: 3.8
@@ -28,7 +26,7 @@ branches:
     - /v?^\d+\.\d+(\.\d+)?(-\S*)?$/
 
 install:
-  - pip install -r requirements/travis.txt
+  - pip install -r requirements/ci.txt
 
 script:
   - tox -e $TOX_ENV

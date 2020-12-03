@@ -5,68 +5,63 @@
 #    make upgrade
 #
 amqp==2.6.1               # via -r requirements/test.txt, kombu
-appdirs==1.4.4            # via -r requirements/travis.txt, virtualenv
+appdirs==1.4.4            # via -r requirements/ci.txt, virtualenv
 astroid==2.3.3            # via -r requirements/quality.txt, pylint, pylint-celery
 attrs==20.3.0             # via -r requirements/test.txt, pytest
 billiard==3.6.3.0         # via -r requirements/test.txt, celery
 celery==4.4.7             # via -c requirements/constraints.txt, -r requirements/test.txt
-certifi==2020.11.8        # via -r requirements/travis.txt, requests
-chardet==3.0.4            # via -r requirements/travis.txt, requests
+certifi==2020.11.8        # via -r requirements/ci.txt, requests
+chardet==3.0.4            # via -r requirements/ci.txt, requests
 click-log==0.3.2          # via -r requirements/quality.txt, edx-lint
 click==7.1.2              # via -r requirements/pip-tools.txt, -r requirements/quality.txt, click-log, edx-lint, pip-tools
-codecov==2.1.10           # via -r requirements/travis.txt
-coverage==5.3             # via -r requirements/test.txt, -r requirements/travis.txt, codecov, pytest-cov
-distlib==0.3.1            # via -r requirements/travis.txt, virtualenv
+codecov==2.1.10           # via -r requirements/ci.txt
+coverage==5.3             # via -r requirements/ci.txt, -r requirements/test.txt, codecov, pytest-cov
+distlib==0.3.1            # via -r requirements/ci.txt, virtualenv
 django-model-utils==4.1.0  # via -r requirements/test.txt
 django==2.2.17            # via -c requirements/constraints.txt, -r requirements/test.txt, django-model-utils, djangorestframework, edx-i18n-tools
 djangorestframework==3.12.2  # via -r requirements/test.txt
 edx-i18n-tools==0.5.3     # via -r requirements/dev.in
 edx-lint==1.5.2           # via -r requirements/dev.in, -r requirements/quality.txt
-filelock==3.0.12          # via -r requirements/travis.txt, tox, virtualenv
-idna==2.10                # via -r requirements/travis.txt, requests
-importlib-metadata==2.1.0  # via -r requirements/test.txt, -r requirements/travis.txt, kombu, path, pluggy, pytest, tox, virtualenv
-importlib-resources==3.2.1  # via -r requirements/travis.txt, virtualenv
+filelock==3.0.12          # via -r requirements/ci.txt, tox, virtualenv
+idna==2.10                # via -r requirements/ci.txt, requests
 iniconfig==1.1.1          # via -r requirements/test.txt, pytest
 isort==4.3.21             # via -r requirements/quality.txt, pylint
 kombu==4.6.11             # via -r requirements/test.txt, celery
 lazy-object-proxy==1.4.3  # via -r requirements/quality.txt, astroid
 mccabe==0.6.1             # via -r requirements/quality.txt, pylint
-mock==3.0.5               # via -r requirements/test.txt
-packaging==20.7           # via -r requirements/test.txt, -r requirements/travis.txt, pytest, tox
+mock==4.0.2               # via -r requirements/test.txt
+packaging==20.7           # via -r requirements/ci.txt, -r requirements/test.txt, pytest, tox
 path.py==12.5.0           # via edx-i18n-tools
-path==13.1.0              # via path.py
-pathlib2==2.3.5           # via -r requirements/test.txt, pytest
+path==15.0.0              # via path.py
 pip-tools==5.4.0          # via -r requirements/pip-tools.txt
-pluggy==0.13.1            # via -r requirements/test.txt, -r requirements/travis.txt, pytest, tox
+pluggy==0.13.1            # via -r requirements/ci.txt, -r requirements/test.txt, pytest, tox
 polib==1.1.0              # via edx-i18n-tools
-py==1.9.0                 # via -r requirements/test.txt, -r requirements/travis.txt, pytest, tox
+py==1.9.0                 # via -r requirements/ci.txt, -r requirements/test.txt, pytest, tox
 pycodestyle==2.6.0        # via -r requirements/quality.txt
 pydocstyle==5.1.1         # via -r requirements/quality.txt
 pylint-celery==0.3        # via -r requirements/quality.txt, edx-lint
 pylint-django==2.0.11     # via -r requirements/quality.txt, edx-lint
 pylint-plugin-utils==0.6  # via -r requirements/quality.txt, pylint-celery, pylint-django
 pylint==2.4.4             # via -r requirements/quality.txt, edx-lint, pylint-celery, pylint-django, pylint-plugin-utils
-pyparsing==2.4.7          # via -r requirements/test.txt, -r requirements/travis.txt, packaging
+pyparsing==2.4.7          # via -r requirements/ci.txt, -r requirements/test.txt, packaging
 pytest-cov==2.10.1        # via -r requirements/test.txt
 pytest-django==4.1.0      # via -r requirements/test.txt
 pytest==6.1.2             # via -r requirements/test.txt, pytest-cov, pytest-django
 pytz==2020.4              # via -r requirements/test.txt, celery, django
 pyyaml==5.3.1             # via edx-i18n-tools
-requests==2.25.0          # via -r requirements/travis.txt, codecov
+requests==2.25.0          # via -r requirements/ci.txt, codecov
 rules==2.2                # via -r requirements/test.txt
-six==1.15.0               # via -r requirements/pip-tools.txt, -r requirements/quality.txt, -r requirements/test.txt, -r requirements/travis.txt, astroid, edx-i18n-tools, edx-lint, mock, pathlib2, pip-tools, tox, virtualenv
+six==1.15.0               # via -r requirements/ci.txt, -r requirements/pip-tools.txt, -r requirements/quality.txt, astroid, edx-i18n-tools, edx-lint, pip-tools, tox, virtualenv
 snowballstemmer==2.0.0    # via -r requirements/quality.txt, pydocstyle
 sqlparse==0.4.1           # via -r requirements/test.txt, django
 testfixtures==6.15.0      # via -r requirements/test.txt
-toml==0.10.2              # via -r requirements/test.txt, -r requirements/travis.txt, pytest, tox
-tox-battery==0.6.1        # via -r requirements/travis.txt
-tox==3.20.1               # via -r requirements/travis.txt, tox-battery
-typed-ast==1.4.1          # via -r requirements/quality.txt, astroid
-urllib3==1.26.2           # via -r requirements/travis.txt, requests
+toml==0.10.2              # via -r requirements/ci.txt, -r requirements/test.txt, pytest, tox
+tox-battery==0.6.1        # via -r requirements/ci.txt
+tox==3.20.1               # via -r requirements/ci.txt, tox-battery
+urllib3==1.26.2           # via -r requirements/ci.txt, requests
 vine==1.3.0               # via -r requirements/test.txt, amqp, celery
-virtualenv==20.2.1        # via -r requirements/travis.txt, tox
+virtualenv==20.2.1        # via -r requirements/ci.txt, tox
 wrapt==1.11.2             # via -r requirements/quality.txt, astroid
-zipp==1.2.0               # via -r requirements/test.txt, -r requirements/travis.txt, importlib-metadata, importlib-resources
 
 # The following packages are considered to be unsafe in a requirements file:
 # pip

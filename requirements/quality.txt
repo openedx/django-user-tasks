@@ -19,5 +19,4 @@ pylint-plugin-utils==0.6  # via pylint-celery, pylint-django
 pylint==2.4.4             # via edx-lint, pylint-celery, pylint-django, pylint-plugin-utils
 six==1.15.0               # via astroid, edx-lint
 snowballstemmer==2.0.0    # via pydocstyle
-typed-ast==1.4.1          # via astroid
 wrapt==1.11.2             # via astroid
