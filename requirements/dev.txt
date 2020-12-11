@@ -57,7 +57,7 @@ rules==2.2                # via -r requirements/test.txt
 six==1.15.0               # via -r requirements/ci.txt, -r requirements/pip-tools.txt, -r requirements/quality.txt, -r requirements/test.txt, astroid, edx-i18n-tools, edx-lint, mock, pathlib2, pip-tools, tox, virtualenv
 snowballstemmer==2.0.0    # via -r requirements/quality.txt, pydocstyle
 sqlparse==0.4.1           # via -r requirements/test.txt, django
-testfixtures==6.15.0      # via -r requirements/test.txt
+testfixtures==6.16.0      # via -r requirements/test.txt
 toml==0.10.2              # via -r requirements/ci.txt, -r requirements/test.txt, pytest, tox
 tox-battery==0.6.1        # via -r requirements/ci.txt
 tox==3.20.1               # via -r requirements/ci.txt, tox-battery
