@@ -3,9 +3,11 @@
 Tests for the ``django-user-tasks`` admin module.
 """
 
-from django.contrib.auth.models import User
+from django.contrib import auth
 from django.test import TestCase
 from django.urls import reverse
+
+User = auth.get_user_model()
 
 
 class AdminTestCase(TestCase):
