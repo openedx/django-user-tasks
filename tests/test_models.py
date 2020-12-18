@@ -8,7 +8,7 @@ from uuid import uuid4
 
 import pytest
 
-from django.contrib.auth.models import User
+from django.contrib import auth
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.test import TestCase
 
@@ -26,7 +26,7 @@ class TestUserTaskStatus(TestCase):
     @classmethod
     def setUpTestData(cls):
         super().setUpTestData()
-        cls.user = User.objects.create_user('test_user', 'test@example.com', 'password')
+        cls.user = auth.get_user_model().objects.create_user('test_user', 'test@example.com', 'password')
 
     def test_cancel_parent(self):
         """Canceling a container status should also cancel its children."""
@@ -206,7 +206,7 @@ class TestUserTaskArtifact(TestCase):
     @classmethod
     def setUpTestData(cls):
         super().setUpTestData()
-        cls.user = User.objects.create_user('test_user', 'test@example.com', 'password')
+        cls.user = auth.get_user_model().objects.create_user('test_user', 'test@example.com', 'password')
 
     def test_file_string(self):
         """File-based UserTaskArtifacts should have a reasonable string representation"""

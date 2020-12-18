@@ -10,7 +10,7 @@ from uuid import uuid4
 import mock
 import rules
 
-from django.contrib.auth.models import User
+from django.contrib import auth
 from django.urls import reverse
 from django.utils.timezone import now
 
@@ -57,9 +57,9 @@ class TestRestApi(APITestCase):
     @classmethod
     def setUpTestData(cls):
         super().setUpTestData()
-        cls.user = User.objects.create_user('test_user', 'test@example.com', 'password')
-        cls.superuser = User.objects.create_superuser('admin', 'admin@example.com', 'password')
-        cls.other_user = User.objects.create_user('other_user', 'other@example.com', 'password')
+        cls.user = auth.get_user_model().objects.create_user('test_user', 'test@example.com', 'password')
+        cls.superuser = auth.get_user_model().objects.create_superuser('admin', 'admin@example.com', 'password')
+        cls.other_user = auth.get_user_model().objects.create_user('other_user', 'other@example.com', 'password')
         cls.status = UserTaskStatus.objects.create(
             user=cls.user, task_id=str(uuid4()), task_class='test_rest_api.sample_task', name='SampleTask 2',
             total_steps=5)
@@ -161,7 +161,7 @@ class TestRestApi(APITestCase):
         self.status.refresh_from_db()
         assert self.status.state == UserTaskStatus.PENDING
 
-    @mock.patch('django.contrib.auth.models.User.has_perm')
+    @mock.patch('django.contrib.auth.get_user_model.has_perm')
     def test_status_cancel_view_only(self, mock_has_perm):
         """A user with view but not cancel permission on a status record should be unable to cancel it."""
         def no_cancel(permission, status):  # pylint: disable=unused-argument

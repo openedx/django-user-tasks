@@ -9,7 +9,7 @@ from uuid import uuid4
 
 from celery import Task, shared_task
 
-from django.contrib.auth.models import User
+from django.contrib import auth
 from django.test import TestCase, override_settings
 from django.utils.timezone import now
 
@@ -67,7 +67,7 @@ class TestUserTasks(TestCase):
     @classmethod
     def setUpTestData(cls):
         super().setUpTestData()
-        cls.user = User.objects.create_user('test_user', 'test@example.com', 'password')
+        cls.user = auth.get_user_model().objects.create_user('test_user', 'test@example.com', 'password')
 
     def test_generate_name_omitted(self):
         """Using UserTaskMixin without generate_name() implemented should default to the task function name."""
@@ -114,7 +114,7 @@ class TestPurgeOldUserTasks(TestCase):
     @classmethod
     def setUpTestData(cls):
         super().setUpTestData()
-        cls.user = User.objects.create_user('test_user', 'test@example.com', 'password')
+        cls.user = auth.get_user_model().objects.create_user('test_user', 'test@example.com', 'password')
 
     def test_old_data(self):
         """The cleanup task should purge old database records."""

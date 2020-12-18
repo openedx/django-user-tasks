@@ -3,7 +3,7 @@
 Tests for the ``django-user-tasks`` admin module.
 """
 
-from django.contrib.auth.models import User
+from django.contrib import auth
 from django.test import TestCase
 from django.urls import reverse
 
@@ -14,7 +14,7 @@ class AdminTestCase(TestCase):
     """
     def setUp(self):
         super().setUp()
-        self.user = User.objects.create_user(
+        self.user = auth.get_user_model().objects.create_user(
             username='tester',
             email='tester@example.com',
             password='password',

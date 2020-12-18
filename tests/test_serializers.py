@@ -7,7 +7,7 @@ import shutil
 from uuid import uuid4
 
 from django.conf import settings
-from django.contrib.auth.models import User
+from django.contrib import auth
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.test import TestCase
 from django.urls import reverse
@@ -34,7 +34,7 @@ class TestStatusSerializer(TestCase):
     @classmethod
     def setUpTestData(cls):
         super().setUpTestData()
-        cls.user = User.objects.create_user('test_user', 'test@example.com', 'password')
+        cls.user = auth.get_user_model().objects.create_user('test_user', 'test@example.com', 'password')
 
     def test_output(self):
         """The serializer should generate the expected data for a status record."""
@@ -81,7 +81,7 @@ class TestArtifactSerializer(TestCase):
     @classmethod
     def setUpTestData(cls):
         super().setUpTestData()
-        user = User.objects.create_user('test_user', 'test@example.com', 'password')
+        user = auth.get_user_model().objects.create_user('test_user', 'test@example.com', 'password')
         cls.status = UserTaskStatus.objects.create(user=user, task_id=str(uuid4()), name='SampleTask', total_steps=4)
 
     @classmethod

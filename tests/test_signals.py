@@ -12,7 +12,7 @@ from celery import chain, chord, group, shared_task
 from packaging import version
 from testfixtures import LogCapture
 
-from django.contrib.auth.models import User
+from django.contrib import auth
 from django.db import transaction
 from django.test import TestCase, TransactionTestCase, override_settings
 
@@ -106,7 +106,7 @@ class TestCreateUserTask(TestCase):
     @classmethod
     def setUpTestData(cls):
         super().setUpTestData()
-        cls.user = User.objects.create_user('test_user', 'test@example.com', 'password')
+        cls.user = auth.get_user_model().objects.create_user('test_user', 'test@example.com', 'password')
 
     def test_create_user_task(self):
         """The create_user_task signal handler should create a new UserTaskStatus record"""
@@ -375,7 +375,7 @@ class TestStatusChanges(TestCase):
     @classmethod
     def setUpTestData(cls):
         super().setUpTestData()
-        cls.user = User.objects.create_user('test_user', 'test@example.com', 'password')
+        cls.user = auth.get_user_model().objects.create_user('test_user', 'test@example.com', 'password')
 
     def test_canceled_before_execution(self):
         """A UserTask which is canceled before execution should have its status updated accordingly."""
