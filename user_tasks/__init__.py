@@ -4,7 +4,7 @@ Management of user-triggered asynchronous tasks in Django projects.
 
 from django.dispatch import Signal
 
-__version__ = '1.3.1'
+__version__ = '1.3.2'
 
 default_app_config = 'user_tasks.apps.UserTasksConfig'  # pylint: disable=invalid-name
 
