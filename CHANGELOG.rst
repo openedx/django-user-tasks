@@ -16,6 +16,15 @@ Unreleased
 
 *
 
+[1.3.2] - 2020-12-17
+~~~~~~~~~~~~~~~~~~~~
+
+Changed
++++++++
+
+* Updated the deprecated celery import class. New import is compatible with 4.4.7 also.
+
+
 [1.3.1] - 2020-11-23
 ~~~~~~~~~~~~~~~~~~~~
 

@@ -5,8 +5,7 @@ Celery task abstract base classes.
 import inspect
 import logging
 
-from celery import shared_task
-from celery.task import Task
+from celery import Task, shared_task
 
 from django.utils.timezone import now
 
