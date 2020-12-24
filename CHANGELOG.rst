@@ -22,6 +22,15 @@ Unreleased
 Changed
 +++++++
 
+* Added celery 5.0 testing using tox. Fix pylint warnings. Update the code accordingly.
+
+
+[1.3.2] - 2020-12-17
+~~~~~~~~~~~~~~~~~~~~
+
+Changed
++++++++
+
 * Updated the deprecated celery import class. New import is compatible with 4.4.7 also.
 
 

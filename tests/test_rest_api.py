@@ -10,7 +10,7 @@ from uuid import uuid4
 import mock
 import rules
 
-from django.contrib.auth.models import User
+from django.contrib import auth
 from django.urls import reverse
 from django.utils.timezone import now
 
@@ -19,6 +19,8 @@ from rest_framework.test import APITestCase
 from user_tasks.models import UserTaskArtifact, UserTaskStatus
 from user_tasks.rules import add_rules
 from user_tasks.serializers import ArtifactSerializer, StatusSerializer
+
+User = auth.get_user_model()
 
 LOGGER = logging.getLogger(__name__)
 

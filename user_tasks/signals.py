@@ -75,9 +75,17 @@ def _create_chain_entry(user_id, task_id, task_class, args, kwargs, callbacks, p
             if parent_name and not parent.name:
                 parent.set_name(parent_name)
     for callback in callbacks:
-        links = callback.options.get('link', [])
-        callback_class = import_string(callback.task)
-        _create_chain_entry(user_id, callback.id, callback_class, callback.args, callback.kwargs, links, parent=parent)
+        callback_class = import_string(callback['task'])
+
+        _create_chain_entry(
+            user_id,
+            callback['options']['task_id'],
+            callback_class,
+            callback['args'],
+            callback['kwargs'],
+            callback['options']['link'],
+            parent=parent
+        )
 
 
 def _create_chord_entry(task_id, task_class, message_body, user_id):
@@ -176,8 +184,8 @@ def _get_user_id(arguments_dict):
     user_id = arguments_dict['user_id']
     try:
         get_user_model().objects.get(pk=user_id)
-    except (ValueError, get_user_model().DoesNotExist):
-        raise TypeError('Invalid user_id: {}'.format(user_id))
+    except (ValueError, get_user_model().DoesNotExist) as import_exception:
+        raise TypeError('Invalid user_id: {}'.format(user_id)) from import_exception
     return user_id
 
 

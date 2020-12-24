@@ -14,7 +14,13 @@ jobs:
       matrix:
         os: [ubuntu-20.04]
         python-version: ["3.8"]
-        toxenv: ["django22-celery44-drf39", "django22-celery44-drf310", "django22-celery44-drf311", "django22-celery44-drf312", "quality", "docs"]
+        toxenv: [
+          "django22-celery44-drf39", "django22-celery44-drf310",
+          "django22-celery44-drf311", "django22-celery44-drf312",
+          "django22-celery50-drf39", "django22-celery50-drf310",
+          "django22-celery50-drf311", "django22-celery50-drf312",
+          "quality", "docs"
+        ]
 
     steps:
     - uses: actions/checkout@v2
@@ -39,3 +45,4 @@ jobs:
       with:
         flags: unittests
         fail_ci_if_error: true
+

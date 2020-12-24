@@ -9,12 +9,14 @@ from uuid import uuid4
 
 from celery import Task, shared_task
 
-from django.contrib.auth.models import User
+from django.contrib import auth
 from django.test import TestCase, override_settings
 from django.utils.timezone import now
 
 from user_tasks.models import UserTaskArtifact, UserTaskStatus
 from user_tasks.tasks import UserTask, UserTaskMixin, purge_old_user_tasks
+
+User = auth.get_user_model()
 
 LOGGER = logging.getLogger(__name__)
 

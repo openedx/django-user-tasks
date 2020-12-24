@@ -7,7 +7,7 @@ import shutil
 from uuid import uuid4
 
 from django.conf import settings
-from django.contrib.auth.models import User
+from django.contrib import auth
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.test import TestCase
 from django.urls import reverse
@@ -17,6 +17,8 @@ from rest_framework.test import APIRequestFactory
 
 from user_tasks.models import UserTaskArtifact, UserTaskStatus
 from user_tasks.serializers import ArtifactSerializer, StatusSerializer
+
+User = auth.get_user_model()
 
 
 def _format(datetime):
