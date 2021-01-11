@@ -5,9 +5,9 @@ Tests for the ``django-user-tasks`` REST API.
 
 import logging
 from datetime import timedelta
+from unittest import mock
 from uuid import uuid4
 
-import mock
 import rules
 
 from django.contrib import auth
