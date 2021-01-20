@@ -220,7 +220,7 @@ class UserTaskStatus(TimeStampedModel):
         """
         Get a string representation of this task.
         """
-        return '<UserTaskStatus: {}>'.format(self.name)
+        return f'<UserTaskStatus: {self.name}>'
 
 
 class UserTaskArtifact(TimeStampedModel):
@@ -251,4 +251,4 @@ class UserTaskArtifact(TimeStampedModel):
             content = self.text[:47] + '...'
         else:
             content = self.text
-        return '<UserTaskArtifact: ({}) {}>'.format(self.name, content)
+        return f'<UserTaskArtifact: ({self.name}) {content}>'

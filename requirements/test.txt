@@ -4,20 +4,68 @@
 #
 #    make upgrade
 #
-attrs==20.3.0             # via pytest
-coverage==5.3.1           # via pytest-cov
-django-model-utils==4.1.1  # via -r requirements/base.txt
-iniconfig==1.1.1          # via pytest
-mock==4.0.3               # via -r requirements/test.in
-packaging==20.8           # via -r requirements/test.in, pytest
-pluggy==0.13.1            # via pytest
-py==1.10.0                # via pytest
-pyparsing==2.4.7          # via packaging
-pytest-cov==2.10.1        # via -r requirements/test.in
-pytest-django==4.1.0      # via -r requirements/test.in
-pytest==6.2.1             # via pytest-cov, pytest-django
-pytz==2020.4              # via -r requirements/base.txt, celery, django
-rules==2.2                # via -r requirements/test.in
-sqlparse==0.4.1           # via -r requirements/base.txt, django
-testfixtures==6.17.0      # via -r requirements/test.in
-toml==0.10.2              # via pytest
+    # via
+    #   -r requirements/base.txt
+    #   kombu
+attrs==20.3.0
+    # via pytest
+    # via
+    #   -r requirements/base.txt
+    #   celery
+    # via
+    #   -c requirements/constraints.txt
+    #   -r requirements/base.txt
+coverage==5.3.1
+    # via pytest-cov
+django-model-utils==4.1.1
+    # via -r requirements/base.txt
+    # via
+    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
+    #   -r requirements/base.txt
+    #   django-model-utils
+    #   djangorestframework
+    # via -r requirements/base.txt
+iniconfig==1.1.1
+    # via pytest
+    # via
+    #   -r requirements/base.txt
+    #   celery
+mock==4.0.3
+    # via -r requirements/test.in
+packaging==20.8
+    # via
+    #   -r requirements/test.in
+    #   pytest
+pluggy==0.13.1
+    # via pytest
+py==1.10.0
+    # via pytest
+pyparsing==2.4.7
+    # via packaging
+pytest-cov==2.11.0
+    # via -r requirements/test.in
+pytest-django==4.1.0
+    # via -r requirements/test.in
+pytest==6.2.1
+    # via
+    #   pytest-cov
+    #   pytest-django
+pytz==2020.5
+    # via
+    #   -r requirements/base.txt
+    #   celery
+    #   django
+rules==2.2
+    # via -r requirements/test.in
+sqlparse==0.4.1
+    # via
+    #   -r requirements/base.txt
+    #   django
+testfixtures==6.17.1
+    # via -r requirements/test.in
+toml==0.10.2
+    # via pytest
+    # via
+    #   -r requirements/base.txt
+    #   amqp
+    #   celery

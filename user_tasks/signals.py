@@ -185,7 +185,7 @@ def _get_user_id(arguments_dict):
     try:
         get_user_model().objects.get(pk=user_id)
     except (ValueError, get_user_model().DoesNotExist) as import_exception:
-        raise TypeError('Invalid user_id: {}'.format(user_id)) from import_exception
+        raise TypeError(f'Invalid user_id: {user_id}') from import_exception
     return user_id
 
 

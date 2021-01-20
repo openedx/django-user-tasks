@@ -32,7 +32,7 @@ BROKER_URL = 'memory://localhost/'
 CELERY_IGNORE_RESULT = True
 
 if CELERY_VERSION >= version.parse('4.0'):
-    CELERY_RESULT_BACKEND = 'file://{}'.format(RESULTS_DIR.name)
+    CELERY_RESULT_BACKEND = f'file://{RESULTS_DIR.name}'
 
 DATABASES = {
     'default': {
