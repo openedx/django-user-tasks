@@ -6,7 +6,7 @@ django-user-tasks
     :alt: PyPI
 
 .. image:: https://github.com/edx/django-user-tasks/workflows/Python%20CI/badge.svg?branch=master
-    :target: https://github.com/edx/django-user-tasks/actions
+    :target: https://github.com/edx/django-user-tasks/actions?query=workflow%3A%22Python+CI%22
     :alt: CI
 
 .. image:: http://codecov.io/github/edx/django-user-tasks/coverage.svg?branch=master
