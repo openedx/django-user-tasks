@@ -46,11 +46,16 @@ click==7.1.2
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
     #   click-log
+    #   code-annotations
     #   edx-lint
     #   pip-tools
+code-annotations==1.0.2
+    # via
+    #   -r requirements/quality.txt
+    #   edx-lint
 codecov==2.1.11
     # via -r requirements/ci.txt
-coverage==5.3.1
+coverage==5.4
     # via
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
@@ -65,15 +70,18 @@ django-model-utils==4.1.1
 django==2.2.17
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
+    #   -r requirements/quality.txt
     #   -r requirements/test.txt
+    #   code-annotations
     #   django-model-utils
     #   djangorestframework
     #   edx-i18n-tools
+    #   edx-lint
 djangorestframework==3.12.2
     # via -r requirements/test.txt
 edx-i18n-tools==0.5.3
     # via -r requirements/dev.in
-edx-lint==1.6
+edx-lint==3.0.2
     # via
     #   -r requirements/dev.in
     #   -r requirements/quality.txt
@@ -94,6 +102,10 @@ isort==5.7.0
     # via
     #   -r requirements/quality.txt
     #   pylint
+jinja2==2.11.2
+    # via
+    #   -r requirements/quality.txt
+    #   code-annotations
 kombu==4.6.11
     # via
     #   -r requirements/test.txt
@@ -102,6 +114,10 @@ lazy-object-proxy==1.4.3
     # via
     #   -r requirements/quality.txt
     #   astroid
+markupsafe==1.1.1
+    # via
+    #   -r requirements/quality.txt
+    #   jinja2
 mccabe==0.6.1
     # via
     #   -r requirements/quality.txt
@@ -116,8 +132,12 @@ packaging==20.8
     #   tox
 path.py==12.5.0
     # via edx-i18n-tools
-path==15.0.1
+path==15.1.0
     # via path.py
+pbr==5.5.1
+    # via
+    #   -r requirements/quality.txt
+    #   stevedore
 pip-tools==5.5.0
     # via -r requirements/pip-tools.txt
 pluggy==0.13.1
@@ -142,7 +162,7 @@ pylint-celery==0.3
     # via
     #   -r requirements/quality.txt
     #   edx-lint
-pylint-django==2.3.0
+pylint-django==2.4.2
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -163,22 +183,30 @@ pyparsing==2.4.7
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
     #   packaging
-pytest-cov==2.11.0
+pytest-cov==2.11.1
     # via -r requirements/test.txt
 pytest-django==4.1.0
     # via -r requirements/test.txt
-pytest==6.2.1
+pytest==6.2.2
     # via
     #   -r requirements/test.txt
     #   pytest-cov
     #   pytest-django
+python-slugify==4.0.1
+    # via
+    #   -r requirements/quality.txt
+    #   code-annotations
 pytz==2020.5
     # via
+    #   -r requirements/quality.txt
     #   -r requirements/test.txt
     #   celery
     #   django
-pyyaml==5.4
-    # via edx-i18n-tools
+pyyaml==5.4.1
+    # via
+    #   -r requirements/quality.txt
+    #   code-annotations
+    #   edx-i18n-tools
 requests==2.25.1
     # via
     #   -r requirements/ci.txt
@@ -194,16 +222,25 @@ six==1.15.0
     #   edx-lint
     #   tox
     #   virtualenv
-snowballstemmer==2.0.0
+snowballstemmer==2.1.0
     # via
     #   -r requirements/quality.txt
     #   pydocstyle
 sqlparse==0.4.1
     # via
+    #   -r requirements/quality.txt
     #   -r requirements/test.txt
     #   django
+stevedore==3.3.0
+    # via
+    #   -r requirements/quality.txt
+    #   code-annotations
 testfixtures==6.17.1
     # via -r requirements/test.txt
+text-unidecode==1.3
+    # via
+    #   -r requirements/quality.txt
+    #   python-slugify
 toml==0.10.2
     # via
     #   -r requirements/ci.txt
@@ -214,11 +251,11 @@ toml==0.10.2
     #   tox
 tox-battery==0.6.1
     # via -r requirements/ci.txt
-tox==3.21.2
+tox==3.21.3
     # via
     #   -r requirements/ci.txt
     #   tox-battery
-urllib3==1.26.2
+urllib3==1.26.3
     # via
     #   -r requirements/ci.txt
     #   requests
