@@ -171,7 +171,7 @@ pylint-plugin-utils==0.6
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pylint==2.6.0
+pylint==2.6.2
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -251,7 +251,7 @@ toml==0.10.2
     #   tox
 tox-battery==0.6.1
     # via -r requirements/ci.txt
-tox==3.21.4
+tox==3.22.0
     # via
     #   -r requirements/ci.txt
     #   tox-battery
