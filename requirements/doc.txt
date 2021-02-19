@@ -42,7 +42,7 @@ coreapi==2.3.3
     #   openapi-codec
 coreschema==0.0.4
     # via coreapi
-cryptography==3.4.5
+cryptography==3.4.6
     # via secretstorage
 django-model-utils==4.1.1
     # via -r requirements/base.txt
@@ -151,7 +151,7 @@ six==1.15.0
     #   readme-renderer
 snowballstemmer==2.1.0
     # via sphinx
-sphinx==3.5.0
+sphinx==3.5.1
     # via
     #   -r requirements/doc.in
     #   edx-sphinx-theme
@@ -177,7 +177,7 @@ strict-rfc3339==0.7
     # via swagger2rst
 swagger2rst==0.0.4
     # via -r requirements/doc.in
-tqdm==4.56.2
+tqdm==4.57.0
     # via twine
 twine==3.3.0
     # via -r requirements/doc.in
