@@ -12,7 +12,7 @@ appdirs==1.4.4
     # via
     #   -r requirements/ci.txt
     #   virtualenv
-astroid==2.4.2
+astroid==2.5
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -67,7 +67,7 @@ distlib==0.3.1
     #   virtualenv
 django-model-utils==4.1.1
     # via -r requirements/test.txt
-django==2.2.18
+django==2.2.19
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/quality.txt
@@ -110,7 +110,7 @@ kombu==4.6.11
     # via
     #   -r requirements/test.txt
     #   celery
-lazy-object-proxy==1.4.3
+lazy-object-proxy==1.5.2
     # via
     #   -r requirements/quality.txt
     #   astroid
@@ -132,7 +132,7 @@ packaging==20.9
     #   tox
 path.py==12.5.0
     # via edx-i18n-tools
-path==15.1.0
+path==15.1.2
     # via path.py
 pbr==5.5.1
     # via
@@ -171,7 +171,7 @@ pylint-plugin-utils==0.6
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pylint==2.6.2
+pylint==2.7.0
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -217,7 +217,6 @@ six==1.15.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
-    #   astroid
     #   edx-i18n-tools
     #   edx-lint
     #   tox
