@@ -81,7 +81,7 @@ djangorestframework==3.12.2
     # via -r requirements/test.txt
 edx-i18n-tools==0.5.3
     # via -r requirements/dev.in
-edx-lint==4.0.1
+edx-lint==4.1.0
     # via
     #   -r requirements/dev.in
     #   -r requirements/quality.txt
@@ -171,7 +171,7 @@ pylint-plugin-utils==0.6
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pylint==2.7.0
+pylint==2.7.1
     # via
     #   -r requirements/quality.txt
     #   edx-lint

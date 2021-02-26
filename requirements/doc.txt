@@ -122,7 +122,7 @@ pytz==2021.1
     #   django
 pyyaml==5.4.1
     # via swagger2rst
-readme-renderer==28.0
+readme-renderer==29.0
     # via twine
 requests-toolbelt==0.9.1
     # via twine
@@ -177,7 +177,7 @@ strict-rfc3339==0.7
     # via swagger2rst
 swagger2rst==0.0.4
     # via -r requirements/doc.in
-tqdm==4.57.0
+tqdm==4.58.0
     # via twine
 twine==3.3.0
     # via -r requirements/doc.in
