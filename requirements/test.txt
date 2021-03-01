@@ -15,7 +15,7 @@ attrs==20.3.0
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
-coverage==5.4
+coverage==5.5
     # via pytest-cov
 django-model-utils==4.1.1
     # via -r requirements/base.txt

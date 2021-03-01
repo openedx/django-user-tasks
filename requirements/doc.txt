@@ -85,7 +85,7 @@ jinja2==2.11.3
     #   swagger2rst
 jsonschema==3.2.0
     # via swagger2rst
-keyring==22.0.1
+keyring==22.3.0
     # via twine
 kombu==4.6.11
     # via
