@@ -250,7 +250,7 @@ toml==0.10.2
     #   tox
 tox-battery==0.6.1
     # via -r requirements/ci.txt
-tox==3.22.0
+tox==3.23.0
     # via
     #   -r requirements/ci.txt
     #   tox-battery
