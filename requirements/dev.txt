@@ -138,7 +138,7 @@ pbr==5.5.1
     # via
     #   -r requirements/quality.txt
     #   stevedore
-pip-tools==5.5.0
+pip-tools==6.0.0
     # via -r requirements/pip-tools.txt
 pluggy==0.13.1
     # via
@@ -154,7 +154,7 @@ py==1.10.0
     #   -r requirements/test.txt
     #   pytest
     #   tox
-pycodestyle==2.6.0
+pycodestyle==2.7.0
     # via -r requirements/quality.txt
 pydocstyle==5.1.1
     # via -r requirements/quality.txt

@@ -72,7 +72,7 @@ idna==2.10
     # via requests
 imagesize==1.2.0
     # via sphinx
-importlib-metadata==3.7.2
+importlib-metadata==3.7.3
     # via keyring
 itypes==1.2.0
     # via coreapi
