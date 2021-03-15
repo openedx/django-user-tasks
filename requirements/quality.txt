@@ -38,7 +38,7 @@ mccabe==0.6.1
     # via pylint
 pbr==5.5.1
     # via stevedore
-pycodestyle==2.6.0
+pycodestyle==2.7.0
     # via -r requirements/quality.in
 pydocstyle==5.1.1
     # via -r requirements/quality.in
