@@ -22,9 +22,9 @@ django==2.2.19
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   code-annotations
     #   edx-lint
-edx-lint==4.1.1
+edx-lint==5.0.0
     # via -r requirements/quality.in
-isort==5.7.0
+isort==5.8.0
     # via
     #   -r requirements/quality.in
     #   pylint

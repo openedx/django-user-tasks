@@ -81,7 +81,7 @@ djangorestframework==3.12.2
     # via -r requirements/test.txt
 edx-i18n-tools==0.5.3
     # via -r requirements/dev.in
-edx-lint==4.1.1
+edx-lint==5.0.0
     # via
     #   -r requirements/dev.in
     #   -r requirements/quality.txt
@@ -98,7 +98,7 @@ iniconfig==1.1.1
     # via
     #   -r requirements/test.txt
     #   pytest
-isort==5.7.0
+isort==5.8.0
     # via
     #   -r requirements/quality.txt
     #   pylint
