@@ -77,7 +77,7 @@ django==2.2.19
     #   djangorestframework
     #   edx-i18n-tools
     #   edx-lint
-djangorestframework==3.12.2
+djangorestframework==3.12.3
     # via -r requirements/test.txt
 edx-i18n-tools==0.5.3
     # via -r requirements/dev.in
@@ -110,7 +110,7 @@ kombu==4.6.11
     # via
     #   -r requirements/test.txt
     #   celery
-lazy-object-proxy==1.5.2
+lazy-object-proxy==1.6.0
     # via
     #   -r requirements/quality.txt
     #   astroid
