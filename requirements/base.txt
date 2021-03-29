@@ -20,7 +20,7 @@ django==2.2.19
     #   -r requirements/base.in
     #   django-model-utils
     #   djangorestframework
-djangorestframework==3.12.3
+djangorestframework==3.12.4
     # via -r requirements/base.in
 kombu==4.6.11
     # via celery
