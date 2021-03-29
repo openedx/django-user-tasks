@@ -54,7 +54,7 @@ django==2.2.19
     #   -r requirements/base.txt
     #   django-model-utils
     #   djangorestframework
-djangorestframework==3.12.3
+djangorestframework==3.12.4
     # via
     #   -r requirements/base.txt
     #   django-rest-swagger
@@ -72,7 +72,7 @@ idna==2.10
     # via requests
 imagesize==1.2.0
     # via sphinx
-importlib-metadata==3.7.3
+importlib-metadata==3.9.0
     # via
     #   keyring
     #   twine
