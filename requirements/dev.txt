@@ -21,7 +21,7 @@ attrs==20.3.0
     # via
     #   -r requirements/test.txt
     #   pytest
-billiard==3.6.3.0
+billiard==3.6.4.0
     # via
     #   -r requirements/test.txt
     #   celery
@@ -49,7 +49,7 @@ click==7.1.2
     #   code-annotations
     #   edx-lint
     #   pip-tools
-code-annotations==1.1.0
+code-annotations==1.1.1
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -175,7 +175,7 @@ pylint-plugin-utils==0.6
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pylint==2.7.2
+pylint==2.7.4
     # via
     #   -r requirements/quality.txt
     #   edx-lint
