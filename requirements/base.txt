@@ -6,7 +6,7 @@
 #
 amqp==2.6.1
     # via kombu
-billiard==3.6.3.0
+billiard==3.6.4.0
     # via celery
 celery==4.4.7
     # via

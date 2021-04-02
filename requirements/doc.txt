@@ -14,7 +14,7 @@ attrs==20.3.0
     # via jsonschema
 babel==2.9.0
     # via sphinx
-billiard==3.6.3.0
+billiard==3.6.4.0
     # via
     #   -r requirements/base.txt
     #   celery
@@ -66,13 +66,13 @@ docutils==0.16
     #   readme-renderer
     #   restructuredtext-lint
     #   sphinx
-edx-sphinx-theme==2.0.0
+edx-sphinx-theme==2.1.0
     # via -r requirements/doc.in
 idna==2.10
     # via requests
 imagesize==1.2.0
     # via sphinx
-importlib-metadata==3.9.0
+importlib-metadata==3.10.0
     # via
     #   keyring
     #   twine
