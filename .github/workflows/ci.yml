@@ -46,7 +46,6 @@ jobs:
         flags: unittests
         fail_ci_if_error: true
 
-
   commit-lint:
     runs-on: ubuntu-20.04
     steps:
