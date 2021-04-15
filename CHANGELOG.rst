@@ -1,3 +1,106 @@
+`8.3.3 <https://github.com/edx/django-user-tasks/compare/8.3.2...8.3.3>`__ (2021-04-23)
+---------------------------------------------------------------------------------------
+
+Fix
+~~~
+
+-  update branch name'
+
+`8.1.3 <https://github.com/edx/django-user-tasks/compare/8.1.2...8.1.3>`__ (2021-04-22)
+---------------------------------------------------------------------------------------
+
+Docs
+~~~~
+
+-  Bump the Version and update Changelogs
+
+Fix
+~~~
+
+-  removed extras
+
+`8.1.2 <https://github.com/edx/django-user-tasks/compare/8.1.1...8.1.2>`__ (2021-04-22)
+---------------------------------------------------------------------------------------
+
+Fix
+~~~
+
+-  correction
+
+`8.1.0 <https://github.com/edx/django-user-tasks/compare/8.0.2...8.1.0>`__ (2021-04-22)
+---------------------------------------------------------------------------------------
+
+Build
+~~~~~
+
+-  try commitizen
+
+Fix
+~~~
+
+-  updated outputs
+
+`8.0.0 <https://github.com/edx/django-user-tasks/compare/7.0.8...8.0.0>`__ (2021-04-20)
+---------------------------------------------------------------------------------------
+
+Build
+~~~~~
+
+-  updated wprkflow
+
+`7.0.5 <https://github.com/edx/django-user-tasks/compare/7.0.4...7.0.5>`__ (2021-04-20)
+---------------------------------------------------------------------------------------
+
+Docs
+~~~~
+
+-  added new line in changelogs
+
+`7.0.2 <https://github.com/edx/django-user-tasks/compare/7.0.1...7.0.2>`__ (2021-04-20)
+---------------------------------------------------------------------------------------
+
+Docs
+~~~~
+
+-  updated changelogs
+
+`6.0.0 <https://github.com/edx/django-user-tasks/compare/5.0.0...6.0.0>`__ (2021-04-20)
+---------------------------------------------------------------------------------------
+
+Config
+~~~~~~
+
+-  updated configuration
+
+Docs
+~~~~
+
+-  resolved error in logs
+-  update
+
+`4.0.0 <https://github.com/edx/django-user-tasks/compare/3.0.0...4.0.0>`__ (2021-04-19)
+---------------------------------------------------------------------------------------
+
+Build
+~~~~~
+
+-  added pandoc in workflow
+
+Config
+~~~~~~
+
+-  Testing Mainline mode
+
+Docs
+~~~~
+
+-  tttest
+
+Feature
+~~~~~~~
+
+-  test
+
 Change Log
 ----------
 
