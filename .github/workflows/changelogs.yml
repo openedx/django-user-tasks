@@ -1,0 +1,95 @@
+name: changelogs
+
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  update_changelogs:
+    runs-on: ubuntu-20.04
+    outputs:
+      output1: ${{ steps.gitversion.outputs.version }}
+      output2: ${{ steps.latesttag.outputs.tag }}
+    steps:
+
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: setup python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+
+    - name: Install commitizen
+      run: pip install -U commitizen
+
+    - name: Determine Version
+      id: gitversion
+      run: echo "::set-output name=version::$(cz bump --files-only | grep 'tag' | cut -d':' -f2-)"
+
+    - name: Get Latest Tag
+      id: latesttag
+      run: echo "::set-output name=tag::$(git describe --tags --abbrev=0)"
+
+    - name: Installing Homebrew
+      if: ${{ !contains(steps.gitversion.outputs.version,steps.latesttag.outputs.tag) }}
+      env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+      run: |
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+        test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
+        test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+        echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
+        echo "::add-path::/home/linuxbrew/.linuxbrew/bin"
+
+    - name: Install git-chglog
+      if: ${{ !contains(steps.gitversion.outputs.version,steps.latesttag.outputs.tag) }}
+      run: |
+        brew tap git-chglog/git-chglog
+        brew install git-chglog
+
+    - name: Install pandoc
+      if: ${{ !contains(steps.gitversion.outputs.version,steps.latesttag.outputs.tag) }}
+      run: brew install pandoc
+
+    - name: Tag the commit
+      if: ${{ !contains(steps.gitversion.outputs.version,steps.latesttag.outputs.tag) }}
+      run: git tag ${{ steps.gitversion.outputs.version }}
+
+    - name: Get Changelog
+      if: ${{ !contains(steps.gitversion.outputs.version,steps.latesttag.outputs.tag) }}
+      id: changelogs
+      run: |
+        git-chglog -o temp.md $(git describe --tags $(git rev-list --tags --max-count=1))
+        pandoc temp.md -f markdown_strict -t rst -o temp.rst
+        echo "" >> temp.rst
+        cat temp.rst CHANGELOG.rst > tmp && mv tmp CHANGELOG.rst
+
+    - name: Create Release
+      if: ${{ !contains(steps.gitversion.outputs.version,steps.latesttag.outputs.tag) }}
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ steps.gitversion.outputs.version }}
+        release_name: Release ${{ steps.gitversion.outputs.version }}
+        body_path: temp.md
+        draft: false
+        prerelease: false
+
+    - name: delete temp files
+      if: ${{ !contains(steps.gitversion.outputs.version,steps.latesttag.outputs.tag) }}
+      run: |
+        rm temp.md
+        rm temp.rst
+
+    - name: create pull request
+      if: ${{ !contains(steps.gitversion.outputs.version,steps.latesttag.outputs.tag) }}
+      uses: peter-evans/create-pull-request@v3
+      with:
+        commit-message: 'docs: Bump the Version and update Changelogs'
+        branch: ${{steps.gitversion.outputs.version}}-update-changelogs
+        title: Upgrade the version ${{steps.gitversion.outputs.version}}

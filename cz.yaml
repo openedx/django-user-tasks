@@ -1,0 +1,30 @@
+commitizen:
+  customize:
+    bump_map:
+      BREAKING: MAJOR
+      break: MAJOR
+      build: MINOR
+      feat: MINOR
+      feature: MINOR
+      fix: PATCH
+      perf: PATCH
+    bump_pattern: ^(break|fix|feat|feature|perf|build|BREAKING CHANGE)
+    message_template: '{{change_type}}:{% if show_message %} {{message}}{% endif %}'
+    questions:
+    - choices:
+      - name: 'feature: A new feature.'
+        value: feature
+      - name: 'bug fix: A bug fix.'
+        value: bug fix
+      message: Select the type of change you are committing
+      name: change_type
+      type: list
+    - message: Body.
+      name: message
+      type: input
+    - message: Do you want to add body message in commit?
+      name: show_message
+      type: confirm
+  name: cz_customize
+  tag_format: $version
+  version: 1.3.2
