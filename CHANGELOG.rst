@@ -16,6 +16,41 @@ Unreleased
 
 *
 
+[2.0.0] - 2021-01-20
+~~~~~~~~~~~~~~~~~~~~
+
+Removed
++++++++
+
+* Removed python3.5 support.
+
+
+[1.3.2] - 2020-12-17
+~~~~~~~~~~~~~~~~~~~~
+
+Changed
++++++++
+
+* Added celery 5.0 testing using tox. Fix pylint warnings. Update the code accordingly.
+
+
+[1.3.2] - 2020-12-17
+~~~~~~~~~~~~~~~~~~~~
+
+Changed
++++++++
+
+* Updated the deprecated celery import class. New import is compatible with 4.4.7 also.
+
+
+[1.3.1] - 2020-11-23
+~~~~~~~~~~~~~~~~~~~~
+
+Added
++++++
+
+* Added support for Django REST Framework 3.10.x through 3.12.x
+
 [1.3.0] - 2020-08-25
 ~~~~~~~~~~~~~~~~~~~~
 

@@ -7,7 +7,7 @@ import shutil
 from uuid import uuid4
 
 from django.conf import settings
-from django.contrib.auth.models import User
+from django.contrib import auth
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.test import TestCase
 from django.urls import reverse
@@ -17,6 +17,8 @@ from rest_framework.test import APIRequestFactory
 
 from user_tasks.models import UserTaskArtifact, UserTaskStatus
 from user_tasks.serializers import ArtifactSerializer, StatusSerializer
+
+User = auth.get_user_model()
 
 
 def _format(datetime):
@@ -66,7 +68,7 @@ class TestStatusSerializer(TestCase):
             'attempts': 1,
             'created': _format(status.created),
             'modified': _format(status.modified),
-            'artifacts': ['http://testserver/artifacts/{}/'.format(artifact.uuid)]
+            'artifacts': [f'http://testserver/artifacts/{artifact.uuid}/']
         }
         request = APIRequestFactory().get(reverse('usertaskstatus-detail', args=[status.uuid]))
         serializer = StatusSerializer(status, context={'request': request})
@@ -95,7 +97,7 @@ class TestArtifactSerializer(TestCase):
         uploaded_file = SimpleUploadedFile('filename.txt', b'Content of the file')
         artifact = UserTaskArtifact.objects.create(status=self.status, file=uploaded_file)
         expected = {
-            'status': 'http://testserver/tasks/{}/'.format(self.status.uuid),
+            'status': f'http://testserver/tasks/{self.status.uuid}/',
             'name': 'Output',
             'created': _format(artifact.created),
             'modified': _format(artifact.modified),
@@ -111,7 +113,7 @@ class TestArtifactSerializer(TestCase):
         """The serializer should handle text block artifacts correctly."""
         artifact = UserTaskArtifact.objects.create(status=self.status, text='Got your output right here.')
         expected = {
-            'status': 'http://testserver/tasks/{}/'.format(self.status.uuid),
+            'status': f'http://testserver/tasks/{self.status.uuid}/',
             'name': 'Output',
             'created': _format(artifact.created),
             'modified': _format(artifact.modified),
@@ -127,7 +129,7 @@ class TestArtifactSerializer(TestCase):
         """The serializer should handle URL artifacts correctly."""
         artifact = UserTaskArtifact.objects.create(status=self.status, url='http://www.example.com/output/3/')
         expected = {
-            'status': 'http://testserver/tasks/{}/'.format(self.status.uuid),
+            'status': f'http://testserver/tasks/{self.status.uuid}/',
             'name': 'Output',
             'created': _format(artifact.created),
             'modified': _format(artifact.modified),

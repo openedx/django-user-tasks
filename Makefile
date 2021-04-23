@@ -64,22 +64,29 @@ upgrade: export CUSTOM_COMPILE_COMMAND=make upgrade
 upgrade: ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
 	pip install -qr requirements/pip-tools.txt
 	# Make sure to compile files after any other files they include!
-	$(PIP_COMPILE) --rebuild -o requirements/pip-tools.txt requirements/pip-tools.in
+	$(PIP_COMPILE) --allow-unsafe --rebuild -o requirements/pip.txt requirements/pip.in
+	$(PIP_COMPILE) -o requirements/pip-tools.txt requirements/pip-tools.in
 	$(PIP_COMPILE) -o requirements/base.txt requirements/base.in
 	$(PIP_COMPILE) -o requirements/test.txt requirements/test.in
 	$(PIP_COMPILE) -o requirements/doc.txt requirements/doc.in
 	$(PIP_COMPILE) -o requirements/quality.txt requirements/quality.in
-	$(PIP_COMPILE) -o requirements/travis.txt requirements/travis.in
+	$(PIP_COMPILE) -o requirements/ci.txt requirements/ci.in
 	$(PIP_COMPILE) -o requirements/dev.txt requirements/dev.in
-	# Let tox control the Django and celery versions for tests
-	grep -e "^amqp==\|^anyjson==\|^billiard==\|^celery==\|^kombu==" requirements/base.txt > requirements/celery44.txt
-	sed -i.tmp '/^[dD]jango==/d' requirements/test.txt
+	# Let tox control the Django, djangorestframework, and celery versions for tests
+	grep -e "^amqp==\|^anyjson==\|^billiard==\|^celery==\|^kombu==\|^click-didyoumean==\|^click-repl==\|^click==\|^prompt-toolkit==\|^vine==" requirements/base.txt > requirements/celery44.txt
+	sed -i.tmp '/^[d|D]jango==/d' requirements/test.txt
+	sed -i.tmp '/^djangorestframework==/d' requirements/test.txt
 	sed -i.tmp '/^amqp==/d' requirements/test.txt
 	sed -i.tmp '/^anyjson==/d' requirements/test.txt
 	sed -i.tmp '/^billiard==/d' requirements/test.txt
 	sed -i.tmp '/^celery==/d' requirements/test.txt
 	sed -i.tmp '/^kombu==/d' requirements/test.txt
-	rm requirements/*.txt.tmp
+	sed -i.tmp '/^vine==/d' requirements/test.txt
+	sed -i.tmp '/^click-didyoumean==/d' requirements/test.txt
+	sed -i.tmp '/^click==/d' requirements/test.txt
+	sed -i.tmp '/^prompt-toolkit==/d' requirements/test.txt
+
+	rm requirements/test.txt.tmp
 
 pull_translations: ## pull translations from Transifex
 	tx pull -a
@@ -91,6 +98,7 @@ quality: ## check coding style with pycodestyle and pylint
 	tox -e quality
 
 requirements: ## install development environment requirements
+	pip install -qr requirements/pip.txt
 	pip install -qr requirements/pip-tools.txt --exists-action w
 	pip-sync requirements/dev.txt requirements/private.*
 

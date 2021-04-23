@@ -4,7 +4,7 @@
 -r pip-tools.txt          # pip-tools and its dependencies, for managing requirements files
 -r quality.txt            # Dependencies for quality check utilities
 -r test.txt               # Dependencies for running unit tests
--r travis.txt             # Dependencies for running tox
+-r ci.txt                 # Dependencies for setting up ci
 
 edx-lint                  # For updating pylintrc
 edx-i18n-tools            # For i18n_tool dummy

@@ -3,7 +3,7 @@ REST API endpoints.
 """
 
 from rest_framework import mixins, permissions, viewsets
-from rest_framework.decorators import detail_route
+from rest_framework.decorators import action
 from rest_framework.response import Response
 
 from .conf import settings
@@ -54,7 +54,7 @@ class StatusViewSet(
     queryset = UserTaskStatus.objects.order_by('-created')
     serializer_class = StatusSerializer
 
-    @detail_route(methods=['post'])
+    @action(detail=True, methods=['post'])
     def cancel(self, request, *args, **kwargs):  # pylint: disable=unused-argument
         """
         Cancel the task associated with the specified status record.

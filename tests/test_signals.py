@@ -4,15 +4,15 @@ Tests for the ``django-user-tasks`` Celery signal handlers and Django signal.
 """
 
 import logging
+from unittest import mock
 
-import mock
 import pytest
 from celery import __version__ as celery_version
 from celery import chain, chord, group, shared_task
 from packaging import version
 from testfixtures import LogCapture
 
-from django.contrib.auth.models import User
+from django.contrib import auth
 from django.db import transaction
 from django.test import TestCase, TransactionTestCase, override_settings
 
@@ -20,6 +20,9 @@ from user_tasks import user_task_stopped
 from user_tasks.models import UserTaskStatus
 from user_tasks.signals import start_user_task
 from user_tasks.tasks import UserTask
+
+User = auth.get_user_model()
+
 
 CELERY_VERSION = version.parse(celery_version)
 LOGGER = logging.getLogger(__name__)
@@ -46,7 +49,7 @@ def sample_task(self, user_id, argument, **kwargs):  # pylint: disable=unused-ar
     """
     Example of a specific task inheriting from UserTask.
     """
-    print('Ran SampleTask for argument "{}"'.format(argument))
+    print(f'Ran SampleTask for argument "{argument}"')
     return argument
 
 
