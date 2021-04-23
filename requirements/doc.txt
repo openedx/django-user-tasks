@@ -73,7 +73,7 @@ idna==2.10
     # via requests
 imagesize==1.2.0
     # via sphinx
-importlib-metadata==4.0.0
+importlib-metadata==4.0.1
     # via
     #   keyring
     #   twine
