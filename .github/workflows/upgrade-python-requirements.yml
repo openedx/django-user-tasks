@@ -14,7 +14,8 @@ on:
 jobs:
   upgrade_requirements:
     runs-on: ubuntu-latest
-
+#    outputs:
+#      output1: ${{ steps.runurl.outputs.url }}
     strategy:
       matrix:
         python-version: ["3.8"]
@@ -48,9 +49,28 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.REQUIREMENTS_BOT_GITHUB_TOKEN }}
           GITHUB_USER_EMAIL: ${{ secrets.REQUIREMENTS_BOT_GITHUB_EMAIL }}
         run: |
+          exit 1
           cd $GITHUB_WORKSPACE/testeng-ci
           python -m jenkins.pull_request_creator --repo-root=$GITHUB_WORKSPACE \
           --target-branch="${{ env.target_branch }}" --base-branch-name="upgrade-python-requirements" \
           --commit-message="chore: Updating Python Requirements" --pr-title="Python Requirements Update" \
           --pr-body="Python requirements update.Please review the [changelogs](https://openedx.atlassian.net/wiki/spaces/TE/pages/1001521320/Python+Package+Changelogs) for the upgraded packages." \
           --user-reviewers="" --team-reviewers="arbi-bom" --delete-old-pull-requests
+
+#      - name: Get run url
+#        if: ${{ failure() }}
+#        id: runurl
+#        run: echo "::set-output name=url::$(echo )"
+
+      - name: Send email
+        if: ${{ failure() }}
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: email-smtp.us-east-1.amazonaws.com
+          server_port: 465
+          username: ${{secrets.EDX_SMTP_USERNAME}}
+          password: ${{secrets.EDX_SMTP_PASSWORD}}
+          subject: Upgrade python requirements workflow failed in ${{github.repository}}
+          to: arbi-bom@edx.org
+          from: testeng-jenkins <testeng-jenkins@edx.org>
+          body: Upgrade python requirements workflow in ${{github.repository}} failed! For reference see "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
