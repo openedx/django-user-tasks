@@ -12,7 +12,7 @@ appdirs==1.4.4
     # via
     #   -r requirements/ci.txt
     #   virtualenv
-astroid==2.5.3
+astroid==2.5.6
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -134,7 +134,7 @@ path.py==12.5.0
     # via edx-i18n-tools
 path==15.1.2
     # via path.py
-pbr==5.5.1
+pbr==5.6.0
     # via
     #   -r requirements/quality.txt
     #   stevedore
@@ -166,7 +166,7 @@ pylint-celery==0.3
     # via
     #   -r requirements/quality.txt
     #   edx-lint
-pylint-django==2.4.3
+pylint-django==2.4.4
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -175,7 +175,7 @@ pylint-plugin-utils==0.6
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pylint==2.7.4
+pylint==2.8.2
     # via
     #   -r requirements/quality.txt
     #   edx-lint

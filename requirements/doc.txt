@@ -12,7 +12,7 @@ amqp==2.6.1
     #   kombu
 attrs==20.3.0
     # via jsonschema
-babel==2.9.0
+babel==2.9.1
     # via sphinx
 billiard==3.6.4.0
     # via
@@ -104,7 +104,7 @@ packaging==20.9
     # via
     #   bleach
     #   sphinx
-pbr==5.5.1
+pbr==5.6.0
     # via stevedore
 pkginfo==1.7.0
     # via twine
