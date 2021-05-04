@@ -65,5 +65,5 @@ jobs:
           password: ${{secrets.EDX_SMTP_PASSWORD}}
           subject: Upgrade python requirements workflow failed in ${{github.repository}}
           to: arbi-bom@edx.org
-          from: testeng-jenkins <testeng-jenkins@edx.org>
+          from: github-actions <github-actions@edx.org>
           body: Upgrade python requirements workflow in ${{github.repository}} failed! For details see "github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
