@@ -14,7 +14,7 @@ celery==4.4.7
     #   -r requirements/base.in
 django-model-utils==4.1.1
     # via -r requirements/base.in
-django==2.2.20
+django==2.2.22
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
