@@ -33,8 +33,16 @@ Removed
 
 * Removed python3.5 support.
 
+[2.0.1] - 2021-05-27
+~~~~~~~~~~~~~~~~~~~~
 
-[1.3.2] - 2020-12-17
+Changed
++++++++
+
+* Added celery 5.1 testing using tox.
+
+
+[1.3.3] - 2020-12-17
 ~~~~~~~~~~~~~~~~~~~~
 
 Changed

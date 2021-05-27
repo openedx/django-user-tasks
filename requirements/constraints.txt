@@ -15,3 +15,8 @@
 # v 5.0 drops support of python3.5
 celery<5.0
 
+# celery greater version requires click<8.0
+click<8.0
+
+
+

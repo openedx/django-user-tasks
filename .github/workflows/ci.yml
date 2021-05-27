@@ -17,8 +17,8 @@ jobs:
         toxenv: [
           "django22-celery44-drf39", "django22-celery44-drf310",
           "django22-celery44-drf311", "django22-celery44-drf312",
-          "django22-celery50-drf39", "django22-celery50-drf310",
-          "django22-celery50-drf311", "django22-celery50-drf312",
+          "django22-celery51-drf39", "django22-celery51-drf310",
+          "django22-celery51-drf311", "django22-celery51-drf312",
           "quality", "docs"
         ]
 
