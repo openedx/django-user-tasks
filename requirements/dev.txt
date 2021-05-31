@@ -12,12 +12,12 @@ appdirs==1.4.4
     # via
     #   -r requirements/ci.txt
     #   virtualenv
-astroid==2.5.3
+astroid==2.5.7
     # via
     #   -r requirements/quality.txt
     #   pylint
     #   pylint-celery
-attrs==20.3.0
+attrs==21.2.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -29,7 +29,7 @@ celery==4.4.7
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/test.txt
-certifi==2020.12.5
+certifi==2021.5.30
     # via
     #   -r requirements/ci.txt
     #   requests
@@ -41,7 +41,7 @@ click-log==0.3.2
     # via
     #   -r requirements/quality.txt
     #   edx-lint
-click==7.1.2
+click==8.0.1
     # via
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
@@ -49,30 +49,29 @@ click==7.1.2
     #   code-annotations
     #   edx-lint
     #   pip-tools
-code-annotations==1.1.1
+code-annotations==1.1.2
     # via
     #   -r requirements/quality.txt
     #   edx-lint
 codecov==2.1.11
     # via -r requirements/ci.txt
-coverage==5.5
+coverage[toml]==5.5
     # via
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
     #   codecov
     #   pytest-cov
-distlib==0.3.1
+distlib==0.3.2
     # via
     #   -r requirements/ci.txt
     #   virtualenv
 django-model-utils==4.1.1
     # via -r requirements/test.txt
-django==2.2.20
+django==2.2.23
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/quality.txt
     #   -r requirements/test.txt
-    #   code-annotations
     #   django-model-utils
     #   djangorestframework
     #   edx-i18n-tools
@@ -102,7 +101,7 @@ isort==5.8.0
     # via
     #   -r requirements/quality.txt
     #   pylint
-jinja2==2.11.3
+jinja2==3.0.1
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -114,7 +113,7 @@ lazy-object-proxy==1.6.0
     # via
     #   -r requirements/quality.txt
     #   astroid
-markupsafe==1.1.1
+markupsafe==2.0.1
     # via
     #   -r requirements/quality.txt
     #   jinja2
@@ -134,7 +133,7 @@ path.py==12.5.0
     # via edx-i18n-tools
 path==15.1.2
     # via path.py
-pbr==5.5.1
+pbr==5.6.0
     # via
     #   -r requirements/quality.txt
     #   stevedore
@@ -160,13 +159,13 @@ py==1.10.0
     #   tox
 pycodestyle==2.7.0
     # via -r requirements/quality.txt
-pydocstyle==6.0.0
+pydocstyle==6.1.1
     # via -r requirements/quality.txt
 pylint-celery==0.3
     # via
     #   -r requirements/quality.txt
     #   edx-lint
-pylint-django==2.4.3
+pylint-django==2.4.4
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -175,7 +174,7 @@ pylint-plugin-utils==0.6
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pylint==2.7.4
+pylint==2.8.2
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -187,16 +186,16 @@ pyparsing==2.4.7
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
     #   packaging
-pytest-cov==2.11.1
+pytest-cov==2.12.0
     # via -r requirements/test.txt
-pytest-django==4.2.0
+pytest-django==4.3.0
     # via -r requirements/test.txt
-pytest==6.2.3
+pytest==6.2.4
     # via
     #   -r requirements/test.txt
     #   pytest-cov
     #   pytest-django
-python-slugify==4.0.1
+python-slugify==5.0.2
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -215,9 +214,9 @@ requests==2.25.1
     # via
     #   -r requirements/ci.txt
     #   codecov
-rules==2.2
+rules==3.0
     # via -r requirements/test.txt
-six==1.15.0
+six==1.16.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -250,17 +249,18 @@ toml==0.10.2
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
     #   -r requirements/test.txt
+    #   coverage
     #   pep517
     #   pylint
     #   pytest
     #   tox
 tox-battery==0.6.1
     # via -r requirements/ci.txt
-tox==3.23.0
+tox==3.23.1
     # via
     #   -r requirements/ci.txt
     #   tox-battery
-urllib3==1.26.4
+urllib3==1.26.5
     # via
     #   -r requirements/ci.txt
     #   requests
@@ -269,7 +269,7 @@ vine==1.3.0
     #   -r requirements/test.txt
     #   amqp
     #   celery
-virtualenv==20.4.4
+virtualenv==20.4.7
     # via
     #   -r requirements/ci.txt
     #   tox
