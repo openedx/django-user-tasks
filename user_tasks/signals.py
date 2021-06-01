@@ -56,7 +56,6 @@ def _create_chain_entry(user_id, task_id, task_class, args, kwargs, callbacks, p
     """
     Create and update status records for a new :py:class:`UserTaskMixin` in a Celery chain.
     """
-    print(user_id)
     LOGGER.debug(task_class)
     if issubclass(task_class.__class__, UserTaskMixin):
         arguments_dict = task_class.arguments_as_dict(*args, **kwargs)
