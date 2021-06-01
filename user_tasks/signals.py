@@ -56,6 +56,7 @@ def _create_chain_entry(user_id, task_id, task_class, args, kwargs, callbacks, p
     """
     Create and update status records for a new :py:class:`UserTaskMixin` in a Celery chain.
     """
+    print(user_id)
     LOGGER.debug(task_class)
     if issubclass(task_class.__class__, UserTaskMixin):
         arguments_dict = task_class.arguments_as_dict(*args, **kwargs)
@@ -75,15 +76,15 @@ def _create_chain_entry(user_id, task_id, task_class, args, kwargs, callbacks, p
             if parent_name and not parent.name:
                 parent.set_name(parent_name)
     for callback in callbacks:
+        LOGGER.debug(callback)
         callback_class = import_string(callback['task'])
-
         _create_chain_entry(
             user_id,
             callback['options']['task_id'],
             callback_class,
             callback['args'],
             callback['kwargs'],
-            callback['options']['link'],
+            callback['options'].get('link', []),
             parent=parent
         )
 

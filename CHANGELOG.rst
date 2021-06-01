@@ -15,6 +15,13 @@ Unreleased
 ~~~~~~~~~~
 
 *
+[2.0.2] - 2021-05-28
+~~~~~~~~~~~~~~~~~~~~
+
+Changed
++++++++
+
+* Fixed minor issue. If links key is not available assign empty list. Added logs.
 
 [2.0.1] - 2021-05-28
 ~~~~~~~~~~~~~~~~~~~~
