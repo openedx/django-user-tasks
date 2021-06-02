@@ -74,8 +74,8 @@ def _create_chain_entry(user_id, task_id, task_class, args, kwargs, callbacks, p
             parent.increment_total_steps(total_steps)
             if parent_name and not parent.name:
                 parent.set_name(parent_name)
+
     for callback in callbacks:
-        LOGGER.debug(callback)
         callback_class = import_string(callback['task'])
         _create_chain_entry(
             user_id,
