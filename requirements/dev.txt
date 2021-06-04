@@ -12,7 +12,7 @@ appdirs==1.4.4
     # via
     #   -r requirements/ci.txt
     #   virtualenv
-astroid==2.5.7
+astroid==2.5.6
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -55,7 +55,7 @@ code-annotations==1.1.2
     #   edx-lint
 codecov==2.1.11
     # via -r requirements/ci.txt
-coverage[toml]==5.5
+coverage==5.5
     # via
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
@@ -67,7 +67,7 @@ distlib==0.3.2
     #   virtualenv
 django-model-utils==4.1.1
     # via -r requirements/test.txt
-django==2.2.23
+django==2.2.24
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/quality.txt
@@ -174,7 +174,7 @@ pylint-plugin-utils==0.6
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pylint==2.8.2
+pylint==2.8.3
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -186,7 +186,7 @@ pyparsing==2.4.7
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
     #   packaging
-pytest-cov==2.12.0
+pytest-cov==2.12.1
     # via -r requirements/test.txt
 pytest-django==4.3.0
     # via -r requirements/test.txt
@@ -249,10 +249,10 @@ toml==0.10.2
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
     #   -r requirements/test.txt
-    #   coverage
     #   pep517
     #   pylint
     #   pytest
+    #   pytest-cov
     #   tox
 tox-battery==0.6.1
     # via -r requirements/ci.txt
