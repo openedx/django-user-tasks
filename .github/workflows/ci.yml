@@ -41,7 +41,7 @@ jobs:
 
     - name: Run coverage
       if: matrix.python-version == '3.8' && matrix.toxenv == 'django22-celery44-drf312'
-      uses: codecov/codecov-action@v1.5.0
+      uses: codecov/codecov-action@v1.0.6
       with:
         flags: unittests
         fail_ci_if_error: true
