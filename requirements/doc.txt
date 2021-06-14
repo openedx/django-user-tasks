@@ -182,7 +182,7 @@ strict-rfc3339==0.7
     # via swagger2rst
 swagger2rst==0.0.4
     # via -r requirements/doc.in
-tqdm==4.61.0
+tqdm==4.61.1
     # via twine
 twine==3.4.1
     # via -r requirements/doc.in
