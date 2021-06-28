@@ -97,7 +97,7 @@ iniconfig==1.1.1
     # via
     #   -r requirements/test.txt
     #   pytest
-isort==5.8.0
+isort==5.9.1
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -141,7 +141,7 @@ pep517==0.10.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-pip-tools==6.1.0
+pip-tools==6.2.0
     # via -r requirements/pip-tools.txt
 pluggy==0.13.1
     # via
@@ -260,7 +260,7 @@ tox==3.23.1
     # via
     #   -r requirements/ci.txt
     #   tox-battery
-urllib3==1.26.5
+urllib3==1.26.6
     # via
     #   -r requirements/ci.txt
     #   requests
@@ -273,6 +273,10 @@ virtualenv==20.4.7
     # via
     #   -r requirements/ci.txt
     #   tox
+wheel==0.36.2
+    # via
+    #   -r requirements/pip-tools.txt
+    #   pip-tools
 wrapt==1.12.1
     # via
     #   -r requirements/quality.txt
@@ -280,3 +284,4 @@ wrapt==1.12.1
 
 # The following packages are considered to be unsafe in a requirements file:
 # pip
+# setuptools
