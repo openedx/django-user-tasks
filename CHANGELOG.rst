@@ -16,6 +16,32 @@ Unreleased
 
 *
 
+[2.0.3] - 2021-06-08
+~~~~~~~~~~~~~~~~~~~~
+
+Changed
++++++++
+
+* Fixed django admin timeout issue.
+
+[2.0.2] - 2021-05-28
+~~~~~~~~~~~~~~~~~~~~
+
+Changed
++++++++
+
+* Fixed minor issue. If links key is not available assign empty list. Added logs.
+
+
+[2.0.1] - 2021-05-28
+~~~~~~~~~~~~~~~~~~~~
+
+Added
++++++++
+
+* Added celery5.0 testing with tox. Update the import task command compatible with both celery 4.4.7 and celery5.0.
+
+
 [2.0.0] - 2021-01-20
 ~~~~~~~~~~~~~~~~~~~~
 

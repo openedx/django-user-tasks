@@ -13,8 +13,10 @@ class UserTaskArtifactAdmin(admin.ModelAdmin):
     """
 
     list_display = ('created', 'uuid', 'status', 'name', 'text')
+    list_filter = ('name',)
     ordering = ('-created',)
     search_fields = ('uuid', 'name', 'text')
+    raw_id_fields = ('status',)
 
 
 class UserTaskStatusAdmin(admin.ModelAdmin):
@@ -23,10 +25,12 @@ class UserTaskStatusAdmin(admin.ModelAdmin):
     """
 
     list_display = ('created', 'uuid', 'state', 'user', 'name')
+    list_filter = ('state',)
     ordering = ('-created',)
     search_fields = (
         'uuid', 'task_id', 'task_class', 'name', 'user__username', 'user__email'
     )
+    readonly_fields = ('parent', )
 
 
 admin.site.register(UserTaskArtifact, UserTaskArtifactAdmin)
