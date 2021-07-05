@@ -40,7 +40,7 @@ class UserTaskMixin():
         Should be implemented by each subclass to generate a meaningful name
         from the task parameters.  Defaults to the name of the task function.
         """
-        return cls.__name__.split('.')[-1]
+        return cls.__name__.rsplit('.', maxsplit=1)[-1]
 
     @staticmethod
     def calculate_total_steps(arguments_dict):  # pylint: disable=unused-argument
