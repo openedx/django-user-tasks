@@ -38,3 +38,10 @@ class AdminTestCase(TestCase):
         """
         response = self.client.get(reverse('admin:user_tasks_usertaskstatus_changelist'))
         assert response.status_code == 200
+
+    def test_django_version(self):
+        """
+        Make sure the main UserTaskStatus admin page loads.
+        """
+        import django
+        assert (2, 0, 0, 'final', 0) == django.VERSION
