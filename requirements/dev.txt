@@ -97,7 +97,7 @@ iniconfig==1.1.1
     # via
     #   -r requirements/test.txt
     #   pytest
-isort==5.9.1
+isort==5.9.2
     # via
     #   -r requirements/quality.txt
     #   pylint

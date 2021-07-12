@@ -28,7 +28,7 @@ celery==4.4.7
     #   -r requirements/base.txt
 certifi==2021.5.30
     # via requests
-cffi==1.14.5
+cffi==1.14.6
     # via cryptography
 chardet==4.0.0
     # via
@@ -72,13 +72,13 @@ idna==2.10
     # via requests
 imagesize==1.2.0
     # via sphinx
-importlib-metadata==4.6.0
+importlib-metadata==4.6.1
     # via
     #   keyring
     #   twine
 itypes==1.2.0
     # via coreapi
-jeepney==0.6.0
+jeepney==0.7.0
     # via
     #   keyring
     #   secretstorage
@@ -105,7 +105,7 @@ packaging==21.0
     #   sphinx
 pbr==5.6.0
     # via stevedore
-pkginfo==1.7.0
+pkginfo==1.7.1
     # via twine
 pycparser==2.20
     # via cffi
@@ -144,7 +144,7 @@ rules==3.0
     # via -r requirements/doc.in
 secretstorage==3.3.1
     # via keyring
-simplejson==3.17.2
+simplejson==3.17.3
     # via django-rest-swagger
 six==1.16.0
     # via
@@ -155,7 +155,7 @@ six==1.16.0
     #   readme-renderer
 snowballstemmer==2.1.0
     # via sphinx
-sphinx==4.0.2
+sphinx==4.1.0
     # via
     #   -r requirements/doc.in
     #   edx-sphinx-theme
@@ -181,7 +181,7 @@ strict-rfc3339==0.7
     # via swagger2rst
 swagger2rst==0.0.4
     # via -r requirements/doc.in
-tqdm==4.61.1
+tqdm==4.61.2
     # via twine
 twine==3.4.1
     # via -r requirements/doc.in

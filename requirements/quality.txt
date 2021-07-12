@@ -23,7 +23,7 @@ django==2.2.24
     #   edx-lint
 edx-lint==5.0.0
     # via -r requirements/quality.in
-isort==5.9.1
+isort==5.9.2
     # via
     #   -r requirements/quality.in
     #   pylint
