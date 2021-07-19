@@ -18,7 +18,7 @@ billiard==3.6.4.0
     # via
     #   -r requirements/base.txt
     #   celery
-bleach==3.3.0
+bleach==3.3.1
     # via readme-renderer
 cached-property==1.5.2
     # via swagger2rst
@@ -31,9 +31,9 @@ certifi==2021.5.30
 cffi==1.14.6
     # via cryptography
 chardet==4.0.0
-    # via
-    #   doc8
-    #   requests
+    # via doc8
+charset-normalizer==2.0.3
+    # via requests
 colorama==0.4.4
     # via twine
 coreapi==2.3.3
@@ -68,7 +68,7 @@ docutils==0.17.1
     #   sphinx
 edx-sphinx-theme==3.0.0
     # via -r requirements/doc.in
-idna==2.10
+idna==3.2
     # via requests
 imagesize==1.2.0
     # via sphinx
@@ -128,7 +128,7 @@ pyyaml==5.4.1
     # via swagger2rst
 readme-renderer==29.0
     # via twine
-requests==2.25.1
+requests==2.26.0
     # via
     #   coreapi
     #   requests-toolbelt
@@ -155,7 +155,7 @@ six==1.16.0
     #   readme-renderer
 snowballstemmer==2.1.0
     # via sphinx
-sphinx==4.1.0
+sphinx==4.1.1
     # via
     #   -r requirements/doc.in
     #   edx-sphinx-theme
