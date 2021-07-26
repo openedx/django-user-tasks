@@ -30,8 +30,6 @@ certifi==2021.5.30
     # via requests
 cffi==1.14.6
     # via cryptography
-chardet==4.0.0
-    # via doc8
 charset-normalizer==2.0.3
     # via requests
 colorama==0.4.4
@@ -58,7 +56,7 @@ djangorestframework==3.12.4
     # via
     #   -r requirements/base.txt
     #   django-rest-swagger
-doc8==0.8.1
+doc8==0.9.0
     # via -r requirements/doc.in
 docutils==0.17.1
     # via
@@ -149,7 +147,6 @@ simplejson==3.17.3
 six==1.16.0
     # via
     #   bleach
-    #   doc8
     #   edx-sphinx-theme
     #   jsonschema
     #   readme-renderer
@@ -183,7 +180,7 @@ swagger2rst==0.0.4
     # via -r requirements/doc.in
 tqdm==4.61.2
     # via twine
-twine==3.4.1
+twine==3.4.2
     # via -r requirements/doc.in
 uritemplate==3.0.1
     # via coreapi
