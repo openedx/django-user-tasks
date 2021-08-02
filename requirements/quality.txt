@@ -15,7 +15,7 @@ click==8.0.1
     #   edx-lint
 click-log==0.3.2
     # via edx-lint
-code-annotations==1.1.2
+code-annotations==1.2.0
     # via edx-lint
 django==2.2.24
     # via
@@ -23,7 +23,7 @@ django==2.2.24
     #   edx-lint
 edx-lint==5.0.0
     # via -r requirements/quality.in
-isort==5.9.2
+isort==5.9.3
     # via
     #   -r requirements/quality.in
     #   pylint
@@ -41,7 +41,7 @@ pycodestyle==2.7.0
     # via -r requirements/quality.in
 pydocstyle==6.1.1
     # via -r requirements/quality.in
-pylint==2.9.5
+pylint==2.9.6
     # via
     #   edx-lint
     #   pylint-celery
