@@ -18,7 +18,7 @@ billiard==3.6.4.0
     # via
     #   -r requirements/base.txt
     #   celery
-bleach==3.3.1
+bleach==4.0.0
     # via readme-renderer
 cached-property==1.5.2
     # via swagger2rst

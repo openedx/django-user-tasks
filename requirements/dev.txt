@@ -8,7 +8,7 @@ amqp==2.6.1
     # via
     #   -r requirements/test.txt
     #   kombu
-astroid==2.6.5
+astroid==2.6.6
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -53,7 +53,7 @@ code-annotations==1.2.0
     # via
     #   -r requirements/quality.txt
     #   edx-lint
-codecov==2.1.11
+codecov==2.1.12
     # via -r requirements/ci.txt
 coverage==5.5
     # via
@@ -254,7 +254,7 @@ toml==0.10.2
     #   pytest
     #   pytest-cov
     #   tox
-tomli==1.2.0
+tomli==1.2.1
     # via
     #   -r requirements/pip-tools.txt
     #   pep517
