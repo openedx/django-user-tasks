@@ -70,7 +70,7 @@ idna==3.2
     # via requests
 imagesize==1.2.0
     # via sphinx
-importlib-metadata==4.6.3
+importlib-metadata==4.6.4
     # via
     #   keyring
     #   twine
@@ -107,7 +107,7 @@ pkginfo==1.7.1
     # via twine
 pycparser==2.20
     # via cffi
-pygments==2.9.0
+pygments==2.10.0
     # via
     #   doc8
     #   readme-renderer
@@ -178,7 +178,7 @@ strict-rfc3339==0.7
     # via swagger2rst
 swagger2rst==0.0.4
     # via -r requirements/doc.in
-tqdm==4.62.0
+tqdm==4.62.1
     # via twine
 twine==3.4.2
     # via -r requirements/doc.in
