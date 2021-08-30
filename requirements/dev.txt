@@ -149,6 +149,7 @@ platformdirs==2.2.0
     #   virtualenv
 pluggy==0.13.1
     # via
+    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
     #   pytest
