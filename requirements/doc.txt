@@ -18,7 +18,7 @@ billiard==3.6.4.0
     # via
     #   -r requirements/base.txt
     #   celery
-bleach==4.0.0
+bleach==4.1.0
     # via readme-renderer
 cached-property==1.5.2
     # via swagger2rst
@@ -40,7 +40,7 @@ coreapi==2.3.3
     #   openapi-codec
 coreschema==0.0.4
     # via coreapi
-cryptography==3.4.7
+cryptography==3.4.8
     # via secretstorage
 django==2.2.24
     # via
@@ -70,7 +70,7 @@ idna==3.2
     # via requests
 imagesize==1.2.0
     # via sphinx
-importlib-metadata==4.6.4
+importlib-metadata==4.8.1
     # via
     #   keyring
     #   twine
@@ -142,7 +142,7 @@ rules==3.0
     # via -r requirements/doc.in
 secretstorage==3.3.1
     # via keyring
-simplejson==3.17.4
+simplejson==3.17.5
     # via django-rest-swagger
 six==1.16.0
     # via
@@ -178,7 +178,7 @@ strict-rfc3339==0.7
     # via swagger2rst
 swagger2rst==0.0.4
     # via -r requirements/doc.in
-tqdm==4.62.1
+tqdm==4.62.2
     # via twine
 twine==3.4.2
     # via -r requirements/doc.in
