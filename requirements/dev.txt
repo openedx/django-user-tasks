@@ -8,7 +8,7 @@ amqp==2.6.1
     # via
     #   -r requirements/test.txt
     #   kombu
-astroid==2.7.2
+astroid==2.7.3
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -68,19 +68,17 @@ distlib==0.3.2
 django==2.2.24
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
-    #   -r requirements/quality.txt
     #   -r requirements/test.txt
     #   django-model-utils
     #   djangorestframework
     #   edx-i18n-tools
-    #   edx-lint
 django-model-utils==4.1.1
     # via -r requirements/test.txt
 djangorestframework==3.12.4
     # via -r requirements/test.txt
 edx-i18n-tools==0.7.0
     # via -r requirements/dev.in
-edx-lint==5.0.0
+edx-lint==5.1.0
     # via
     #   -r requirements/dev.in
     #   -r requirements/quality.txt
@@ -141,15 +139,14 @@ pep517==0.11.0
     #   pip-tools
 pip-tools==6.2.0
     # via -r requirements/pip-tools.txt
-platformdirs==2.2.0
+platformdirs==2.3.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   pylint
     #   virtualenv
-pluggy==0.13.1
+pluggy==1.0.0
     # via
-    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
     #   pytest
@@ -191,7 +188,7 @@ pyparsing==2.4.7
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
     #   packaging
-pytest==6.2.4
+pytest==6.2.5
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -206,7 +203,6 @@ python-slugify==5.0.2
     #   code-annotations
 pytz==2021.1
     # via
-    #   -r requirements/quality.txt
     #   -r requirements/test.txt
     #   celery
     #   django
@@ -235,7 +231,6 @@ snowballstemmer==2.1.0
     #   pydocstyle
 sqlparse==0.4.1
     # via
-    #   -r requirements/quality.txt
     #   -r requirements/test.txt
     #   django
 stevedore==3.4.0
