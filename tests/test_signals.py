@@ -37,7 +37,7 @@ class SampleTask(UserTask):  # pylint: disable=abstract-method
 
     @classmethod
     def generate_name(cls, arguments_dict):
-        return 'SampleTask: {}'.format(arguments_dict['argument'])
+        return f"SampleTask: {arguments_dict['argument']}"
 
     @staticmethod
     def calculate_total_steps(arguments_dict):

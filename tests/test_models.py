@@ -228,7 +228,7 @@ class TestUserTaskArtifact(TestCase):
         status = self._status()
         text = 'blah ' * 50
         artifact = UserTaskArtifact(status=status, name='Cropped', text=text)
-        assert str(artifact) == '<UserTaskArtifact: (Cropped) {}>'.format(text[:47] + '...')
+        assert str(artifact) == f"<UserTaskArtifact: (Cropped) {text[:47]}...>"
 
     def test_url_string(self):
         """URL-based UserTaskArtifacts should have a reasonable string representation."""
