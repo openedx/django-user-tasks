@@ -24,7 +24,7 @@ djangorestframework==3.12.4
     # via -r requirements/base.in
 kombu==4.6.11
     # via celery
-pytz==2021.1
+pytz==2021.3
     # via
     #   celery
     #   django
