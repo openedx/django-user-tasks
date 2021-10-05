@@ -3,7 +3,7 @@
 
 -r base.txt               # Core dependencies for this package
 
-django-rest-swagger       # Generates a Swagger/Open API schema for the REST API
+drf_yasg                  # Generates a Swagger/Open API schema for the REST API
 doc8                      # reStructuredText style checker
 edx-sphinx-theme          # edX theme for Sphinx output
 rules                     # Needed to import user_tasks/rules.py for autodoc
