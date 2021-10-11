@@ -15,7 +15,7 @@ attrs==21.2.0
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
-coverage==6.0
+coverage[toml]==6.0.1
     # via pytest-cov
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
@@ -46,7 +46,7 @@ pytest==6.2.5
     # via
     #   pytest-cov
     #   pytest-django
-pytest-cov==2.12.1
+pytest-cov==3.0.0
     # via -r requirements/test.in
 pytest-django==4.4.0
     # via -r requirements/test.in
@@ -64,9 +64,9 @@ sqlparse==0.4.2
 testfixtures==6.18.3
     # via -r requirements/test.in
 toml==0.10.2
-    # via
-    #   pytest
-    #   pytest-cov
+    # via pytest
+tomli==1.2.1
+    # via coverage
     # via
     #   -r requirements/base.txt
     #   amqp

@@ -26,7 +26,7 @@ celery==4.4.7
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
-certifi==2021.5.30
+certifi==2021.10.8
     # via requests
 cffi==1.14.6
     # via cryptography
@@ -80,12 +80,12 @@ jeepney==0.7.1
     # via
     #   keyring
     #   secretstorage
-jinja2==3.0.1
+jinja2==3.0.2
     # via
     #   coreschema
     #   sphinx
     #   swagger2rst
-jsonschema==4.0.1
+jsonschema==4.1.0
     # via swagger2rst
 keyring==23.2.1
     # via twine
@@ -180,7 +180,7 @@ tqdm==4.62.3
     # via twine
 twine==3.4.2
     # via -r requirements/doc.in
-uritemplate==3.0.1
+uritemplate==4.0.0
     # via coreapi
 urllib3==1.26.7
     # via requests
