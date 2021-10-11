@@ -8,7 +8,7 @@ amqp==2.6.1
     # via
     #   -r requirements/test.txt
     #   kombu
-astroid==2.8.0
+astroid==2.8.2
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -29,7 +29,7 @@ celery==4.4.7
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/test.txt
-certifi==2021.5.30
+certifi==2021.10.8
     # via
     #   -r requirements/ci.txt
     #   requests
@@ -37,7 +37,7 @@ charset-normalizer==2.0.6
     # via
     #   -r requirements/ci.txt
     #   requests
-click==8.0.1
+click==8.0.3
     # via
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
@@ -55,7 +55,7 @@ code-annotations==1.2.0
     #   edx-lint
 codecov==2.1.12
     # via -r requirements/ci.txt
-coverage==6.0
+coverage[toml]==6.0.1
     # via
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
@@ -76,7 +76,7 @@ django-model-utils==4.1.1
     # via -r requirements/test.txt
 djangorestframework==3.12.4
     # via -r requirements/test.txt
-edx-i18n-tools==0.7.0
+edx-i18n-tools==0.8.1
     # via -r requirements/dev.in
 edx-lint==5.2.0
     # via
@@ -99,7 +99,7 @@ isort==5.9.3
     # via
     #   -r requirements/quality.txt
     #   pylint
-jinja2==3.0.1
+jinja2==3.0.2
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -137,7 +137,7 @@ pep517==0.11.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-pip-tools==6.3.0
+pip-tools==6.3.1
     # via -r requirements/pip-tools.txt
 platformdirs==2.4.0
     # via
@@ -193,7 +193,7 @@ pytest==6.2.5
     #   -r requirements/test.txt
     #   pytest-cov
     #   pytest-django
-pytest-cov==2.12.1
+pytest-cov==3.0.0
     # via -r requirements/test.txt
 pytest-django==4.4.0
     # via -r requirements/test.txt
@@ -221,7 +221,6 @@ six==1.16.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
-    #   edx-i18n-tools
     #   edx-lint
     #   tox
     #   virtualenv
@@ -250,11 +249,12 @@ toml==0.10.2
     #   -r requirements/test.txt
     #   pylint
     #   pytest
-    #   pytest-cov
     #   tox
 tomli==1.2.1
     # via
     #   -r requirements/pip-tools.txt
+    #   -r requirements/test.txt
+    #   coverage
     #   pep517
 tox==3.24.4
     # via
