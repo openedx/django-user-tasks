@@ -133,7 +133,7 @@ pbr==5.6.0
     # via
     #   -r requirements/quality.txt
     #   stevedore
-pep517==0.11.0
+pep517==0.11.1
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
@@ -206,8 +206,9 @@ pytz==2021.3
     #   -r requirements/test.txt
     #   celery
     #   django
-pyyaml==6.0
+pyyaml==5.4.1
     # via
+    #   -c requirements/constraints.txt
     #   -r requirements/quality.txt
     #   code-annotations
     #   edx-i18n-tools

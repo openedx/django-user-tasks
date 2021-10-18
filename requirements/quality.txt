@@ -55,8 +55,10 @@ pylint-plugin-utils==0.6
     #   pylint-django
 python-slugify==5.0.2
     # via code-annotations
-pyyaml==6.0
-    # via code-annotations
+pyyaml==5.4.1
+    # via
+    #   -c requirements/constraints.txt
+    #   code-annotations
 six==1.16.0
     # via edx-lint
 snowballstemmer==2.1.0
