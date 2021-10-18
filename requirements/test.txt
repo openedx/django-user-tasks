@@ -15,14 +15,14 @@ attrs==21.2.0
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
-coverage[toml]==6.0.1
+coverage[toml]==6.0.2
     # via pytest-cov
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.txt
     #   django-model-utils
     #   djangorestframework
-django-model-utils==4.1.1
+django-model-utils==4.2.0
     # via -r requirements/base.txt
     # via -r requirements/base.txt
 iniconfig==1.1.1
