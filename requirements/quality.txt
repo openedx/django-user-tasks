@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-astroid==2.8.2
+astroid==2.8.3
     # via
     #   pylint
     #   pylint-celery
@@ -35,7 +35,7 @@ pbr==5.6.0
     # via stevedore
 platformdirs==2.4.0
     # via pylint
-pycodestyle==2.7.0
+pycodestyle==2.8.0
     # via -r requirements/quality.in
 pydocstyle==6.1.1
     # via -r requirements/quality.in
@@ -56,7 +56,9 @@ pylint-plugin-utils==0.6
 python-slugify==5.0.2
     # via code-annotations
 pyyaml==5.4.1
-    # via code-annotations
+    # via
+    #   -c requirements/constraints.txt
+    #   code-annotations
 six==1.16.0
     # via edx-lint
 snowballstemmer==2.1.0
@@ -71,7 +73,7 @@ typing-extensions==3.10.0.2
     # via
     #   astroid
     #   pylint
-wrapt==1.12.1
+wrapt==1.13.2
     # via astroid
 
 # The following packages are considered to be unsafe in a requirements file:
