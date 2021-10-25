@@ -40,7 +40,7 @@ pluggy==1.0.0
     # via pytest
 py==1.10.0
     # via pytest
-pyparsing==2.4.7
+pyparsing==3.0.1
     # via packaging
 pytest==6.2.5
     # via
