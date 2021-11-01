@@ -8,7 +8,7 @@ amqp==2.6.1
     # via
     #   -r requirements/test.txt
     #   kombu
-astroid==2.8.3
+astroid==2.8.4
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -55,7 +55,7 @@ code-annotations==1.2.0
     #   edx-lint
 codecov==2.1.12
     # via -r requirements/ci.txt
-coverage[toml]==6.0.2
+coverage[toml]==6.1.1
     # via
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
@@ -78,11 +78,11 @@ djangorestframework==3.12.4
     # via -r requirements/test.txt
 edx-i18n-tools==0.8.1
     # via -r requirements/dev.in
-edx-lint==5.2.0
+edx-lint==5.2.1
     # via
     #   -r requirements/dev.in
     #   -r requirements/quality.txt
-filelock==3.3.1
+filelock==3.3.2
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -121,7 +121,7 @@ mccabe==0.6.1
     #   pylint
 mock==4.0.3
     # via -r requirements/test.txt
-packaging==21.0
+packaging==21.2
     # via
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
@@ -183,7 +183,7 @@ pylint-plugin-utils==0.6
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pyparsing==3.0.1
+pyparsing==2.4.7
     # via
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
@@ -251,7 +251,7 @@ toml==0.10.2
     #   pylint
     #   pytest
     #   tox
-tomli==1.2.1
+tomli==1.2.2
     # via
     #   -r requirements/pip-tools.txt
     #   -r requirements/test.txt
@@ -285,7 +285,7 @@ wheel==0.37.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-wrapt==1.13.2
+wrapt==1.13.3
     # via
     #   -r requirements/quality.txt
     #   astroid
