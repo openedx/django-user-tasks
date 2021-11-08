@@ -28,7 +28,7 @@ platformdirs==2.4.0
     # via virtualenv
 pluggy==1.0.0
     # via tox
-py==1.10.0
+py==1.11.0
     # via tox
 pyparsing==2.4.7
     # via packaging
@@ -48,5 +48,5 @@ tox-battery==0.6.1
     # via -r requirements/ci.in
 urllib3==1.26.7
     # via requests
-virtualenv==20.9.0
+virtualenv==20.10.0
     # via tox
