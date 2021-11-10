@@ -4,3 +4,4 @@ include LICENSE.txt
 include README.rst
 include requirements/base.in
 recursive-include user_tasks *.html *.png *.gif *js *.css *jpg *jpeg *svg *py
+include requirements/constraints.txt
