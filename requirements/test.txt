@@ -15,7 +15,7 @@ attrs==21.2.0
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
-coverage[toml]==6.1.1
+coverage[toml]==6.1.2
     # via pytest-cov
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
