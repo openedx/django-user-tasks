@@ -8,7 +8,11 @@ amqp==2.6.1
     # via
     #   -r requirements/test.txt
     #   kombu
-astroid==2.8.5
+asgiref==3.4.1
+    # via
+    #   -r requirements/test.txt
+    #   django
+astroid==2.8.6
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -65,7 +69,7 @@ distlib==0.3.3
     # via
     #   -r requirements/ci.txt
     #   virtualenv
-django==2.2.24
+django==3.2.9
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
@@ -82,7 +86,7 @@ edx-lint==5.2.1
     # via
     #   -r requirements/dev.in
     #   -r requirements/quality.txt
-filelock==3.3.2
+filelock==3.4.0
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -121,7 +125,7 @@ mccabe==0.6.1
     #   pylint
 mock==4.0.3
     # via -r requirements/test.txt
-packaging==21.2
+packaging==21.3
     # via
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
@@ -129,7 +133,7 @@ packaging==21.2
     #   tox
 path==16.2.0
     # via edx-i18n-tools
-pbr==5.7.0
+pbr==5.8.0
     # via
     #   -r requirements/quality.txt
     #   stevedore
@@ -183,7 +187,7 @@ pylint-plugin-utils==0.6
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pyparsing==2.4.7
+pyparsing==3.0.6
     # via
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
@@ -225,7 +229,7 @@ six==1.16.0
     #   edx-lint
     #   tox
     #   virtualenv
-snowballstemmer==2.1.0
+snowballstemmer==2.2.0
     # via
     #   -r requirements/quality.txt
     #   pydocstyle

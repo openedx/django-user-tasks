@@ -6,13 +6,15 @@
 #
 amqp==2.6.1
     # via kombu
+asgiref==3.4.1
+    # via django
 billiard==3.6.4.0
     # via celery
 celery==4.4.7
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.in
-django==2.2.24
+django==3.2.9
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
