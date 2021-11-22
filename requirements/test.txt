@@ -7,6 +7,10 @@
     # via
     #   -r requirements/base.txt
     #   kombu
+asgiref==3.4.1
+    # via
+    #   -r requirements/base.txt
+    #   django
 attrs==21.2.0
     # via pytest
     # via
@@ -32,7 +36,7 @@ iniconfig==1.1.1
     #   celery
 mock==4.0.3
     # via -r requirements/test.in
-packaging==21.2
+packaging==21.3
     # via
     #   -r requirements/test.in
     #   pytest
@@ -40,7 +44,7 @@ pluggy==1.0.0
     # via pytest
 py==1.11.0
     # via pytest
-pyparsing==2.4.7
+pyparsing==3.0.6
     # via packaging
 pytest==6.2.5
     # via

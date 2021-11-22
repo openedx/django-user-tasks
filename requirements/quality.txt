@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-astroid==2.8.5
+astroid==2.8.6
     # via
     #   pylint
     #   pylint-celery
@@ -31,7 +31,7 @@ markupsafe==2.0.1
     # via jinja2
 mccabe==0.6.1
     # via pylint
-pbr==5.7.0
+pbr==5.8.0
     # via stevedore
 platformdirs==2.4.0
     # via pylint
@@ -61,7 +61,7 @@ pyyaml==5.4.1
     #   code-annotations
 six==1.16.0
     # via edx-lint
-snowballstemmer==2.1.0
+snowballstemmer==2.2.0
     # via pydocstyle
 stevedore==3.5.0
     # via code-annotations
