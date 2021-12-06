@@ -37,7 +37,7 @@ certifi==2021.10.8
     # via
     #   -r requirements/ci.txt
     #   requests
-charset-normalizer==2.0.8
+charset-normalizer==2.0.9
     # via
     #   -r requirements/ci.txt
     #   requests
@@ -167,7 +167,7 @@ pycodestyle==2.8.0
     # via -r requirements/quality.txt
 pydocstyle==6.1.1
     # via -r requirements/quality.txt
-pylint==2.12.1
+pylint==2.12.2
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -199,7 +199,7 @@ pytest==6.2.5
     #   pytest-django
 pytest-cov==3.0.0
     # via -r requirements/test.txt
-pytest-django==4.4.0
+pytest-django==4.5.1
     # via -r requirements/test.txt
 python-slugify==5.0.2
     # via
@@ -267,7 +267,7 @@ tox==3.24.4
     #   tox-battery
 tox-battery==0.6.1
     # via -r requirements/ci.txt
-typing-extensions==4.0.0
+typing-extensions==4.0.1
     # via
     #   -r requirements/quality.txt
     #   astroid
