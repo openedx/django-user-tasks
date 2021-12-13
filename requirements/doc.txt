@@ -46,7 +46,7 @@ coreschema==0.0.4
     # via coreapi
 cryptography==36.0.0
     # via secretstorage
-django==3.2.9
+django==3.2.10
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.txt
@@ -132,7 +132,7 @@ pyyaml==5.4.1
     # via
     #   -c requirements/constraints.txt
     #   swagger2rst
-readme-renderer==30.0
+readme-renderer==31.0
     # via twine
 requests==2.26.0
     # via
@@ -186,7 +186,7 @@ swagger2rst==0.0.4
     # via -r requirements/doc.in
 tqdm==4.62.3
     # via twine
-twine==3.7.0
+twine==3.7.1
     # via -r requirements/doc.in
 uritemplate==4.1.1
     # via coreapi
