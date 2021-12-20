@@ -59,6 +59,7 @@ pytz==2021.3
     #   -r requirements/base.txt
     #   celery
     #   django
+    #   djangorestframework
 rules==3.0
     # via -r requirements/test.in
 sqlparse==0.4.2
@@ -69,7 +70,7 @@ testfixtures==6.18.3
     # via -r requirements/test.in
 toml==0.10.2
     # via pytest
-tomli==1.2.2
+tomli==2.0.0
     # via coverage
     # via
     #   -r requirements/base.txt
