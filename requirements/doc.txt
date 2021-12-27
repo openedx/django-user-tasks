@@ -32,8 +32,6 @@ celery==4.4.7
     #   -r requirements/base.txt
 certifi==2021.10.8
     # via requests
-cffi==1.15.0
-    # via cryptography
 charset-normalizer==2.0.9
     # via requests
 colorama==0.4.4
@@ -44,8 +42,6 @@ coreapi==2.3.3
     #   openapi-codec
 coreschema==0.0.4
     # via coreapi
-cryptography==36.0.1
-    # via secretstorage
 django==3.2.10
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
@@ -82,10 +78,6 @@ importlib-resources==5.4.0
     # via jsonschema
 itypes==1.2.0
     # via coreapi
-jeepney==0.7.1
-    # via
-    #   keyring
-    #   secretstorage
 jinja2==3.0.3
     # via
     #   coreschema
@@ -111,8 +103,6 @@ pbr==5.8.0
     # via stevedore
 pkginfo==1.8.2
     # via twine
-pycparser==2.21
-    # via cffi
 pygments==2.10.0
     # via
     #   doc8
@@ -149,8 +139,6 @@ rfc3986==1.5.0
     # via twine
 rules==3.1
     # via -r requirements/doc.in
-secretstorage==3.3.1
-    # via keyring
 simplejson==3.17.6
     # via django-rest-swagger
 six==1.16.0
