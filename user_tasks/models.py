@@ -13,7 +13,7 @@ from django.db import models, transaction
 from django.db.models import Q
 from django.db.models.expressions import F
 from django.utils.timezone import now
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from model_utils.models import TimeStampedModel
 
