@@ -2,7 +2,7 @@ Change Log
 ----------
 
 ..
-   All enhancements and patches to cookiecutter-django-app will be documented
+   All enhancements and patches to django-user-tasks will be documented
    in this file.  It adheres to the structure of http://keepachangelog.com/ ,
    but in reStructuredText instead of Markdown (for ease of incorporation into
    Sphinx documentation and the PyPI description).
@@ -15,6 +15,19 @@ Unreleased
 ~~~~~~~~~~
 
 *
+
+[2.2.0] - 2022-01-26
+~~~~~~~~~~~~~~~~~~~~
+
+Removed
++++++++
+
+* Removed Django22,30,31 support.
+
+Added
++++++
+
+* Added Django40 support in CI
 
 [2.1.0] - 2021-07-07
 ~~~~~~~~~~~~~~~~~~~~

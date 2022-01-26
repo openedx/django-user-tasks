@@ -5,7 +5,7 @@ on:
     branches: [master]
   pull_request:
     branches:
-      - '**'
+    - '**'
 
 jobs:
   tests:
@@ -14,12 +14,9 @@ jobs:
       matrix:
         os: [ubuntu-20.04]
         python-version: ['3.8']
-        toxenv: [django22-celery44-drflatest, django22-celery44-drf312, django22-celery50-drflatest,
-          django22-celery50-drf312, django30-celery44-drflatest, django30-celery44-drf312,
-          django30-celery50-drflatest, django30-celery50-drf312, django31-celery44-drflatest,
-          django31-celery44-drf312, django31-celery50-drflatest, django31-celery50-drf312,
-          django32-celery44-drflatest, django32-celery44-drf312, django32-celery50-drflatest,
-          django32-celery50-drf312, quality, docs]
+        toxenv: [django32-celery44-drf312, django32-celery44-drflatest, django32-celery50-drf312, 
+          django32-celery50-drflatest, django40-celery44-drf312, django40-celery44-drflatest,
+          django40-celery50-drf312, django40-celery50-drflatest, quality, docs]
 
     steps:
     - uses: actions/checkout@v2
@@ -39,7 +36,7 @@ jobs:
       run: tox
 
     - name: Run coverage
-      if: matrix.python-version == '3.8' && matrix.toxenv == 'django22-celery44-drf312'
+      if: matrix.python-version == '3.8' && matrix.toxenv == 'django32-celery50-drf312'
       uses: codecov/codecov-action@v1
       with:
         flags: unittests
