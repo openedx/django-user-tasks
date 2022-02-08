@@ -19,6 +19,23 @@ attrs==21.4.0
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
+    # via
+    #   -r requirements/base.txt
+    #   celery
+    #   click-didyoumean
+    #   click-plugins
+    #   click-repl
+    # via
+    #   -r requirements/base.txt
+    #   celery
+click-plugins==1.1.1
+    # via
+    #   -r requirements/base.txt
+    #   celery
+click-repl==0.2.0
+    # via
+    #   -r requirements/base.txt
+    #   celery
 coverage[toml]==6.3.1
     # via pytest-cov
     # via
@@ -42,6 +59,9 @@ packaging==21.3
     #   pytest
 pluggy==1.0.0
     # via pytest
+    # via
+    #   -r requirements/base.txt
+    #   click-repl
 py==1.11.0
     # via pytest
 pyparsing==3.0.7
@@ -62,13 +82,17 @@ pytz==2021.3
     #   djangorestframework
 rules==3.1
     # via -r requirements/test.in
+six==1.16.0
+    # via
+    #   -r requirements/base.txt
+    #   click-repl
 sqlparse==0.4.2
     # via
     #   -r requirements/base.txt
     #   django
 testfixtures==6.18.3
     # via -r requirements/test.in
-tomli==2.0.0
+tomli==2.0.1
     # via
     #   coverage
     #   pytest
@@ -76,3 +100,11 @@ tomli==2.0.0
     #   -r requirements/base.txt
     #   amqp
     #   celery
+    #   kombu
+wcwidth==0.2.5
+    # via
+    #   -r requirements/base.txt
+    #   prompt-toolkit
+
+# The following packages are considered to be unsafe in a requirements file:
+# setuptools

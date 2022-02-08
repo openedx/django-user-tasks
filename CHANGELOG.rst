@@ -14,7 +14,15 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
-*
+Removed
++++++++
+
+* Removed Python 3.5 support.
+
+Chore
++++++
+
+* Upgraded celery to latest 5.x version.
 
 [2.2.0] - 2022-01-26
 ~~~~~~~~~~~~~~~~~~~~
