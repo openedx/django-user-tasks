@@ -12,8 +12,7 @@
 # This file contains all common constraints for edx-repos
 -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
 
-# v 5.0 drops support of python3.5
-celery<5.0
+celery<6.0
 
 # pyyaml==6.0 made the `Loader` a necessary argument for `yaml.load()` function.
 # swagger2rst uses pyyaml and fails with the new version hence failing the `make docs` command.
