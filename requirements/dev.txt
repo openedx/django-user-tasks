@@ -33,7 +33,7 @@ certifi==2021.10.8
     # via
     #   -r requirements/ci.txt
     #   requests
-charset-normalizer==2.0.11
+charset-normalizer==2.0.12
     # via
     #   -r requirements/ci.txt
     #   requests
@@ -93,7 +93,7 @@ django-model-utils==4.2.0
     # via -r requirements/test.txt
 djangorestframework==3.13.1
     # via -r requirements/test.txt
-edx-i18n-tools==0.8.1
+edx-i18n-tools==0.9.1
     # via -r requirements/dev.in
 edx-lint==5.2.1
     # via
@@ -156,7 +156,7 @@ pep517==0.12.0
     #   pip-tools
 pip-tools==6.5.1
     # via -r requirements/pip-tools.txt
-platformdirs==2.4.1
+platformdirs==2.5.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -170,7 +170,7 @@ pluggy==1.0.0
     #   tox
 polib==1.1.1
     # via edx-i18n-tools
-prompt-toolkit==3.0.27
+prompt-toolkit==3.0.28
     # via
     #   -r requirements/test.txt
     #   click-repl
@@ -209,7 +209,7 @@ pyparsing==3.0.7
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
     #   packaging
-pytest==7.0.0
+pytest==7.0.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -286,7 +286,7 @@ tox==3.24.5
     #   tox-battery
 tox-battery==0.6.1
     # via -r requirements/ci.txt
-typing-extensions==4.0.1
+typing-extensions==4.1.0
     # via
     #   -r requirements/quality.txt
     #   astroid
