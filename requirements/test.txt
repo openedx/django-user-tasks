@@ -90,7 +90,7 @@ sqlparse==0.4.2
     # via
     #   -r requirements/base.txt
     #   django
-testfixtures==6.18.3
+testfixtures==6.18.4
     # via -r requirements/test.in
 tomli==2.0.1
     # via
