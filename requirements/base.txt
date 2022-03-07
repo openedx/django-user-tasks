@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-amqp==5.0.9
+amqp==5.1.0
     # via kombu
 asgiref==3.5.0
     # via django
@@ -36,7 +36,7 @@ django-model-utils==4.2.0
     # via -r requirements/base.in
 djangorestframework==3.13.1
     # via -r requirements/base.in
-kombu==5.2.3
+kombu==5.2.4
     # via celery
 prompt-toolkit==3.0.28
     # via click-repl

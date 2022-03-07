@@ -6,7 +6,7 @@
 #
 alabaster==0.7.12
     # via sphinx
-amqp==5.0.9
+amqp==5.1.0
     # via
     #   -r requirements/base.txt
     #   kombu
@@ -115,7 +115,7 @@ jsonschema==4.4.0
     # via swagger2rst
 keyring==23.5.0
     # via twine
-kombu==5.2.3
+kombu==5.2.4
     # via
     #   -r requirements/base.txt
     #   celery
@@ -157,7 +157,7 @@ pyyaml==5.4.1
     # via
     #   -c requirements/constraints.txt
     #   swagger2rst
-readme-renderer==32.0
+readme-renderer==33.0
     # via twine
 requests==2.27.1
     # via
@@ -171,7 +171,7 @@ restructuredtext-lint==1.4.0
     # via doc8
 rfc3986==2.0.0
     # via twine
-rules==3.1
+rules==3.2.1
     # via -r requirements/doc.in
 secretstorage==3.3.1
     # via keyring
@@ -211,7 +211,7 @@ strict-rfc3339==0.7
     # via swagger2rst
 swagger2rst==0.0.4
     # via -r requirements/doc.in
-tqdm==4.62.3
+tqdm==4.63.0
     # via twine
 twine==3.8.0
     # via -r requirements/doc.in
