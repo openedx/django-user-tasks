@@ -63,7 +63,7 @@ coreapi==2.3.3
     #   openapi-codec
 coreschema==0.0.4
     # via coreapi
-cryptography==36.0.1
+cryptography==36.0.2
     # via secretstorage
 django==3.2.12
     # via
@@ -119,7 +119,7 @@ kombu==5.2.4
     # via
     #   -r requirements/base.txt
     #   celery
-markupsafe==2.1.0
+markupsafe==2.1.1
     # via jinja2
 openapi-codec==1.3.2
     # via django-rest-swagger
@@ -146,7 +146,7 @@ pyparsing==3.0.7
     # via packaging
 pyrsistent==0.18.1
     # via jsonschema
-pytz==2021.3
+pytz==2022.1
     # via
     #   -r requirements/base.txt
     #   babel
@@ -217,7 +217,7 @@ twine==3.8.0
     # via -r requirements/doc.in
 uritemplate==4.1.1
     # via coreapi
-urllib3==1.26.8
+urllib3==1.26.9
     # via
     #   requests
     #   twine

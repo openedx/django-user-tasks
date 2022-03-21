@@ -128,7 +128,7 @@ lazy-object-proxy==1.7.1
     # via
     #   -r requirements/quality.txt
     #   astroid
-markupsafe==2.1.0
+markupsafe==2.1.1
     # via
     #   -r requirements/quality.txt
     #   jinja2
@@ -209,7 +209,7 @@ pyparsing==3.0.7
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
     #   packaging
-pytest==7.1.0
+pytest==7.1.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -222,7 +222,7 @@ python-slugify==6.1.1
     # via
     #   -r requirements/quality.txt
     #   code-annotations
-pytz==2021.3
+pytz==2022.1
     # via
     #   -r requirements/test.txt
     #   celery
@@ -291,7 +291,7 @@ typing-extensions==4.1.1
     #   -r requirements/quality.txt
     #   astroid
     #   pylint
-urllib3==1.26.8
+urllib3==1.26.9
     # via
     #   -r requirements/ci.txt
     #   requests
@@ -301,7 +301,7 @@ vine==5.0.0
     #   amqp
     #   celery
     #   kombu
-virtualenv==20.13.3
+virtualenv==20.13.4
     # via
     #   -r requirements/ci.txt
     #   tox
