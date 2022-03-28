@@ -63,7 +63,7 @@ coreapi==2.3.3
     #   openapi-codec
 coreschema==0.0.4
     # via coreapi
-cryptography==36.0.1
+cryptography==36.0.2
     # via secretstorage
 django==3.2.12
     # via
@@ -98,7 +98,7 @@ importlib-metadata==4.11.3
     #   keyring
     #   sphinx
     #   twine
-importlib-resources==5.4.0
+importlib-resources==5.6.0
     # via jsonschema
 itypes==1.2.0
     # via coreapi
@@ -106,7 +106,7 @@ jeepney==0.7.1
     # via
     #   keyring
     #   secretstorage
-jinja2==3.0.3
+jinja2==3.1.1
     # via
     #   coreschema
     #   sphinx
@@ -119,7 +119,7 @@ kombu==5.2.4
     # via
     #   -r requirements/base.txt
     #   celery
-markupsafe==2.1.0
+markupsafe==2.1.1
     # via jinja2
 openapi-codec==1.3.2
     # via django-rest-swagger
@@ -146,7 +146,7 @@ pyparsing==3.0.7
     # via packaging
 pyrsistent==0.18.1
     # via jsonschema
-pytz==2021.3
+pytz==2022.1
     # via
     #   -r requirements/base.txt
     #   babel
@@ -171,7 +171,7 @@ restructuredtext-lint==1.4.0
     # via doc8
 rfc3986==2.0.0
     # via twine
-rules==3.2.1
+rules==3.3
     # via -r requirements/doc.in
 secretstorage==3.3.1
     # via keyring
@@ -185,7 +185,7 @@ six==1.16.0
     #   edx-sphinx-theme
 snowballstemmer==2.2.0
     # via sphinx
-sphinx==4.4.0
+sphinx==4.5.0
     # via
     #   -r requirements/doc.in
     #   edx-sphinx-theme
@@ -211,13 +211,13 @@ strict-rfc3339==0.7
     # via swagger2rst
 swagger2rst==0.0.4
     # via -r requirements/doc.in
-tqdm==4.63.0
+tqdm==4.63.1
     # via twine
 twine==3.8.0
     # via -r requirements/doc.in
 uritemplate==4.1.1
     # via coreapi
-urllib3==1.26.8
+urllib3==1.26.9
     # via
     #   requests
     #   twine
