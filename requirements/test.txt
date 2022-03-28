@@ -66,7 +66,7 @@ py==1.11.0
     # via pytest
 pyparsing==3.0.7
     # via packaging
-pytest==7.1.0
+pytest==7.1.1
     # via
     #   pytest-cov
     #   pytest-django
@@ -74,13 +74,13 @@ pytest-cov==3.0.0
     # via -r requirements/test.in
 pytest-django==4.5.2
     # via -r requirements/test.in
-pytz==2021.3
+pytz==2022.1
     # via
     #   -r requirements/base.txt
     #   celery
     #   django
     #   djangorestframework
-rules==3.2.1
+rules==3.3
     # via -r requirements/test.in
 six==1.16.0
     # via
