@@ -25,7 +25,7 @@ billiard==3.6.4.0
     # via
     #   -r requirements/test.txt
     #   celery
-celery==5.2.3
+celery==5.2.5
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/test.txt
@@ -37,7 +37,7 @@ charset-normalizer==2.0.12
     # via
     #   -r requirements/ci.txt
     #   requests
-click==8.0.4
+click==8.1.2
     # via
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
@@ -188,7 +188,7 @@ pycodestyle==2.8.0
     # via -r requirements/quality.txt
 pydocstyle==6.1.1
     # via -r requirements/quality.txt
-pylint==2.13.2
+pylint==2.13.4
     # via
     #   -r requirements/quality.txt
     #   edx-lint
