@@ -10,11 +10,11 @@ asgiref==3.5.0
     # via django
 billiard==3.6.4.0
     # via celery
-celery==5.2.3
+celery==5.2.6
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.in
-click==8.0.4
+click==8.1.2
     # via
     #   celery
     #   click-didyoumean
@@ -38,7 +38,7 @@ djangorestframework==3.13.1
     # via -r requirements/base.in
 kombu==5.2.4
     # via celery
-prompt-toolkit==3.0.28
+prompt-toolkit==3.0.29
     # via click-repl
 pytz==2022.1
     # via
@@ -56,6 +56,3 @@ vine==5.0.0
     #   kombu
 wcwidth==0.2.5
     # via prompt-toolkit
-
-# The following packages are considered to be unsafe in a requirements file:
-# setuptools
