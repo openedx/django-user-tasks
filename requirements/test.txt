@@ -64,7 +64,7 @@ pluggy==1.0.0
     #   click-repl
 py==1.11.0
     # via pytest
-pyparsing==3.0.7
+pyparsing==3.0.8
     # via packaging
 pytest==7.1.1
     # via
@@ -105,6 +105,3 @@ wcwidth==0.2.5
     # via
     #   -r requirements/base.txt
     #   prompt-toolkit
-
-# The following packages are considered to be unsafe in a requirements file:
-# setuptools
