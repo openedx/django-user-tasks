@@ -6,7 +6,7 @@
 #
 alabaster==0.7.12
     # via sphinx
-amqp==5.1.0
+amqp==5.1.1
     # via
     #   -r requirements/base.txt
     #   kombu
@@ -65,7 +65,7 @@ coreschema==0.0.4
     # via coreapi
 cryptography==36.0.2
     # via secretstorage
-django==3.2.12
+django==3.2.13
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.txt
@@ -98,7 +98,7 @@ importlib-metadata==4.11.3
     #   keyring
     #   sphinx
     #   twine
-importlib-resources==5.6.0
+importlib-resources==5.7.1
     # via jsonschema
 itypes==1.2.0
     # via coreapi
@@ -214,7 +214,7 @@ swagger2rst==0.0.4
     # via -r requirements/doc.in
 twine==4.0.0
     # via -r requirements/doc.in
-typing-extensions==4.1.1
+typing-extensions==4.2.0
     # via rich
 uritemplate==4.1.1
     # via coreapi
