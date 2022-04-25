@@ -6,7 +6,7 @@
 #
 alabaster==0.7.12
     # via sphinx
-amqp==5.1.0
+amqp==5.1.1
     # via
     #   -r requirements/base.txt
     #   kombu
@@ -16,7 +16,7 @@ asgiref==3.5.0
     #   django
 attrs==21.4.0
     # via jsonschema
-babel==2.9.1
+babel==2.10.1
     # via sphinx
 billiard==3.6.4.0
     # via
@@ -65,7 +65,7 @@ coreschema==0.0.4
     # via coreapi
 cryptography==36.0.2
     # via secretstorage
-django==3.2.12
+django==3.2.13
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.txt
@@ -98,7 +98,7 @@ importlib-metadata==4.11.3
     #   keyring
     #   sphinx
     #   twine
-importlib-resources==5.6.0
+importlib-resources==5.7.1
     # via jsonschema
 itypes==1.2.0
     # via coreapi
@@ -135,7 +135,7 @@ prompt-toolkit==3.0.29
     #   click-repl
 pycparser==2.21
     # via cffi
-pygments==2.11.2
+pygments==2.12.0
     # via
     #   doc8
     #   readme-renderer
@@ -156,7 +156,7 @@ pyyaml==5.4.1
     # via
     #   -c requirements/constraints.txt
     #   swagger2rst
-readme-renderer==34.0
+readme-renderer==35.0
     # via twine
 requests==2.27.1
     # via
@@ -174,7 +174,7 @@ rich==12.2.0
     # via twine
 rules==3.3
     # via -r requirements/doc.in
-secretstorage==3.3.1
+secretstorage==3.3.2
     # via keyring
 simplejson==3.17.6
     # via django-rest-swagger
@@ -214,7 +214,7 @@ swagger2rst==0.0.4
     # via -r requirements/doc.in
 twine==4.0.0
     # via -r requirements/doc.in
-typing-extensions==4.1.1
+typing-extensions==4.2.0
     # via rich
 uritemplate==4.1.1
     # via coreapi

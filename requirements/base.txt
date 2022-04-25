@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-amqp==5.1.0
+amqp==5.1.1
     # via kombu
 asgiref==3.5.0
     # via django
@@ -26,7 +26,7 @@ click-plugins==1.1.1
     # via celery
 click-repl==0.2.0
     # via celery
-django==3.2.12
+django==3.2.13
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
