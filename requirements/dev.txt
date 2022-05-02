@@ -8,7 +8,7 @@ amqp==5.1.1
     # via
     #   -r requirements/test.txt
     #   kombu
-asgiref==3.5.0
+asgiref==3.5.1
     # via
     #   -r requirements/test.txt
     #   django
@@ -37,7 +37,7 @@ charset-normalizer==2.0.12
     # via
     #   -r requirements/ci.txt
     #   requests
-click==8.1.2
+click==8.1.3
     # via
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
@@ -120,7 +120,7 @@ isort==5.10.1
     # via
     #   -r requirements/quality.txt
     #   pylint
-jinja2==3.1.1
+jinja2==3.1.2
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -222,7 +222,7 @@ pytest-cov==3.0.0
     # via -r requirements/test.txt
 pytest-django==4.5.2
     # via -r requirements/test.txt
-python-slugify==6.1.1
+python-slugify==6.1.2
     # via
     #   -r requirements/quality.txt
     #   code-annotations

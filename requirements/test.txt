@@ -7,7 +7,7 @@
     # via
     #   -r requirements/base.txt
     #   kombu
-asgiref==3.5.0
+asgiref==3.5.1
     # via
     #   -r requirements/base.txt
     #   django
