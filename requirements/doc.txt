@@ -63,7 +63,7 @@ coreapi==2.3.3
     #   openapi-codec
 coreschema==0.0.4
     # via coreapi
-cryptography==37.0.1
+cryptography==37.0.2
     # via secretstorage
 django==3.2.13
     # via
@@ -111,7 +111,7 @@ jinja2==3.1.2
     #   coreschema
     #   sphinx
     #   swagger2rst
-jsonschema==4.4.0
+jsonschema==4.5.1
     # via swagger2rst
 keyring==23.5.0
     # via twine
@@ -125,7 +125,7 @@ openapi-codec==1.3.2
     # via django-rest-swagger
 packaging==21.3
     # via sphinx
-pbr==5.8.1
+pbr==5.9.0
     # via stevedore
 pkginfo==1.8.2
     # via twine
@@ -170,7 +170,7 @@ restructuredtext-lint==1.4.0
     # via doc8
 rfc3986==2.0.0
     # via twine
-rich==12.3.0
+rich==12.4.1
     # via twine
 rules==3.3
     # via -r requirements/doc.in
