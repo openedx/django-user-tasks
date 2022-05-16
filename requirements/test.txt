@@ -36,7 +36,7 @@ click-repl==0.2.0
     # via
     #   -r requirements/base.txt
     #   celery
-coverage[toml]==6.3.2
+coverage[toml]==6.3.3
     # via pytest-cov
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
@@ -64,7 +64,7 @@ pluggy==1.0.0
     #   click-repl
 py==1.11.0
     # via pytest
-pyparsing==3.0.8
+pyparsing==3.0.9
     # via packaging
 pytest==7.1.2
     # via
