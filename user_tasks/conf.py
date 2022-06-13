@@ -52,7 +52,7 @@ class LazySettings():
         return getattr(django_settings, 'USER_TASKS_MAX_AGE', timedelta(days=30))
 
     @property
-    def USER_TASKS_STATUS_FILTERS(self):  # pylint: disable=invalid-name
+    def USER_TASKS_STATUS_FILTERS(self):
         """
         Tuple containing zero or more filters for UserTaskStatus listing REST API calls.
 
@@ -65,4 +65,4 @@ class LazySettings():
         return getattr(django_settings, 'USER_TASKS_STATUS_FILTERS', (filters.StatusFilterBackend,))
 
 
-settings = LazySettings()  # pylint: disable=invalid-name
+settings = LazySettings()

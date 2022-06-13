@@ -21,7 +21,7 @@ LOGGER = logging.getLogger(__name__)
 
 
 @before_task_publish.connect
-def create_user_task(sender=None, body=None, **kwargs):  # pylint: disable=unused-argument
+def create_user_task(sender=None, body=None, **kwargs):
     """
     Create a :py:class:`UserTaskStatus` record for each :py:class:`UserTaskMixin`.
 
@@ -190,7 +190,7 @@ def _get_user_id(arguments_dict):
 
 
 @task_prerun.connect
-def start_user_task(sender=None, **kwargs):  # pylint: disable=unused-argument
+def start_user_task(sender=None, **kwargs):
     """
     Update the status record when execution of a :py:class:`UserTaskMixin` begins.
     """
@@ -229,7 +229,7 @@ def task_failed(sender=None, **kwargs):
 
 
 @task_retry.connect
-def retrying_task(sender=None, **kwargs):  # pylint: disable=unused-argument
+def retrying_task(sender=None, **kwargs):
     """
     Update the status record to reflect that a retry is pending.
     """
@@ -238,7 +238,7 @@ def retrying_task(sender=None, **kwargs):  # pylint: disable=unused-argument
 
 
 @task_success.connect
-def task_succeeded(sender=None, **kwargs):  # pylint: disable=unused-argument
+def task_succeeded(sender=None, **kwargs):
     """
     Update the status record accordingly when a :py:class:`UserTaskMixin` finishes successfully.
     """

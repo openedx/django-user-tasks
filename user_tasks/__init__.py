@@ -11,4 +11,4 @@ default_app_config = 'user_tasks.apps.UserTasksConfig'  # pylint: disable=invali
 # This signal is emitted when a user task reaches any final state:
 # SUCCEEDED, FAILED, or CANCELED
 # providing_args = ['status']
-user_task_stopped = Signal()  # pylint: disable=invalid-name
+user_task_stopped = Signal()
