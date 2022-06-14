@@ -32,7 +32,7 @@ class ConditionalOpenAPIRenderer(OpenAPIRenderer):
 
 @api_view()
 @renderer_classes([ConditionalOpenAPIRenderer, SwaggerUIRenderer])
-def swagger(request):  # pylint: disable=unused-argument
+def swagger(request):
     """
     Render Swagger UI and the underlying Open API schema JSON file.
     """

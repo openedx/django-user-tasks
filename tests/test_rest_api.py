@@ -31,14 +31,14 @@ def _context(response):
     """
     Get a context dictionary for a serializer appropriate for the given response.
     """
-    return {'request': response.wsgi_request}  # pylint: disable=no-member
+    return {'request': response.wsgi_request}
 
 
 def _data(response):
     """
     Get the serialized data dictionary from the given REST API test response.
     """
-    return response.data  # pylint: disable=no-member
+    return response.data
 
 
 class TestRestApi(APITestCase):
@@ -166,7 +166,7 @@ class TestRestApi(APITestCase):
     @mock.patch('django.contrib.auth.models.User.has_perm')
     def test_status_cancel_view_only(self, mock_has_perm):
         """A user with view but not cancel permission on a status record should be unable to cancel it."""
-        def no_cancel(permission, status):  # pylint: disable=unused-argument
+        def no_cancel(permission, status):
             """Deny user_tasks.cancel_usertaskstatus permission for any particular status record."""
             if permission == 'user_tasks.cancel_usertaskstatus':
                 return status is None
@@ -266,4 +266,4 @@ class TestRestApi(APITestCase):
         """
         Log the test client in as the specified user.
         """
-        self.client.force_authenticate(user)  # pylint: disable=no-member
+        self.client.force_authenticate(user)

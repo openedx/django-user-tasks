@@ -110,7 +110,7 @@ class UserTaskStatus(TimeStampedModel):
                                                          modified=now())
         self.refresh_from_db(fields={'completed_steps', 'modified', 'state'})
         if self.parent:
-            self.parent.increment_completed_steps(steps)  # pylint: disable=no-member
+            self.parent.increment_completed_steps(steps)
         # Was a cancellation command recently sent?
         if self.state == self.CANCELED and not self.is_container:
             raise TaskCanceledException
@@ -121,7 +121,7 @@ class UserTaskStatus(TimeStampedModel):
         UserTaskStatus.objects.filter(pk=self.id).update(total_steps=F('total_steps') + steps, modified=now())
         self.refresh_from_db(fields={'total_steps', 'modified'})
         if self.parent:
-            self.parent.increment_total_steps(steps)  # pylint: disable=no-member
+            self.parent.increment_total_steps(steps)
 
     def cancel(self):
         """
@@ -157,7 +157,7 @@ class UserTaskStatus(TimeStampedModel):
             self.state = UserTaskStatus.FAILED
             self.save(update_fields={'state', 'modified'})
         if self.parent:
-            self.parent.fail(message)  # pylint: disable=no-member
+            self.parent.fail(message)
 
     def retry(self):
         """
@@ -176,7 +176,7 @@ class UserTaskStatus(TimeStampedModel):
         self.name = name
         self.save(update_fields={'name', 'modified'})
         if self.parent:
-            self.parent.set_name(name)  # pylint: disable=no-member
+            self.parent.set_name(name)
 
     def set_state(self, custom_state):
         """
@@ -193,8 +193,8 @@ class UserTaskStatus(TimeStampedModel):
             status.save(update_fields={'state', 'modified'})
             self.state = status.state
             self.modified = status.modified
-        if self.parent and self.parent.task_class != 'celery.group':  # pylint: disable=no-member
-            self.parent.set_state(custom_state)  # pylint: disable=no-member
+        if self.parent and self.parent.task_class != 'celery.group':
+            self.parent.set_state(custom_state)
 
     @property
     def state_text(self):
@@ -214,7 +214,7 @@ class UserTaskStatus(TimeStampedModel):
         if self.parent_id:
             query = UserTaskStatus.objects.filter(~Q(state=UserTaskStatus.SUCCEEDED), parent__pk=self.parent_id)
             if not query.exists():
-                self.parent.succeed()  # pylint: disable=no-member
+                self.parent.succeed()
 
     def __str__(self):
         """

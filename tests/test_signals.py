@@ -306,7 +306,7 @@ class TestCreateUserTask(TestCase):
 
 
 @shared_task(base=SampleTask, bind=True)
-def failing_task(self, user_id, argument, **kwargs):  # pylint: disable=unused-argument
+def failing_task(self, user_id, argument, **kwargs):
     """
     A task using the UserTask framework which always throws an exception.
     """
@@ -322,7 +322,7 @@ def manually_failed_task(self, user_id, argument, **kwargs):  # pylint: disable=
 
 
 @shared_task(bind=True)
-def normal_failing_task(self, *args, **kwargs):  # pylint: disable=unused-argument
+def normal_failing_task(self, *args, **kwargs):
     """
     A non-UserTaskMixin Celery task which always throws an exception.
     """
@@ -343,7 +343,7 @@ def retried_task(self, user_id, argument, **kwargs):  # pylint: disable=unused-a
 
 
 @shared_task(bind=True)
-def normal_retried_task(self, *args, **kwargs):  # pylint: disable=unused-argument
+def normal_retried_task(self, *args, **kwargs):
     """
     A non-UserTaskMixin Celery task which fails once and succeeds on the retry.
     """

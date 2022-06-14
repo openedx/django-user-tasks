@@ -55,7 +55,7 @@ class StatusViewSet(
     serializer_class = StatusSerializer
 
     @action(detail=True, methods=['post'])
-    def cancel(self, request, *args, **kwargs):  # pylint: disable=unused-argument
+    def cancel(self, request, *args, **kwargs):
         """
         Cancel the task associated with the specified status record.
 
