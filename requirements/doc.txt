@@ -16,7 +16,7 @@ asgiref==3.5.2
     #   django
 attrs==21.4.0
     # via jsonschema
-babel==2.10.1
+babel==2.10.3
     # via sphinx
 billiard==3.6.4.0
     # via
@@ -30,7 +30,7 @@ celery==5.2.7
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
-certifi==2022.5.18.1
+certifi==2022.6.15
     # via requests
 cffi==1.15.0
     # via cryptography
@@ -98,7 +98,7 @@ importlib-metadata==4.11.4
     #   keyring
     #   sphinx
     #   twine
-importlib-resources==5.7.1
+importlib-resources==5.8.0
     # via jsonschema
 itypes==1.2.0
     # via coreapi
@@ -186,7 +186,7 @@ six==1.16.0
     #   edx-sphinx-theme
 snowballstemmer==2.2.0
     # via sphinx
-sphinx==5.0.1
+sphinx==5.0.2
     # via
     #   -r requirements/doc.in
     #   edx-sphinx-theme
