@@ -25,6 +25,10 @@ billiard==3.6.4.0
     # via
     #   -r requirements/test.txt
     #   celery
+build==0.8.0
+    # via
+    #   -r requirements/pip-tools.txt
+    #   pip-tools
 celery==5.2.7
     # via
     #   -c requirements/constraints.txt
@@ -33,7 +37,7 @@ certifi==2022.6.15
     # via
     #   -r requirements/ci.txt
     #   requests
-charset-normalizer==2.0.12
+charset-normalizer==2.1.0
     # via
     #   -r requirements/ci.txt
     #   requests
@@ -145,7 +149,9 @@ mock==4.0.3
 packaging==21.3
     # via
     #   -r requirements/ci.txt
+    #   -r requirements/pip-tools.txt
     #   -r requirements/test.txt
+    #   build
     #   pytest
     #   tox
 path==16.4.0
@@ -157,8 +163,8 @@ pbr==5.9.0
 pep517==0.12.0
     # via
     #   -r requirements/pip-tools.txt
-    #   pip-tools
-pip-tools==6.6.2
+    #   build
+pip-tools==6.8.0
     # via -r requirements/pip-tools.txt
 platformdirs==2.5.2
     # via
@@ -174,7 +180,7 @@ pluggy==1.0.0
     #   tox
 polib==1.1.1
     # via edx-i18n-tools
-prompt-toolkit==3.0.29
+prompt-toolkit==3.0.30
     # via
     #   -r requirements/test.txt
     #   click-repl
@@ -188,7 +194,7 @@ pycodestyle==2.8.0
     # via -r requirements/quality.txt
 pydocstyle==6.1.1
     # via -r requirements/quality.txt
-pylint==2.14.3
+pylint==2.14.4
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -211,6 +217,7 @@ pylint-plugin-utils==0.7
 pyparsing==3.0.9
     # via
     #   -r requirements/ci.txt
+    #   -r requirements/pip-tools.txt
     #   -r requirements/test.txt
     #   packaging
 pytest==7.1.2
@@ -238,7 +245,7 @@ pyyaml==5.4.1
     #   -r requirements/quality.txt
     #   code-annotations
     #   edx-i18n-tools
-requests==2.28.0
+requests==2.28.1
     # via
     #   -r requirements/ci.txt
     #   codecov
@@ -280,6 +287,7 @@ tomli==2.0.1
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
     #   -r requirements/test.txt
+    #   build
     #   coverage
     #   pep517
     #   pylint
@@ -288,13 +296,13 @@ tomlkit==0.11.0
     # via
     #   -r requirements/quality.txt
     #   pylint
-tox==3.25.0
+tox==3.25.1
     # via
     #   -r requirements/ci.txt
     #   tox-battery
 tox-battery==0.6.1
     # via -r requirements/ci.txt
-typing-extensions==4.2.0
+typing-extensions==4.3.0
     # via
     #   -r requirements/quality.txt
     #   astroid
@@ -309,7 +317,7 @@ vine==5.0.0
     #   amqp
     #   celery
     #   kombu
-virtualenv==20.15.0
+virtualenv==20.15.1
     # via
     #   -r requirements/ci.txt
     #   tox
