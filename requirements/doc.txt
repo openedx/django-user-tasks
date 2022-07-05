@@ -22,7 +22,7 @@ billiard==3.6.4.0
     # via
     #   -r requirements/base.txt
     #   celery
-bleach==5.0.0
+bleach==5.0.1
     # via readme-renderer
 cached-property==1.5.2
     # via swagger2rst
@@ -32,9 +32,9 @@ celery==5.2.7
     #   -r requirements/base.txt
 certifi==2022.6.15
     # via requests
-cffi==1.15.0
+cffi==1.15.1
     # via cryptography
-charset-normalizer==2.0.12
+charset-normalizer==2.1.0
     # via requests
 click==8.1.3
     # via
@@ -91,7 +91,7 @@ edx-sphinx-theme==3.0.0
     # via -r requirements/doc.in
 idna==3.3
     # via requests
-imagesize==1.3.0
+imagesize==1.4.1
     # via sphinx
 importlib-metadata==4.12.0
     # via
@@ -111,7 +111,7 @@ jinja2==3.1.2
     #   coreschema
     #   sphinx
     #   swagger2rst
-jsonschema==4.6.0
+jsonschema==4.6.1
     # via swagger2rst
 keyring==23.6.0
     # via twine
@@ -129,7 +129,7 @@ pbr==5.9.0
     # via stevedore
 pkginfo==1.8.3
     # via twine
-prompt-toolkit==3.0.29
+prompt-toolkit==3.0.30
     # via
     #   -r requirements/base.txt
     #   click-repl
@@ -158,7 +158,7 @@ pyyaml==5.4.1
     #   swagger2rst
 readme-renderer==35.0
     # via twine
-requests==2.28.0
+requests==2.28.1
     # via
     #   coreapi
     #   requests-toolbelt
@@ -214,7 +214,7 @@ swagger2rst==0.0.4
     # via -r requirements/doc.in
 twine==4.0.1
     # via -r requirements/doc.in
-typing-extensions==4.2.0
+typing-extensions==4.3.0
     # via rich
 uritemplate==4.1.1
     # via coreapi

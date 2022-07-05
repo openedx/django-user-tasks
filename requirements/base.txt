@@ -38,7 +38,7 @@ djangorestframework==3.13.1
     # via -r requirements/base.in
 kombu==5.2.4
     # via celery
-prompt-toolkit==3.0.29
+prompt-toolkit==3.0.30
     # via click-repl
 pytz==2022.1
     # via
