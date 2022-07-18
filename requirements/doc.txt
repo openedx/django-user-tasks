@@ -63,9 +63,9 @@ coreapi==2.3.3
     #   openapi-codec
 coreschema==0.0.4
     # via coreapi
-cryptography==37.0.2
+cryptography==37.0.4
     # via secretstorage
-django==3.2.13
+django==3.2.14
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.txt
@@ -111,9 +111,9 @@ jinja2==3.1.2
     #   coreschema
     #   sphinx
     #   swagger2rst
-jsonschema==4.6.1
+jsonschema==4.7.2
     # via swagger2rst
-keyring==23.6.0
+keyring==23.7.0
     # via twine
 kombu==5.2.4
     # via
@@ -170,7 +170,7 @@ restructuredtext-lint==1.4.0
     # via doc8
 rfc3986==2.0.0
     # via twine
-rich==12.4.4
+rich==12.5.1
     # via twine
 rules==3.3
     # via -r requirements/doc.in
@@ -206,7 +206,7 @@ sqlparse==0.4.2
     # via
     #   -r requirements/base.txt
     #   django
-stevedore==3.5.0
+stevedore==4.0.0
     # via doc8
 strict-rfc3339==0.7
     # via swagger2rst
@@ -218,7 +218,7 @@ typing-extensions==4.3.0
     # via rich
 uritemplate==4.1.1
     # via coreapi
-urllib3==1.26.9
+urllib3==1.26.10
     # via
     #   requests
     #   twine
@@ -234,7 +234,7 @@ wcwidth==0.2.5
     #   prompt-toolkit
 webencodings==0.5.1
     # via bleach
-zipp==3.8.0
+zipp==3.8.1
     # via
     #   importlib-metadata
     #   importlib-resources
