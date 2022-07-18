@@ -26,7 +26,7 @@ click-plugins==1.1.1
     # via celery
 click-repl==0.2.0
     # via celery
-django==3.2.13
+django==3.2.14
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
