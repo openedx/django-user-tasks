@@ -81,7 +81,7 @@ djangorestframework==3.13.1
     #   django-rest-swagger
 doc8==0.11.2
     # via -r requirements/doc.in
-docutils==0.18.1
+docutils==0.19
     # via
     #   doc8
     #   readme-renderer
@@ -98,7 +98,7 @@ importlib-metadata==4.12.0
     #   keyring
     #   sphinx
     #   twine
-importlib-resources==5.8.0
+importlib-resources==5.9.0
     # via jsonschema
 itypes==1.2.0
     # via coreapi
@@ -186,7 +186,7 @@ six==1.16.0
     #   edx-sphinx-theme
 snowballstemmer==2.2.0
     # via sphinx
-sphinx==5.0.2
+sphinx==5.1.0
     # via
     #   -r requirements/doc.in
     #   edx-sphinx-theme
