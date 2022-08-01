@@ -14,7 +14,7 @@ asgiref==3.5.2
     # via
     #   -r requirements/base.txt
     #   django
-attrs==21.4.0
+attrs==22.1.0
     # via jsonschema
 babel==2.10.3
     # via sphinx
@@ -79,7 +79,7 @@ djangorestframework==3.13.1
     # via
     #   -r requirements/base.txt
     #   django-rest-swagger
-doc8==0.11.2
+doc8==1.0.0
     # via -r requirements/doc.in
 docutils==0.19
     # via
@@ -111,7 +111,7 @@ jinja2==3.1.2
     #   coreschema
     #   sphinx
     #   swagger2rst
-jsonschema==4.7.2
+jsonschema==4.9.0
     # via swagger2rst
 keyring==23.7.0
     # via twine
@@ -129,6 +129,8 @@ pbr==5.9.0
     # via stevedore
 pkginfo==1.8.3
     # via twine
+pkgutil-resolve-name==1.3.10
+    # via jsonschema
 prompt-toolkit==3.0.30
     # via
     #   -r requirements/base.txt
@@ -186,7 +188,7 @@ six==1.16.0
     #   edx-sphinx-theme
 snowballstemmer==2.2.0
     # via sphinx
-sphinx==5.1.0
+sphinx==5.1.1
     # via
     #   -r requirements/doc.in
     #   edx-sphinx-theme
@@ -212,13 +214,15 @@ strict-rfc3339==0.7
     # via swagger2rst
 swagger2rst==0.0.4
     # via -r requirements/doc.in
+tomli==2.0.1
+    # via doc8
 twine==4.0.1
     # via -r requirements/doc.in
 typing-extensions==4.3.0
     # via rich
 uritemplate==4.1.1
     # via coreapi
-urllib3==1.26.10
+urllib3==1.26.11
     # via
     #   requests
     #   twine
