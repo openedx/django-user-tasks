@@ -17,7 +17,7 @@ astroid==2.11.7
     #   -r requirements/quality.txt
     #   pylint
     #   pylint-celery
-attrs==21.4.0
+attrs==22.1.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -160,7 +160,7 @@ pbr==5.9.0
     # via
     #   -r requirements/quality.txt
     #   stevedore
-pep517==0.12.0
+pep517==0.13.0
     # via
     #   -r requirements/pip-tools.txt
     #   build
@@ -190,7 +190,7 @@ py==1.11.0
     #   -r requirements/test.txt
     #   pytest
     #   tox
-pycodestyle==2.8.0
+pycodestyle==2.9.0
     # via -r requirements/quality.txt
 pydocstyle==6.1.1
     # via -r requirements/quality.txt
@@ -259,7 +259,6 @@ six==1.16.0
     #   click-repl
     #   edx-lint
     #   tox
-    #   virtualenv
 snowballstemmer==2.2.0
     # via
     #   -r requirements/quality.txt
@@ -307,7 +306,7 @@ typing-extensions==4.3.0
     #   -r requirements/quality.txt
     #   astroid
     #   pylint
-urllib3==1.26.10
+urllib3==1.26.11
     # via
     #   -r requirements/ci.txt
     #   requests
@@ -317,7 +316,7 @@ vine==5.0.0
     #   amqp
     #   celery
     #   kombu
-virtualenv==20.15.1
+virtualenv==20.16.2
     # via
     #   -r requirements/ci.txt
     #   tox

@@ -11,7 +11,7 @@ asgiref==3.5.2
     # via
     #   -r requirements/base.txt
     #   django
-attrs==21.4.0
+attrs==22.1.0
     # via pytest
     # via
     #   -r requirements/base.txt
