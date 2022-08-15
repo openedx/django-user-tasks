@@ -87,7 +87,7 @@ coreschema==0.0.4
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==6.4.2
+coverage[toml]==6.4.3
     # via
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
@@ -123,7 +123,7 @@ edx-lint==5.2.4
     # via
     #   -r requirements/dev.in
     #   -r requirements/quality.txt
-filelock==3.7.1
+filelock==3.8.0
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -185,7 +185,7 @@ packaging==21.3
     #   tox
 path==16.4.0
     # via edx-i18n-tools
-pbr==5.9.0
+pbr==5.10.0
     # via
     #   -r requirements/quality.txt
     #   stevedore
@@ -219,7 +219,7 @@ py==1.11.0
     #   -r requirements/test.txt
     #   pytest
     #   tox
-pycodestyle==2.9.0
+pycodestyle==2.9.1
     # via -r requirements/quality.txt
 pydocstyle==6.1.1
     # via -r requirements/quality.txt
@@ -262,7 +262,7 @@ python-slugify==6.1.2
     # via
     #   -r requirements/quality.txt
     #   code-annotations
-pytz==2022.1
+pytz==2022.2.1
     # via
     #   -r requirements/test.txt
     #   celery
@@ -331,7 +331,7 @@ tomli==2.0.1
     #   pep517
     #   pylint
     #   pytest
-tomlkit==0.11.1
+tomlkit==0.11.4
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -362,7 +362,7 @@ vine==5.0.0
     #   amqp
     #   celery
     #   kombu
-virtualenv==20.16.2
+virtualenv==20.16.3
     # via
     #   -r requirements/ci.txt
     #   tox
