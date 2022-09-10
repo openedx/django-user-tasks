@@ -5,8 +5,8 @@ django-user-tasks
     :target: https://pypi.python.org/pypi/django-user-tasks/
     :alt: PyPI
 
-.. image:: https://github.com/edx/django-user-tasks/workflows/Python%20CI/badge.svg?branch=master
-    :target: https://github.com/edx/django-user-tasks/actions?query=workflow%3A%22Python+CI%22
+.. image:: https://github.com/openedx/django-user-tasks/workflows/Python%20CI/badge.svg?branch=master
+    :target: https://github.com/openedx/django-user-tasks/actions?query=workflow%3A%22Python+CI%22
     :alt: CI
 
 .. image:: http://codecov.io/github/edx/django-user-tasks/coverage.svg?branch=master
@@ -22,7 +22,7 @@ django-user-tasks
     :alt: Supported Python versions
 
 .. image:: https://img.shields.io/github/license/edx/django-user-tasks.svg
-    :target: https://github.com/edx/django-user-tasks/blob/master/LICENSE.txt
+    :target: https://github.com/openedx/django-user-tasks/blob/master/LICENSE.txt
     :alt: License
 
 django-user-tasks is a reusable Django application for managing user-triggered
@@ -90,7 +90,7 @@ How To Contribute
 
 Contributions are very welcome.
 
-Please read `How To Contribute <https://github.com/edx/edx-platform/blob/master/CONTRIBUTING.rst>`_ for details.
+Please read `How To Contribute <https://github.com/openedx/edx-platform/blob/master/CONTRIBUTING.rst>`_ for details.
 
 Even though they were written with ``edx-platform`` in mind, the guidelines
 should be followed for Open edX code in general.
