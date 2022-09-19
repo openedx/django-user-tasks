@@ -286,6 +286,8 @@ disable =
 	illegal-waffle-usage,
 	
 	logging-fstring-interpolation,
+	django-not-configured,
+	unsupported-binary-operation
 
 [REPORTS]
 output-format = text
@@ -382,4 +384,4 @@ int-import-graph =
 [EXCEPTIONS]
 overgeneral-exceptions = Exception
 
-# 0271f406a94698d1df3568fe52ebb1ff2bee0006
+# 061a42be09c4375d527b20ee02fd14bdf2aa56f8

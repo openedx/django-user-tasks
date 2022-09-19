@@ -12,7 +12,7 @@ asgiref==3.5.2
     # via
     #   -r requirements/test.txt
     #   django
-astroid==2.11.7
+astroid==2.12.10
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -33,12 +33,12 @@ celery==5.2.7
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/test.txt
-certifi==2022.6.15
+certifi==2022.9.14
     # via
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
     #   requests
-charset-normalizer==2.1.0
+charset-normalizer==2.1.1
     # via
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
@@ -87,7 +87,7 @@ coreschema==0.0.4
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==6.4.3
+coverage[toml]==6.4.4
     # via
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
@@ -97,7 +97,7 @@ dill==0.3.5.1
     # via
     #   -r requirements/quality.txt
     #   pylint
-distlib==0.3.5
+distlib==0.3.6
     # via
     #   -r requirements/ci.txt
     #   virtualenv
@@ -119,7 +119,7 @@ drf-yasg==1.21.3
     # via -r requirements/test.txt
 edx-i18n-tools==0.9.1
     # via -r requirements/dev.in
-edx-lint==5.2.4
+edx-lint==5.3.0
     # via
     #   -r requirements/dev.in
     #   -r requirements/quality.txt
@@ -128,7 +128,7 @@ filelock==3.8.0
     #   -r requirements/ci.txt
     #   tox
     #   virtualenv
-idna==3.3
+idna==3.4
     # via
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
@@ -209,7 +209,7 @@ pluggy==1.0.0
     #   tox
 polib==1.1.1
     # via edx-i18n-tools
-prompt-toolkit==3.0.30
+prompt-toolkit==3.0.31
     # via
     #   -r requirements/test.txt
     #   click-repl
@@ -223,7 +223,7 @@ pycodestyle==2.9.1
     # via -r requirements/quality.txt
 pydocstyle==6.1.1
     # via -r requirements/quality.txt
-pylint==2.14.5
+pylint==2.15.2
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -249,7 +249,7 @@ pyparsing==3.0.9
     #   -r requirements/pip-tools.txt
     #   -r requirements/test.txt
     #   packaging
-pytest==7.1.2
+pytest==7.1.3
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -317,12 +317,9 @@ text-unidecode==1.3
     # via
     #   -r requirements/quality.txt
     #   python-slugify
-toml==0.10.2
-    # via
-    #   -r requirements/ci.txt
-    #   tox
 tomli==2.0.1
     # via
+    #   -r requirements/ci.txt
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
     #   -r requirements/test.txt
@@ -331,11 +328,12 @@ tomli==2.0.1
     #   pep517
     #   pylint
     #   pytest
+    #   tox
 tomlkit==0.11.4
     # via
     #   -r requirements/quality.txt
     #   pylint
-tox==3.25.1
+tox==3.26.0
     # via
     #   -r requirements/ci.txt
     #   tox-battery
@@ -351,7 +349,7 @@ uritemplate==4.1.1
     #   -r requirements/test.txt
     #   coreapi
     #   drf-yasg
-urllib3==1.26.11
+urllib3==1.26.12
     # via
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
@@ -362,7 +360,7 @@ vine==5.0.0
     #   amqp
     #   celery
     #   kombu
-virtualenv==20.16.3
+virtualenv==20.16.5
     # via
     #   -r requirements/ci.txt
     #   tox
