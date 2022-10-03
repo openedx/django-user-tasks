@@ -98,7 +98,7 @@ docutils==0.19
     #   readme-renderer
     #   restructuredtext-lint
     #   sphinx
-drf-yasg==1.21.3
+drf-yasg==1.21.4
     # via -r requirements/base.txt
 edx-sphinx-theme==3.0.0
     # via -r requirements/doc.in
@@ -108,7 +108,7 @@ idna==3.4
     #   requests
 imagesize==1.4.1
     # via sphinx
-importlib-metadata==4.12.0
+importlib-metadata==5.0.0
     # via
     #   keyring
     #   sphinx
@@ -123,7 +123,7 @@ itypes==1.2.0
     # via
     #   -r requirements/base.txt
     #   coreapi
-jaraco-classes==3.2.2
+jaraco-classes==3.2.3
     # via keyring
 jeepney==0.8.0
     # via
@@ -180,7 +180,7 @@ pyparsing==3.0.9
     #   packaging
 pyrsistent==0.18.1
     # via jsonschema
-pytz==2022.2.1
+pytz==2022.4
     # via
     #   -r requirements/base.txt
     #   babel
@@ -207,7 +207,7 @@ restructuredtext-lint==1.4.0
     # via doc8
 rfc3986==2.0.0
     # via twine
-rich==12.5.1
+rich==12.6.0
     # via twine
 ruamel-yaml==0.17.21
     # via
@@ -231,7 +231,7 @@ six==1.16.0
     #   edx-sphinx-theme
 snowballstemmer==2.2.0
     # via sphinx
-sphinx==5.2.1
+sphinx==5.2.3
     # via
     #   -r requirements/doc.in
     #   edx-sphinx-theme
