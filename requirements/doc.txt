@@ -74,7 +74,7 @@ coreschema==0.0.4
     #   drf-yasg
 cryptography==38.0.1
     # via secretstorage
-django==3.2.15
+django==3.2.16
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.txt
@@ -113,7 +113,7 @@ importlib-metadata==5.0.0
     #   keyring
     #   sphinx
     #   twine
-importlib-resources==5.9.0
+importlib-resources==5.10.0
     # via jsonschema
 inflection==0.5.1
     # via
@@ -201,7 +201,7 @@ requests==2.28.1
     #   requests-toolbelt
     #   sphinx
     #   twine
-requests-toolbelt==0.9.1
+requests-toolbelt==0.10.0
     # via twine
 restructuredtext-lint==1.4.0
     # via doc8
@@ -261,7 +261,7 @@ tomli==2.0.1
     # via doc8
 twine==4.0.1
     # via -r requirements/doc.in
-typing-extensions==4.3.0
+typing-extensions==4.4.0
     # via rich
 uritemplate==4.1.1
     # via
@@ -285,7 +285,7 @@ wcwidth==0.2.5
     #   prompt-toolkit
 webencodings==0.5.1
     # via bleach
-zipp==3.8.1
+zipp==3.9.0
     # via
     #   importlib-metadata
     #   importlib-resources

@@ -101,7 +101,7 @@ distlib==0.3.6
     # via
     #   -r requirements/ci.txt
     #   virtualenv
-django==3.2.15
+django==3.2.16
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
@@ -193,7 +193,7 @@ pep517==0.13.0
     # via
     #   -r requirements/pip-tools.txt
     #   build
-pip-tools==6.8.0
+pip-tools==6.9.0
     # via -r requirements/pip-tools.txt
 platformdirs==2.5.2
     # via
@@ -339,7 +339,7 @@ tox==3.26.0
     #   tox-battery
 tox-battery==0.6.1
     # via -r requirements/ci.txt
-typing-extensions==4.3.0
+typing-extensions==4.4.0
     # via
     #   -r requirements/quality.txt
     #   astroid
