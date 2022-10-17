@@ -231,7 +231,7 @@ six==1.16.0
     #   edx-sphinx-theme
 snowballstemmer==2.2.0
     # via sphinx
-sphinx==5.2.3
+sphinx==5.3.0
     # via
     #   -r requirements/doc.in
     #   edx-sphinx-theme
@@ -251,7 +251,7 @@ sqlparse==0.4.3
     # via
     #   -r requirements/base.txt
     #   django
-stevedore==4.0.0
+stevedore==4.0.1
     # via doc8
 strict-rfc3339==0.7
     # via swagger2rst
