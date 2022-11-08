@@ -65,11 +65,11 @@ markupsafe==2.1.1
     # via jinja2
 packaging==21.3
     # via drf-yasg
-prompt-toolkit==3.0.31
+prompt-toolkit==3.0.32
     # via click-repl
 pyparsing==3.0.9
     # via packaging
-pytz==2022.5
+pytz==2022.6
     # via
     #   celery
     #   django

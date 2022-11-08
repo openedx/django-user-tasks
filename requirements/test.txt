@@ -68,7 +68,7 @@ django-model-utils==4.2.0
     #   drf-yasg
 drf-yasg==1.21.4
     # via -r requirements/base.txt
-exceptiongroup==1.0.0
+exceptiongroup==1.0.1
     # via pytest
 idna==3.4
     # via
@@ -120,7 +120,7 @@ pytest-cov==4.0.0
     # via -r requirements/test.in
 pytest-django==4.5.2
     # via -r requirements/test.in
-pytz==2022.5
+pytz==2022.6
     # via
     #   -r requirements/base.txt
     #   celery
@@ -149,7 +149,7 @@ sqlparse==0.4.3
     # via
     #   -r requirements/base.txt
     #   django
-testfixtures==7.0.0
+testfixtures==7.0.3
     # via -r requirements/test.in
 tomli==2.0.1
     # via
