@@ -81,7 +81,7 @@ django==3.2.16
     #   django-model-utils
     #   djangorestframework
     #   drf-yasg
-django-model-utils==4.2.0
+django-model-utils==4.3.1
     # via -r requirements/base.txt
 django-rest-swagger==2.2.0
     # via -r requirements/doc.in
@@ -221,7 +221,7 @@ rules==3.3
     # via -r requirements/doc.in
 secretstorage==3.3.3
     # via keyring
-simplejson==3.17.6
+simplejson==3.18.0
     # via django-rest-swagger
 six==1.16.0
     # via
@@ -251,7 +251,7 @@ sqlparse==0.4.3
     # via
     #   -r requirements/base.txt
     #   django
-stevedore==4.1.0
+stevedore==4.1.1
     # via doc8
 strict-rfc3339==0.7
     # via swagger2rst

@@ -61,14 +61,14 @@ coverage[toml]==6.5.0
     #   django-model-utils
     #   djangorestframework
     #   drf-yasg
-django-model-utils==4.2.0
+django-model-utils==4.3.1
     # via -r requirements/base.txt
     # via
     #   -r requirements/base.txt
     #   drf-yasg
 drf-yasg==1.21.4
     # via -r requirements/base.txt
-exceptiongroup==1.0.1
+exceptiongroup==1.0.4
     # via pytest
 idna==3.4
     # via
