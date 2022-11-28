@@ -43,7 +43,7 @@ django==3.2.16
     #   django-model-utils
     #   djangorestframework
     #   drf-yasg
-django-model-utils==4.2.0
+django-model-utils==4.3.1
     # via -r requirements/base.in
 djangorestframework==3.14.0
     # via
@@ -65,7 +65,7 @@ markupsafe==2.1.1
     # via jinja2
 packaging==21.3
     # via drf-yasg
-prompt-toolkit==3.0.32
+prompt-toolkit==3.0.33
     # via click-repl
 pyparsing==3.0.9
     # via packaging
@@ -89,7 +89,7 @@ uritemplate==4.1.1
     # via
     #   coreapi
     #   drf-yasg
-urllib3==1.26.12
+urllib3==1.26.13
     # via requests
 vine==5.0.0
     # via
