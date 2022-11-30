@@ -91,7 +91,7 @@ upgrade: ## update the requirements/*.txt files with the latest packages satisfy
 	rm requirements/test.txt.tmp
 
 pull_translations: ## pull translations from Transifex
-	tx pull -a
+	tx pull -t -a
 
 push_translations: ## push source translation files (.po) from Transifex
 	tx push -s
