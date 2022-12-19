@@ -67,7 +67,7 @@ packaging==22.0
     # via drf-yasg
 prompt-toolkit==3.0.36
     # via click-repl
-pytz==2022.6
+pytz==2022.7
     # via
     #   celery
     #   django
