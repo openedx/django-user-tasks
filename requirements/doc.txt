@@ -10,11 +10,11 @@ amqp==5.1.1
     # via
     #   -r requirements/base.txt
     #   kombu
-asgiref==3.5.2
+asgiref==3.6.0
     # via
     #   -r requirements/base.txt
     #   django
-attrs==22.1.0
+attrs==22.2.0
     # via jsonschema
 babel==2.11.0
     # via sphinx
@@ -90,7 +90,7 @@ djangorestframework==3.14.0
     #   -r requirements/base.txt
     #   django-rest-swagger
     #   drf-yasg
-doc8==1.0.0
+doc8==1.1.1
     # via -r requirements/doc.in
 docutils==0.19
     # via
@@ -108,13 +108,15 @@ idna==3.4
     #   requests
 imagesize==1.4.1
     # via sphinx
-importlib-metadata==5.1.0
+importlib-metadata==6.0.0
     # via
     #   keyring
     #   sphinx
     #   twine
-importlib-resources==5.10.1
-    # via jsonschema
+importlib-resources==5.10.2
+    # via
+    #   jsonschema
+    #   keyring
 inflection==0.5.1
     # via
     #   -r requirements/base.txt
@@ -137,7 +139,7 @@ jinja2==3.1.2
     #   swagger2rst
 jsonschema==4.17.3
     # via swagger2rst
-keyring==23.11.0
+keyring==23.13.1
     # via twine
 kombu==5.2.4
     # via
@@ -168,15 +170,15 @@ prompt-toolkit==3.0.36
     #   click-repl
 pycparser==2.21
     # via cffi
-pygments==2.13.0
+pygments==2.14.0
     # via
     #   doc8
     #   readme-renderer
     #   rich
     #   sphinx
-pyrsistent==0.19.2
+pyrsistent==0.19.3
     # via jsonschema
-pytz==2022.6
+pytz==2022.7
     # via
     #   -r requirements/base.txt
     #   babel
@@ -203,7 +205,7 @@ restructuredtext-lint==1.4.0
     # via doc8
 rfc3986==2.0.0
     # via twine
-rich==12.6.0
+rich==13.0.0
     # via twine
 ruamel-yaml==0.17.21
     # via
@@ -227,7 +229,7 @@ six==1.16.0
     #   edx-sphinx-theme
 snowballstemmer==2.2.0
     # via sphinx
-sphinx==5.3.0
+sphinx==6.0.0
     # via
     #   -r requirements/doc.in
     #   edx-sphinx-theme
