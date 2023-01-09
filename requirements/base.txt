@@ -6,7 +6,7 @@
 #
 amqp==5.1.1
     # via kombu
-asgiref==3.5.2
+asgiref==3.6.0
     # via django
 billiard==3.6.4.0
     # via celery
@@ -63,11 +63,11 @@ kombu==5.2.4
     # via celery
 markupsafe==2.1.1
     # via jinja2
-packaging==22.0
+packaging==23.0
     # via drf-yasg
 prompt-toolkit==3.0.36
     # via click-repl
-pytz==2022.6
+pytz==2022.7
     # via
     #   celery
     #   django
