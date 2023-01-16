@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-astroid==2.12.13
+astroid==2.13.2
     # via
     #   pylint
     #   pylint-celery
@@ -21,27 +21,27 @@ dill==0.3.6
     # via pylint
 edx-lint==5.3.0
     # via -r requirements/quality.in
-isort==5.10.1
+isort==5.11.4
     # via
     #   -r requirements/quality.in
     #   pylint
 jinja2==3.1.2
     # via code-annotations
-lazy-object-proxy==1.8.0
+lazy-object-proxy==1.9.0
     # via astroid
 markupsafe==2.1.1
     # via jinja2
 mccabe==0.7.0
     # via pylint
-pbr==5.11.0
+pbr==5.11.1
     # via stevedore
-platformdirs==2.6.0
+platformdirs==2.6.2
     # via pylint
 pycodestyle==2.10.0
     # via -r requirements/quality.in
-pydocstyle==6.1.1
+pydocstyle==6.2.3
     # via -r requirements/quality.in
-pylint==2.15.8
+pylint==2.15.10
     # via
     #   edx-lint
     #   pylint-celery

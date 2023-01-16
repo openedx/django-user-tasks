@@ -6,7 +6,7 @@
 #
 amqp==5.1.1
     # via kombu
-asgiref==3.5.2
+asgiref==3.6.0
     # via django
 billiard==3.6.4.0
     # via celery
@@ -16,7 +16,7 @@ celery==5.2.7
     #   -r requirements/base.in
 certifi==2022.12.7
     # via requests
-charset-normalizer==2.1.1
+charset-normalizer==3.0.1
     # via requests
 click==8.1.3
     # via
@@ -63,17 +63,17 @@ kombu==5.2.4
     # via celery
 markupsafe==2.1.1
     # via jinja2
-packaging==22.0
+packaging==23.0
     # via drf-yasg
 prompt-toolkit==3.0.36
     # via click-repl
-pytz==2022.6
+pytz==2022.7.1
     # via
     #   celery
     #   django
     #   djangorestframework
     #   drf-yasg
-requests==2.28.1
+requests==2.28.2
     # via coreapi
 ruamel-yaml==0.17.21
     # via drf-yasg
@@ -87,12 +87,12 @@ uritemplate==4.1.1
     # via
     #   coreapi
     #   drf-yasg
-urllib3==1.26.13
+urllib3==1.26.14
     # via requests
 vine==5.0.0
     # via
     #   amqp
     #   celery
     #   kombu
-wcwidth==0.2.5
+wcwidth==0.2.6
     # via prompt-toolkit
