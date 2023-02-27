@@ -65,7 +65,7 @@ markupsafe==2.1.2
     # via jinja2
 packaging==23.0
     # via drf-yasg
-prompt-toolkit==3.0.36
+prompt-toolkit==3.0.37
     # via click-repl
 pytz==2022.7.1
     # via
