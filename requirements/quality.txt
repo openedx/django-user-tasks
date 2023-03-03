@@ -55,7 +55,7 @@ pylint-plugin-utils==0.7
     # via
     #   pylint-celery
     #   pylint-django
-python-slugify==8.0.0
+python-slugify==8.0.1
     # via code-annotations
 pyyaml==5.4.1
     # via
