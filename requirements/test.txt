@@ -108,7 +108,7 @@ pluggy==1.0.0
     # via
     #   -r requirements/base.txt
     #   click-repl
-pytest==7.2.1
+pytest==7.2.2
     # via
     #   pytest-cov
     #   pytest-django
