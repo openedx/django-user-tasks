@@ -23,7 +23,7 @@ certifi==2022.12.7
     # via
     #   -r requirements/base.txt
     #   requests
-charset-normalizer==3.0.1
+charset-normalizer==3.1.0
     # via
     #   -r requirements/base.txt
     #   requests
@@ -68,7 +68,7 @@ django-model-utils==4.3.1
     #   drf-yasg
 drf-yasg==1.21.5
     # via -r requirements/base.txt
-exceptiongroup==1.1.0
+exceptiongroup==1.1.1
     # via pytest
 idna==3.4
     # via
@@ -108,7 +108,7 @@ pluggy==1.0.0
     # via
     #   -r requirements/base.txt
     #   click-repl
-pytest==7.2.1
+pytest==7.2.2
     # via
     #   pytest-cov
     #   pytest-django
@@ -156,7 +156,7 @@ uritemplate==4.1.1
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
-urllib3==1.26.14
+urllib3==1.26.15
     # via
     #   -r requirements/base.txt
     #   requests
