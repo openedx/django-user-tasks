@@ -106,7 +106,7 @@ idna==3.4
     #   requests
 imagesize==1.4.1
     # via sphinx
-importlib-metadata==6.0.0
+importlib-metadata==6.1.0
     # via
     #   keyring
     #   sphinx
@@ -221,7 +221,7 @@ rules==3.3
     # via -r requirements/doc.in
 secretstorage==3.3.3
     # via keyring
-simplejson==3.18.3
+simplejson==3.18.4
     # via django-rest-swagger
 six==1.16.0
     # via
