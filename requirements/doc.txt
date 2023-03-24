@@ -4,6 +4,8 @@
 #
 #    make upgrade
 #
+accessible-pygments==0.0.4
+    # via pydata-sphinx-theme
 alabaster==0.7.13
     # via sphinx
 amqp==5.1.1
@@ -17,7 +19,11 @@ asgiref==3.6.0
 attrs==23.1.0
     # via jsonschema
 babel==2.12.1
-    # via sphinx
+    # via
+    #   pydata-sphinx-theme
+    #   sphinx
+beautifulsoup4==4.12.2
+    # via pydata-sphinx-theme
 billiard==3.6.4.0
     # via
     #   -r requirements/base.txt
@@ -93,13 +99,12 @@ doc8==1.1.1
 docutils==0.19
     # via
     #   doc8
+    #   pydata-sphinx-theme
     #   readme-renderer
     #   restructuredtext-lint
     #   sphinx
 drf-yasg==1.21.5
     # via -r requirements/base.txt
-edx-sphinx-theme==3.1.0
-    # via -r requirements/doc.in
 idna==3.4
     # via
     #   -r requirements/base.txt
@@ -159,6 +164,7 @@ packaging==23.1
     # via
     #   -r requirements/base.txt
     #   drf-yasg
+    #   pydata-sphinx-theme
     #   sphinx
 pbr==5.11.1
     # via stevedore
@@ -172,9 +178,13 @@ prompt-toolkit==3.0.38
     #   click-repl
 pycparser==2.21
     # via cffi
+pydata-sphinx-theme==0.13.3
+    # via sphinx-book-theme
 pygments==2.15.0
     # via
+    #   accessible-pygments
     #   doc8
+    #   pydata-sphinx-theme
     #   readme-renderer
     #   rich
     #   sphinx
@@ -228,14 +238,18 @@ six==1.16.0
     #   -r requirements/base.txt
     #   bleach
     #   click-repl
-    #   edx-sphinx-theme
 snowballstemmer==2.2.0
     # via sphinx
+soupsieve==2.4
+    # via beautifulsoup4
 sphinx==5.3.0
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/doc.in
-    #   edx-sphinx-theme
+    #   pydata-sphinx-theme
+    #   sphinx-book-theme
+sphinx-book-theme==1.0.1
+    # via -r requirements/doc.in
 sphinxcontrib-applehelp==1.0.4
     # via sphinx
 sphinxcontrib-devhelp==1.0.2
@@ -263,7 +277,9 @@ tomli==2.0.1
 twine==4.0.2
     # via -r requirements/doc.in
 typing-extensions==4.5.0
-    # via rich
+    # via
+    #   pydata-sphinx-theme
+    #   rich
 uritemplate==4.1.1
     # via
     #   -r requirements/base.txt

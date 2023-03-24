@@ -21,7 +21,8 @@ Removed
 
 Chore
 +++++
-
+* Switch from ``edx-sphinx-theme`` to ``sphinx-book-theme`` since the former is
+  deprecated
 * Upgraded celery to latest 5.x version.
 
 [2.2.0] - 2022-01-26
