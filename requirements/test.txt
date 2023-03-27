@@ -116,7 +116,7 @@ pytest-cov==4.0.0
     # via -r requirements/test.in
 pytest-django==4.5.2
     # via -r requirements/test.in
-pytz==2022.7.1
+pytz==2023.2
     # via
     #   -r requirements/base.txt
     #   celery
