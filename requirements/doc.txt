@@ -70,7 +70,7 @@ coreschema==0.0.4
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
-cryptography==39.0.2
+cryptography==40.0.1
     # via secretstorage
 django==3.2.18
     # via
@@ -180,7 +180,7 @@ pygments==2.14.0
     #   sphinx
 pyrsistent==0.19.3
     # via jsonschema
-pytz==2022.7.1
+pytz==2023.3
     # via
     #   -r requirements/base.txt
     #   babel
@@ -207,7 +207,7 @@ restructuredtext-lint==1.4.0
     # via doc8
 rfc3986==2.0.0
     # via twine
-rich==13.3.2
+rich==13.3.3
     # via twine
 ruamel-yaml==0.17.21
     # via

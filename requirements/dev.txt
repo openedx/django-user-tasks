@@ -12,7 +12,7 @@ asgiref==3.6.0
     # via
     #   -r requirements/test.txt
     #   django
-astroid==2.15.0
+astroid==2.15.1
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -127,7 +127,7 @@ exceptiongroup==1.1.1
     # via
     #   -r requirements/test.txt
     #   pytest
-filelock==3.10.0
+filelock==3.10.7
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -195,7 +195,7 @@ pbr==5.11.1
     #   stevedore
 pip-tools==6.12.3
     # via -r requirements/pip-tools.txt
-platformdirs==3.1.1
+platformdirs==3.2.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -221,7 +221,7 @@ pycodestyle==2.10.0
     # via -r requirements/quality.txt
 pydocstyle==6.3.0
     # via -r requirements/quality.txt
-pylint==2.17.0
+pylint==2.17.1
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -258,7 +258,7 @@ python-slugify==8.0.1
     # via
     #   -r requirements/quality.txt
     #   code-annotations
-pytz==2022.7.1
+pytz==2023.3
     # via
     #   -r requirements/test.txt
     #   celery
@@ -325,7 +325,7 @@ tomli==2.0.1
     #   pyproject-hooks
     #   pytest
     #   tox
-tomlkit==0.11.6
+tomlkit==0.11.7
     # via
     #   -r requirements/quality.txt
     #   pylint
