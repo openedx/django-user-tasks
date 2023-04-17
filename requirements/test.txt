@@ -11,8 +11,6 @@ asgiref==3.6.0
     # via
     #   -r requirements/base.txt
     #   django
-attrs==22.2.0
-    # via pytest
     # via
     #   -r requirements/base.txt
     #   celery
@@ -53,7 +51,7 @@ coreschema==0.0.4
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==7.2.2
+coverage[toml]==7.2.3
     # via pytest-cov
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
@@ -95,9 +93,9 @@ markupsafe==2.1.2
     # via
     #   -r requirements/base.txt
     #   jinja2
-mock==5.0.1
+mock==5.0.2
     # via -r requirements/test.in
-packaging==23.0
+packaging==23.1
     # via
     #   -r requirements/base.txt
     #   -r requirements/test.in
@@ -108,7 +106,7 @@ pluggy==1.0.0
     # via
     #   -r requirements/base.txt
     #   click-repl
-pytest==7.2.2
+pytest==7.3.1
     # via
     #   pytest-cov
     #   pytest-django
@@ -116,7 +114,7 @@ pytest-cov==4.0.0
     # via -r requirements/test.in
 pytest-django==4.5.2
     # via -r requirements/test.in
-pytz==2022.7.1
+pytz==2023.3
     # via
     #   -r requirements/base.txt
     #   celery
