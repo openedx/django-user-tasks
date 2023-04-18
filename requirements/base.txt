@@ -63,11 +63,11 @@ kombu==5.2.4
     # via celery
 markupsafe==2.1.2
     # via jinja2
-packaging==23.0
+packaging==23.1
     # via drf-yasg
 prompt-toolkit==3.0.38
     # via click-repl
-pytz==2022.7.1
+pytz==2023.3
     # via
     #   celery
     #   django
@@ -81,7 +81,7 @@ ruamel-yaml-clib==0.2.7
     # via ruamel-yaml
 six==1.16.0
     # via click-repl
-sqlparse==0.4.3
+sqlparse==0.4.4
     # via django
 uritemplate==4.1.1
     # via
