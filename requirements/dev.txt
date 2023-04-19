@@ -286,7 +286,7 @@ snowballstemmer==2.2.0
     # via
     #   -r requirements/quality.txt
     #   pydocstyle
-sqlparse==0.4.3
+sqlparse==0.4.4
     # via
     #   -r requirements/test.txt
     #   django

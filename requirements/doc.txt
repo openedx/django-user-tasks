@@ -68,6 +68,8 @@ coreschema==0.0.4
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
+cryptography==40.0.2
+    # via secretstorage
 django==3.2.18
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
@@ -102,7 +104,7 @@ idna==3.4
     #   requests
 imagesize==1.4.1
     # via sphinx
-importlib-metadata==6.4.1
+importlib-metadata==6.5.0
     # via
     #   keyring
     #   sphinx
@@ -162,6 +164,8 @@ prompt-toolkit==3.0.38
     # via
     #   -r requirements/base.txt
     #   click-repl
+pycparser==2.21
+    # via cffi
 pygments==2.15.0
     # via
     #   doc8
@@ -209,6 +213,8 @@ ruamel-yaml-clib==0.2.7
     #   ruamel-yaml
 rules==3.3
     # via -r requirements/doc.in
+secretstorage==3.3.3
+    # via keyring
 simplejson==3.19.1
     # via django-rest-swagger
 six==1.16.0
@@ -236,7 +242,7 @@ sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
-sqlparse==0.4.3
+sqlparse==0.4.4
     # via
     #   -r requirements/base.txt
     #   django

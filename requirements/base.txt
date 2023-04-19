@@ -81,7 +81,7 @@ ruamel-yaml-clib==0.2.7
     # via ruamel-yaml
 six==1.16.0
     # via click-repl
-sqlparse==0.4.3
+sqlparse==0.4.4
     # via django
 uritemplate==4.1.1
     # via
