@@ -40,8 +40,6 @@ certifi==2022.12.7
     # via
     #   -r requirements/base.txt
     #   requests
-cffi==1.15.1
-    # via cryptography
 charset-normalizer==3.1.0
     # via
     #   -r requirements/base.txt
@@ -130,10 +128,6 @@ itypes==1.2.0
     #   coreapi
 jaraco-classes==3.2.3
     # via keyring
-jeepney==0.8.0
-    # via
-    #   keyring
-    #   secretstorage
 jinja2==3.1.2
     # via
     #   -r requirements/base.txt
