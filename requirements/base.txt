@@ -73,7 +73,7 @@ pytz==2023.3
     #   django
     #   djangorestframework
     #   drf-yasg
-requests==2.28.2
+requests==2.29.0
     # via coreapi
 ruamel-yaml==0.17.21
     # via drf-yasg
