@@ -14,7 +14,7 @@ celery==5.2.7
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.in
-certifi==2022.12.7
+certifi==2023.5.7
     # via requests
 charset-normalizer==3.1.0
     # via requests
@@ -36,7 +36,7 @@ coreschema==0.0.4
     # via
     #   coreapi
     #   drf-yasg
-django==3.2.18
+django==3.2.19
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
@@ -73,9 +73,9 @@ pytz==2023.3
     #   django
     #   djangorestframework
     #   drf-yasg
-requests==2.28.2
+requests==2.30.0
     # via coreapi
-ruamel-yaml==0.17.21
+ruamel-yaml==0.17.24
     # via drf-yasg
 ruamel-yaml-clib==0.2.7
     # via ruamel-yaml
@@ -87,7 +87,7 @@ uritemplate==4.1.1
     # via
     #   coreapi
     #   drf-yasg
-urllib3==1.26.15
+urllib3==2.0.2
     # via requests
 vine==5.0.0
     # via
