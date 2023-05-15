@@ -219,7 +219,7 @@ rfc3986==2.0.0
     # via twine
 rich==13.3.5
     # via twine
-ruamel-yaml==0.17.24
+ruamel-yaml==0.17.26
     # via
     #   -r requirements/base.txt
     #   drf-yasg

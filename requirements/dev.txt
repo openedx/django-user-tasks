@@ -12,7 +12,7 @@ asgiref==3.6.0
     # via
     #   -r requirements/test.txt
     #   django
-astroid==2.15.4
+astroid==2.15.5
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -184,7 +184,7 @@ pbr==5.11.1
     #   stevedore
 pip-tools==6.13.0
     # via -r requirements/pip-tools.txt
-platformdirs==3.5.0
+platformdirs==3.5.1
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -264,7 +264,7 @@ requests==2.30.0
     # via
     #   -r requirements/test.txt
     #   coreapi
-ruamel-yaml==0.17.24
+ruamel-yaml==0.17.26
     # via
     #   -r requirements/test.txt
     #   drf-yasg

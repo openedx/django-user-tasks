@@ -125,7 +125,7 @@ requests==2.30.0
     # via
     #   -r requirements/base.txt
     #   coreapi
-ruamel-yaml==0.17.24
+ruamel-yaml==0.17.26
     # via
     #   -r requirements/base.txt
     #   drf-yasg
