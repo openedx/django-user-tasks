@@ -75,7 +75,7 @@ pytz==2023.3
     #   drf-yasg
 requests==2.30.0
     # via coreapi
-ruamel-yaml==0.17.24
+ruamel-yaml==0.17.26
     # via drf-yasg
 ruamel-yaml-clib==0.2.7
     # via ruamel-yaml
