@@ -7,7 +7,7 @@
     # via
     #   -r requirements/base.txt
     #   kombu
-asgiref==3.6.0
+asgiref==3.7.2
     # via
     #   -r requirements/base.txt
     #   django
@@ -51,7 +51,7 @@ coreschema==0.0.4
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==7.2.5
+coverage[toml]==7.2.6
     # via pytest-cov
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
@@ -110,7 +110,7 @@ pytest==7.3.1
     # via
     #   pytest-cov
     #   pytest-django
-pytest-cov==4.0.0
+pytest-cov==4.1.0
     # via -r requirements/test.in
 pytest-django==4.5.2
     # via -r requirements/test.in
@@ -121,11 +121,11 @@ pytz==2023.3
     #   django
     #   djangorestframework
     #   drf-yasg
-requests==2.30.0
+requests==2.31.0
     # via
     #   -r requirements/base.txt
     #   coreapi
-ruamel-yaml==0.17.24
+ruamel-yaml==0.17.28
     # via
     #   -r requirements/base.txt
     #   drf-yasg
@@ -149,6 +149,10 @@ tomli==2.0.1
     # via
     #   coverage
     #   pytest
+typing-extensions==4.6.2
+    # via
+    #   -r requirements/base.txt
+    #   asgiref
 uritemplate==4.1.1
     # via
     #   -r requirements/base.txt
