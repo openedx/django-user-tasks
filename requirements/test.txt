@@ -11,6 +11,10 @@ asgiref==3.7.2
     # via
     #   -r requirements/base.txt
     #   django
+backports-zoneinfo[tzdata]==0.2.1
+    # via
+    #   -r requirements/base.txt
+    #   kombu
     # via
     #   -r requirements/base.txt
     #   celery
@@ -51,7 +55,7 @@ coreschema==0.0.4
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
-coverage[toml]==7.2.6
+coverage[toml]==7.2.7
     # via pytest-cov
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
@@ -89,7 +93,7 @@ jinja2==3.1.2
     # via
     #   -r requirements/base.txt
     #   celery
-markupsafe==2.1.2
+markupsafe==2.1.3
     # via
     #   -r requirements/base.txt
     #   jinja2
@@ -125,7 +129,7 @@ requests==2.31.0
     # via
     #   -r requirements/base.txt
     #   coreapi
-ruamel-yaml==0.17.28
+ruamel-yaml==0.17.31
     # via
     #   -r requirements/base.txt
     #   drf-yasg
@@ -149,10 +153,15 @@ tomli==2.0.1
     # via
     #   coverage
     #   pytest
-typing-extensions==4.6.2
+typing-extensions==4.6.3
     # via
     #   -r requirements/base.txt
     #   asgiref
+    #   kombu
+tzdata==2023.3
+    # via
+    #   -r requirements/base.txt
+    #   backports-zoneinfo
 uritemplate==4.1.1
     # via
     #   -r requirements/base.txt
