@@ -14,6 +14,7 @@ asgiref==3.7.2
 backports-zoneinfo[tzdata]==0.2.1
     # via
     #   -r requirements/base.txt
+    #   celery
     #   kombu
     # via
     #   -r requirements/base.txt
@@ -110,7 +111,7 @@ pluggy==1.0.0
     # via
     #   -r requirements/base.txt
     #   click-repl
-pytest==7.3.1
+pytest==7.3.2
     # via
     #   pytest-cov
     #   pytest-django
@@ -118,10 +119,13 @@ pytest-cov==4.1.0
     # via -r requirements/test.in
 pytest-django==4.5.2
     # via -r requirements/test.in
-pytz==2023.3
+python-dateutil==2.8.2
     # via
     #   -r requirements/base.txt
     #   celery
+pytz==2023.3
+    # via
+    #   -r requirements/base.txt
     #   django
     #   djangorestframework
     #   drf-yasg
@@ -143,6 +147,7 @@ six==1.16.0
     # via
     #   -r requirements/base.txt
     #   click-repl
+    #   python-dateutil
 sqlparse==0.4.4
     # via
     #   -r requirements/base.txt
@@ -162,12 +167,13 @@ tzdata==2023.3
     # via
     #   -r requirements/base.txt
     #   backports-zoneinfo
+    #   celery
 uritemplate==4.1.1
     # via
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
-urllib3==2.0.2
+urllib3==2.0.3
     # via
     #   -r requirements/base.txt
     #   requests
