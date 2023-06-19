@@ -22,14 +22,6 @@ backports-zoneinfo[tzdata]==0.2.1
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
-certifi==2023.5.7
-    # via
-    #   -r requirements/base.txt
-    #   requests
-charset-normalizer==3.1.0
-    # via
-    #   -r requirements/base.txt
-    #   requests
     # via
     #   -r requirements/base.txt
     #   celery
@@ -43,19 +35,10 @@ click-plugins==1.1.1
     # via
     #   -r requirements/base.txt
     #   celery
-click-repl==0.2.0
+click-repl==0.3.0
     # via
     #   -r requirements/base.txt
     #   celery
-coreapi==2.3.3
-    # via
-    #   -r requirements/base.txt
-    #   drf-yasg
-coreschema==0.0.4
-    # via
-    #   -r requirements/base.txt
-    #   coreapi
-    #   drf-yasg
 coverage[toml]==7.2.7
     # via pytest-cov
     # via
@@ -69,35 +52,19 @@ django-model-utils==4.3.1
     # via
     #   -r requirements/base.txt
     #   drf-yasg
-drf-yasg==1.21.5
+drf-yasg==1.21.6
     # via -r requirements/base.txt
 exceptiongroup==1.1.1
     # via pytest
-idna==3.4
-    # via
-    #   -r requirements/base.txt
-    #   requests
 inflection==0.5.1
     # via
     #   -r requirements/base.txt
     #   drf-yasg
 iniconfig==2.0.0
     # via pytest
-itypes==1.2.0
-    # via
-    #   -r requirements/base.txt
-    #   coreapi
-jinja2==3.1.2
-    # via
-    #   -r requirements/base.txt
-    #   coreschema
     # via
     #   -r requirements/base.txt
     #   celery
-markupsafe==2.1.3
-    # via
-    #   -r requirements/base.txt
-    #   jinja2
 mock==5.0.2
     # via -r requirements/test.in
 packaging==23.1
@@ -129,24 +96,16 @@ pytz==2023.3
     #   django
     #   djangorestframework
     #   drf-yasg
-requests==2.31.0
+pyyaml==5.4.1
     # via
-    #   -r requirements/base.txt
-    #   coreapi
-ruamel-yaml==0.17.31
-    # via
+    #   -c requirements/constraints.txt
     #   -r requirements/base.txt
     #   drf-yasg
-ruamel-yaml-clib==0.2.7
-    # via
-    #   -r requirements/base.txt
-    #   ruamel-yaml
 rules==3.3
     # via -r requirements/test.in
 six==1.16.0
     # via
     #   -r requirements/base.txt
-    #   click-repl
     #   python-dateutil
 sqlparse==0.4.4
     # via
@@ -171,12 +130,7 @@ tzdata==2023.3
 uritemplate==4.1.1
     # via
     #   -r requirements/base.txt
-    #   coreapi
     #   drf-yasg
-urllib3==2.0.3
-    # via
-    #   -r requirements/base.txt
-    #   requests
     # via
     #   -r requirements/base.txt
     #   amqp
