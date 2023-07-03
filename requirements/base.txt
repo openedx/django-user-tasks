@@ -68,7 +68,7 @@ six==1.16.0
     # via python-dateutil
 sqlparse==0.4.4
     # via django
-typing-extensions==4.6.3
+typing-extensions==4.7.1
     # via
     #   asgiref
     #   kombu

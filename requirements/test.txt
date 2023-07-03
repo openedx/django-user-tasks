@@ -73,12 +73,12 @@ packaging==23.1
     #   -r requirements/test.in
     #   drf-yasg
     #   pytest
-pluggy==1.0.0
+pluggy==1.2.0
     # via pytest
     # via
     #   -r requirements/base.txt
     #   click-repl
-pytest==7.3.2
+pytest==7.4.0
     # via
     #   pytest-cov
     #   pytest-django
@@ -117,7 +117,7 @@ tomli==2.0.1
     # via
     #   coverage
     #   pytest
-typing-extensions==4.6.3
+typing-extensions==4.7.1
     # via
     #   -r requirements/base.txt
     #   asgiref
