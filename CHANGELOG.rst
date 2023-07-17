@@ -14,9 +14,17 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+
+[3.1.0] - 2023-07-21
+~~~~~~~~~~~~~~~~~~~~
+
+Added
++++++
+* Added Django42 support in CI.
+* Removed old versions of celery and drf version from ci.
+
 Removed
 +++++++
-
 * Removed Python 3.5 support.
 
 Chore
@@ -24,6 +32,7 @@ Chore
 * Switch from ``edx-sphinx-theme`` to ``sphinx-book-theme`` since the former is
   deprecated
 * Upgraded celery to latest 5.x version.
+* Add Support for Django 4.2
 
 [2.2.0] - 2022-01-26
 ~~~~~~~~~~~~~~~~~~~~

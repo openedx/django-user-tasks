@@ -4,6 +4,7 @@
 #
 #    make upgrade
 #
+amqp==5.1.1
     # via
     #   -r requirements/base.txt
     #   kombu
@@ -16,18 +17,22 @@ backports-zoneinfo[tzdata]==0.2.1
     #   -r requirements/base.txt
     #   celery
     #   kombu
+billiard==4.1.0
     # via
     #   -r requirements/base.txt
     #   celery
+celery==5.3.1
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
+click==8.1.6
     # via
     #   -r requirements/base.txt
     #   celery
     #   click-didyoumean
     #   click-plugins
     #   click-repl
+click-didyoumean==0.3.0
     # via
     #   -r requirements/base.txt
     #   celery
@@ -52,7 +57,7 @@ django-model-utils==4.3.1
     # via
     #   -r requirements/base.txt
     #   drf-yasg
-drf-yasg==1.21.6
+drf-yasg==1.21.7
     # via -r requirements/base.txt
 exceptiongroup==1.1.2
     # via pytest
@@ -62,10 +67,11 @@ inflection==0.5.1
     #   drf-yasg
 iniconfig==2.0.0
     # via pytest
+kombu==5.3.1
     # via
     #   -r requirements/base.txt
     #   celery
-mock==5.0.2
+mock==5.1.0
     # via -r requirements/test.in
 packaging==23.1
     # via
@@ -75,6 +81,7 @@ packaging==23.1
     #   pytest
 pluggy==1.2.0
     # via pytest
+prompt-toolkit==3.0.39
     # via
     #   -r requirements/base.txt
     #   click-repl
@@ -131,6 +138,7 @@ uritemplate==4.1.1
     # via
     #   -r requirements/base.txt
     #   drf-yasg
+vine==5.0.0
     # via
     #   -r requirements/base.txt
     #   amqp

@@ -5,8 +5,8 @@ URLs for REST API schema generation.
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 
-from django.conf.urls import include, url
 from django.contrib import admin
+from django.urls import include, re_path
 
 from rest_framework import permissions
 
@@ -24,7 +24,7 @@ SCHEMA = get_schema_view(
 
 # The Swagger/Open API JSON file can be found at http://localhost:8000/?format=openapi
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^swagger(?P<format>\.json|\.yaml)$', SCHEMA.without_ui(cache_timeout=0), name='schema-json'),
-    url(r'^swagger/$', SCHEMA.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+   re_path(r'^admin/', include(admin.site.urls)),
+   re_path(r'^swagger(?P<format>\.json|\.yaml)$', SCHEMA.without_ui(cache_timeout=0), name='schema-json'),
+   re_path(r'^swagger/$', SCHEMA.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ] + base_patterns

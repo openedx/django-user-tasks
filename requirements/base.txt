@@ -18,7 +18,7 @@ celery==5.3.1
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.in
-click==8.1.4
+click==8.1.6
     # via
     #   celery
     #   click-didyoumean
@@ -43,7 +43,7 @@ djangorestframework==3.14.0
     # via
     #   -r requirements/base.in
     #   drf-yasg
-drf-yasg==1.21.6
+drf-yasg==1.21.7
     # via -r requirements/base.in
 inflection==0.5.1
     # via drf-yasg

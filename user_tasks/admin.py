@@ -7,6 +7,7 @@ from django.contrib import admin
 from .models import UserTaskArtifact, UserTaskStatus
 
 
+@admin.register(UserTaskArtifact)
 class UserTaskArtifactAdmin(admin.ModelAdmin):
     """
     Configuration for UserTaskArtifact admin panel.
@@ -19,6 +20,7 @@ class UserTaskArtifactAdmin(admin.ModelAdmin):
     raw_id_fields = ('status',)
 
 
+@admin.register(UserTaskStatus)
 class UserTaskStatusAdmin(admin.ModelAdmin):
     """
     Configuration for UserTaskStatus admin panel.
@@ -31,7 +33,3 @@ class UserTaskStatusAdmin(admin.ModelAdmin):
         'uuid', 'task_id', 'task_class', 'name', 'user__username', 'user__email'
     )
     readonly_fields = ('parent', )
-
-
-admin.site.register(UserTaskArtifact, UserTaskArtifactAdmin)
-admin.site.register(UserTaskStatus, UserTaskStatusAdmin)
