@@ -65,7 +65,7 @@ iniconfig==2.0.0
     # via
     #   -r requirements/base.txt
     #   celery
-mock==5.0.2
+mock==5.1.0
     # via -r requirements/test.in
 packaging==23.1
     # via
