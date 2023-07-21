@@ -4,7 +4,7 @@ Management of user-triggered asynchronous tasks in Django projects.
 
 from django.dispatch import Signal
 
-__version__ = '3.0.0'
+__version__ = '3.1.0'
 
 
 # This signal is emitted when a user task reaches any final state:
