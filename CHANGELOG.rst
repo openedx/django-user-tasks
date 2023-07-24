@@ -21,7 +21,18 @@ Unreleased
 Added
 +++++
 * Added Django42 support in CI.
+
+Removed
++++++++
 * Removed old versions of celery and drf version from ci.
+
+Chore
++++++
+* Switch from ``edx-sphinx-theme`` to ``sphinx-book-theme`` since the former is
+  deprecated
+
+[3.0.0] - 2022-02-09
+~~~~~~~~~~~~~~~~~~~~
 
 Removed
 +++++++
@@ -29,10 +40,7 @@ Removed
 
 Chore
 +++++
-* Switch from ``edx-sphinx-theme`` to ``sphinx-book-theme`` since the former is
-  deprecated
 * Upgraded celery to latest 5.x version.
-* Add Support for Django 4.2
 
 [2.2.0] - 2022-01-26
 ~~~~~~~~~~~~~~~~~~~~
