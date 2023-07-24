@@ -52,7 +52,7 @@ django-model-utils==4.3.1
     # via
     #   -r requirements/base.txt
     #   drf-yasg
-drf-yasg==1.21.6
+drf-yasg==1.21.7
     # via -r requirements/base.txt
 exceptiongroup==1.1.2
     # via pytest
@@ -65,7 +65,7 @@ iniconfig==2.0.0
     # via
     #   -r requirements/base.txt
     #   celery
-mock==5.0.2
+mock==5.1.0
     # via -r requirements/test.in
 packaging==23.1
     # via
