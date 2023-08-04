@@ -236,12 +236,16 @@ sphinx==6.2.1
     #   -r requirements/doc.in
     #   pydata-sphinx-theme
     #   sphinx-book-theme
+    #   sphinx-reredirects
     #   sphinxcontrib-httpdomain
     #   sphinxcontrib-openapi
+    #   sphinxext-rediraffe
 sphinx-book-theme==1.0.1
     # via -r requirements/doc.in
 sphinx-mdinclude==0.5.3
     # via sphinxcontrib-openapi
+sphinx-reredirects==0.1.2
+    # via -r requirements/doc.in
 sphinxcontrib-applehelp==1.0.4
     # via sphinx
 sphinxcontrib-devhelp==1.0.2
@@ -258,6 +262,8 @@ sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
+sphinxext-rediraffe==0.2.7
+    # via -r requirements/doc.in
 sqlparse==0.4.4
     # via
     #   -r requirements/base.txt

@@ -9,4 +9,6 @@ sphinx-book-theme         # Common theme for all Open edX projects
 rules                     # Needed to import user_tasks/rules.py for autodoc
 Sphinx                    # Documentation builder
 sphinxcontrib-openapi[markdown] # Be able to render openapi schema in a sphinx project
+sphinxext-rediraffe       # Quickly and easily redirect when we move pages around.
+sphinx-reredirects        # Redirect from a sphinx project out to other places on the web including other sphinx projects
 twine                     # Validates the generated long description for PyPI
