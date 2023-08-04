@@ -71,7 +71,7 @@ coverage[toml]==7.2.7
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-dill==0.3.6
+dill==0.3.7
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -95,7 +95,7 @@ djangorestframework==3.14.0
     #   drf-yasg
 drf-yasg==1.21.7
     # via -r requirements/test.txt
-edx-i18n-tools==1.0.0
+edx-i18n-tools==1.1.0
     # via -r requirements/dev.in
 edx-lint==5.3.4
     # via
@@ -159,9 +159,9 @@ pbr==5.11.1
     # via
     #   -r requirements/quality.txt
     #   stevedore
-pip-tools==7.1.0
+pip-tools==7.2.0
     # via -r requirements/pip-tools.txt
-platformdirs==3.9.1
+platformdirs==3.10.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -183,11 +183,11 @@ py==1.11.0
     # via
     #   -r requirements/ci.txt
     #   tox
-pycodestyle==2.10.0
+pycodestyle==2.11.0
     # via -r requirements/quality.txt
 pydocstyle==6.3.0
     # via -r requirements/quality.txt
-pylint==2.17.4
+pylint==2.17.5
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -234,9 +234,8 @@ pytz==2023.3
     #   django
     #   djangorestframework
     #   drf-yasg
-pyyaml==5.4.1
+pyyaml==6.0.1
     # via
-    #   -c requirements/constraints.txt
     #   -r requirements/quality.txt
     #   -r requirements/test.txt
     #   code-annotations
@@ -283,7 +282,7 @@ tomli==2.0.1
     #   pyproject-hooks
     #   pytest
     #   tox
-tomlkit==0.11.8
+tomlkit==0.12.1
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -317,7 +316,7 @@ vine==5.0.0
     #   amqp
     #   celery
     #   kombu
-virtualenv==20.24.1
+virtualenv==20.24.2
     # via
     #   -r requirements/ci.txt
     #   tox

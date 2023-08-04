@@ -60,10 +60,8 @@ pytz==2023.3
     #   django
     #   djangorestframework
     #   drf-yasg
-pyyaml==5.4.1
-    # via
-    #   -c requirements/constraints.txt
-    #   drf-yasg
+pyyaml==6.0.1
+    # via drf-yasg
 six==1.16.0
     # via python-dateutil
 sqlparse==0.4.4
