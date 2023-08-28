@@ -8,7 +8,7 @@ astroid==2.15.6
     # via
     #   pylint
     #   pylint-celery
-click==8.1.6
+click==8.1.7
     # via
     #   click-log
     #   code-annotations
@@ -17,7 +17,7 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==1.5.0
     # via edx-lint
-dill==0.3.6
+dill==0.3.7
     # via pylint
 edx-lint==5.3.4
     # via -r requirements/quality.in
@@ -35,13 +35,13 @@ mccabe==0.7.0
     # via pylint
 pbr==5.11.1
     # via stevedore
-platformdirs==3.9.1
+platformdirs==3.10.0
     # via pylint
-pycodestyle==2.10.0
+pycodestyle==2.11.0
     # via -r requirements/quality.in
 pydocstyle==6.3.0
     # via -r requirements/quality.in
-pylint==2.17.4
+pylint==2.17.5
     # via
     #   edx-lint
     #   pylint-celery
@@ -71,7 +71,7 @@ text-unidecode==1.3
     # via python-slugify
 tomli==2.0.1
     # via pylint
-tomlkit==0.11.8
+tomlkit==0.12.1
     # via pylint
 typing-extensions==4.7.1
     # via
