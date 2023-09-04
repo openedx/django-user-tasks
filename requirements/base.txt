@@ -14,11 +14,11 @@ backports-zoneinfo[tzdata]==0.2.1
     #   kombu
 billiard==4.1.0
     # via celery
-celery==5.3.1
+celery==5.3.4
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.in
-click==8.1.6
+click==8.1.7
     # via
     #   celery
     #   click-didyoumean
@@ -47,7 +47,7 @@ drf-yasg==1.21.7
     # via -r requirements/base.in
 inflection==0.5.1
     # via drf-yasg
-kombu==5.3.1
+kombu==5.3.2
     # via celery
 packaging==23.1
     # via drf-yasg
