@@ -30,7 +30,7 @@ click-plugins==1.1.1
     # via celery
 click-repl==0.3.0
     # via celery
-django==3.2.20
+django==3.2.21
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
@@ -55,7 +55,7 @@ prompt-toolkit==3.0.39
     # via click-repl
 python-dateutil==2.8.2
     # via celery
-pytz==2023.3
+pytz==2023.3.post1
     # via
     #   django
     #   djangorestframework
