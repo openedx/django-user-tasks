@@ -172,7 +172,7 @@ prompt-toolkit==3.0.39
     #   click-repl
 pycparser==2.21
     # via cffi
-pydata-sphinx-theme==0.13.3
+pydata-sphinx-theme==0.14.0
     # via sphinx-book-theme
 pygments==2.16.1
     # via
@@ -217,9 +217,9 @@ restructuredtext-lint==1.4.0
     # via doc8
 rfc3986==2.0.0
     # via twine
-rich==13.5.2
+rich==13.5.3
     # via twine
-rpds-py==0.10.2
+rpds-py==0.10.3
     # via
     #   jsonschema
     #   referencing
