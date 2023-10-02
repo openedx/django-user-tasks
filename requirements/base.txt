@@ -49,7 +49,7 @@ inflection==0.5.1
     # via drf-yasg
 kombu==5.3.2
     # via celery
-packaging==23.1
+packaging==23.2
     # via drf-yasg
 prompt-toolkit==3.0.39
     # via click-repl
@@ -68,7 +68,7 @@ six==1.16.0
     # via python-dateutil
 sqlparse==0.4.4
     # via django
-typing-extensions==4.7.1
+typing-extensions==4.8.0
     # via
     #   asgiref
     #   kombu
@@ -83,5 +83,5 @@ vine==5.0.0
     #   amqp
     #   celery
     #   kombu
-wcwidth==0.2.6
+wcwidth==0.2.8
     # via prompt-toolkit
