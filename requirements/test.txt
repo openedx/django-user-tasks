@@ -15,6 +15,7 @@ asgiref==3.7.2
 backports-zoneinfo[tzdata]==0.2.1
     # via
     #   -r requirements/base.txt
+    #   backports-zoneinfo
     #   celery
     #   kombu
 billiard==4.1.0
@@ -44,8 +45,10 @@ click-repl==0.3.0
     # via
     #   -r requirements/base.txt
     #   celery
-coverage[toml]==7.3.1
-    # via pytest-cov
+coverage[toml]==7.3.2
+    # via
+    #   coverage
+    #   pytest-cov
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.txt
@@ -73,7 +76,7 @@ kombu==5.3.2
     #   celery
 mock==5.1.0
     # via -r requirements/test.in
-packaging==23.1
+packaging==23.2
     # via
     #   -r requirements/base.txt
     #   -r requirements/test.in
@@ -85,13 +88,13 @@ prompt-toolkit==3.0.39
     # via
     #   -r requirements/base.txt
     #   click-repl
-pytest==7.4.2
+pytest==7.4.3
     # via
     #   pytest-cov
     #   pytest-django
 pytest-cov==4.1.0
     # via -r requirements/test.in
-pytest-django==4.5.2
+pytest-django==4.6.0
     # via -r requirements/test.in
 python-dateutil==2.8.2
     # via
@@ -118,13 +121,13 @@ sqlparse==0.4.4
     # via
     #   -r requirements/base.txt
     #   django
-testfixtures==7.1.0
+testfixtures==7.2.2
     # via -r requirements/test.in
 tomli==2.0.1
     # via
     #   coverage
     #   pytest
-typing-extensions==4.7.1
+typing-extensions==4.8.0
     # via
     #   -r requirements/base.txt
     #   asgiref
@@ -138,13 +141,13 @@ uritemplate==4.1.1
     # via
     #   -r requirements/base.txt
     #   drf-yasg
-vine==5.0.0
+vine==5.1.0
     # via
     #   -r requirements/base.txt
     #   amqp
     #   celery
     #   kombu
-wcwidth==0.2.6
+wcwidth==0.2.9
     # via
     #   -r requirements/base.txt
     #   prompt-toolkit
