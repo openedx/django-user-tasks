@@ -70,7 +70,7 @@ inflection==0.5.1
     #   drf-yasg
 iniconfig==2.0.0
     # via pytest
-kombu==5.3.3
+kombu==5.3.4
     # via
     #   -r requirements/base.txt
     #   celery
