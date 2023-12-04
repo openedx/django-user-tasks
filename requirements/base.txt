@@ -14,7 +14,7 @@ backports-zoneinfo[tzdata]==0.2.1
     #   kombu
 billiard==4.2.0
     # via celery
-celery==5.3.5
+celery==5.3.6
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.in
@@ -83,5 +83,5 @@ vine==5.1.0
     #   amqp
     #   celery
     #   kombu
-wcwidth==0.2.10
+wcwidth==0.2.12
     # via prompt-toolkit

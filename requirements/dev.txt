@@ -31,7 +31,7 @@ build==1.0.3
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-celery==5.3.5
+celery==5.3.6
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/test.txt
@@ -103,7 +103,7 @@ edx-lint==5.3.6
     # via
     #   -r requirements/dev.in
     #   -r requirements/quality.txt
-exceptiongroup==1.1.3
+exceptiongroup==1.2.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -112,7 +112,7 @@ filelock==3.13.1
     #   -r requirements/ci.txt
     #   tox
     #   virtualenv
-importlib-metadata==6.8.0
+importlib-metadata==7.0.0
     # via
     #   -r requirements/pip-tools.txt
     #   build
@@ -321,15 +321,15 @@ vine==5.1.0
     #   amqp
     #   celery
     #   kombu
-virtualenv==20.24.6
+virtualenv==20.25.0
     # via
     #   -r requirements/ci.txt
     #   tox
-wcwidth==0.2.10
+wcwidth==0.2.12
     # via
     #   -r requirements/test.txt
     #   prompt-toolkit
-wheel==0.41.3
+wheel==0.42.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
