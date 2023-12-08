@@ -33,10 +33,8 @@ mccabe==0.7.0
     # via pylint
 pbr==6.0.0
     # via stevedore
-platformdirs==3.11.0
-    # via
-    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
-    #   pylint
+platformdirs==4.1.0
+    # via pylint
 pycodestyle==2.11.1
     # via -r requirements/quality.in
 pydocstyle==6.3.0
