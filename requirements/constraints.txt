@@ -18,3 +18,7 @@ celery<6.0
 # swagger2rst uses pyyaml and fails with the new version hence failing the `make docs` command.
 # This constraint can be removed once the https://github.com/Arello-Mobile/swagger2rst/issues/10 is done.
 pyyaml<6.0
+
+# tox>4.0.0 isn't yet compatible with many tox plugins, causing CI failures in almost all repos.
+# Details can be found in this discussion: https://github.com/tox-dev/tox/discussions/1810
+tox<4.0.0
