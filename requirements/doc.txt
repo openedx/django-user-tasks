@@ -259,7 +259,7 @@ tomli==2.0.1
     # via doc8
 twine==4.0.2
     # via -r requirements/doc.in
-typing-extensions==4.8.0
+typing-extensions==4.9.0
     # via
     #   -r requirements/base.txt
     #   asgiref
