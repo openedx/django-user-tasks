@@ -8,5 +8,4 @@ doc8                      # reStructuredText style checker
 sphinx-book-theme         # Common theme for all Open edX projects
 rules                     # Needed to import user_tasks/rules.py for autodoc
 Sphinx                    # Documentation builder
-swagger2rst               # Generates REST API documentation for Sphinx from a Swagger/Open API schema JSON file
 twine                     # Validates the generated long description for PyPI
