@@ -16,6 +16,10 @@ asgiref==3.7.2
     # via
     #   -r requirements/base.txt
     #   django
+attrs==23.1.0
+    # via
+    #   jsonschema
+    #   referencing
 babel==2.14.0
     # via
     #   pydata-sphinx-theme
@@ -65,6 +69,8 @@ coreapi==2.3.3
     #   openapi-codec
 coreschema==0.0.4
     # via coreapi
+deepmerge==1.1.0
+    # via sphinxcontrib-openapi
 django==3.2.23
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
@@ -90,6 +96,7 @@ docutils==0.19
     #   readme-renderer
     #   restructuredtext-lint
     #   sphinx
+    #   sphinx-mdinclude
 drf-yasg==1.21.7
     # via -r requirements/base.txt
 idna==3.6
@@ -102,7 +109,10 @@ importlib-metadata==7.0.0
     #   sphinx
     #   twine
 importlib-resources==6.1.1
-    # via keyring
+    # via
+    #   jsonschema
+    #   jsonschema-specifications
+    #   keyring
 inflection==0.5.1
     # via
     #   -r requirements/base.txt
@@ -115,6 +125,10 @@ jinja2==3.1.2
     # via
     #   coreschema
     #   sphinx
+jsonschema==4.20.0
+    # via sphinxcontrib-openapi
+jsonschema-specifications==2023.11.2
+    # via jsonschema
 keyring==24.3.0
     # via twine
 kombu==5.3.4
@@ -127,6 +141,8 @@ markupsafe==2.1.3
     # via jinja2
 mdurl==0.1.2
     # via markdown-it-py
+mistune==2.0.5
+    # via sphinx-mdinclude
 more-itertools==10.1.0
     # via jaraco-classes
 nh3==0.2.15
@@ -141,9 +157,13 @@ packaging==23.2
     #   sphinx
 pbr==6.0.0
     # via stevedore
+picobox==4.0.0
+    # via sphinxcontrib-openapi
 pkginfo==1.9.6
     # via twine
-prompt-toolkit==3.0.42
+pkgutil-resolve-name==1.3.10
+    # via jsonschema
+prompt-toolkit==3.0.43
     # via
     #   -r requirements/base.txt
     #   click-repl
@@ -157,6 +177,7 @@ pygments==2.17.2
     #   readme-renderer
     #   rich
     #   sphinx
+    #   sphinx-mdinclude
 python-dateutil==2.8.2
     # via
     #   -r requirements/base.txt
@@ -172,8 +193,13 @@ pyyaml==6.0.1
     # via
     #   -r requirements/base.txt
     #   drf-yasg
+    #   sphinxcontrib-openapi
 readme-renderer==42.0
     # via twine
+referencing==0.32.0
+    # via
+    #   jsonschema
+    #   jsonschema-specifications
 requests==2.31.0
     # via
     #   coreapi
@@ -188,6 +214,10 @@ rfc3986==2.0.0
     # via twine
 rich==13.7.0
     # via twine
+rpds-py==0.13.2
+    # via
+    #   jsonschema
+    #   referencing
 rules==3.3
     # via -r requirements/doc.in
 simplejson==3.19.2
@@ -196,6 +226,7 @@ six==1.16.0
     # via
     #   -r requirements/base.txt
     #   python-dateutil
+    #   sphinxcontrib-httpdomain
 snowballstemmer==2.2.0
     # via sphinx
 soupsieve==2.5
@@ -205,16 +236,24 @@ sphinx==6.2.1
     #   -r requirements/doc.in
     #   pydata-sphinx-theme
     #   sphinx-book-theme
+    #   sphinxcontrib-httpdomain
+    #   sphinxcontrib-openapi
 sphinx-book-theme==1.0.1
     # via -r requirements/doc.in
+sphinx-mdinclude==0.5.3
+    # via sphinxcontrib-openapi
 sphinxcontrib-applehelp==1.0.4
     # via sphinx
 sphinxcontrib-devhelp==1.0.2
     # via sphinx
 sphinxcontrib-htmlhelp==2.0.1
     # via sphinx
+sphinxcontrib-httpdomain==1.8.1
+    # via sphinxcontrib-openapi
 sphinxcontrib-jsmath==1.0.1
     # via sphinx
+sphinxcontrib-openapi==0.8.3
+    # via -r requirements/doc.in
 sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.5

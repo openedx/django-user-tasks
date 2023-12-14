@@ -136,7 +136,7 @@ iniconfig==2.0.0
     # via
     #   -r requirements/test.txt
     #   pytest
-isort==5.13.1
+isort==5.13.2
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -193,7 +193,7 @@ pluggy==1.3.0
     #   tox
 polib==1.2.0
     # via edx-i18n-tools
-prompt-toolkit==3.0.42
+prompt-toolkit==3.0.43
     # via
     #   -r requirements/test.txt
     #   click-repl

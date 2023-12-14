@@ -51,7 +51,7 @@ kombu==5.3.4
     # via celery
 packaging==23.2
     # via drf-yasg
-prompt-toolkit==3.0.42
+prompt-toolkit==3.0.43
     # via click-repl
 python-dateutil==2.8.2
     # via celery

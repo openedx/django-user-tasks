@@ -21,7 +21,7 @@ dill==0.3.7
     # via pylint
 edx-lint==5.3.6
     # via -r requirements/quality.in
-isort==5.13.1
+isort==5.13.2
     # via
     #   -r requirements/quality.in
     #   pylint
