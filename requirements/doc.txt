@@ -20,7 +20,7 @@ attrs==23.1.0
     # via
     #   jsonschema
     #   referencing
-babel==2.13.1
+babel==2.14.0
     # via
     #   pydata-sphinx-theme
     #   sphinx
@@ -44,6 +44,8 @@ celery==5.3.6
     #   -r requirements/base.txt
 certifi==2023.11.17
     # via requests
+cffi==1.16.0
+    # via cryptography
 charset-normalizer==3.3.2
     # via requests
 click==8.1.7
@@ -71,6 +73,8 @@ coreapi==2.3.3
     #   openapi-codec
 coreschema==0.0.4
     # via coreapi
+cryptography==41.0.7
+    # via secretstorage
 django==3.2.23
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
@@ -120,6 +124,10 @@ itypes==1.2.0
     # via coreapi
 jaraco-classes==3.3.0
     # via keyring
+jeepney==0.8.0
+    # via
+    #   keyring
+    #   secretstorage
 jinja2==3.1.2
     # via
     #   coreschema
@@ -159,10 +167,12 @@ pkginfo==1.9.6
     # via twine
 pkgutil-resolve-name==1.3.10
     # via jsonschema
-prompt-toolkit==3.0.41
+prompt-toolkit==3.0.43
     # via
     #   -r requirements/base.txt
     #   click-repl
+pycparser==2.21
+    # via cffi
 pydata-sphinx-theme==0.14.4
     # via sphinx-book-theme
 pygments==2.17.2
@@ -210,12 +220,14 @@ rfc3986==2.0.0
     # via twine
 rich==13.7.0
     # via twine
-rpds-py==0.13.2
+rpds-py==0.15.2
     # via
     #   jsonschema
     #   referencing
 rules==3.3
     # via -r requirements/doc.in
+secretstorage==3.3.3
+    # via keyring
 simplejson==3.19.2
     # via django-rest-swagger
 six==1.16.0
