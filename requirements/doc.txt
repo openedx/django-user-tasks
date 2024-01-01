@@ -16,7 +16,7 @@ asgiref==3.7.2
     # via
     #   -r requirements/base.txt
     #   django
-attrs==23.1.0
+attrs==23.2.0
     # via
     #   jsonschema
     #   referencing
@@ -106,7 +106,7 @@ idna==3.6
     # via requests
 imagesize==1.4.1
     # via sphinx
-importlib-metadata==7.0.0
+importlib-metadata==7.0.1
     # via
     #   keyring
     #   sphinx
@@ -135,7 +135,7 @@ jinja2==3.1.2
     #   swagger2rst
 jsonschema==4.20.0
     # via swagger2rst
-jsonschema-specifications==2023.11.2
+jsonschema-specifications==2023.12.1
     # via jsonschema
 keyring==24.3.0
     # via twine
@@ -220,7 +220,7 @@ rfc3986==2.0.0
     # via twine
 rich==13.7.0
     # via twine
-rpds-py==0.15.2
+rpds-py==0.16.2
     # via
     #   jsonschema
     #   referencing
@@ -278,7 +278,7 @@ typing-extensions==4.9.0
     #   kombu
     #   pydata-sphinx-theme
     #   rich
-tzdata==2023.3
+tzdata==2023.4
     # via
     #   -r requirements/base.txt
     #   backports-zoneinfo
