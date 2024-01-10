@@ -36,8 +36,6 @@ billiard==4.2.0
     # via
     #   -r requirements/base.txt
     #   celery
-cached-property==1.5.2
-    # via swagger2rst
 celery==5.3.6
     # via
     #   -c requirements/constraints.txt
@@ -73,6 +71,8 @@ coreapi==2.3.3
     #   openapi-codec
 coreschema==0.0.4
     # via coreapi
+deepmerge==1.1.0
+    # via sphinxcontrib-openapi
 cryptography==41.0.7
     # via secretstorage
 django==3.2.23
@@ -100,6 +100,7 @@ docutils==0.19
     #   readme-renderer
     #   restructuredtext-lint
     #   sphinx
+    #   sphinx-mdinclude
 drf-yasg==1.21.7
     # via -r requirements/base.txt
 idna==3.6
@@ -132,9 +133,8 @@ jinja2==3.1.2
     # via
     #   coreschema
     #   sphinx
-    #   swagger2rst
 jsonschema==4.20.0
-    # via swagger2rst
+    # via sphinxcontrib-openapi
 jsonschema-specifications==2023.11.2
     # via jsonschema
 keyring==24.3.0
@@ -149,6 +149,8 @@ markupsafe==2.1.3
     # via jinja2
 mdurl==0.1.2
     # via markdown-it-py
+mistune==2.0.5
+    # via sphinx-mdinclude
 more-itertools==10.1.0
     # via jaraco-classes
 nh3==0.2.15
@@ -163,6 +165,8 @@ packaging==23.2
     #   sphinx
 pbr==6.0.0
     # via stevedore
+picobox==4.0.0
+    # via sphinxcontrib-openapi
 pkginfo==1.9.6
     # via twine
 pkgutil-resolve-name==1.3.10
@@ -183,6 +187,7 @@ pygments==2.17.2
     #   readme-renderer
     #   rich
     #   sphinx
+    #   sphinx-mdinclude
 python-dateutil==2.8.2
     # via
     #   -r requirements/base.txt
@@ -194,12 +199,11 @@ pytz==2023.3.post1
     #   django
     #   djangorestframework
     #   drf-yasg
-pyyaml==5.4.1
+pyyaml==6.0.1
     # via
-    #   -c requirements/constraints.txt
     #   -r requirements/base.txt
     #   drf-yasg
-    #   swagger2rst
+    #   sphinxcontrib-openapi
 readme-renderer==42.0
     # via twine
 referencing==0.32.0
@@ -234,6 +238,7 @@ six==1.16.0
     # via
     #   -r requirements/base.txt
     #   python-dateutil
+    #   sphinxcontrib-httpdomain
 snowballstemmer==2.2.0
     # via sphinx
 soupsieve==2.5
@@ -243,16 +248,24 @@ sphinx==6.2.1
     #   -r requirements/doc.in
     #   pydata-sphinx-theme
     #   sphinx-book-theme
+    #   sphinxcontrib-httpdomain
+    #   sphinxcontrib-openapi
 sphinx-book-theme==1.0.1
     # via -r requirements/doc.in
+sphinx-mdinclude==0.5.3
+    # via sphinxcontrib-openapi
 sphinxcontrib-applehelp==1.0.4
     # via sphinx
 sphinxcontrib-devhelp==1.0.2
     # via sphinx
 sphinxcontrib-htmlhelp==2.0.1
     # via sphinx
+sphinxcontrib-httpdomain==1.8.1
+    # via sphinxcontrib-openapi
 sphinxcontrib-jsmath==1.0.1
     # via sphinx
+sphinxcontrib-openapi==0.8.3
+    # via -r requirements/doc.in
 sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.5
@@ -263,10 +276,6 @@ sqlparse==0.4.4
     #   django
 stevedore==5.1.0
     # via doc8
-strict-rfc3339==0.7
-    # via swagger2rst
-swagger2rst==0.0.4
-    # via -r requirements/doc.in
 tomli==2.0.1
     # via doc8
 twine==4.0.2
