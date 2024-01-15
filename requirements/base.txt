@@ -47,7 +47,7 @@ drf-yasg==1.21.7
     # via -r requirements/base.in
 inflection==0.5.1
     # via drf-yasg
-kombu==5.3.4
+kombu==5.3.5
     # via celery
 packaging==23.2
     # via drf-yasg
@@ -70,7 +70,7 @@ typing-extensions==4.9.0
     # via
     #   asgiref
     #   kombu
-tzdata==2023.3
+tzdata==2023.4
     # via
     #   backports-zoneinfo
     #   celery
@@ -81,5 +81,5 @@ vine==5.1.0
     #   amqp
     #   celery
     #   kombu
-wcwidth==0.2.12
+wcwidth==0.2.13
     # via prompt-toolkit
