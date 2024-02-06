@@ -12,7 +12,7 @@ asgiref==3.7.2
     # via
     #   -r requirements/test.txt
     #   django
-astroid==3.0.2
+astroid==3.0.3
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -72,7 +72,7 @@ click-repl==0.3.0
     # via
     #   -r requirements/test.txt
     #   celery
-code-annotations==1.5.0
+code-annotations==1.6.0
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -150,7 +150,7 @@ kombu==5.3.5
     #   celery
 lxml==5.1.0
     # via edx-i18n-tools
-markupsafe==2.1.4
+markupsafe==2.1.5
     # via
     #   -r requirements/quality.txt
     #   jinja2
@@ -170,7 +170,7 @@ packaging==23.2
     #   pyproject-api
     #   pytest
     #   tox
-path==16.9.0
+path==16.10.0
     # via edx-i18n-tools
 pbr==6.0.0
     # via
@@ -178,7 +178,7 @@ pbr==6.0.0
     #   stevedore
 pip-tools==7.3.0
     # via -r requirements/pip-tools.txt
-platformdirs==4.1.0
+platformdirs==4.2.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -236,17 +236,17 @@ pytest==8.0.0
     #   pytest-django
 pytest-cov==4.1.0
     # via -r requirements/test.txt
-pytest-django==4.7.0
+pytest-django==4.8.0
     # via -r requirements/test.txt
 python-dateutil==2.8.2
     # via
     #   -r requirements/test.txt
     #   celery
-python-slugify==8.0.2
+python-slugify==8.0.3
     # via
     #   -r requirements/quality.txt
     #   code-annotations
-pytz==2023.3.post1
+pytz==2024.1
     # via
     #   -r requirements/test.txt
     #   django

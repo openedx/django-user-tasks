@@ -55,7 +55,7 @@ prompt-toolkit==3.0.43
     # via click-repl
 python-dateutil==2.8.2
     # via celery
-pytz==2023.3.post1
+pytz==2024.1
     # via
     #   django
     #   djangorestframework
