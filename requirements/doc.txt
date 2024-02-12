@@ -75,14 +75,14 @@ cryptography==42.0.2
     # via secretstorage
 deepmerge==1.1.1
     # via sphinxcontrib-openapi
-django==3.2.23
+django==3.2.24
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.txt
     #   django-model-utils
     #   djangorestframework
     #   drf-yasg
-django-model-utils==4.3.1
+django-model-utils==4.4.0
     # via -r requirements/base.txt
 django-rest-swagger==2.2.0
     # via -r requirements/doc.in
@@ -123,7 +123,7 @@ inflection==0.5.1
     #   drf-yasg
 itypes==1.2.0
     # via coreapi
-jaraco-classes==3.3.0
+jaraco-classes==3.3.1
     # via keyring
 jeepney==0.8.0
     # via
@@ -278,7 +278,7 @@ stevedore==5.1.0
     # via doc8
 tomli==2.0.1
     # via doc8
-twine==4.0.2
+twine==5.0.0
     # via -r requirements/doc.in
 typing-extensions==4.9.0
     # via
@@ -287,7 +287,7 @@ typing-extensions==4.9.0
     #   kombu
     #   pydata-sphinx-theme
     #   rich
-tzdata==2023.4
+tzdata==2024.1
     # via
     #   -r requirements/base.txt
     #   backports-zoneinfo

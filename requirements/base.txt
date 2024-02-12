@@ -30,14 +30,14 @@ click-plugins==1.1.1
     # via celery
 click-repl==0.3.0
     # via celery
-django==3.2.23
+django==3.2.24
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
     #   django-model-utils
     #   djangorestframework
     #   drf-yasg
-django-model-utils==4.3.1
+django-model-utils==4.4.0
     # via -r requirements/base.in
 djangorestframework==3.14.0
     # via
@@ -70,7 +70,7 @@ typing-extensions==4.9.0
     # via
     #   asgiref
     #   kombu
-tzdata==2023.4
+tzdata==2024.1
     # via
     #   backports-zoneinfo
     #   celery
