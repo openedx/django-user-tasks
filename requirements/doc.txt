@@ -27,7 +27,6 @@ babel==2.14.0
 backports-zoneinfo[tzdata]==0.2.1
     # via
     #   -r requirements/base.txt
-    #   backports-zoneinfo
     #   celery
     #   kombu
 beautifulsoup4==4.12.3
@@ -71,7 +70,7 @@ coreapi==2.3.3
     #   openapi-codec
 coreschema==0.0.4
     # via coreapi
-cryptography==42.0.2
+cryptography==42.0.3
     # via secretstorage
 deepmerge==1.1.1
     # via sphinxcontrib-openapi
@@ -224,7 +223,7 @@ rfc3986==2.0.0
     # via twine
 rich==13.7.0
     # via twine
-rpds-py==0.17.1
+rpds-py==0.18.0
     # via
     #   jsonschema
     #   referencing
@@ -264,7 +263,7 @@ sphinxcontrib-httpdomain==1.8.1
     # via sphinxcontrib-openapi
 sphinxcontrib-jsmath==1.0.1
     # via sphinx
-sphinxcontrib-openapi==0.8.3
+sphinxcontrib-openapi==0.8.4
     # via -r requirements/doc.in
 sphinxcontrib-qthelp==1.0.3
     # via sphinx
@@ -297,7 +296,7 @@ uritemplate==4.1.1
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
-urllib3==2.2.0
+urllib3==2.2.1
     # via
     #   requests
     #   twine
