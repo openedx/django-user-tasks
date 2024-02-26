@@ -70,7 +70,7 @@ coreapi==2.3.3
     #   openapi-codec
 coreschema==0.0.4
     # via coreapi
-cryptography==42.0.3
+cryptography==42.0.5
     # via secretstorage
 deepmerge==1.1.1
     # via sphinxcontrib-openapi
@@ -111,7 +111,7 @@ importlib-metadata==7.0.1
     #   keyring
     #   sphinx
     #   twine
-importlib-resources==6.1.1
+importlib-resources==6.1.2
     # via
     #   jsonschema
     #   jsonschema-specifications
@@ -273,13 +273,13 @@ sqlparse==0.4.4
     # via
     #   -r requirements/base.txt
     #   django
-stevedore==5.1.0
+stevedore==5.2.0
     # via doc8
 tomli==2.0.1
     # via doc8
 twine==5.0.0
     # via -r requirements/doc.in
-typing-extensions==4.9.0
+typing-extensions==4.10.0
     # via
     #   -r requirements/base.txt
     #   asgiref
