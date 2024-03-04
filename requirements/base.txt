@@ -11,6 +11,7 @@ asgiref==3.7.2
 backports-zoneinfo[tzdata]==0.2.1
     # via
     #   celery
+    #   django
     #   kombu
 billiard==4.2.0
     # via celery
@@ -30,7 +31,7 @@ click-plugins==1.1.1
     # via celery
 click-repl==0.3.0
     # via celery
-django==3.2.24
+django==4.2.10
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
@@ -53,11 +54,10 @@ packaging==23.2
     # via drf-yasg
 prompt-toolkit==3.0.43
     # via click-repl
-python-dateutil==2.8.2
+python-dateutil==2.9.0.post0
     # via celery
 pytz==2024.1
     # via
-    #   django
     #   djangorestframework
     #   drf-yasg
 pyyaml==6.0.1

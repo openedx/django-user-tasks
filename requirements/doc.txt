@@ -28,6 +28,7 @@ backports-zoneinfo[tzdata]==0.2.1
     # via
     #   -r requirements/base.txt
     #   celery
+    #   django
     #   kombu
 beautifulsoup4==4.12.3
     # via pydata-sphinx-theme
@@ -74,7 +75,7 @@ cryptography==42.0.5
     # via secretstorage
 deepmerge==1.1.1
     # via sphinxcontrib-openapi
-django==3.2.24
+django==4.2.10
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.txt
@@ -136,7 +137,7 @@ jsonschema==4.21.1
     # via sphinxcontrib-openapi
 jsonschema-specifications==2023.12.1
     # via jsonschema
-keyring==24.3.0
+keyring==24.3.1
     # via twine
 kombu==5.3.5
     # via
@@ -166,7 +167,7 @@ pbr==6.0.0
     # via stevedore
 picobox==4.0.0
     # via sphinxcontrib-openapi
-pkginfo==1.9.6
+pkginfo==1.10.0
     # via twine
 pkgutil-resolve-name==1.3.10
     # via jsonschema
@@ -187,7 +188,7 @@ pygments==2.17.2
     #   rich
     #   sphinx
     #   sphinx-mdinclude
-python-dateutil==2.8.2
+python-dateutil==2.9.0.post0
     # via
     #   -r requirements/base.txt
     #   celery
@@ -195,7 +196,6 @@ pytz==2024.1
     # via
     #   -r requirements/base.txt
     #   babel
-    #   django
     #   djangorestframework
     #   drf-yasg
 pyyaml==6.0.1
@@ -203,7 +203,7 @@ pyyaml==6.0.1
     #   -r requirements/base.txt
     #   drf-yasg
     #   sphinxcontrib-openapi
-readme-renderer==42.0
+readme-renderer==43.0
     # via twine
 referencing==0.33.0
     # via
@@ -221,7 +221,7 @@ restructuredtext-lint==1.4.0
     # via doc8
 rfc3986==2.0.0
     # via twine
-rich==13.7.0
+rich==13.7.1
     # via twine
 rpds-py==0.18.0
     # via
