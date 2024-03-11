@@ -74,7 +74,7 @@ kombu==5.3.5
     #   celery
 mock==5.1.0
     # via -r requirements/test.in
-packaging==23.2
+packaging==24.0
     # via
     #   -r requirements/base.txt
     #   -r requirements/test.in
@@ -86,7 +86,7 @@ prompt-toolkit==3.0.43
     # via
     #   -r requirements/base.txt
     #   click-repl
-pytest==8.1.0
+pytest==8.1.1
     # via
     #   pytest-cov
     #   pytest-django
