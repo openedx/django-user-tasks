@@ -16,7 +16,7 @@ jobs:
         python-version:
         - '3.8'
         - '3.12'
-        toxenv: [django32-celery53-drf313, django32-celery53-drflatest, django42-celery53-drflatest,
+        toxenv: [django42-celery53-drf313, django42-celery53-drflatest, django42-celery53-drflatest,
           quality, docs, django42]
 
     steps:
