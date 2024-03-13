@@ -24,8 +24,9 @@ babel==2.14.0
     # via
     #   pydata-sphinx-theme
     #   sphinx
-backports-zoneinfo[tzdata]==0.2.1
+backports-zoneinfo[tzdata]==0.2.1 ; python_version < "3.9"
     # via
+    #   -c requirements/constraints.txt
     #   -r requirements/base.txt
     #   celery
     #   django

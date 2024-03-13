@@ -12,8 +12,9 @@ asgiref==3.7.2
     # via
     #   -r requirements/base.txt
     #   django
-backports-zoneinfo[tzdata]==0.2.1
+backports-zoneinfo[tzdata]==0.2.1 ; python_version < "3.9"
     # via
+    #   -c requirements/constraints.txt
     #   -r requirements/base.txt
     #   celery
     #   django
