@@ -8,8 +8,9 @@ amqp==5.2.0
     # via kombu
 asgiref==3.7.2
     # via django
-backports-zoneinfo[tzdata]==0.2.1
+backports-zoneinfo[tzdata]==0.2.1 ; python_version < "3.9"
     # via
+    #   -c requirements/constraints.txt
     #   celery
     #   django
     #   kombu
