@@ -13,6 +13,7 @@ backports-zoneinfo[tzdata]==0.2.1 ; python_version < "3.9"
     #   -c requirements/constraints.txt
     #   celery
     #   django
+    #   djangorestframework
     #   kombu
 billiard==4.2.0
     # via celery
@@ -41,7 +42,7 @@ django==4.2.11
     #   drf-yasg
 django-model-utils==4.4.0
     # via -r requirements/base.in
-djangorestframework==3.14.0
+djangorestframework==3.15.0
     # via
     #   -r requirements/base.in
     #   drf-yasg
@@ -58,9 +59,7 @@ prompt-toolkit==3.0.43
 python-dateutil==2.9.0.post0
     # via celery
 pytz==2024.1
-    # via
-    #   djangorestframework
-    #   drf-yasg
+    # via drf-yasg
 pyyaml==6.0.1
     # via drf-yasg
 six==1.16.0

@@ -30,6 +30,7 @@ backports-zoneinfo[tzdata]==0.2.1 ; python_version < "3.9"
     #   -r requirements/base.txt
     #   celery
     #   django
+    #   djangorestframework
     #   kombu
 beautifulsoup4==4.12.3
     # via pydata-sphinx-theme
@@ -87,7 +88,7 @@ django-model-utils==4.4.0
     # via -r requirements/base.txt
 django-rest-swagger==2.2.0
     # via -r requirements/doc.in
-djangorestframework==3.14.0
+djangorestframework==3.15.0
     # via
     #   -r requirements/base.txt
     #   django-rest-swagger
@@ -114,7 +115,7 @@ importlib-metadata==6.11.0
     #   keyring
     #   sphinx
     #   twine
-importlib-resources==6.3.0
+importlib-resources==6.3.1
     # via
     #   jsonschema
     #   jsonschema-specifications
@@ -198,7 +199,6 @@ pytz==2024.1
     # via
     #   -r requirements/base.txt
     #   babel
-    #   djangorestframework
     #   drf-yasg
 pyyaml==6.0.1
     # via
@@ -207,7 +207,7 @@ pyyaml==6.0.1
     #   sphinxcontrib-openapi
 readme-renderer==43.0
     # via twine
-referencing==0.33.0
+referencing==0.34.0
     # via
     #   jsonschema
     #   jsonschema-specifications
@@ -312,7 +312,7 @@ wcwidth==0.2.13
     # via
     #   -r requirements/base.txt
     #   prompt-toolkit
-zipp==3.18.0
+zipp==3.18.1
     # via
     #   importlib-metadata
     #   importlib-resources
