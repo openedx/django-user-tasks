@@ -15,6 +15,7 @@ jobs:
         os: [ubuntu-20.04]
         python-version:
         - '3.8'
+        - '3.11'
         - '3.12'
         toxenv: [django42-celery53-drflatest, django42-celery53-drflatest,
           quality, docs, django42]

@@ -19,6 +19,7 @@ Unreleased
 
 Added
 +++++
+* Adding python 3.11 support.
 * Adding python 3.12 support.
 * Removed django32 support.
 
