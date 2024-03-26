@@ -14,6 +14,13 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+[3.2.0] - 2024-03-12
+~~~~~~~~~~~~~~~~~~~~
+
+Added
++++++
+* Adding python 3.12 support.
+* Removed django32 support.
 
 [3.1.0] - 2023-07-21
 ~~~~~~~~~~~~~~~~~~~~
