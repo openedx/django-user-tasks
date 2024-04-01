@@ -6,13 +6,14 @@
 #
 amqp==5.2.0
     # via kombu
-asgiref==3.7.2
+asgiref==3.8.1
     # via django
 backports-zoneinfo[tzdata]==0.2.1 ; python_version < "3.9"
     # via
     #   -c requirements/constraints.txt
     #   celery
     #   django
+    #   djangorestframework
     #   kombu
 billiard==4.2.0
     # via celery
@@ -26,7 +27,7 @@ click==8.1.7
     #   click-didyoumean
     #   click-plugins
     #   click-repl
-click-didyoumean==0.3.0
+click-didyoumean==0.3.1
     # via celery
 click-plugins==1.1.1
     # via celery
@@ -41,7 +42,7 @@ django==4.2.11
     #   drf-yasg
 django-model-utils==4.4.0
     # via -r requirements/base.in
-djangorestframework==3.14.0
+djangorestframework==3.15.1
     # via
     #   -r requirements/base.in
     #   drf-yasg
@@ -49,7 +50,7 @@ drf-yasg==1.21.7
     # via -r requirements/base.in
 inflection==0.5.1
     # via drf-yasg
-kombu==5.3.5
+kombu==5.3.6
     # via celery
 packaging==24.0
     # via drf-yasg
@@ -58,9 +59,7 @@ prompt-toolkit==3.0.43
 python-dateutil==2.9.0.post0
     # via celery
 pytz==2024.1
-    # via
-    #   djangorestframework
-    #   drf-yasg
+    # via drf-yasg
 pyyaml==6.0.1
     # via drf-yasg
 six==1.16.0
