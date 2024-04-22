@@ -15,7 +15,7 @@ click==8.1.7
     #   edx-lint
 click-log==0.4.0
     # via edx-lint
-code-annotations==1.6.0
+code-annotations==1.8.0
     # via edx-lint
 dill==0.3.8
     # via pylint
@@ -69,7 +69,7 @@ tomli==2.0.1
     # via pylint
 tomlkit==0.12.4
     # via pylint
-typing-extensions==4.10.0
+typing-extensions==4.11.0
     # via
     #   astroid
     #   pylint
