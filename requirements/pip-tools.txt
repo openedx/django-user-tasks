@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-build==1.1.1
+build==1.2.1
     # via pip-tools
 click==8.1.7
     # via pip-tools
@@ -27,7 +27,7 @@ tomli==2.0.1
     #   pyproject-hooks
 wheel==0.43.0
     # via pip-tools
-zipp==3.18.0
+zipp==3.18.1
     # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
