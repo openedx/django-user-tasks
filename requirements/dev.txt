@@ -84,6 +84,7 @@ colorama==0.4.6
     #   tox
 coverage[toml]==7.5.3
     # via
+    #   -r requirements/ci.txt
     #   -r requirements/test.txt
     #   pytest-cov
 dill==0.3.8
@@ -104,7 +105,7 @@ django==4.2.13
     #   edx-i18n-tools
 django-model-utils==4.5.1
     # via -r requirements/test.txt
-djangorestframework==3.15.1
+djangorestframework==3.15.2
     # via
     #   -r requirements/test.txt
     #   drf-yasg
@@ -120,7 +121,7 @@ exceptiongroup==1.2.1
     # via
     #   -r requirements/test.txt
     #   pytest
-filelock==3.15.1
+filelock==3.15.4
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -227,7 +228,7 @@ pylint-plugin-utils==0.8.2
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pyproject-api==1.6.1
+pyproject-api==1.7.1
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -332,7 +333,7 @@ vine==5.1.0
     #   amqp
     #   celery
     #   kombu
-virtualenv==20.26.2
+virtualenv==20.26.3
     # via
     #   -r requirements/ci.txt
     #   tox
