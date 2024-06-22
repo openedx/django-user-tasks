@@ -2,3 +2,4 @@
 -c constraints.txt
 
 tox                       # Virtualenv management for tests
+coverage                  # to capture code coverage information
