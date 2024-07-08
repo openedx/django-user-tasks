@@ -44,7 +44,7 @@ celery==5.4.0
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
-certifi==2024.6.2
+certifi==2024.7.4
     # via requests
 cffi==1.16.0
     # via cryptography
@@ -164,7 +164,7 @@ more-itertools==10.3.0
     # via
     #   jaraco-classes
     #   jaraco-functools
-nh3==0.2.17
+nh3==0.2.18
     # via readme-renderer
 openapi-codec==1.3.2
     # via django-rest-swagger
@@ -178,7 +178,7 @@ pbr==6.0.0
     # via stevedore
 picobox==4.0.0
     # via sphinxcontrib-openapi
-pkginfo==1.11.1
+pkginfo==1.10.0
     # via twine
 pkgutil-resolve-name==1.3.10
     # via jsonschema
@@ -288,7 +288,7 @@ stevedore==5.2.0
     # via doc8
 tomli==2.0.1
     # via doc8
-twine==5.1.0
+twine==5.1.1
     # via -r requirements/doc.in
 typing-extensions==4.12.2
     # via
