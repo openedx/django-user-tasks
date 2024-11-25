@@ -35,6 +35,8 @@ class UserTaskStatus(TimeStampedModel):
     The methods of this class should generally not be run as part of larger
     transactions.  If they are, some deadlocks and race conditions become
     possible.
+
+    .. no_pii:
     """
 
     PENDING = 'Pending'
@@ -228,6 +230,8 @@ class UserTaskArtifact(TimeStampedModel):
     An artifact (or error message) generated for a user by an asynchronous task.
 
     May be a file, a URL, or text stored directly in the database table.
+
+    .. no_pii:
     """
 
     uuid = models.UUIDField(default=uuid4, unique=True, editable=False, help_text='Unique ID for use in APIs')
