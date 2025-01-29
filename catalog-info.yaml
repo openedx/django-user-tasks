@@ -1,0 +1,23 @@
+# This file records information about this repo. Its use is described in OEP-55:
+# https://open-edx-proposals.readthedocs.io/en/latest/processes/oep-0055-proc-project-maintainers.html
+#
+# If you're thinking about copying this, check out the sample file in the relevant ADR instead:
+# https://open-edx-proposals.readthedocs.io/en/latest/processes/oep-0055/decisions/0001-use-backstage-to-support-maintainers.html#references
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: 'django-user-tasks'
+  description: "Management of user-triggered asynchronous tasks in Django projects"
+  annotations:
+    # (Optional) Annotation keys and values can be whatever you want.
+    # We use it in Open edX repos to have a comma-separated list of GitHub user
+    # names that might be interested in changes to the architecture of this
+    # component.
+    openedx.org/arch-interest-groups: ""
+spec:
+  # (Required) This can be a group (`group:<github_group_name>`) or a user (`user:<github_username>`).
+  # Don't forget the "user:" or "group:" prefix. Groups must be GitHub team
+  # names in the openedx GitHub organization: https://github.com/orgs/openedx/teams
+  owner: user:usamasadiq
+  type: 'library'
+  lifecycle: 'production'
