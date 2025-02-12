@@ -14,6 +14,14 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+[3.3.0] - 2025-02-13
+~~~~~~~~~~~~~~~~~~~~
+
+Removed
++++++++
+* Removed `python 3.8` support
+* Updated requirements with `python 3.11` env
+
 [3.2.0] - 2024-03-12
 ~~~~~~~~~~~~~~~~~~~~
 

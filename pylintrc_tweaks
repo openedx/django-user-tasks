@@ -6,4 +6,5 @@ load-plugins = edx_lint.pylint,pylint_django,pylint_celery
 [MESSAGES CONTROL]
 disable+ = 
     django-not-configured,
-    unsupported-binary-operation
+    unsupported-binary-operation,
+    too-many-positional-arguments
