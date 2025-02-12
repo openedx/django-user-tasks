@@ -14,7 +14,6 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         python-version:
-        - '3.8'
         - '3.11'
         - '3.12'
         toxenv: [django42-celery53-drflatest,
@@ -38,7 +37,7 @@ jobs:
       run: tox
 
     - name: Run coverage
-      if: matrix.python-version == '3.8' && matrix.toxenv == 'django42-celery53-drflatest'
+      if: matrix.python-version == '3.11' && matrix.toxenv == 'django42-celery53-drflatest'
       uses: codecov/codecov-action@v5
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
