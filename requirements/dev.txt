@@ -25,7 +25,7 @@ build==1.2.2.post1
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-cachetools==5.5.1
+cachetools==5.5.2
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -264,7 +264,7 @@ sqlparse==0.5.3
     # via
     #   -r requirements/test.txt
     #   django
-stevedore==5.4.0
+stevedore==5.4.1
     # via
     #   -r requirements/quality.txt
     #   code-annotations
