@@ -4,9 +4,9 @@ All user-facing text content should be marked for translation. Even if this appl
 open source users may choose to use another language. Marking content for translation ensures our users have
 this choice.
 
-Follow the `internationalization coding guidelines`_ in the edX Developer's Guide when developing new features.
+Follow the `internationalization coding guidelines`_ in the Open edX Developer's Guide when developing new features.
 
-.. _internationalization coding guidelines: http://edx.readthedocs.io/projects/edx-developer-guide/en/latest/conventions/internationalization/i18n.html
+.. _internationalization coding guidelines: https://docs.openedx.org/en/latest/developers/references/developer_guide/internationalization/i18n.html
 
 Updating Translations
 ~~~~~~~~~~~~~~~~~~~~~
