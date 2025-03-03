@@ -25,7 +25,7 @@ build==1.2.2.post1
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-cachetools==5.5.1
+cachetools==5.5.2
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -101,7 +101,7 @@ djangorestframework==3.15.2
     # via
     #   -r requirements/test.txt
     #   drf-yasg
-drf-yasg==1.21.8
+drf-yasg==1.21.9
     # via -r requirements/test.txt
 edx-i18n-tools==1.6.3
     # via -r requirements/dev.in
@@ -122,7 +122,7 @@ iniconfig==2.0.0
     # via
     #   -r requirements/test.txt
     #   pytest
-isort==6.0.0
+isort==6.0.1
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -220,7 +220,7 @@ pyproject-hooks==1.2.0
     #   -r requirements/pip-tools.txt
     #   build
     #   pip-tools
-pytest==8.3.4
+pytest==8.3.5
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -264,7 +264,7 @@ sqlparse==0.5.3
     # via
     #   -r requirements/test.txt
     #   django
-stevedore==5.4.0
+stevedore==5.4.1
     # via
     #   -r requirements/quality.txt
     #   code-annotations
