@@ -16,7 +16,7 @@ asgiref==3.8.1
     # via
     #   -r requirements/base.txt
     #   django
-attrs==25.1.0
+attrs==25.3.0
     # via
     #   jsonschema
     #   referencing
@@ -97,7 +97,7 @@ docutils==0.21.2
     #   restructuredtext-lint
     #   sphinx
     #   sphinx-mdinclude
-drf-yasg==1.21.9
+drf-yasg==1.21.10
     # via -r requirements/base.txt
 id==1.5.0
     # via twine
@@ -133,7 +133,7 @@ jsonschema-specifications==2024.10.1
     # via jsonschema
 keyring==25.6.0
     # via twine
-kombu==5.4.2
+kombu==5.5.0
     # via
     #   -r requirements/base.txt
     #   celery
