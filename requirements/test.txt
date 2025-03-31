@@ -39,7 +39,7 @@ click-repl==0.3.0
     # via
     #   -r requirements/base.txt
     #   celery
-coverage[toml]==7.7.0
+coverage[toml]==7.8.0
     # via pytest-cov
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
@@ -58,9 +58,9 @@ inflection==0.5.1
     # via
     #   -r requirements/base.txt
     #   drf-yasg
-iniconfig==2.0.0
+iniconfig==2.1.0
     # via pytest
-kombu==5.5.0
+kombu==5.5.2
     # via
     #   -r requirements/base.txt
     #   celery
@@ -90,7 +90,7 @@ python-dateutil==2.9.0.post0
     # via
     #   -r requirements/base.txt
     #   celery
-pytz==2025.1
+pytz==2025.2
     # via
     #   -r requirements/base.txt
     #   drf-yasg
@@ -110,7 +110,7 @@ sqlparse==0.5.3
     #   django
 testfixtures==8.3.0
     # via -r requirements/test.in
-tzdata==2025.1
+tzdata==2025.2
     # via
     #   -r requirements/base.txt
     #   celery

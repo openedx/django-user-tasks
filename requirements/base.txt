@@ -35,7 +35,7 @@ django==4.2.20
     #   drf-yasg
 django-model-utils==5.0.0
     # via -r requirements/base.in
-djangorestframework==3.15.2
+djangorestframework==3.16.0
     # via
     #   -r requirements/base.in
     #   drf-yasg
@@ -43,7 +43,7 @@ drf-yasg==1.21.10
     # via -r requirements/base.in
 inflection==0.5.1
     # via drf-yasg
-kombu==5.5.0
+kombu==5.5.2
     # via celery
 packaging==24.2
     # via drf-yasg
@@ -51,7 +51,7 @@ prompt-toolkit==3.0.50
     # via click-repl
 python-dateutil==2.9.0.post0
     # via celery
-pytz==2025.1
+pytz==2025.2
     # via drf-yasg
 pyyaml==6.0.2
     # via drf-yasg
@@ -59,7 +59,7 @@ six==1.17.0
     # via python-dateutil
 sqlparse==0.5.3
     # via django
-tzdata==2025.1
+tzdata==2025.2
     # via
     #   celery
     #   kombu
