@@ -74,7 +74,7 @@ colorama==0.4.6
     # via
     #   -r requirements/ci.txt
     #   tox
-coverage[toml]==7.7.0
+coverage[toml]==7.8.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
@@ -97,13 +97,13 @@ django==4.2.20
     #   edx-i18n-tools
 django-model-utils==5.0.0
     # via -r requirements/test.txt
-djangorestframework==3.15.2
+djangorestframework==3.16.0
     # via
     #   -r requirements/test.txt
     #   drf-yasg
 drf-yasg==1.21.10
     # via -r requirements/test.txt
-edx-i18n-tools==1.6.3
+edx-i18n-tools==1.7.0
     # via -r requirements/dev.in
 edx-lint==5.6.0
     # via
@@ -118,7 +118,7 @@ inflection==0.5.1
     # via
     #   -r requirements/test.txt
     #   drf-yasg
-iniconfig==2.0.0
+iniconfig==2.1.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -130,7 +130,7 @@ jinja2==3.1.6
     # via
     #   -r requirements/quality.txt
     #   code-annotations
-kombu==5.5.0
+kombu==5.5.2
     # via
     #   -r requirements/test.txt
     #   celery
@@ -168,7 +168,7 @@ pbr==6.1.1
     #   stevedore
 pip-tools==7.4.1
     # via -r requirements/pip-tools.txt
-platformdirs==4.3.6
+platformdirs==4.3.7
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -187,11 +187,11 @@ prompt-toolkit==3.0.50
     # via
     #   -r requirements/test.txt
     #   click-repl
-pycodestyle==2.12.1
+pycodestyle==2.13.0
     # via -r requirements/quality.txt
 pydocstyle==6.3.0
     # via -r requirements/quality.txt
-pylint==3.3.5
+pylint==3.3.6
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -237,7 +237,7 @@ python-slugify==8.0.4
     # via
     #   -r requirements/quality.txt
     #   code-annotations
-pytz==2025.1
+pytz==2025.2
     # via
     #   -r requirements/test.txt
     #   drf-yasg
@@ -278,9 +278,9 @@ tomlkit==0.13.2
     # via
     #   -r requirements/quality.txt
     #   pylint
-tox==4.24.2
+tox==4.25.0
     # via -r requirements/ci.txt
-tzdata==2025.1
+tzdata==2025.2
     # via
     #   -r requirements/test.txt
     #   celery
