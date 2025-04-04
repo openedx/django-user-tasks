@@ -6,7 +6,7 @@ from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 
 from django.contrib import admin
-from django.urls import include, re_path
+from django.urls import include, path, re_path
 
 from rest_framework import permissions
 
@@ -24,7 +24,7 @@ SCHEMA = get_schema_view(
 
 # The Swagger/Open API JSON file can be found at http://localhost:8000/?format=openapi
 urlpatterns = [
-   re_path(r'^admin/', include(admin.site.urls)),
+   path('admin/', include(admin.site.urls)),
    re_path(r'^swagger(?P<format>\.json|\.yaml)$', SCHEMA.without_ui(cache_timeout=0), name='schema-json'),
-   re_path(r'^swagger/$', SCHEMA.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+   path('swagger/', SCHEMA.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ] + base_patterns
