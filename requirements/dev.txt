@@ -29,7 +29,7 @@ cachetools==5.5.2
     # via
     #   -r requirements/ci.txt
     #   tox
-celery==5.4.0
+celery==5.5.0
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/test.txt
@@ -134,7 +134,7 @@ kombu==5.5.2
     # via
     #   -r requirements/test.txt
     #   celery
-lxml[html-clean,html_clean]==5.3.1
+lxml[html-clean,html_clean]==5.3.2
     # via
     #   edx-i18n-tools
     #   lxml-html-clean
@@ -225,9 +225,9 @@ pytest==8.3.5
     #   -r requirements/test.txt
     #   pytest-cov
     #   pytest-django
-pytest-cov==6.0.0
+pytest-cov==6.1.1
     # via -r requirements/test.txt
-pytest-django==4.10.0
+pytest-django==4.11.1
     # via -r requirements/test.txt
 python-dateutil==2.9.0.post0
     # via
@@ -283,7 +283,6 @@ tox==4.25.0
 tzdata==2025.2
     # via
     #   -r requirements/test.txt
-    #   celery
     #   kombu
 uritemplate==4.1.1
     # via
@@ -295,7 +294,7 @@ vine==5.1.0
     #   amqp
     #   celery
     #   kombu
-virtualenv==20.29.3
+virtualenv==20.30.0
     # via
     #   -r requirements/ci.txt
     #   tox
