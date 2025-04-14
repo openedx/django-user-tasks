@@ -10,7 +10,7 @@ asgiref==3.8.1
     # via django
 billiard==4.2.1
     # via celery
-celery==5.4.0
+celery==5.5.1
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.in
@@ -60,9 +60,7 @@ six==1.17.0
 sqlparse==0.5.3
     # via django
 tzdata==2025.2
-    # via
-    #   celery
-    #   kombu
+    # via kombu
 uritemplate==4.1.1
     # via drf-yasg
 vine==5.1.0

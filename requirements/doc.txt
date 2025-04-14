@@ -32,7 +32,7 @@ billiard==4.2.1
     # via
     #   -r requirements/base.txt
     #   celery
-celery==5.4.0
+celery==5.5.1
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
@@ -272,7 +272,7 @@ stevedore==5.4.1
     # via doc8
 twine==6.1.0
     # via -r requirements/doc.in
-typing-extensions==4.13.0
+typing-extensions==4.13.2
     # via
     #   beautifulsoup4
     #   pydata-sphinx-theme
@@ -280,7 +280,6 @@ typing-extensions==4.13.0
 tzdata==2025.2
     # via
     #   -r requirements/base.txt
-    #   celery
     #   kombu
 uritemplate==4.1.1
     # via
