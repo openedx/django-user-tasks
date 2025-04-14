@@ -16,7 +16,7 @@ billiard==4.2.1
     # via
     #   -r requirements/base.txt
     #   celery
-celery==5.4.0
+celery==5.5.1
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
@@ -82,9 +82,9 @@ pytest==8.3.5
     # via
     #   pytest-cov
     #   pytest-django
-pytest-cov==6.0.0
+pytest-cov==6.1.1
     # via -r requirements/test.in
-pytest-django==4.10.0
+pytest-django==4.11.1
     # via -r requirements/test.in
 python-dateutil==2.9.0.post0
     # via
@@ -113,7 +113,6 @@ testfixtures==8.3.0
 tzdata==2025.2
     # via
     #   -r requirements/base.txt
-    #   celery
     #   kombu
 uritemplate==4.1.1
     # via
