@@ -16,7 +16,7 @@ billiard==4.2.1
     # via
     #   -r requirements/base.txt
     #   celery
-celery==5.5.1
+celery==5.5.2
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
@@ -60,13 +60,13 @@ inflection==0.5.1
     #   drf-yasg
 iniconfig==2.1.0
     # via pytest
-kombu==5.5.2
+kombu==5.5.3
     # via
     #   -r requirements/base.txt
     #   celery
 mock==5.2.0
     # via -r requirements/test.in
-packaging==24.2
+packaging==25.0
     # via
     #   -r requirements/base.txt
     #   -r requirements/test.in
@@ -74,7 +74,7 @@ packaging==24.2
     #   pytest
 pluggy==1.5.0
     # via pytest
-prompt-toolkit==3.0.50
+prompt-toolkit==3.0.51
     # via
     #   -r requirements/base.txt
     #   click-repl

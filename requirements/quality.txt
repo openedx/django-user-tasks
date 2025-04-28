@@ -17,7 +17,7 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==2.3.0
     # via edx-lint
-dill==0.3.9
+dill==0.4.0
     # via pylint
 edx-lint==5.6.0
     # via -r requirements/quality.in
