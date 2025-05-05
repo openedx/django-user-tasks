@@ -17,7 +17,7 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==2.3.0
     # via edx-lint
-dill==0.3.9
+dill==0.4.0
     # via pylint
 edx-lint==5.6.0
     # via -r requirements/quality.in
@@ -39,7 +39,7 @@ pycodestyle==2.13.0
     # via -r requirements/quality.in
 pydocstyle==6.3.0
     # via -r requirements/quality.in
-pylint==3.3.6
+pylint==3.3.7
     # via
     #   edx-lint
     #   pylint-celery
