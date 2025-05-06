@@ -10,7 +10,7 @@ asgiref==3.8.1
     # via django
 billiard==4.2.1
     # via celery
-celery==5.5.1
+celery==5.5.2
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.in
@@ -43,11 +43,11 @@ drf-yasg==1.21.10
     # via -r requirements/base.in
 inflection==0.5.1
     # via drf-yasg
-kombu==5.5.2
+kombu==5.5.3
     # via celery
-packaging==24.2
+packaging==25.0
     # via drf-yasg
-prompt-toolkit==3.0.50
+prompt-toolkit==3.0.51
     # via click-repl
 python-dateutil==2.9.0.post0
     # via celery
