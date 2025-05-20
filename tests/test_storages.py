@@ -10,6 +10,7 @@ from user_tasks.conf import settings as user_tasks_settings
 
 class TestUserTaskStatus(TestCase):
     """ Test cases for storages."""
+
     @override_settings(
         USER_TASKS_ARTIFACT_STORAGE="storages.backends.s3boto3.S3Boto3Storage"
     )
