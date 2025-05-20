@@ -9,3 +9,4 @@ pytest-cov                # pytest extension for code coverage statistics
 pytest-django             # pytest extension for better Django support
 rules                     # Authorization rules for test cases
 testfixtures              # Provides the LogCapture utility used in some tests
+django-storages

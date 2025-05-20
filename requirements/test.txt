@@ -45,10 +45,13 @@ coverage[toml]==7.8.0
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.txt
     #   django-model-utils
+    #   django-storages
     #   djangorestframework
     #   drf-yasg
 django-model-utils==5.0.0
     # via -r requirements/base.txt
+django-storages==1.14.6
+    # via -r requirements/test.in
     # via
     #   -r requirements/base.txt
     #   drf-yasg
