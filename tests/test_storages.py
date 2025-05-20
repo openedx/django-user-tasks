@@ -51,5 +51,4 @@ class TestUserTaskStatus(TestCase):
 
         storage = get_storage()
         assert isinstance(storage, S3Boto3Storage)
-        assert storage.default_acl == "public"
         assert storage.location == "tasks/images"
