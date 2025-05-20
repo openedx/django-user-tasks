@@ -84,4 +84,11 @@ STORAGES = {
     "default": {
         "BACKEND": "django.core.files.storage.FileSystemStorage",
     },
+    "user_task_artifacts": {
+        "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+        "OPTIONS": {
+            "bucket_name": "tasks",
+            "location": "tasks/images",
+        }
+    }
 }
