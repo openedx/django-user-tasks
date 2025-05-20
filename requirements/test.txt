@@ -20,7 +20,7 @@ celery==5.5.2
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
-click==8.1.8
+click==8.2.0
     # via
     #   -r requirements/base.txt
     #   celery
@@ -75,7 +75,7 @@ packaging==25.0
     #   -r requirements/test.in
     #   drf-yasg
     #   pytest
-pluggy==1.5.0
+pluggy==1.6.0
     # via pytest
 prompt-toolkit==3.0.51
     # via
