@@ -16,7 +16,7 @@ class TestUserTaskStatus(TestCase):
     )
     def test_storage_from_import_path(self):
         """
-        Test that providing an explicit import path to get_storage() 
+        Test that providing an explicit import path to get_storage()
         returns the correct storage backend.
         """
         storage = get_storage("storages.backends.s3boto3.S3Boto3Storage")
@@ -24,7 +24,7 @@ class TestUserTaskStatus(TestCase):
 
     def test_storage_fallback_to_default(self):
         """
-        Test that get_storage() returns Django's default storage 
+        Test that get_storage() returns Django's default storage
         when no import path is provided and no STORAGES dict is defined.
         """
         storage = get_storage()

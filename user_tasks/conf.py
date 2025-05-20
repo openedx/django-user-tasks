@@ -61,7 +61,6 @@ class LazySettings():
         import_path = getattr(django_settings, 'USER_TASKS_ARTIFACT_STORAGE', None)
         return get_storage(import_path)
 
-
     @property
     def USER_TASKS_MAX_AGE(self):  # pylint: disable=invalid-name
         """
