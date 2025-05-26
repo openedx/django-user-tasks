@@ -42,7 +42,7 @@ cffi==1.17.1
     # via cryptography
 charset-normalizer==3.4.2
     # via requests
-click==8.1.8
+click==8.2.1
     # via
     #   -r requirements/base.txt
     #   celery
@@ -67,11 +67,11 @@ coreapi==2.3.3
     #   openapi-codec
 coreschema==0.0.4
     # via coreapi
-cryptography==44.0.3
+cryptography==45.0.3
     # via secretstorage
 deepmerge==2.0
     # via sphinxcontrib-openapi
-django==4.2.20
+django==4.2.21
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.txt
@@ -217,7 +217,7 @@ rich==14.0.0
     # via twine
 roman-numerals-py==3.1.0
     # via sphinx
-rpds-py==0.24.0
+rpds-py==0.25.1
     # via
     #   jsonschema
     #   referencing
@@ -232,7 +232,7 @@ six==1.17.0
     #   -r requirements/base.txt
     #   python-dateutil
     #   sphinxcontrib-httpdomain
-snowballstemmer==2.2.0
+snowballstemmer==3.0.1
     # via sphinx
 soupsieve==2.7
     # via beautifulsoup4
