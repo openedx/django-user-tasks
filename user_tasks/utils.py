@@ -23,12 +23,12 @@ def proto2_to_proto1(body, headers):
     return new_body
 
 
-def extract_proto2_headers(id, retries, eta, expires, group, timelimit, task, **_):
+def extract_proto2_headers(task_id, retries, eta, expires, group, timelimit, task, **_):
     """
     Extract relevant headers from protocol v2 format.
     """
     return {
-        "id": id,
+        "id": task_id,
         "task": task,
         "retries": retries,
         "eta": eta,
@@ -39,13 +39,13 @@ def extract_proto2_headers(id, retries, eta, expires, group, timelimit, task, **
     }
 
 
-def extract_proto2_embed(callbacks=None, errbacks=None, chain=None, chord=None, **_):
+def extract_proto2_embed(callbacks=None, errbacks=None, task_chain=None, chord=None, **_):
     """
     Extract embedded task metadata.
     """
     return {
         "callbacks": callbacks or [],
         "errbacks": errbacks or [],
-        "chain": chain,
+        "chain": task_chain,
         "chord": chord,
     }
