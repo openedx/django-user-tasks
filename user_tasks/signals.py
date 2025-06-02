@@ -32,7 +32,6 @@ def create_user_task(sender=None, body=None, headers=None, **kwargs):
 
     Supports Celery protocol v1 and v2.
     """
-
     try:
         task_class = import_string(sender)
     except ImportError:
@@ -58,7 +57,7 @@ def create_user_task(sender=None, body=None, headers=None, **kwargs):
     total_steps = task_class.calculate_total_steps(arguments_dict)
     UserTaskStatus.objects.get_or_create(
         task_id=task_id, defaults={'user_id': user_id, 'parent': parent, 'name': name, 'task_class': sender,
-                                    'total_steps': total_steps})
+                                   'total_steps': total_steps})
     if parent:
         parent.increment_total_steps(total_steps)
 
