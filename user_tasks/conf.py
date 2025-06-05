@@ -16,17 +16,17 @@ def get_storage(import_path=None):
     """
     Return a storage backend instance.
 
-    1. Explicit import path, if provided.
-    2. STORAGES['user_task_artifacts'] alias (Django ≥4.2).
+    1. STORAGES['user_task_artifacts'] alias (Django ≥4.2 or 5.2).
+    2. Explicit import path, if provided.
     3. Django’s default_storage singleton.
     """
-    if import_path:
-        return import_string(import_path)()
-
     # New STORAGES dict lookup for user task artifacts
     storages_config = getattr(settings, 'STORAGES', {})
     if "user_task_artifacts" in storages_config:
         return storages["user_task_artifacts"]
+
+    if import_path:
+        return import_string(import_path)()
 
     # Final fallback
     return django_default_storage
