@@ -38,11 +38,9 @@ celery==5.5.2
     #   -r requirements/base.txt
 certifi==2025.4.26
     # via requests
-cffi==1.17.1
-    # via cryptography
 charset-normalizer==3.4.2
     # via requests
-click==8.1.8
+click==8.2.0
     # via
     #   -r requirements/base.txt
     #   celery
@@ -67,11 +65,9 @@ coreapi==2.3.3
     #   openapi-codec
 coreschema==0.0.4
     # via coreapi
-cryptography==44.0.3
-    # via secretstorage
 deepmerge==2.0
     # via sphinxcontrib-openapi
-django==4.2.20
+django==4.2.21
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.txt
@@ -119,10 +115,6 @@ jaraco-context==6.0.1
     # via keyring
 jaraco-functools==4.1.0
     # via keyring
-jeepney==0.9.0
-    # via
-    #   keyring
-    #   secretstorage
 jinja2==3.1.6
     # via
     #   coreschema
@@ -168,8 +160,6 @@ prompt-toolkit==3.0.51
     # via
     #   -r requirements/base.txt
     #   click-repl
-pycparser==2.22
-    # via cffi
 pydata-sphinx-theme==0.15.4
     # via sphinx-book-theme
 pygments==2.19.1
@@ -217,14 +207,12 @@ rich==14.0.0
     # via twine
 roman-numerals-py==3.1.0
     # via sphinx
-rpds-py==0.24.0
+rpds-py==0.25.0
     # via
     #   jsonschema
     #   referencing
 rules==3.5
     # via -r requirements/doc.in
-secretstorage==3.3.3
-    # via keyring
 simplejson==3.20.1
     # via django-rest-swagger
 six==1.17.0
@@ -232,7 +220,7 @@ six==1.17.0
     #   -r requirements/base.txt
     #   python-dateutil
     #   sphinxcontrib-httpdomain
-snowballstemmer==2.2.0
+snowballstemmer==3.0.1
     # via sphinx
 soupsieve==2.7
     # via beautifulsoup4
