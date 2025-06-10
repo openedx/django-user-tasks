@@ -12,7 +12,7 @@ asgiref==3.8.1
     # via
     #   -r requirements/test.txt
     #   django
-astroid==3.3.9
+astroid==3.3.10
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -21,6 +21,13 @@ billiard==4.2.1
     # via
     #   -r requirements/test.txt
     #   celery
+boto3==1.38.19
+    # via -r requirements/test.txt
+botocore==1.38.19
+    # via
+    #   -r requirements/test.txt
+    #   boto3
+    #   s3transfer
 build==1.2.2.post1
     # via
     #   -r requirements/pip-tools.txt
@@ -37,7 +44,7 @@ chardet==5.2.0
     # via
     #   -r requirements/ci.txt
     #   tox
-click==8.1.8
+click==8.2.0
     # via
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
@@ -87,15 +94,18 @@ distlib==0.3.9
     # via
     #   -r requirements/ci.txt
     #   virtualenv
-django==4.2.20
+django==4.2.21
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
     #   django-model-utils
+    #   django-storages
     #   djangorestframework
     #   drf-yasg
     #   edx-i18n-tools
 django-model-utils==5.0.0
+    # via -r requirements/test.txt
+django-storages==1.14.6
     # via -r requirements/test.txt
 djangorestframework==3.16.0
     # via
@@ -130,6 +140,11 @@ jinja2==3.1.6
     # via
     #   -r requirements/quality.txt
     #   code-annotations
+jmespath==1.0.1
+    # via
+    #   -r requirements/test.txt
+    #   boto3
+    #   botocore
 kombu==5.5.3
     # via
     #   -r requirements/test.txt
@@ -168,14 +183,14 @@ pbr==6.1.1
     #   stevedore
 pip-tools==7.4.1
     # via -r requirements/pip-tools.txt
-platformdirs==4.3.7
+platformdirs==4.3.8
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   pylint
     #   tox
     #   virtualenv
-pluggy==1.5.0
+pluggy==1.6.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
@@ -211,7 +226,7 @@ pylint-plugin-utils==0.8.2
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pyproject-api==1.9.0
+pyproject-api==1.9.1
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -232,6 +247,7 @@ pytest-django==4.11.1
 python-dateutil==2.9.0.post0
     # via
     #   -r requirements/test.txt
+    #   botocore
     #   celery
 python-slugify==8.0.4
     # via
@@ -250,13 +266,17 @@ pyyaml==6.0.2
     #   edx-i18n-tools
 rules==3.5
     # via -r requirements/test.txt
+s3transfer==0.12.0
+    # via
+    #   -r requirements/test.txt
+    #   boto3
 six==1.17.0
     # via
     #   -r requirements/quality.txt
     #   -r requirements/test.txt
     #   edx-lint
     #   python-dateutil
-snowballstemmer==2.2.0
+snowballstemmer==3.0.1
     # via
     #   -r requirements/quality.txt
     #   pydocstyle
@@ -278,7 +298,7 @@ tomlkit==0.13.2
     # via
     #   -r requirements/quality.txt
     #   pylint
-tox==4.25.0
+tox==4.26.0
     # via -r requirements/ci.txt
 tzdata==2025.2
     # via
@@ -288,13 +308,18 @@ uritemplate==4.1.1
     # via
     #   -r requirements/test.txt
     #   drf-yasg
+urllib3==2.2.3
+    # via
+    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
+    #   -r requirements/test.txt
+    #   botocore
 vine==5.1.0
     # via
     #   -r requirements/test.txt
     #   amqp
     #   celery
     #   kombu
-virtualenv==20.30.0
+virtualenv==20.31.2
     # via
     #   -r requirements/ci.txt
     #   tox

@@ -5,16 +5,31 @@ Custom Django settings for django-user-tasks.
 from datetime import timedelta
 
 from django.conf import settings as django_settings
+from django.core.files.storage import default_storage as django_default_storage
 from django.core.files.storage import storages
+from django.utils.module_loading import import_string
 
 from user_tasks import filters
 
 
 def get_storage(import_path=None):
     """
-    Get the default storage backend or for the given import path.
+    Return a storage backend instance.
+
+    1. STORAGES['user_task_artifacts'] alias (Django ≥4.2 or 5.2).
+    2. Explicit import path, if provided.
+    3. Django’s default_storage singleton.
     """
-    return storages["default"] if import_path is None else storages[import_path]
+    # New STORAGES dict lookup for user task artifacts
+    storages_config = getattr(settings, 'STORAGES', {})
+    if "user_task_artifacts" in storages_config:
+        return storages["user_task_artifacts"]
+
+    if import_path:
+        return import_string(import_path)()
+
+    # Final fallback
+    return django_default_storage
 
 
 class LazySettings():
