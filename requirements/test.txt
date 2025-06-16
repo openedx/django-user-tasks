@@ -16,17 +16,17 @@ billiard==4.2.1
     # via
     #   -r requirements/base.txt
     #   celery
-boto3==1.38.19
+boto3==1.38.36
     # via -r requirements/test.in
-botocore==1.38.19
+botocore==1.38.36
     # via
     #   boto3
     #   s3transfer
-celery==5.5.2
+celery==5.5.3
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
-click==8.2.0
+click==8.2.1
     # via
     #   -r requirements/base.txt
     #   celery
@@ -45,7 +45,7 @@ click-repl==0.3.0
     # via
     #   -r requirements/base.txt
     #   celery
-coverage[toml]==7.8.0
+coverage[toml]==7.9.1
     # via pytest-cov
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
@@ -73,7 +73,7 @@ jmespath==1.0.1
     # via
     #   boto3
     #   botocore
-kombu==5.5.3
+kombu==5.5.4
     # via
     #   -r requirements/base.txt
     #   celery
@@ -84,18 +84,23 @@ packaging==25.0
     #   -r requirements/base.txt
     #   -r requirements/test.in
     #   drf-yasg
+    #   kombu
     #   pytest
 pluggy==1.6.0
-    # via pytest
+    # via
+    #   pytest
+    #   pytest-cov
 prompt-toolkit==3.0.51
     # via
     #   -r requirements/base.txt
     #   click-repl
-pytest==8.3.5
+pygments==2.19.1
+    # via pytest
+pytest==8.4.0
     # via
     #   pytest-cov
     #   pytest-django
-pytest-cov==6.1.1
+pytest-cov==6.2.1
     # via -r requirements/test.in
 pytest-django==4.11.1
     # via -r requirements/test.in
@@ -114,7 +119,7 @@ pyyaml==6.0.2
     #   drf-yasg
 rules==3.5
     # via -r requirements/test.in
-s3transfer==0.12.0
+s3transfer==0.13.0
     # via boto3
 six==1.17.0
     # via
@@ -130,7 +135,7 @@ tzdata==2025.2
     # via
     #   -r requirements/base.txt
     #   kombu
-uritemplate==4.1.1
+uritemplate==4.2.0
     # via
     #   -r requirements/base.txt
     #   drf-yasg
