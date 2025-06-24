@@ -13,6 +13,12 @@ Change Log
 
 Unreleased
 ~~~~~~~~~~
+[3.4.2] - 2025-06-24
+~~~~~~~~~~~~~~~~~~~~
+
+Changed
+* Support Celery protocol V2 in create_user_tasks 
+
 
 [3.4.1] - 2025-04-20
 ~~~~~~~~~~~~~~~~~~~~
