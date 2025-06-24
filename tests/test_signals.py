@@ -5,6 +5,7 @@ Tests for the ``django-user-tasks`` Celery signal handlers and Django signal.
 
 import logging
 from unittest import mock
+from unittest.mock import patch
 
 import pytest
 from celery import __version__ as celery_version
@@ -191,10 +192,10 @@ class TestCreateUserTask(TestCase):
         assert not statuses
 
     @override_settings(CELERY_TASK_PROTOCOL=2)
-    def test_create_user_task_protocol_v2(self, monkeypatch):
+    def test_create_user_task_protocol_v2(self):
         """The create_user_task signal handler should work with Celery protocol version 2."""
-        monkeypatch.setattr(celery_app.conf, "task_protocol", 2)
-        self._create_user_task(eager=False)
+        with patch('user_tasks.signals.celery_app.conf.task_protocol', 2):
+            self._create_user_task(eager=False)
 
     def _create_user_task(self, eager):
         """Create a task based on UserTaskMixin and verify some assertions about its corresponding status."""
