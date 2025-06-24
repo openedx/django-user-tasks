@@ -5,7 +5,6 @@ Tests for the ``django-user-tasks`` Celery signal handlers and Django signal.
 
 import logging
 from unittest import mock
-from unittest.mock import patch
 
 import pytest
 from celery import __version__ as celery_version
