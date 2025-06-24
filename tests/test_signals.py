@@ -591,5 +591,5 @@ class TestUtils:
         assert result['kwargs'] == {'foo': 'bar'}
         assert result['callbacks'] == ['cb', "chain(['a'])"]
         assert result['errbacks'] == ['eb']
-        assert result['chain'] is None
+        assert 'chain' not in result
         assert result['chord'] == 'ch'
