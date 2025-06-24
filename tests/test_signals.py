@@ -589,7 +589,7 @@ class TestUtils:
         assert result['id'] == 'tid'
         assert result['args'] == [1, 2]
         assert result['kwargs'] == {'foo': 'bar'}
-        assert result['callbacks'] == ['cb', 'chain([a])']
+        assert result['callbacks'] == ['cb', "chain(['a'])"]
         assert result['errbacks'] == ['eb']
         assert result['chain'] is None
         assert result['chord'] == 'ch'
