@@ -20,6 +20,7 @@ from user_tasks import user_task_stopped
 from user_tasks.models import UserTaskStatus
 from user_tasks.signals import start_user_task
 from user_tasks.tasks import UserTask
+from user_tasks.utils import proto2_to_proto1, extract_proto2_headers, extract_proto2_embed
 
 User = auth.get_user_model()
 
@@ -530,3 +531,65 @@ class TestConnectionClosing(TransactionTestCase):
         with mock.patch('user_tasks.signals.transaction.get_connection', side_effect=Exception):
             start_user_task(sender=SampleTask)
             assert mock_close_old_connections.called is False
+
+
+class TestUtils:
+    def test_extract_proto2_headers(self):
+        headers = extract_proto2_headers(
+            task_id='abc123', retries=2, eta='2025-05-30T12:00:00',
+            expires=None, group='group1', timelimit=[10, 20],
+            task='my_task', extra='ignored')
+        assert headers == {
+            'id': 'abc123',
+            'task': 'my_task',
+            'retries': 2,
+            'eta': '2025-05-30T12:00:00',
+            'expires': None,
+            'utc': True,
+            'taskset': 'group1',
+            'timelimit': [10, 20],
+        }
+
+    def test_extract_proto2_embed(self):
+        embed = extract_proto2_embed(
+            callbacks=['cb'], errbacks=['eb'], task_chain=['a', 'b'],
+            chord='chord1', extra='ignored')
+        assert embed == {
+            'callbacks': ['cb'],
+            'errbacks': ['eb'],
+            'chain': ['a', 'b'],
+            'chord': 'chord1',
+        }
+        embed = extract_proto2_embed()
+        assert embed == {
+            'callbacks': [],
+            'errbacks': [],
+            'chain': None,
+            'chord': None
+        }
+
+    def test_proto2_to_proto1(self, mocker):
+        mock_chain = mocker.patch(
+            'user_tasks.utils.chain',
+            side_effect=lambda x: f'chain({x})'
+        )
+        body = (
+            [1, 2],
+            {'foo': 'bar'},
+            {'callbacks': ['cb'], 'errbacks': ['eb'],
+             'task_chain': ['a'], 'chord': 'ch'}
+        )
+        headers = {
+            'task_id': 'tid', 'retries': 1, 'eta': 'eta', 'expires': 'exp',
+            'group': 'grp', 'timelimit': [1, 2], 'task': 't',
+            'extra': 'ignored'
+        }
+        result = proto2_to_proto1(body, headers)
+        assert result['id'] == 'tid'
+        assert result['args'] == [1, 2]
+        assert result['kwargs'] == {'foo': 'bar'}
+        assert result['callbacks'] == ['cb', 'chain([a])']
+        assert result['errbacks'] == ['eb']
+        assert result['chain'] is None
+        assert result['chord'] == 'ch'
+        mock_chain.assert_called_once_with(['a'])
