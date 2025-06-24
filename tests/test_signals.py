@@ -534,6 +534,10 @@ class TestConnectionClosing(TransactionTestCase):
 
 
 class TestUtils:
+    """
+    Unit tests for utility functions in user_tasks/utils.py.
+    """
+
     def test_extract_proto2_headers(self):
         headers = extract_proto2_headers(
             task_id='abc123', retries=2, eta='2025-05-30T12:00:00',
@@ -569,7 +573,6 @@ class TestUtils:
         }
 
     def test_proto2_to_proto1(self, monkeypatch):
-        # Patch chain to just return its input for test simplicity
         monkeypatch.setattr(
             'user_tasks.utils.chain',
             lambda x: f'chain({x})'
