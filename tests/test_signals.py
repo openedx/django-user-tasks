@@ -193,7 +193,10 @@ class TestCreateUserTask(TestCase):
 
     def test_create_user_task_protocol_v2(self):
         """The create_user_task signal handler should work with Celery protocol version 2."""
-        with patch('user_tasks.signals.celery_app.conf.task_protocol', 2):
+
+        original_protocol = getattr(celery_app.conf, 'task_protocol', 1)
+        celery_app.conf.task_protocol = 2
+        try:
             body = (
                 [self.user.id, 'Argument'],
                 {},
@@ -210,6 +213,8 @@ class TestCreateUserTask(TestCase):
             assert status.task_class == 'test_signals.sample_task'
             assert status.user_id == self.user.id
             assert status.name == 'SampleTask: Argument'
+        finally:
+            celery_app.conf.task_protocol = original_protocol
 
     def _create_user_task(self, eager):
         """Create a task based on UserTaskMixin and verify some assertions about its corresponding status."""
