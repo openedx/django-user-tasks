@@ -18,7 +18,7 @@ from django.test import TestCase, TransactionTestCase, override_settings
 
 from user_tasks import user_task_stopped
 from user_tasks.models import UserTaskStatus
-from user_tasks.signals import start_user_task
+from user_tasks.signals import start_user_task, celery_app
 from user_tasks.tasks import UserTask
 from user_tasks.utils import proto2_to_proto1, extract_proto2_headers, extract_proto2_embed
 
@@ -189,6 +189,12 @@ class TestCreateUserTask(TestCase):
         assert result.get() == 'placeholder'
         statuses = UserTaskStatus.objects.all()
         assert not statuses
+
+    @override_settings(CELERY_TASK_PROTOCOL=2)
+    def test_create_user_task_protocol_v2(self, monkeypatch):
+        """The create_user_task signal handler should work with Celery protocol version 2."""
+        monkeypatch.setattr(celery_app.conf, "task_protocol", 2)
+        self._create_user_task(eager=False)
 
     def _create_user_task(self, eager):
         """Create a task based on UserTaskMixin and verify some assertions about its corresponding status."""
