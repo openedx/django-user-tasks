@@ -191,7 +191,6 @@ class TestCreateUserTask(TestCase):
         statuses = UserTaskStatus.objects.all()
         assert not statuses
 
-    @override_settings(CELERY_TASK_PROTOCOL=2)
     def test_create_user_task_protocol_v2(self):
         """The create_user_task signal handler should work with Celery protocol version 2."""
         with patch('user_tasks.signals.celery_app.conf.task_protocol', 2):

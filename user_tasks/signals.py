@@ -37,7 +37,7 @@ def create_user_task(sender=None, body=None, headers=None, **kwargs):
     except ImportError:
         return
 
-    if celery_app.conf.task_protocol == 2:
+    if celery_app.conf.task_protocol == 2 and isinstance(body, tuple):
         body = proto2_to_proto1(body, headers or {})
 
     if not issubclass(task_class.__class__, UserTaskMixin):
