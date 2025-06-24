@@ -19,7 +19,7 @@ from django.test import TestCase, TransactionTestCase, override_settings
 
 from user_tasks import user_task_stopped
 from user_tasks.models import UserTaskStatus
-from user_tasks.signals import start_user_task, celery_app
+from user_tasks.signals import start_user_task, celery_app, create_user_task
 from user_tasks.tasks import UserTask
 from user_tasks.utils import proto2_to_proto1, extract_proto2_headers, extract_proto2_embed
 
@@ -195,7 +195,22 @@ class TestCreateUserTask(TestCase):
     def test_create_user_task_protocol_v2(self):
         """The create_user_task signal handler should work with Celery protocol version 2."""
         with patch('user_tasks.signals.celery_app.conf.task_protocol', 2):
-            self._create_user_task(eager=False)
+            body = (
+                [self.user.id, 'Argument'],
+                {'user_id': self.user.id, 'argument': 'Argument'},
+                {'callbacks': [], 'errbacks': [], 'task_chain': None, 'chord': None}
+            )
+            headers = {
+                'task_id': 'tid', 'retries': 0, 'eta': None, 'expires': None,
+                'group': None, 'timelimit': [None, None], 'task': 'test_signals.sample_task'
+            }
+            create_user_task(sender='test_signals.sample_task', body=body, headers=headers)
+            statuses = UserTaskStatus.objects.all()
+            assert len(statuses) == 1
+            status = statuses[0]
+            assert status.task_class == 'test_signals.sample_task'
+            assert status.user_id == self.user.id
+            assert status.name == 'SampleTask: Argument'
 
     def _create_user_task(self, eager):
         """Create a task based on UserTaskMixin and verify some assertions about its corresponding status."""
