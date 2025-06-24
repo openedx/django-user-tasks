@@ -19,8 +19,8 @@ from django.test import TestCase, TransactionTestCase, override_settings
 from user_tasks import user_task_stopped
 from user_tasks.models import UserTaskStatus
 from user_tasks.signals import celery_app, create_user_task, start_user_task
-from user_tasks.utils import extract_proto2_embed, extract_proto2_headers, proto2_to_proto1
 from user_tasks.tasks import UserTask
+from user_tasks.utils import extract_proto2_embed, extract_proto2_headers, proto2_to_proto1
 
 User = auth.get_user_model()
 
