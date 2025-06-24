@@ -18,8 +18,9 @@ from django.test import TestCase, TransactionTestCase, override_settings
 
 from user_tasks import user_task_stopped
 from user_tasks.models import UserTaskStatus
-from user_tasks.signals import start_user_task
+from user_tasks.signals import celery_app, create_user_task, start_user_task
 from user_tasks.tasks import UserTask
+from user_tasks.utils import extract_proto2_embed, extract_proto2_headers, proto2_to_proto1
 
 User = auth.get_user_model()
 
@@ -188,6 +189,31 @@ class TestCreateUserTask(TestCase):
         assert result.get() == 'placeholder'
         statuses = UserTaskStatus.objects.all()
         assert not statuses
+
+    def test_create_user_task_protocol_v2(self):
+        """The create_user_task signal handler should work with Celery protocol version 2."""
+
+        original_protocol = getattr(celery_app.conf, 'task_protocol', 1)
+        celery_app.conf.task_protocol = 2
+        try:
+            body = (
+                [self.user.id, 'Argument'],
+                {},
+                {'callbacks': [], 'errbacks': [], 'task_chain': None, 'chord': None}
+            )
+            headers = {
+                'task_id': 'tid', 'retries': 0, 'eta': None, 'expires': None,
+                'group': None, 'timelimit': [None, None], 'task': 'test_signals.sample_task'
+            }
+            create_user_task(sender='test_signals.sample_task', body=body, headers=headers)
+            statuses = UserTaskStatus.objects.all()
+            assert len(statuses) == 1
+            status = statuses[0]
+            assert status.task_class == 'test_signals.sample_task'
+            assert status.user_id == self.user.id
+            assert status.name == 'SampleTask: Argument'
+        finally:
+            celery_app.conf.task_protocol = original_protocol
 
     def _create_user_task(self, eager):
         """Create a task based on UserTaskMixin and verify some assertions about its corresponding status."""
@@ -530,3 +556,68 @@ class TestConnectionClosing(TransactionTestCase):
         with mock.patch('user_tasks.signals.transaction.get_connection', side_effect=Exception):
             start_user_task(sender=SampleTask)
             assert mock_close_old_connections.called is False
+
+
+class TestUtils:
+    """
+    Unit tests for utility functions in user_tasks/utils.py.
+    """
+
+    def test_extract_proto2_headers(self):
+        headers = extract_proto2_headers(
+            task_id='abc123', retries=2, eta='2025-05-30T12:00:00',
+            expires=None, group='group1', timelimit=[10, 20],
+            task='my_task', extra='ignored')
+        assert headers == {
+            'id': 'abc123',
+            'task': 'my_task',
+            'retries': 2,
+            'eta': '2025-05-30T12:00:00',
+            'expires': None,
+            'utc': True,
+            'taskset': 'group1',
+            'timelimit': [10, 20],
+        }
+
+    def test_extract_proto2_embed(self):
+        embed = extract_proto2_embed(
+            callbacks=['cb'], errbacks=['eb'], task_chain=['a', 'b'],
+            chord='chord1', extra='ignored')
+        assert embed == {
+            'callbacks': ['cb'],
+            'errbacks': ['eb'],
+            'chain': ['a', 'b'],
+            'chord': 'chord1',
+        }
+        embed = extract_proto2_embed()
+        assert embed == {
+            'callbacks': [],
+            'errbacks': [],
+            'chain': None,
+            'chord': None
+        }
+
+    def test_proto2_to_proto1(self, monkeypatch):
+        monkeypatch.setattr(
+            'user_tasks.utils.chain',
+            lambda x: f'chain({x})'
+        )
+        body = (
+            [1, 2],
+            {'foo': 'bar'},
+            {'callbacks': ['cb'], 'errbacks': ['eb'],
+             'task_chain': ['a'], 'chord': 'ch'}
+        )
+        headers = {
+            'task_id': 'tid', 'retries': 1, 'eta': 'eta', 'expires': 'exp',
+            'group': 'grp', 'timelimit': [1, 2], 'task': 't',
+            'extra': 'ignored'
+        }
+        result = proto2_to_proto1(body, headers)
+        assert result['id'] == 'tid'
+        assert result['args'] == [1, 2]
+        assert result['kwargs'] == {'foo': 'bar'}
+        assert result['callbacks'] == ['cb', "chain(['a'])"]
+        assert result['errbacks'] == ['eb']
+        assert 'chain' not in result
+        assert result['chord'] == 'ch'

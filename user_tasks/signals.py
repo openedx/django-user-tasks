@@ -5,6 +5,7 @@ Celery signal handlers and custom Django signal.
 import logging
 from uuid import uuid4
 
+from celery import current_app as celery_app
 from celery.signals import before_task_publish, task_failure, task_prerun, task_retry, task_success
 
 from django.contrib.auth import get_user_model
@@ -16,40 +17,49 @@ from user_tasks import user_task_stopped
 from .exceptions import TaskCanceledException
 from .models import UserTaskStatus
 from .tasks import UserTaskMixin
+from .utils import proto2_to_proto1
 
 LOGGER = logging.getLogger(__name__)
 
 
 @before_task_publish.connect
-def create_user_task(sender=None, body=None, **kwargs):
+def create_user_task(sender=None, body=None, headers=None, **kwargs):
     """
     Create a :py:class:`UserTaskStatus` record for each :py:class:`UserTaskMixin`.
 
     Also creates a :py:class:`UserTaskStatus` for each chain, chord, or group containing
     the new :py:class:`UserTaskMixin`.
+
+    Supports Celery protocol v1 and v2.
     """
     try:
         task_class = import_string(sender)
     except ImportError:
         return
-    if issubclass(task_class.__class__, UserTaskMixin):
-        arguments_dict = task_class.arguments_as_dict(*body['args'], **body['kwargs'])
-        user_id = _get_user_id(arguments_dict)
-        task_id = body['id']
-        if body.get('callbacks', []):
-            _create_chain_entry(user_id, task_id, task_class, body['args'], body['kwargs'], body['callbacks'])
-            return
-        if body.get('chord', None):
-            _create_chord_entry(task_id, task_class, body, user_id)
-            return
-        parent = _get_or_create_group_parent(body, user_id)
-        name = task_class.generate_name(arguments_dict)
-        total_steps = task_class.calculate_total_steps(arguments_dict)
-        UserTaskStatus.objects.get_or_create(
-            task_id=task_id, defaults={'user_id': user_id, 'parent': parent, 'name': name, 'task_class': sender,
-                                       'total_steps': total_steps})
-        if parent:
-            parent.increment_total_steps(total_steps)
+
+    if celery_app.conf.task_protocol == 2 and isinstance(body, tuple):
+        body = proto2_to_proto1(body, headers or {})
+
+    if not issubclass(task_class.__class__, UserTaskMixin):
+        return
+
+    arguments_dict = task_class.arguments_as_dict(*body['args'], **body['kwargs'])
+    user_id = _get_user_id(arguments_dict)
+    task_id = body['id']
+    if body.get('callbacks', []):
+        _create_chain_entry(user_id, task_id, task_class, body['args'], body['kwargs'], body['callbacks'])
+        return
+    if body.get('chord', None):
+        _create_chord_entry(task_id, task_class, body, user_id)
+        return
+    parent = _get_or_create_group_parent(body, user_id)
+    name = task_class.generate_name(arguments_dict)
+    total_steps = task_class.calculate_total_steps(arguments_dict)
+    UserTaskStatus.objects.get_or_create(
+        task_id=task_id, defaults={'user_id': user_id, 'parent': parent, 'name': name, 'task_class': sender,
+                                   'total_steps': total_steps})
+    if parent:
+        parent.increment_total_steps(total_steps)
 
 
 def _create_chain_entry(user_id, task_id, task_class, args, kwargs, callbacks, parent=None):
