@@ -196,7 +196,7 @@ class TestCreateUserTask(TestCase):
         with patch('user_tasks.signals.celery_app.conf.task_protocol', 2):
             body = (
                 [self.user.id, 'Argument'],
-                {'user_id': self.user.id, 'argument': 'Argument'},
+                {'argument': 'Argument'},
                 {'callbacks': [], 'errbacks': [], 'task_chain': None, 'chord': None}
             )
             headers = {
