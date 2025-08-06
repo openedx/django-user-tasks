@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-astroid==3.3.10
+astroid==3.3.11
     # via
     #   pylint
     #   pylint-celery
@@ -35,7 +35,7 @@ pbr==6.1.1
     # via stevedore
 platformdirs==4.3.8
     # via pylint
-pycodestyle==2.13.0
+pycodestyle==2.14.0
     # via -r requirements/quality.in
 pydocstyle==6.3.0
     # via -r requirements/quality.in
@@ -49,7 +49,7 @@ pylint-celery==0.3
     # via edx-lint
 pylint-django==2.6.1
     # via edx-lint
-pylint-plugin-utils==0.8.2
+pylint-plugin-utils==0.9.0
     # via
     #   pylint-celery
     #   pylint-django
