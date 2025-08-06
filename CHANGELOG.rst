@@ -13,6 +13,14 @@ Change Log
 
 Unreleased
 ~~~~~~~~~~
+
+[3.4.3] - 2025-08-06
+~~~~~~~~~~~~~~~~~~~~
+
+Fixed
++++++
+* Fix Celery protocol v2 header parameter name from ``task_id`` to ``id`` in ``extract_proto2_headers`` function
+
 [3.4.2] - 2025-06-24
 ~~~~~~~~~~~~~~~~~~~~
 
