@@ -202,7 +202,7 @@ class TestCreateUserTask(TestCase):
                 {'callbacks': [], 'errbacks': [], 'task_chain': None, 'chord': None}
             )
             headers = {
-                'task_id': 'tid', 'retries': 0, 'eta': None, 'expires': None,
+                'id': 'tid', 'retries': 0, 'eta': None, 'expires': None,
                 'group': None, 'timelimit': [None, None], 'task': 'test_signals.sample_task'
             }
             create_user_task(sender='test_signals.sample_task', body=body, headers=headers)
@@ -565,7 +565,7 @@ class TestUtils:
 
     def test_extract_proto2_headers(self):
         headers = extract_proto2_headers(
-            task_id='abc123', retries=2, eta='2025-05-30T12:00:00',
+            id='abc123', retries=2, eta='2025-05-30T12:00:00',
             expires=None, group='group1', timelimit=[10, 20],
             task='my_task', extra='ignored')
         assert headers == {
@@ -609,7 +609,7 @@ class TestUtils:
              'task_chain': ['a'], 'chord': 'ch'}
         )
         headers = {
-            'task_id': 'tid', 'retries': 1, 'eta': 'eta', 'expires': 'exp',
+            'id': 'tid', 'retries': 1, 'eta': 'eta', 'expires': 'exp',
             'group': 'grp', 'timelimit': [1, 2], 'task': 't',
             'extra': 'ignored'
         }

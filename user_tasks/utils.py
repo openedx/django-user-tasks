@@ -23,12 +23,12 @@ def proto2_to_proto1(body, headers):
     return new_body
 
 
-def extract_proto2_headers(task_id, retries, eta, expires, group, timelimit, task, **_):
+def extract_proto2_headers(id, retries, eta, expires, group, timelimit, task, **_):  # pylint: disable=redefined-builtin
     """
     Extract relevant headers from protocol v2 format.
     """
     return {
-        "id": task_id,
+        "id": id,
         "task": task,
         "retries": retries,
         "eta": eta,
