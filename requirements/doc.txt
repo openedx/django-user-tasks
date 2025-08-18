@@ -40,7 +40,7 @@ certifi==2025.8.3
     # via requests
 cffi==1.17.1
     # via cryptography
-charset-normalizer==3.4.2
+charset-normalizer==3.4.3
     # via requests
 click==8.2.1
     # via
@@ -67,7 +67,7 @@ coreapi==2.3.3
     #   openapi-codec
 coreschema==0.0.4
     # via coreapi
-cryptography==45.0.5
+cryptography==45.0.6
     # via secretstorage
 deepmerge==2.0
     # via sphinxcontrib-openapi
@@ -82,7 +82,7 @@ django-model-utils==5.0.0
     # via -r requirements/base.txt
 django-rest-swagger==2.2.0
     # via -r requirements/doc.in
-djangorestframework==3.16.0
+djangorestframework==3.16.1
     # via
     #   -r requirements/base.txt
     #   django-rest-swagger
@@ -137,7 +137,7 @@ kombu==5.5.4
     # via
     #   -r requirements/base.txt
     #   celery
-markdown-it-py==3.0.0
+markdown-it-py==4.0.0
     # via rich
 markupsafe==3.0.2
     # via jinja2
@@ -161,7 +161,7 @@ packaging==25.0
     #   pydata-sphinx-theme
     #   sphinx
     #   twine
-pbr==6.1.1
+pbr==7.0.0
     # via stevedore
 picobox==4.0.0
     # via sphinxcontrib-openapi
@@ -218,7 +218,7 @@ rich==14.1.0
     # via twine
 roman-numerals-py==3.1.0
     # via sphinx
-rpds-py==0.26.0
+rpds-py==0.27.0
     # via
     #   jsonschema
     #   referencing
