@@ -21,9 +21,9 @@ billiard==4.2.1
     # via
     #   -r requirements/test.txt
     #   celery
-boto3==1.40.1
+boto3==1.40.11
     # via -r requirements/test.txt
-botocore==1.40.1
+botocore==1.40.11
     # via
     #   -r requirements/test.txt
     #   boto3
@@ -81,7 +81,7 @@ colorama==0.4.6
     # via
     #   -r requirements/ci.txt
     #   tox
-coverage[toml]==7.10.1
+coverage[toml]==7.10.4
     # via
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
@@ -107,7 +107,7 @@ django-model-utils==5.0.0
     # via -r requirements/test.txt
 django-storages==1.14.6
     # via -r requirements/test.txt
-djangorestframework==3.16.0
+djangorestframework==3.16.1
     # via
     #   -r requirements/test.txt
     #   drf-yasg
@@ -119,7 +119,7 @@ edx-lint==5.6.0
     # via
     #   -r requirements/dev.in
     #   -r requirements/quality.txt
-filelock==3.18.0
+filelock==3.19.1
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -178,7 +178,7 @@ packaging==25.0
     #   tox
 path==16.16.0
     # via edx-i18n-tools
-pbr==6.1.1
+pbr==7.0.0
     # via
     #   -r requirements/quality.txt
     #   stevedore
@@ -212,7 +212,7 @@ pygments==2.19.2
     # via
     #   -r requirements/test.txt
     #   pytest
-pylint==3.3.7
+pylint==3.3.8
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -324,7 +324,7 @@ vine==5.1.0
     #   amqp
     #   celery
     #   kombu
-virtualenv==20.33.0
+virtualenv==20.34.0
     # via
     #   -r requirements/ci.txt
     #   tox
