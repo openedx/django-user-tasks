@@ -21,9 +21,9 @@ billiard==4.2.1
     # via
     #   -r requirements/test.txt
     #   celery
-boto3==1.40.11
+boto3==1.40.16
     # via -r requirements/test.txt
-botocore==1.40.11
+botocore==1.40.16
     # via
     #   -r requirements/test.txt
     #   boto3
@@ -81,7 +81,7 @@ colorama==0.4.6
     # via
     #   -r requirements/ci.txt
     #   tox
-coverage[toml]==7.10.4
+coverage[toml]==7.10.5
     # via
     #   -r requirements/ci.txt
     #   -r requirements/test.txt
@@ -149,7 +149,7 @@ kombu==5.5.4
     # via
     #   -r requirements/test.txt
     #   celery
-lxml[html-clean]==6.0.0
+lxml[html-clean]==6.0.1
     # via
     #   edx-i18n-tools
     #   lxml-html-clean
@@ -178,7 +178,7 @@ packaging==25.0
     #   tox
 path==16.16.0
     # via edx-i18n-tools
-pbr==7.0.0
+pbr==7.0.1
     # via
     #   -r requirements/quality.txt
     #   stevedore

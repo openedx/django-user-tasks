@@ -26,7 +26,7 @@ babel==2.17.0
     #   sphinx
 backports-tarfile==1.2.0
     # via jaraco-context
-beautifulsoup4==4.13.4
+beautifulsoup4==4.13.5
     # via pydata-sphinx-theme
 billiard==4.2.1
     # via
@@ -117,7 +117,7 @@ jaraco-classes==3.4.0
     # via keyring
 jaraco-context==6.0.1
     # via keyring
-jaraco-functools==4.2.1
+jaraco-functools==4.3.0
     # via keyring
 jeepney==0.9.0
     # via
@@ -127,7 +127,7 @@ jinja2==3.1.6
     # via
     #   coreschema
     #   sphinx
-jsonschema==4.25.0
+jsonschema==4.25.1
     # via sphinxcontrib-openapi
 jsonschema-specifications==2025.4.1
     # via jsonschema
@@ -161,7 +161,7 @@ packaging==25.0
     #   pydata-sphinx-theme
     #   sphinx
     #   twine
-pbr==7.0.0
+pbr==7.0.1
     # via stevedore
 picobox==4.0.0
     # via sphinxcontrib-openapi
@@ -201,7 +201,7 @@ referencing==0.36.2
     # via
     #   jsonschema
     #   jsonschema-specifications
-requests==2.32.4
+requests==2.32.5
     # via
     #   coreapi
     #   id
