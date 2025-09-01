@@ -49,7 +49,7 @@ packaging==25.0
     # via
     #   drf-yasg
     #   kombu
-prompt-toolkit==3.0.51
+prompt-toolkit==3.0.52
     # via click-repl
 python-dateutil==2.9.0.post0
     # via celery
