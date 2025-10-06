@@ -6,15 +6,15 @@
 #
 amqp==5.3.1
     # via kombu
-asgiref==3.9.1
+asgiref==3.10.0
     # via django
-billiard==4.2.1
+billiard==4.2.2
     # via celery
 celery==5.5.3
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.in
-click==8.2.1
+click==8.3.0
     # via
     #   celery
     #   click-didyoumean
@@ -26,9 +26,9 @@ click-plugins==1.1.1.2
     # via celery
 click-repl==0.3.0
     # via celery
-django==4.2.23
+django==4.2.25
     # via
-    #   -c https:/raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
+    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
     #   django-model-utils
     #   djangorestframework
@@ -39,7 +39,7 @@ djangorestframework==3.16.1
     # via
     #   -r requirements/base.in
     #   drf-yasg
-drf-yasg==1.21.10
+drf-yasg==1.21.11
     # via -r requirements/base.in
 inflection==0.5.1
     # via drf-yasg
@@ -49,13 +49,13 @@ packaging==25.0
     # via
     #   drf-yasg
     #   kombu
-prompt-toolkit==3.0.51
+prompt-toolkit==3.0.52
     # via click-repl
 python-dateutil==2.9.0.post0
     # via celery
 pytz==2025.2
     # via drf-yasg
-pyyaml==6.0.2
+pyyaml==6.0.3
     # via drf-yasg
 six==1.17.0
     # via python-dateutil
@@ -70,5 +70,5 @@ vine==5.1.0
     #   amqp
     #   celery
     #   kombu
-wcwidth==0.2.13
+wcwidth==0.2.14
     # via prompt-toolkit
