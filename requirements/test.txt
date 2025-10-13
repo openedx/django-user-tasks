@@ -16,9 +16,9 @@ billiard==4.2.2
     # via
     #   -r requirements/base.txt
     #   celery
-boto3==1.40.45
+boto3==1.40.50
     # via -r requirements/test.in
-botocore==1.40.45
+botocore==1.40.50
     # via
     #   boto3
     #   s3transfer
