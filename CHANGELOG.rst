@@ -14,6 +14,13 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+[3.5.0] - 2025-12-08
+~~~~~~~~~~~~~~~~~~~~
+
+Removed
++++++++
+* Removed `django 4.2` support
+
 [3.4.3] - 2025-08-06
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -25,7 +32,8 @@ Fixed
 ~~~~~~~~~~~~~~~~~~~~
 
 Changed
-* Support Celery protocol V2 in create_user_tasks 
++++++++
+* Support Celery protocol V2 in create_user_tasks
 
 
 [3.4.1] - 2025-04-20
@@ -150,14 +158,6 @@ Changed
 +++++++
 
 * Added celery 5.0 testing using tox. Fix pylint warnings. Update the code accordingly.
-
-
-[1.3.2] - 2020-12-17
-~~~~~~~~~~~~~~~~~~~~
-
-Changed
-+++++++
-
 * Updated the deprecated celery import class. New import is compatible with 4.4.7 also.
 
 
