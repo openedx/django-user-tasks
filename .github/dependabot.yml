@@ -5,6 +5,5 @@ updates:
     directory: "/"
     schedule:
         interval: "weekly"
-    # Optional: specify reviewers to automatically request review on Dependabot PRs
-    # reviewers:
-    #   - "openedx/xxx"
+    reviewers:
+      - "usamasadiq"
