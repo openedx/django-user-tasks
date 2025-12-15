@@ -14,6 +14,13 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+[3.5.0] - 2025-12-08
+~~~~~~~~~~~~~~~~~~~~
+
+Removed
++++++++
+* Removed `django 4.2` support
+
 [3.4.3] - 2025-08-06
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -25,7 +32,7 @@ Fixed
 ~~~~~~~~~~~~~~~~~~~~
 
 Changed
-* Support Celery protocol V2 in create_user_tasks 
+* Support Celery protocol V2 in create_user_tasks
 
 
 [3.4.1] - 2025-04-20

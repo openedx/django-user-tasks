@@ -13,3 +13,6 @@
 -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
 
 celery<6.0
+
+# greater version breaking docs build
+sphinx<8.2.4
