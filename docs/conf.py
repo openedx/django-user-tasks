@@ -52,6 +52,11 @@ extensions = [
     'sphinxcontrib.openapi',
 ]
 
+# Sphinx 9.0 rewrote autodoc to call repr() on class members, which triggers
+# Django queryset evaluation against a non-existent database during docs builds.
+# Use the legacy class-based implementation to avoid this.
+autodoc_use_legacy_class_based = True
+
 # A list of warning types to suppress arbitrary warning messages.
 suppress_warnings = [
     'image.nonlocal_uri',
