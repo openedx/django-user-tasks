@@ -13,3 +13,6 @@
 -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
 
 celery<6.0
+
+# Django 4.2 support was dropped; only Django 5.2+ is supported.
+Django>=5.2,<6.0
