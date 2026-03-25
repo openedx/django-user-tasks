@@ -14,6 +14,8 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+* Dropped Django 4.2 support; bumped djangorestframework, testfixtures 10→11
+
 [3.4.3] - 2025-08-06
 ~~~~~~~~~~~~~~~~~~~~
 

@@ -15,11 +15,11 @@ click==8.3.1
     #   edx-lint
 click-log==0.4.0
     # via edx-lint
-code-annotations==2.3.2
+code-annotations==3.0.0
     # via edx-lint
 dill==0.4.1
     # via pylint
-edx-lint==5.6.0
+edx-lint==6.0.0
     # via -r requirements/quality.in
 isort==8.0.1
     # via
