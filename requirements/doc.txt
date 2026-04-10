@@ -16,7 +16,7 @@ asgiref==3.11.1
     # via
     #   -r requirements/base.txt
     #   django
-attrs==25.4.0
+attrs==26.1.0
     # via
     #   jsonschema
     #   referencing
@@ -36,9 +36,7 @@ celery==5.6.2
     #   -r requirements/base.txt
 certifi==2026.2.25
     # via requests
-cffi==2.0.0
-    # via cryptography
-charset-normalizer==3.4.5
+charset-normalizer==3.4.6
     # via requests
 click==8.3.1
     # via
@@ -65,13 +63,12 @@ coreapi==2.3.3
     #   openapi-codec
 coreschema==0.0.4
     # via coreapi
-cryptography==46.0.5
-    # via secretstorage
 deepmerge==2.0
     # via sphinxcontrib-openapi
 django==5.2.12
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
+    #   -c requirements/constraints.txt
     #   -r requirements/base.txt
     #   django-model-utils
     #   djangorestframework
@@ -80,7 +77,7 @@ django-model-utils==5.0.0
     # via -r requirements/base.txt
 django-rest-swagger==2.2.0
     # via -r requirements/doc.in
-djangorestframework==3.16.1
+djangorestframework==3.17.0
     # via
     #   -r requirements/base.txt
     #   django-rest-swagger
@@ -111,14 +108,10 @@ itypes==1.2.0
     # via coreapi
 jaraco-classes==3.4.0
     # via keyring
-jaraco-context==6.1.0
+jaraco-context==6.1.2
     # via keyring
 jaraco-functools==4.4.0
     # via keyring
-jeepney==0.9.0
-    # via
-    #   keyring
-    #   secretstorage
 jinja2==3.1.6
     # via
     #   coreschema
@@ -154,7 +147,6 @@ packaging==26.0
     #   -r requirements/base.txt
     #   drf-yasg
     #   kombu
-    #   pydata-sphinx-theme
     #   sphinx
     #   twine
 picobox==4.0.0
@@ -163,9 +155,7 @@ prompt-toolkit==3.0.52
     # via
     #   -r requirements/base.txt
     #   click-repl
-pycparser==3.0
-    # via cffi
-pydata-sphinx-theme==0.15.4
+pydata-sphinx-theme==0.16.1
     # via sphinx-book-theme
 pygments==2.19.2
     # via
@@ -217,8 +207,6 @@ rpds-py==0.30.0
     #   referencing
 rules==3.5
     # via -r requirements/doc.in
-secretstorage==3.5.0
-    # via keyring
 simplejson==3.20.2
     # via django-rest-swagger
 six==1.17.0
@@ -237,7 +225,7 @@ sphinx==9.1.0
     #   sphinx-mdinclude
     #   sphinxcontrib-httpdomain
     #   sphinxcontrib-openapi
-sphinx-book-theme==1.1.4
+sphinx-book-theme==1.2.0
     # via -r requirements/doc.in
 sphinx-mdinclude==0.6.2
     # via sphinxcontrib-openapi
