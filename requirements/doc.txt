@@ -16,7 +16,7 @@ asgiref==3.11.1
     # via
     #   -r requirements/base.txt
     #   django
-attrs==25.4.0
+attrs==26.1.0
     # via
     #   jsonschema
     #   referencing
@@ -30,17 +30,17 @@ billiard==4.2.4
     # via
     #   -r requirements/base.txt
     #   celery
-celery==5.6.2
+celery==5.6.3
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
-certifi==2026.2.25
+certifi==2026.4.22
     # via requests
 cffi==2.0.0
     # via cryptography
-charset-normalizer==3.4.5
+charset-normalizer==3.4.7
     # via requests
-click==8.3.1
+click==8.3.3
     # via
     #   -r requirements/base.txt
     #   celery
@@ -65,11 +65,11 @@ coreapi==2.3.3
     #   openapi-codec
 coreschema==0.0.4
     # via coreapi
-cryptography==46.0.5
+cryptography==48.0.0
     # via secretstorage
 deepmerge==2.0
     # via sphinxcontrib-openapi
-django==5.2.12
+django==5.2.14
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.txt
@@ -80,7 +80,7 @@ django-model-utils==5.0.0
     # via -r requirements/base.txt
 django-rest-swagger==2.2.0
     # via -r requirements/doc.in
-djangorestframework==3.16.1
+djangorestframework==3.17.1
     # via
     #   -r requirements/base.txt
     #   django-rest-swagger
@@ -99,7 +99,7 @@ drf-yasg==1.21.15
     # via -r requirements/base.txt
 id==1.6.1
     # via twine
-idna==3.11
+idna==3.13
     # via requests
 imagesize==2.0.0
     # via sphinx
@@ -111,7 +111,7 @@ itypes==1.2.0
     # via coreapi
 jaraco-classes==3.4.0
     # via keyring
-jaraco-context==6.1.0
+jaraco-context==6.1.2
     # via keyring
 jaraco-functools==4.4.0
     # via keyring
@@ -133,28 +133,27 @@ kombu==5.6.2
     # via
     #   -r requirements/base.txt
     #   celery
-markdown-it-py==4.0.0
+markdown-it-py==4.2.0
     # via rich
 markupsafe==3.0.3
     # via jinja2
 mdurl==0.1.2
     # via markdown-it-py
-mistune==3.2.0
+mistune==3.2.1
     # via sphinx-mdinclude
-more-itertools==10.8.0
+more-itertools==11.0.2
     # via
     #   jaraco-classes
     #   jaraco-functools
-nh3==0.3.3
+nh3==0.3.5
     # via readme-renderer
 openapi-codec==1.3.2
     # via django-rest-swagger
-packaging==26.0
+packaging==26.2
     # via
     #   -r requirements/base.txt
     #   drf-yasg
     #   kombu
-    #   pydata-sphinx-theme
     #   sphinx
     #   twine
 picobox==4.0.0
@@ -165,9 +164,9 @@ prompt-toolkit==3.0.52
     #   click-repl
 pycparser==3.0
     # via cffi
-pydata-sphinx-theme==0.15.4
+pydata-sphinx-theme==0.16.1
     # via sphinx-book-theme
-pygments==2.19.2
+pygments==2.20.0
     # via
     #   accessible-pygments
     #   doc8
@@ -180,7 +179,7 @@ python-dateutil==2.9.0.post0
     # via
     #   -r requirements/base.txt
     #   celery
-pytz==2026.1.post1
+pytz==2026.2
     # via
     #   -r requirements/base.txt
     #   drf-yasg
@@ -195,7 +194,7 @@ referencing==0.37.0
     # via
     #   jsonschema
     #   jsonschema-specifications
-requests==2.32.5
+requests==2.33.1
     # via
     #   coreapi
     #   requests-toolbelt
@@ -207,7 +206,7 @@ restructuredtext-lint==2.0.2
     # via doc8
 rfc3986==2.0.0
     # via twine
-rich==14.3.3
+rich==15.0.0
     # via twine
 roman-numerals==4.1.0
     # via sphinx
@@ -219,7 +218,7 @@ rules==3.5
     # via -r requirements/doc.in
 secretstorage==3.5.0
     # via keyring
-simplejson==3.20.2
+simplejson==4.1.1
     # via django-rest-swagger
 six==1.17.0
     # via
@@ -237,7 +236,7 @@ sphinx==9.1.0
     #   sphinx-mdinclude
     #   sphinxcontrib-httpdomain
     #   sphinxcontrib-openapi
-sphinx-book-theme==1.1.4
+sphinx-book-theme==1.2.0
     # via -r requirements/doc.in
 sphinx-mdinclude==0.6.2
     # via sphinxcontrib-openapi
@@ -270,7 +269,7 @@ typing-extensions==4.15.0
     #   beautifulsoup4
     #   pydata-sphinx-theme
     #   referencing
-tzdata==2025.3
+tzdata==2026.2
     # via
     #   -r requirements/base.txt
     #   kombu
@@ -283,7 +282,7 @@ uritemplate==4.2.0
     #   -r requirements/base.txt
     #   coreapi
     #   drf-yasg
-urllib3==2.6.3
+urllib3==2.7.0
     # via
     #   id
     #   requests
@@ -294,7 +293,7 @@ vine==5.1.0
     #   amqp
     #   celery
     #   kombu
-wcwidth==0.6.0
+wcwidth==0.7.0
     # via
     #   -r requirements/base.txt
     #   prompt-toolkit
