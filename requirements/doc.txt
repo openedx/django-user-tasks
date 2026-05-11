@@ -99,7 +99,7 @@ drf-yasg==1.21.15
     # via -r requirements/base.txt
 id==1.6.1
     # via twine
-idna==3.13
+idna==3.14
     # via requests
 imagesize==2.0.0
     # via sphinx
