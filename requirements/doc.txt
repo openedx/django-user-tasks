@@ -40,7 +40,7 @@ cffi==2.0.0
     # via cryptography
 charset-normalizer==3.4.7
     # via requests
-click==8.3.3
+click==8.4.0
     # via
     #   -r requirements/base.txt
     #   celery
@@ -99,7 +99,7 @@ drf-yasg==1.21.15
     # via -r requirements/base.txt
 id==1.6.1
     # via twine
-idna==3.13
+idna==3.15
     # via requests
 imagesize==2.0.0
     # via sphinx
@@ -113,7 +113,7 @@ jaraco-classes==3.4.0
     # via keyring
 jaraco-context==6.1.2
     # via keyring
-jaraco-functools==4.4.0
+jaraco-functools==4.5.0
     # via keyring
 jeepney==0.9.0
     # via
@@ -194,7 +194,7 @@ referencing==0.37.0
     # via
     #   jsonschema
     #   jsonschema-specifications
-requests==2.33.1
+requests==2.34.2
     # via
     #   coreapi
     #   requests-toolbelt
