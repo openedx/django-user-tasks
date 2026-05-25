@@ -34,13 +34,13 @@ celery==5.6.3
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
-certifi==2026.4.22
+certifi==2026.5.20
     # via requests
 cffi==2.0.0
     # via cryptography
 charset-normalizer==3.4.7
     # via requests
-click==8.3.3
+click==8.4.1
     # via
     #   -r requirements/base.txt
     #   celery
@@ -99,7 +99,7 @@ drf-yasg==1.21.15
     # via -r requirements/base.txt
 id==1.6.1
     # via twine
-idna==3.13
+idna==3.16
     # via requests
 imagesize==2.0.0
     # via sphinx
@@ -113,7 +113,7 @@ jaraco-classes==3.4.0
     # via keyring
 jaraco-context==6.1.2
     # via keyring
-jaraco-functools==4.4.0
+jaraco-functools==4.5.0
     # via keyring
 jeepney==0.9.0
     # via
@@ -141,7 +141,7 @@ mdurl==0.1.2
     # via markdown-it-py
 mistune==3.2.1
     # via sphinx-mdinclude
-more-itertools==11.0.2
+more-itertools==11.1.0
     # via
     #   jaraco-classes
     #   jaraco-functools
@@ -194,7 +194,7 @@ referencing==0.37.0
     # via
     #   jsonschema
     #   jsonschema-specifications
-requests==2.33.1
+requests==2.34.2
     # via
     #   coreapi
     #   requests-toolbelt
@@ -224,9 +224,9 @@ six==1.17.0
     # via
     #   -r requirements/base.txt
     #   python-dateutil
-snowballstemmer==3.0.1
+snowballstemmer==3.1.0
     # via sphinx
-soupsieve==2.8.3
+soupsieve==2.8.4
     # via beautifulsoup4
 sphinx==9.1.0
     # via
@@ -260,7 +260,7 @@ sqlparse==0.5.5
     # via
     #   -r requirements/base.txt
     #   django
-stevedore==5.7.0
+stevedore==5.8.0
     # via doc8
 twine==6.2.0
     # via -r requirements/doc.in
