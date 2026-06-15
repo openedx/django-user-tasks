@@ -14,7 +14,7 @@ celery==5.6.3
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.in
-click==8.3.3
+click==8.4.1
     # via
     #   celery
     #   click-didyoumean
@@ -26,7 +26,7 @@ click-plugins==1.1.1.2
     # via celery
 click-repl==0.3.0
     # via celery
-django==5.2.14
+django==5.2.15
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
@@ -72,5 +72,5 @@ vine==5.1.0
     #   amqp
     #   celery
     #   kombu
-wcwidth==0.7.0
+wcwidth==0.8.1
     # via prompt-toolkit

@@ -24,7 +24,7 @@ babel==2.18.0
     # via
     #   pydata-sphinx-theme
     #   sphinx
-beautifulsoup4==4.14.3
+beautifulsoup4==4.15.0
     # via pydata-sphinx-theme
 billiard==4.2.4
     # via
@@ -34,13 +34,13 @@ celery==5.6.3
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
-certifi==2026.4.22
+certifi==2026.5.20
     # via requests
 cffi==2.0.0
     # via cryptography
 charset-normalizer==3.4.7
     # via requests
-click==8.3.3
+click==8.4.1
     # via
     #   -r requirements/base.txt
     #   celery
@@ -65,11 +65,11 @@ coreapi==2.3.3
     #   openapi-codec
 coreschema==0.0.4
     # via coreapi
-cryptography==48.0.0
+cryptography==49.0.0
     # via secretstorage
 deepmerge==2.0
     # via sphinxcontrib-openapi
-django==5.2.14
+django==5.2.15
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.txt
@@ -99,7 +99,7 @@ drf-yasg==1.21.15
     # via -r requirements/base.txt
 id==1.6.1
     # via twine
-idna==3.13
+idna==3.18
     # via requests
 imagesize==2.0.0
     # via sphinx
@@ -113,7 +113,7 @@ jaraco-classes==3.4.0
     # via keyring
 jaraco-context==6.1.2
     # via keyring
-jaraco-functools==4.4.0
+jaraco-functools==4.5.0
     # via keyring
 jeepney==0.9.0
     # via
@@ -141,7 +141,7 @@ mdurl==0.1.2
     # via markdown-it-py
 mistune==3.2.1
     # via sphinx-mdinclude
-more-itertools==11.0.2
+more-itertools==11.1.0
     # via
     #   jaraco-classes
     #   jaraco-functools
@@ -188,13 +188,13 @@ pyyaml==6.0.3
     #   -r requirements/base.txt
     #   drf-yasg
     #   sphinxcontrib-openapi
-readme-renderer==44.0
+readme-renderer==45.0
     # via twine
 referencing==0.37.0
     # via
     #   jsonschema
     #   jsonschema-specifications
-requests==2.33.1
+requests==2.34.2
     # via
     #   coreapi
     #   requests-toolbelt
@@ -210,7 +210,7 @@ rich==15.0.0
     # via twine
 roman-numerals==4.1.0
     # via sphinx
-rpds-py==0.30.0
+rpds-py==2026.5.1
     # via
     #   jsonschema
     #   referencing
@@ -224,9 +224,9 @@ six==1.17.0
     # via
     #   -r requirements/base.txt
     #   python-dateutil
-snowballstemmer==3.0.1
+snowballstemmer==3.1.1
     # via sphinx
-soupsieve==2.8.3
+soupsieve==2.8.4
     # via beautifulsoup4
 sphinx==9.1.0
     # via
@@ -260,7 +260,7 @@ sqlparse==0.5.5
     # via
     #   -r requirements/base.txt
     #   django
-stevedore==5.7.0
+stevedore==5.8.0
     # via doc8
 twine==6.2.0
     # via -r requirements/doc.in
@@ -293,7 +293,7 @@ vine==5.1.0
     #   amqp
     #   celery
     #   kombu
-wcwidth==0.7.0
+wcwidth==0.8.1
     # via
     #   -r requirements/base.txt
     #   prompt-toolkit
