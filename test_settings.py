@@ -56,7 +56,7 @@ INSTALLED_APPS = (
 )
 
 LOCALE_PATHS = [
-    root('user_tasks', 'conf', 'locale'),
+    root('src', 'user_tasks', 'conf', 'locale'),
 ]
 
 MEDIA_ROOT = MEDIA_DIR.name
