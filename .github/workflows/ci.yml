@@ -25,6 +25,9 @@ jobs:
       with:
         enable-cache: true
         python-version: ${{ matrix.python-version }}
+        # Puts .venv/bin (with `coverage` from the ci group) on PATH so the
+        # Codecov uploader can generate coverage.xml, as it did on master.
+        activate-environment: true
 
     - name: Install Dependencies
       run: uv sync --locked --group ci
