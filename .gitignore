@@ -63,10 +63,6 @@ docs/modules.rst
 docs/rest_api.rst
 docs/user_tasks.rst
 
-# Private requirements
-requirements/private.in
-requirements/private.txt
-
 # tox environment temporary artifacts
 tests/__init__.py
 
