@@ -1,7 +1,15 @@
-include AUTHORS
-include CHANGELOG.rst
-include LICENSE.txt
-include README.rst
-include requirements/base.in
-recursive-include user_tasks *.html *.png *.gif *js *.css *jpg *jpeg *svg *py
-include requirements/constraints.txt
+# Exclude development, test, and documentation folders
+prune .github
+prune docs
+prune tests
+
+# Exclude root level configuration and build files
+exclude Makefile
+exclude tox.ini
+exclude uv.lock
+exclude .gitignore
+
+# Exclude test/coverage artifacts
+prune htmlcov
+global-exclude .coverage
+global-exclude coverage.xml
