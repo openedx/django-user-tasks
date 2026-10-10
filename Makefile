@@ -45,11 +45,17 @@ coverage: clean ## generate and view HTML coverage report
 	$(BROWSER) htmlcov/index.html
 
 docs: ## generate Sphinx HTML documentation, including API docs
-	tox -e docs
+	doc8 --ignore-path docs/_build --ignore-path docs/rest_api.rst README.rst docs
+	rm -f docs/user_tasks.rst
+	rm -f docs/modules.rst
+	make -C docs clean
+	make -C docs html
+	python -m build
+	twine check dist/*
 	$(BROWSER) docs/_build/html/index.html
 
 dummy_translations: ## generate dummy translation (.po) files
-	cd user_tasks && i18n_tool dummy
+	cd src/user_tasks && i18n_tool dummy
 
 extract_translations: ## extract strings to be translated, outputting .mo files
 	./manage.py makemessages -l en -v1 -d django
@@ -57,27 +63,9 @@ extract_translations: ## extract strings to be translated, outputting .mo files
 
 fake_translations: extract_translations dummy_translations compile_translations ## generate and compile dummy translation files
 
-# Define PIP_COMPILE_OPTS=-v to get more information during make upgrade.
-PIP_COMPILE = pip-compile --upgrade $(PIP_COMPILE_OPTS)
-
-upgrade: export CUSTOM_COMPILE_COMMAND=make upgrade
-upgrade: ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
-	pip install -qr requirements/pip-tools.txt
-	# Make sure to compile files after any other files they include!
-	$(PIP_COMPILE) --allow-unsafe --rebuild -o requirements/pip.txt requirements/pip.in
-	$(PIP_COMPILE) -o requirements/pip-tools.txt requirements/pip-tools.in
-	pip install -qr requirements/pip.txt
-	pip install -qr requirements/pip-tools.txt
-	$(PIP_COMPILE) -o requirements/base.txt requirements/base.in
-	$(PIP_COMPILE) -o requirements/test.txt requirements/test.in
-	$(PIP_COMPILE) -o requirements/doc.txt requirements/doc.in
-	$(PIP_COMPILE) -o requirements/quality.txt requirements/quality.in
-	$(PIP_COMPILE) -o requirements/ci.txt requirements/ci.in
-	$(PIP_COMPILE) -o requirements/dev.txt requirements/dev.in
-	# Let tox control the Django, djangorestframework, and celery versions for tests
-	sed -i.tmp '/^[d|D]jango==/d' requirements/test.txt
-	sed -i.tmp '/^djangorestframework==/d' requirements/test.txt
-	rm requirements/test.txt.tmp
+upgrade: ## update python dependencies
+	uv run --with edx-lint edx_lint write_uv_constraints pyproject.toml
+	uv lock --upgrade
 
 pull_translations: ## pull translations from Transifex
 	tx pull -t -a
@@ -86,12 +74,18 @@ push_translations: ## push source translation files (.po) from Transifex
 	tx push -s
 
 quality: ## check coding style with pycodestyle and pylint
-	tox -e quality
+	touch tests/__init__.py
+	pylint src/user_tasks
+	pylint tests
+	pylint schema
+	rm tests/__init__.py
+	pycodestyle schema tests src/user_tasks
+	pydocstyle schema tests src/user_tasks
+	isort --check-only --diff schema tests src/user_tasks manage.py test_settings.py
+	make help
 
 requirements: ## install development environment requirements
-	pip install -qr requirements/pip.txt
-	pip install -qr requirements/pip-tools.txt --exists-action w
-	pip-sync requirements/dev.txt requirements/private.*
+	uv sync --locked --group dev
 
 swagger-ui: ## view Swagger UI for the REST API documentation
 	tox -e docs
@@ -100,7 +94,7 @@ swagger-ui: ## view Swagger UI for the REST API documentation
 	. .tox/docs/bin/activate; ./manage.py migrate --settings=schema.settings; SWAGGER_JSON_PATH=docs/swagger.json ./manage.py runserver --settings=schema.settings
 
 test: clean ## run tests in the current virtualenv
-	pytest
+	python -Wd -m pytest $(PYTEST_ARGS)
 
 test-all: ## run tests on every supported Python/Django combination
 	tox -e quality

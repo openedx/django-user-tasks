@@ -1,0 +1,171 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm>8.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django-user-tasks"
+description = "Management of user-triggered asynchronous tasks in Django projects"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+license-files = ["LICENSE*", "AUTHORS"]
+authors = [
+    {name = "Open edX Project", email = "oscm@openedx.org"},
+]
+keywords = [
+    "Django",
+    "edx",
+]
+classifiers = [
+    'Development Status :: 4 - Beta',
+    'Framework :: Django',
+    'Framework :: Django :: 4.2',
+    'Framework :: Django :: 5.2',
+    'Intended Audience :: Developers',
+    'Natural Language :: English',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.12',
+]
+
+dynamic = ["readme", "version"]
+
+dependencies = [
+    "celery",
+    "Django",
+    "django-model-utils>=2.0",
+    "djangorestframework>=3.0.4",
+    "drf_yasg",
+]
+
+[project.urls]
+Homepage = "https://github.com/openedx/django-user-tasks"
+Repository = "https://github.com/openedx/django-user-tasks"
+
+[dependency-groups]
+test-base = [
+    "mock",
+    "packaging",
+    "pytest-cov",
+    "pytest-django",
+    "rules",
+    "testfixtures",
+    "django-storages",
+    "boto3",
+]
+test = [
+    {include-group = "test-base"},
+    "Django>=5.2,<6.0",
+]
+django42 = [
+    {include-group = "test-base"},
+    "Django>=4.2,<5.0",
+]
+quality = [
+    {include-group = "doc"},
+    {include-group = "test"},
+    "edx-lint",
+    "isort",
+    "pycodestyle",
+    "pydocstyle",
+]
+doc = [
+    "build",
+    "django-rest-swagger",
+    "doc8",
+    "sphinx-book-theme",
+    "rules",
+    "Sphinx",
+    "sphinxcontrib-openapi",
+    "twine",
+]
+ci = [
+    "tox",
+    "tox-uv",
+    "coverage",
+]
+dev = [
+    {include-group = "quality"},
+    {include-group = "test"},
+    {include-group = "ci"},
+    "edx-lint",
+    "edx-i18n-tools",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+readme = {file = ["README.rst"], content-type = "text/x-rst"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = [
+    "*.html",
+    "*.png",
+    "*.gif",
+    "*js",
+    "*.css",
+    "*jpg",
+    "*jpeg",
+    "*svg",
+]
+
+[tool.semantic_release]
+build_command = "pip install build && SETUPTOOLS_SCM_PRETEND_VERSION=$NEW_VERSION python -m build"
+
+[tool.setuptools_scm]
+version_scheme = 'only-version'
+local_scheme = 'no-local-version'
+fallback_version = "0.0.0.dev0"
+
+[tool.uv]
+conflicts = [
+    [{group = "test"}, {group = "django42"}],
+]
+constraint-dependencies = [
+    "Django<6.0",
+    "elasticsearch<7.14.0",
+    "social-auth-app-django<6.0.0",
+    "social-auth-core<5.0.0",
+    "pip<26.2.1",
+    "celery<6.0",
+]
+
+[tool.edx_lint]
+uv_constraints = [
+    "celery<6.0",
+]
+
+[tool.coverage.run]
+branch = true
+data_file = ".coverage"
+source = ["src"]
+omit = [
+    "test_settings",
+    "*migrations*",
+    "*admin.py",
+    "*static*",
+    "*templates*",
+]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "test_settings"
+addopts = "--cov --cov-report term-missing"
+norecursedirs = [".*", "docs"]
+
+[tool.isort]
+line_length = 120
+known_edx = []
+known_django = ["django"]
+known_djangoapp = ["model_utils", "rest_framework", "rest_framework_swagger"]
+known_first_party = ["user_tasks"]
+known_third_party = ["testfixtures"]
+sections = ["FUTURE", "STDLIB", "THIRDPARTY", "DJANGO", "DJANGOAPP", "EDX", "FIRSTPARTY", "LOCALFOLDER"]
+
+[tool.pydocstyle]
+ignore = "D200,D203,D212,D406,D407"
+match-dir = "(?!migrations)"
+
+[tool.doc8]
+max-line-length = 120
