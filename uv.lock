@@ -14,7 +14,6 @@ conflicts = [[
 
 [manifest]
 constraints = [
-    { name = "celery", specifier = "<6.0" },
     { name = "django", specifier = "<6.0" },
     { name = "elasticsearch", specifier = "<7.14.0" },
     { name = "pip", specifier = "<26.2.1" },
@@ -777,7 +776,7 @@ test-base = [
 
 [package.metadata]
 requires-dist = [
-    { name = "celery" },
+    { name = "celery", specifier = "<6.0" },
     { name = "django" },
     { name = "django-model-utils", specifier = ">=2.0" },
     { name = "djangorestframework", specifier = ">=3.0.4" },

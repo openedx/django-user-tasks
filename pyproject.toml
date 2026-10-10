@@ -29,7 +29,7 @@ classifiers = [
 dynamic = ["readme", "version"]
 
 dependencies = [
-    "celery",
+    "celery<6.0",
     "Django",
     "django-model-utils>=2.0",
     "djangorestframework>=3.0.4",
@@ -129,13 +129,10 @@ constraint-dependencies = [
     "social-auth-app-django<6.0.0",
     "social-auth-core<5.0.0",
     "pip<26.2.1",
-    "celery<6.0",
 ]
 
 [tool.edx_lint]
-uv_constraints = [
-    "celery<6.0",
-]
+uv_constraints = []
 
 [tool.coverage.run]
 branch = true
