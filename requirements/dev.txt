@@ -176,7 +176,7 @@ packaging==26.2
     #   wheel
 path==16.16.0
     # via edx-i18n-tools
-pip-tools==7.5.3
+pip-tools==7.6.2
     # via -r requirements/pip-tools.txt
 platformdirs==4.9.6
     # via
